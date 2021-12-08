@@ -1,0 +1,24 @@
+{
+  "unversionedId": "getstarted/README",
+  "id": "getstarted/README",
+  "isDocsHomePage": false,
+  "title": "Get Started",
+  "description": "Atmo is a self-hosted platform that uses a Runnable bundle to run your described application. The bundle includes two things: a Directive, and a set of Runnables \\(WebAssembly modules compiled from various languages such as TypeScript, Rust and Swift\\). A bundle contains everything needed to run your application.",
+  "source": "@site/docs/getstarted/README.md",
+  "sourceDirName": "getstarted",
+  "slug": "/getstarted/README",
+  "permalink": "/docs/getstarted/README",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/getstarted/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Creating a Project",
+    "permalink": "/docs/getstarted/creating-a-project"
+  },
+  "next": {
+    "title": "Background",
+    "permalink": "/docs/more-info/background"
+  }
+}

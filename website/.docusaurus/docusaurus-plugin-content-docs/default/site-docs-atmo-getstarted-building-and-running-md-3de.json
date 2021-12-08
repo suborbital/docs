@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/getstarted/building-and-running",
+  "id": "atmo/getstarted/building-and-running",
+  "isDocsHomePage": false,
+  "title": "Building and Running",
+  "description": "The subo command line tool is used again here to build and run your Atmo project.",
+  "source": "@site/docs/atmo/getstarted/building-and-running.md",
+  "sourceDirName": "atmo/getstarted",
+  "slug": "/atmo/getstarted/building-and-running",
+  "permalink": "/docs/atmo/getstarted/building-and-running",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/getstarted/building-and-running.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Creating a Project",
+    "permalink": "/docs/atmo/getstarted/creating-a-project"
+  },
+  "next": {
+    "title": "Runnables",
+    "permalink": "/docs/atmo/concepts/runnables"
+  }
+}

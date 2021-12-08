@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/concepts/the-directive",
+  "id": "atmo/concepts/the-directive",
+  "isDocsHomePage": false,
+  "title": "The Directive",
+  "description": "The Directive is a declarative file that allows you to describe your application's business logic. By describing your application declaratively, you can avoid all of the boilerplate code that normally comes with building a web service such as binding to ports, setting up TLS, constructing a router, etc.",
+  "source": "@site/docs/atmo/concepts/the-directive.md",
+  "sourceDirName": "atmo/concepts",
+  "slug": "/atmo/concepts/the-directive",
+  "permalink": "/docs/atmo/concepts/the-directive",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/the-directive.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Static Directory",
+    "permalink": "/docs/atmo/concepts/static-directory"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/atmo/runnable-api/introduction"
+  }
+}

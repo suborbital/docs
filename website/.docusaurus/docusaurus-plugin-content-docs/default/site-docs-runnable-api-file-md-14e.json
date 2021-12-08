@@ -1,0 +1,24 @@
+{
+  "unversionedId": "runnable-api/file",
+  "id": "runnable-api/file",
+  "isDocsHomePage": false,
+  "title": "Static files",
+  "description": "Files in the static directory of an Atmo project will be copied into the Runnable Bundle by subo. Those files can then be accessed by Runnables. The directory is mounted as a sandboxed read-only filesystem.",
+  "source": "@site/docs/runnable-api/file.md",
+  "sourceDirName": "runnable-api",
+  "slug": "/runnable-api/file",
+  "permalink": "/docs/runnable-api/file",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/runnable-api/file.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Example Runnable",
+    "permalink": "/docs/runnable-api/example-runnable"
+  },
+  "next": {
+    "title": "GraphQL requests",
+    "permalink": "/docs/runnable-api/graphql-requests"
+  }
+}

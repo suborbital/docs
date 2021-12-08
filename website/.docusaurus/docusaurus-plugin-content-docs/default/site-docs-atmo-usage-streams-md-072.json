@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/usage/streams",
+  "id": "atmo/usage/streams",
+  "isDocsHomePage": false,
+  "title": "Streams",
+  "description": "Atmo can handle several different types of input. The default is an HTTP request, which is defined with type: request in a Directive handler. There is another type of input called stream which allows Atmo to listen to streaming data sources and handle messages it receives from them.",
+  "source": "@site/docs/atmo/usage/streams.md",
+  "sourceDirName": "atmo/usage",
+  "slug": "/atmo/usage/streams",
+  "permalink": "/docs/atmo/usage/streams",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/streams.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Scheduled jobs",
+    "permalink": "/docs/atmo/usage/schedules"
+  },
+  "next": {
+    "title": "Using SQL databases",
+    "permalink": "/docs/atmo/usage/using-sql-databases"
+  }
+}

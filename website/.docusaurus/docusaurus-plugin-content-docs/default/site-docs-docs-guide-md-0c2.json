@@ -1,0 +1,24 @@
+{
+  "unversionedId": "docs/guide",
+  "id": "docs/guide",
+  "isDocsHomePage": false,
+  "title": "Get started with Reactr 🚀",
+  "description": "Once you've gotten the basics of Reactr, follow along here to learn what makes it so powerful.",
+  "source": "@site/docs/docs/guide.md",
+  "sourceDirName": "docs",
+  "slug": "/docs/guide",
+  "permalink": "/docs/docs/guide",
+  "editUrl": "https://github.com/suborbital/docs/docs/docs/guide.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Reactr ➕ Grav",
+    "permalink": "/docs/docs/grav"
+  },
+  "next": {
+    "title": "Reactr ❤️ WebAssembly",
+    "permalink": "/docs/docs/wasm"
+  }
+}

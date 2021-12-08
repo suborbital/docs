@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('/static/Montserrat-Regular.ttf') format('ttf');
+}
+
+.spacing {
+  margin: 1rem 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.subHeading {
+  padding: 0.5rem 0;
+}
+
+.headingLeft {
+  width: 45%;
+}
+
+.headerImage {
+  width: 50%;
+  height: 100%;
+}
+
+@media (min-width: 2000px) {
+  .headingLeft {
+    width: 30%;
+  }
+  .headerImage {
+    width: 35%;
+  }
+}
+
+@media (max-width: 890px) {
+  .headingLeft {
+    width: 100%;
+  }
+  .headerImage {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+.homeMainContent {
+  margin-bottom: 3rem;
+}
+
+.right {
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.headerImage {
+  width: 40%;
+}
+
+@media (min-width: 2000px) {
+  .right {
+    width: 35%;
+  }
+  .headerImage {
+    width: 30%;
+  }
+}
+
+@media (max-width: 890px) {
+  .right {
+    width: 100%;
+  }
+  .headerImage {
+    width: 100%;
+  }
+}
+
+.OpenSourceProjectsDiv {
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.OpenSourceProjectLogo{
+  height: 200px;
+  width: 200px;
+}
+
+.subHeadingOS {
+  font-weight: 600;
+  color:  #2d3e50;
+  font-size: 1.4rem;
+}
+
+.subHeadingOO {
+  font-weight: 600;
+  color:  #2d3e50;
+  font-size: 1.4rem;
+}
+
+.OtherOfferingsDiv {
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.OtherOfferingsLogo{
+  height: 200px;
+  width: 200px;
+}
+
+
+.footerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 20%;
+}
+
+.preFooterRight {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*# sourceMappingURL=home.css.map */

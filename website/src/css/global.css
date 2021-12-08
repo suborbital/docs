@@ -1,0 +1,53 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+  src: url('/static/Montserrat-Regular.ttf') format('ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg,
+text {
+  font-family: 'Montserrat', sans-serif; 
+  src: url('/static/Montserrat-Regular.ttf') format('ttf');
+  font-weight: 200;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #466277;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3e50;
+  cursor: pointer;
+}
+
+/* Text Selection Colours */
+
+::-moz-selection {
+  color: white;
+  background: #466277;
+}
+
+::selection {
+  color: white;
+  background: #466277;
+}

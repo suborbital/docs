@@ -1,0 +1,17 @@
+{
+  "unversionedId": "atmo/more-info/background",
+  "id": "atmo/more-info/background",
+  "isDocsHomePage": false,
+  "title": "Background",
+  "description": "Atmo was born out of a desire to simplify server-side development by making it easy to bootstrap new projects, automatically scale to handle large amounts of traffic, and ensure their security with new technology and best practices.",
+  "source": "@site/docs/atmo/more-info/background.md",
+  "sourceDirName": "atmo/more-info",
+  "slug": "/atmo/more-info/background",
+  "permalink": "/docs/atmo/more-info/background",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/more-info/background.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {}
+}

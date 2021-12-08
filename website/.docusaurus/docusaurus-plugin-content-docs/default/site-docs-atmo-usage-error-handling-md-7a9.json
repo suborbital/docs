@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/usage/error-handling",
+  "id": "atmo/usage/error-handling",
+  "isDocsHomePage": false,
+  "title": "Error handling",
+  "description": "When building your Atmo app, handling errors returned from Runnables is pretty essential. When a Runnable returns an error, it contains a code and a message. The code must be a valid HTTP response status code. Using the Directive, you can manage how your application behaves when an error is returned:",
+  "source": "@site/docs/atmo/usage/error-handling.md",
+  "sourceDirName": "atmo/usage",
+  "slug": "/atmo/usage/error-handling",
+  "permalink": "/docs/atmo/usage/error-handling",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/error-handling.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Deploying Atmo",
+    "permalink": "/docs/atmo/usage/deploying-atmo"
+  },
+  "next": {
+    "title": "Headless Mode",
+    "permalink": "/docs/atmo/usage/headless"
+  }
+}

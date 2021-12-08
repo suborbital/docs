@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/runnable-api/request",
+  "id": "atmo/runnable-api/request",
+  "isDocsHomePage": false,
+  "title": "Handling requests",
+  "description": "When a Runnable is used to handle an HTTP request, Atmo will bind that request to the Runnable. The req namespace of the Runnable API can then be used to access all of the information about the request. Note if the Runnable is not being used to handle a request, then all methods in the req namespace will return empty or an error.",
+  "source": "@site/docs/atmo/runnable-api/request.md",
+  "sourceDirName": "atmo/runnable-api",
+  "slug": "/atmo/runnable-api/request",
+  "permalink": "/docs/atmo/runnable-api/request",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/request.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Structured logging",
+    "permalink": "/docs/atmo/runnable-api/logging"
+  },
+  "next": {
+    "title": "Modifying responses",
+    "permalink": "/docs/atmo/runnable-api/response"
+  }
+}

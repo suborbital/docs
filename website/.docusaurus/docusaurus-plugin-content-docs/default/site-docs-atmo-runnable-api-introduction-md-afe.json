@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/runnable-api/introduction",
+  "id": "atmo/runnable-api/introduction",
+  "isDocsHomePage": false,
+  "title": "Introduction",
+  "description": "The Runnables that you write for your Atmo application are compiled to WebAssembly, and are run in a controlled sandbox. The Runnable API is the set of capabilities Atmo grants to the sandbox which can be used to build your application's logic.",
+  "source": "@site/docs/atmo/runnable-api/introduction.md",
+  "sourceDirName": "atmo/runnable-api",
+  "slug": "/atmo/runnable-api/introduction",
+  "permalink": "/docs/atmo/runnable-api/introduction",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/introduction.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "The Directive",
+    "permalink": "/docs/atmo/concepts/the-directive"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/docs/atmo/runnable-api/authentication"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "concepts/the-directive",
+  "id": "concepts/the-directive",
+  "isDocsHomePage": false,
+  "title": "The Directive",
+  "description": "The Directive is a declarative file that allows you to describe your application's business logic. By describing your application declaratively, you can avoid all of the boilerplate code that normally comes with building a web service such as binding to ports, setting up TLS, constructing a router, etc.",
+  "source": "@site/docs/concepts/the-directive.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/the-directive",
+  "permalink": "/docs/concepts/the-directive",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/concepts/the-directive.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Static Directory",
+    "permalink": "/docs/concepts/static-directory"
+  },
+  "next": {
+    "title": "Building and Running",
+    "permalink": "/docs/getstarted/building-and-running"
+  }
+}

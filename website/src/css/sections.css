@@ -1,0 +1,18 @@
+.homeSection {
+  padding: 3rem 2rem;
+}
+
+.homeSection > div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 890px) {
+  .homeSection {
+    padding: 1rem 10%;
+  }
+  .homeSection > div {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=sections.css.map */

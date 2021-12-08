@@ -1,0 +1,12 @@
+.link {
+  display: block;
+  color: #2d3e50;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  list-style: none;
+}
+/*# sourceMappingURL=link.css.map */

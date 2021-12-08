@@ -1,0 +1,17 @@
+{
+  "unversionedId": "subo/README",
+  "id": "subo/README",
+  "isDocsHomePage": false,
+  "title": "Subo, the Suborbital CLI",
+  "description": "Subo is the command-line helper for working with the Suborbital Development Platform. Subo is used to build Wasm Runnables, generate new projects and config files, and more over time.",
+  "source": "@site/docs/subo/README.md",
+  "sourceDirName": "subo",
+  "slug": "/subo/README",
+  "permalink": "/docs/subo/README",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/subo/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {}
+}

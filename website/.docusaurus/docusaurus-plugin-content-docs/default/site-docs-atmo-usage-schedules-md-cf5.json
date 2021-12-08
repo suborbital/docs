@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/usage/schedules",
+  "id": "atmo/usage/schedules",
+  "isDocsHomePage": false,
+  "title": "Scheduled jobs",
+  "description": "You can easily define background jobs in your Directive that Atmo will run on a schedule. Schedules run a set of steps, exactly like a handler. Schedules can be set up with an initial state to provide input.",
+  "source": "@site/docs/atmo/usage/schedules.md",
+  "sourceDirName": "atmo/usage",
+  "slug": "/atmo/usage/schedules",
+  "permalink": "/docs/atmo/usage/schedules",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/schedules.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Managing state",
+    "permalink": "/docs/atmo/usage/managing-state"
+  },
+  "next": {
+    "title": "Streams",
+    "permalink": "/docs/atmo/usage/streams"
+  }
+}

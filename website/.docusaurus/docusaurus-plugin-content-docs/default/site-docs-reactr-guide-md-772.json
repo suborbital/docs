@@ -1,0 +1,17 @@
+{
+  "unversionedId": "reactr/guide",
+  "id": "reactr/guide",
+  "isDocsHomePage": false,
+  "title": "Get started with Reactr 🚀",
+  "description": "Once you've gotten the basics of Reactr, follow along here to learn what makes it so powerful.",
+  "source": "@site/docs/reactr/guide.md",
+  "sourceDirName": "reactr",
+  "slug": "/reactr/guide",
+  "permalink": "/docs/reactr/guide",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/guide.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {}
+}

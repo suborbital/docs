@@ -1,0 +1,22 @@
+{
+  "unversionedId": "atmo/usage/using-sql-databases",
+  "id": "atmo/usage/using-sql-databases",
+  "isDocsHomePage": false,
+  "title": "Using SQL databases",
+  "description": "To connect Atmo with your SQL database, you will define the connection using the connections section of the Directive, and then define queries that your Runnables can execute. Runnables are not allowed to execute arbitrary queries. Instead, a list of named queries are provided in a Queries.yaml file, and then your Runnables are allowed to execute them.",
+  "source": "@site/docs/atmo/usage/using-sql-databases.md",
+  "sourceDirName": "atmo/usage",
+  "slug": "/atmo/usage/using-sql-databases",
+  "permalink": "/docs/atmo/usage/using-sql-databases",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/using-sql-databases.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Streams",
+    "permalink": "/docs/atmo/usage/streams"
+  }
+}
