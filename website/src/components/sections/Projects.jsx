@@ -14,7 +14,9 @@ const Projects = ({ type }) => {
           <div className="grid">
             {OpenSourceProjects.map(OpenSourceProject => (
               <div className="OpenSourceProjectsDiv">
-                <img className="OpenSourceProjectLogo" src={useBaseUrl(OpenSourceProject.icon)} alt={OpenSourceProject.icon} />
+                <Link className="OpenSourceProjectLogo" to={OpenSourceProject.url}>
+                  <img className="OpenSourceProjectLogo" src={useBaseUrl(OpenSourceProject.icon)} alt={OpenSourceProject.icon} />
+                </Link>
                 <br />
                 <Link className="subHeadingOS" to={OpenSourceProject.url}>
                   <b>{OpenSourceProject.heading}</b>
@@ -30,7 +32,9 @@ const Projects = ({ type }) => {
           <div className="grid">
             {OtherOfferings.map(OtherOffering => (
               <div className="OtherOfferingsDiv">
-                <img className="OtherOfferingsLogo"src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
+               <Link className="OtherOfferingsLogo" to={OtherOffering.url}>
+                <img className="OtherOfferingsLogo" src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
+               </Link> 
                 <br />
                 <Link className="subHeadingOO" to={OtherOffering.url}>
                   <b>{OtherOffering.heading}</b>
