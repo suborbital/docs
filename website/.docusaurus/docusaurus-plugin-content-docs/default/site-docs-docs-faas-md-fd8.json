@@ -1,0 +1,24 @@
+{
+  "unversionedId": "docs/faas",
+  "id": "docs/faas",
+  "isDocsHomePage": false,
+  "title": "faas",
+  "description": "Reactr FaaS ☁️",
+  "source": "@site/docs/docs/faas.md",
+  "sourceDirName": "docs",
+  "slug": "/docs/faas",
+  "permalink": "/docs/docs/faas",
+  "editUrl": "https://github.com/suborbital/docs/docs/docs/faas.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Reactr ➕ Grav",
+    "permalink": "/docs/docs/grav"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "runnable-api/logging",
+  "id": "runnable-api/logging",
+  "isDocsHomePage": false,
+  "title": "Structured logging",
+  "description": "Your Runnable code can log to Atmo's structured output using the logging methods.",
+  "source": "@site/docs/runnable-api/logging.md",
+  "sourceDirName": "runnable-api",
+  "slug": "/runnable-api/logging",
+  "permalink": "/docs/runnable-api/logging",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/runnable-api/logging.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/runnable-api/introduction"
+  },
+  "next": {
+    "title": "Handling requests",
+    "permalink": "/docs/runnable-api/request"
+  }
+}

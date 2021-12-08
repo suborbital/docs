@@ -1,0 +1,17 @@
+{
+  "unversionedId": "reactr/wasm",
+  "id": "reactr/wasm",
+  "isDocsHomePage": false,
+  "title": "Reactr ❤️ WebAssembly",
+  "description": "Reactr has first-class support for WebAssembly-packaged Runnables. Wasm is an incredibly useful modern portable binary format that allows multiple languages to be compiled into .wasm modules.",
+  "source": "@site/docs/reactr/wasm.md",
+  "sourceDirName": "reactr",
+  "slug": "/reactr/wasm",
+  "permalink": "/docs/reactr/wasm",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/wasm.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {}
+}

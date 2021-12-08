@@ -1,0 +1,24 @@
+{
+  "unversionedId": "getstarted/creating-a-project",
+  "id": "getstarted/creating-a-project",
+  "isDocsHomePage": false,
+  "title": "Creating a Project",
+  "description": "With subo installed, you can now create a project:",
+  "source": "@site/docs/getstarted/creating-a-project.md",
+  "sourceDirName": "getstarted",
+  "slug": "/getstarted/creating-a-project",
+  "permalink": "/docs/getstarted/creating-a-project",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/getstarted/creating-a-project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Building and Running",
+    "permalink": "/docs/getstarted/building-and-running"
+  },
+  "next": {
+    "title": "Get Started",
+    "permalink": "/docs/getstarted/README"
+  }
+}

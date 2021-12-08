@@ -1,0 +1,24 @@
+{
+  "unversionedId": "concepts/static-directory",
+  "id": "concepts/static-directory",
+  "isDocsHomePage": false,
+  "title": "Static Directory",
+  "description": "An Atmo project can optionally contain a static directory. When present, the subo CLI will package the static directory into your application Bundle. Example:",
+  "source": "@site/docs/concepts/static-directory.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/static-directory",
+  "permalink": "/docs/concepts/static-directory",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/concepts/static-directory.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "State",
+    "permalink": "/docs/concepts/state"
+  },
+  "next": {
+    "title": "The Directive",
+    "permalink": "/docs/concepts/the-directive"
+  }
+}

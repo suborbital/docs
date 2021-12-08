@@ -1,0 +1,24 @@
+{
+  "unversionedId": "runnable-api/http",
+  "id": "runnable-api/http",
+  "isDocsHomePage": false,
+  "title": "HTTP requests",
+  "description": "You can use the http namespace of the Runnable API to make HTTP requests from your Runnable code. These methods are currently the only way to access the network from Runnable code. Arbitrary socket and network access is not currently possible.",
+  "source": "@site/docs/runnable-api/http.md",
+  "sourceDirName": "runnable-api",
+  "slug": "/runnable-api/http",
+  "permalink": "/docs/runnable-api/http",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/runnable-api/http.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GraphQL requests",
+    "permalink": "/docs/runnable-api/graphql-requests"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/runnable-api/introduction"
+  }
+}

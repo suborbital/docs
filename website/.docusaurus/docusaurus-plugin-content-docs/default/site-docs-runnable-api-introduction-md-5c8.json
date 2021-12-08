@@ -1,0 +1,24 @@
+{
+  "unversionedId": "runnable-api/introduction",
+  "id": "runnable-api/introduction",
+  "isDocsHomePage": false,
+  "title": "Introduction",
+  "description": "The Runnables that you write for your Atmo application are compiled to WebAssembly, and are run in a controlled sandbox. The Runnable API is the set of capabilities Atmo grants to the sandbox which can be used to build your application's logic.",
+  "source": "@site/docs/runnable-api/introduction.md",
+  "sourceDirName": "runnable-api",
+  "slug": "/runnable-api/introduction",
+  "permalink": "/docs/runnable-api/introduction",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/runnable-api/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTTP requests",
+    "permalink": "/docs/runnable-api/http"
+  },
+  "next": {
+    "title": "Structured logging",
+    "permalink": "/docs/runnable-api/logging"
+  }
+}

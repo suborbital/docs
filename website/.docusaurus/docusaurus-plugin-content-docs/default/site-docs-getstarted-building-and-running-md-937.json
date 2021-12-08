@@ -1,0 +1,24 @@
+{
+  "unversionedId": "getstarted/building-and-running",
+  "id": "getstarted/building-and-running",
+  "isDocsHomePage": false,
+  "title": "Building and Running",
+  "description": "The subo command line tool is used again here to build and run your Atmo project.",
+  "source": "@site/docs/getstarted/building-and-running.md",
+  "sourceDirName": "getstarted",
+  "slug": "/getstarted/building-and-running",
+  "permalink": "/docs/getstarted/building-and-running",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/main/website/docs/getstarted/building-and-running.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "The Directive",
+    "permalink": "/docs/concepts/the-directive"
+  },
+  "next": {
+    "title": "Creating a Project",
+    "permalink": "/docs/getstarted/creating-a-project"
+  }
+}

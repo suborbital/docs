@@ -1,0 +1,26 @@
+{
+  "unversionedId": "atmo/usage/headless",
+  "id": "atmo/usage/headless",
+  "isDocsHomePage": false,
+  "title": "Headless Mode",
+  "description": "Atmo can be run 'headless' mode, which causes it to ignore the Directive and instead make each Runnable in your application available as an individual endpoint. This can be useful for a number of things such as automated testing \\(being able to test each Runnable in isolation with controlled inputs\\).",
+  "source": "@site/docs/atmo/usage/headless.md",
+  "sourceDirName": "atmo/usage",
+  "slug": "/atmo/usage/headless",
+  "permalink": "/docs/atmo/usage/headless",
+  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/headless.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Error handling",
+    "permalink": "/docs/atmo/usage/error-handling"
+  },
+  "next": {
+    "title": "Managing state",
+    "permalink": "/docs/atmo/usage/managing-state"
+  }
+}
