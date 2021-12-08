@@ -38,6 +38,8 @@ module.exports = {
   favicon: 'img/SOS_SubOrb-Icon-FullColour.ico',
   organizationName: 'suborbital',
   projectName: 'docs',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   themeConfig: {
 //    algolia: {
 //      apiKey: '',
