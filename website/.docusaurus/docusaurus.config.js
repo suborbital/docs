@@ -2,10 +2,12 @@ export default {
   "title": "Suborbital Docs Home",
   "tagline": "Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.",
   "url": "https://docs.suborbital.dev",
-  "baseUrl": "/",
+  "baseUrl": "/docs/",
   "favicon": "img/SOS_SubOrb-Icon-FullColour.ico",
   "organizationName": "suborbital",
   "projectName": "docs",
+  "onBrokenLinks": "ignore",
+  "onBrokenMarkdownLinks": "ignore",
   "themeConfig": {
     "navbar": {
       "title": "",
@@ -98,12 +100,12 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "D:\\atmo-trial-doc\\sidebars.js",
+          "sidebarPath": "C:\\Users\\divya\\docs\\website\\sidebars.js",
           "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs",
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "D:\\atmo-trial-doc\\src\\css\\home.css"
+          "customCss": "C:\\Users\\divya\\docs\\website\\src\\css\\home.css"
         }
       }
     ]
@@ -116,8 +118,6 @@ export default {
     ],
     "localeConfigs": {}
   },
-  "onBrokenLinks": "throw",
-  "onBrokenMarkdownLinks": "warn",
   "onDuplicateRoutes": "warn",
   "customFields": {},
   "plugins": [],

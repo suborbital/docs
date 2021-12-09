@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/usage/building-a-bundle.md",
   "sourceDirName": "atmo/usage",
   "slug": "/atmo/usage/building-a-bundle",
-  "permalink": "/docs/atmo/usage/building-a-bundle",
+  "permalink": "/docs/docs/atmo/usage/building-a-bundle",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/building-a-bundle.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Creating handlers",
-    "permalink": "/docs/atmo/usage/creating-handlers"
+    "permalink": "/docs/docs/atmo/usage/creating-handlers"
   },
   "next": {
     "title": "Deploying Atmo",
-    "permalink": "/docs/atmo/usage/deploying-atmo"
+    "permalink": "/docs/docs/atmo/usage/deploying-atmo"
   }
 }
