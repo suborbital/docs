@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/usage/using-sql-databases.md",
   "sourceDirName": "atmo/usage",
   "slug": "/atmo/usage/using-sql-databases",
-  "permalink": "/docs/docs/atmo/usage/using-sql-databases",
+  "permalink": "/docs/atmo/usage/using-sql-databases",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/using-sql-databases.md",
   "tags": [],
   "version": "current",
@@ -17,6 +17,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "Streams",
-    "permalink": "/docs/docs/atmo/usage/streams"
+    "permalink": "/docs/atmo/usage/streams"
   }
 }

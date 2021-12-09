@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/runnable-api/http.md",
   "sourceDirName": "atmo/runnable-api",
   "slug": "/atmo/runnable-api/http",
-  "permalink": "/docs/docs/atmo/runnable-api/http",
+  "permalink": "/docs/atmo/runnable-api/http",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/http.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "GraphQL requests",
-    "permalink": "/docs/docs/atmo/runnable-api/graphql-requests"
+    "permalink": "/docs/atmo/runnable-api/graphql-requests"
   },
   "next": {
     "title": "Structured logging",
-    "permalink": "/docs/docs/atmo/runnable-api/logging"
+    "permalink": "/docs/atmo/runnable-api/logging"
   }
 }
