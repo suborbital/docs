@@ -46,29 +46,6 @@ module.exports ={
             'atmo/usage/using-sql-databases'
           ]
         }
-      ],
-      Reactr:[
-        {
-          'Get Started':[
-            'reactr/guide'
-          ],
-          'Reactr FAAS':[
-            'reactr/faas'
-          ],
-          'Reactr and WASM':[
-            'reactr/wasm'
-          ],
-          'Reactr and GRAV':[
-            'reactr/grav'
-          ]
-        }
-      ],
-      Subo:[
-        {
-          'Get Started':[
-            'subo/get-started'
-          ]
-        }
       ]
     }
   ]

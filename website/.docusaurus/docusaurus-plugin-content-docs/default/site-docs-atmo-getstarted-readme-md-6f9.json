@@ -15,10 +15,6 @@
   "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
-  "previous": {
-    "title": "Get started",
-    "permalink": "/docs/docs/subo/get-started"
-  },
   "next": {
     "title": "Creating a Project",
     "permalink": "/docs/docs/atmo/getstarted/creating-a-project"

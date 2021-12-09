@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/docs",
-          "mainDocId": "subo/get-started",
+          "mainDocId": "atmo/getstarted/README",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
@@ -159,28 +159,23 @@
             },
             {
               "id": "reactr/faas",
-              "path": "/docs/docs/reactr/faas",
-              "sidebar": "docs"
+              "path": "/docs/docs/reactr/faas"
             },
             {
               "id": "reactr/grav",
-              "path": "/docs/docs/reactr/grav",
-              "sidebar": "docs"
+              "path": "/docs/docs/reactr/grav"
             },
             {
               "id": "reactr/guide",
-              "path": "/docs/docs/reactr/guide",
-              "sidebar": "docs"
+              "path": "/docs/docs/reactr/guide"
             },
             {
               "id": "reactr/wasm",
-              "path": "/docs/docs/reactr/wasm",
-              "sidebar": "docs"
+              "path": "/docs/docs/reactr/wasm"
             },
             {
               "id": "subo/get-started",
-              "path": "/docs/docs/subo/get-started",
-              "sidebar": "docs"
+              "path": "/docs/docs/subo/get-started"
             },
             {
               "id": "subo/README",

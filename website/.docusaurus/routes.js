@@ -95,7 +95,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','586'),
+    component: ComponentCreator('/docs/docs','b8a'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -276,33 +276,28 @@ export default [
       },
       {
         path: '/docs/docs/reactr/faas',
-        component: ComponentCreator('/docs/docs/reactr/faas','e3e'),
-        exact: true,
-        'sidebar': "docs"
+        component: ComponentCreator('/docs/docs/reactr/faas','ffb'),
+        exact: true
       },
       {
         path: '/docs/docs/reactr/grav',
-        component: ComponentCreator('/docs/docs/reactr/grav','0c9'),
-        exact: true,
-        'sidebar': "docs"
+        component: ComponentCreator('/docs/docs/reactr/grav','c84'),
+        exact: true
       },
       {
         path: '/docs/docs/reactr/guide',
-        component: ComponentCreator('/docs/docs/reactr/guide','c7a'),
-        exact: true,
-        'sidebar': "docs"
+        component: ComponentCreator('/docs/docs/reactr/guide','d17'),
+        exact: true
       },
       {
         path: '/docs/docs/reactr/wasm',
-        component: ComponentCreator('/docs/docs/reactr/wasm','a2b'),
-        exact: true,
-        'sidebar': "docs"
+        component: ComponentCreator('/docs/docs/reactr/wasm','9aa'),
+        exact: true
       },
       {
         path: '/docs/docs/subo/get-started',
-        component: ComponentCreator('/docs/docs/subo/get-started','726'),
-        exact: true,
-        'sidebar': "docs"
+        component: ComponentCreator('/docs/docs/subo/get-started','84a'),
+        exact: true
       },
       {
         path: '/docs/docs/subo/README',
