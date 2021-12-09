@@ -2,6 +2,13 @@ module.exports ={
   docs: [
     //Open Source Projects
     {
+      Subo:[
+        {
+          'Get Started':[
+            'subo/get-started'
+          ]
+        }
+      ],
       Atmo:[
         {
           'Get Started':[
@@ -44,6 +51,22 @@ module.exports ={
             'atmo/usage/schedules',
             'atmo/usage/streams',
             'atmo/usage/using-sql-databases'
+          ]
+        }
+      ],
+      Reactr:[
+        {
+          'Get Started':[
+            'reactr/guide'
+          ],
+          'Reactr FAAS':[
+            'reactr/faas'
+          ],
+          'Reactr and WASM':[
+            'reactr/wasm'
+          ],
+          'Reactr and GRAV':[
+            'reactr/grav'
           ]
         }
       ]

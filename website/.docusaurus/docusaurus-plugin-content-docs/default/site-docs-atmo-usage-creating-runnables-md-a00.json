@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/usage/creating-runnables.md",
   "sourceDirName": "atmo/usage",
   "slug": "/atmo/usage/creating-runnables",
-  "permalink": "/docs/atmo/usage/creating-runnables",
+  "permalink": "/docs/docs/atmo/usage/creating-runnables",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/creating-runnables.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Modifying responses",
-    "permalink": "/docs/atmo/runnable-api/response"
+    "permalink": "/docs/docs/atmo/runnable-api/response"
   },
   "next": {
     "title": "Creating handlers",
-    "permalink": "/docs/atmo/usage/creating-handlers"
+    "permalink": "/docs/docs/atmo/usage/creating-handlers"
   }
 }
