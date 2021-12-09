@@ -2,13 +2,6 @@ module.exports ={
   docs: [
     //Open Source Projects
     {
-      Subo:[
-        {
-          'Get Started':[
-            'subo/get-started'
-          ]
-        }
-      ],
       Atmo:[
         {
           'Get Started':[
@@ -67,6 +60,13 @@ module.exports ={
           ],
           'Reactr and GRAV':[
             'reactr/grav'
+          ]
+        }
+      ],
+      Subo:[
+        {
+          'Get Started':[
+            'subo/get-started'
           ]
         }
       ]
