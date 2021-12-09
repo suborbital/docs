@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/usage/schedules.md",
   "sourceDirName": "atmo/usage",
   "slug": "/atmo/usage/schedules",
-  "permalink": "/docs/docs/atmo/usage/schedules",
+  "permalink": "/docs/atmo/usage/schedules",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/schedules.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Managing state",
-    "permalink": "/docs/docs/atmo/usage/managing-state"
+    "permalink": "/docs/atmo/usage/managing-state"
   },
   "next": {
     "title": "Streams",
-    "permalink": "/docs/docs/atmo/usage/streams"
+    "permalink": "/docs/atmo/usage/streams"
   }
 }

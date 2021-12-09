@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/usage/deploying-atmo.md",
   "sourceDirName": "atmo/usage",
   "slug": "/atmo/usage/deploying-atmo",
-  "permalink": "/docs/docs/atmo/usage/deploying-atmo",
+  "permalink": "/docs/atmo/usage/deploying-atmo",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/deploying-atmo.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Building a Bundle",
-    "permalink": "/docs/docs/atmo/usage/building-a-bundle"
+    "permalink": "/docs/atmo/usage/building-a-bundle"
   },
   "next": {
     "title": "Error handling",
-    "permalink": "/docs/docs/atmo/usage/error-handling"
+    "permalink": "/docs/atmo/usage/error-handling"
   }
 }

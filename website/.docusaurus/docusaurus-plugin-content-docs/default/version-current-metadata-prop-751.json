@@ -23,17 +23,17 @@
               {
                 "type": "link",
                 "label": "Get Started",
-                "href": "/docs/docs/atmo/getstarted/README"
+                "href": "/docs/atmo/getstarted/README"
               },
               {
                 "type": "link",
                 "label": "Creating a Project",
-                "href": "/docs/docs/atmo/getstarted/creating-a-project"
+                "href": "/docs/atmo/getstarted/creating-a-project"
               },
               {
                 "type": "link",
                 "label": "Building and Running",
-                "href": "/docs/docs/atmo/getstarted/building-and-running"
+                "href": "/docs/atmo/getstarted/building-and-running"
               }
             ]
           },
@@ -46,22 +46,22 @@
               {
                 "type": "link",
                 "label": "Runnables",
-                "href": "/docs/docs/atmo/concepts/runnables"
+                "href": "/docs/atmo/concepts/runnables"
               },
               {
                 "type": "link",
                 "label": "State",
-                "href": "/docs/docs/atmo/concepts/state"
+                "href": "/docs/atmo/concepts/state"
               },
               {
                 "type": "link",
                 "label": "Static Directory",
-                "href": "/docs/docs/atmo/concepts/static-directory"
+                "href": "/docs/atmo/concepts/static-directory"
               },
               {
                 "type": "link",
                 "label": "The Directive",
-                "href": "/docs/docs/atmo/concepts/the-directive"
+                "href": "/docs/atmo/concepts/the-directive"
               }
             ]
           },
@@ -74,52 +74,52 @@
               {
                 "type": "link",
                 "label": "Introduction",
-                "href": "/docs/docs/atmo/runnable-api/introduction"
+                "href": "/docs/atmo/runnable-api/introduction"
               },
               {
                 "type": "link",
                 "label": "Authentication",
-                "href": "/docs/docs/atmo/runnable-api/authentication"
+                "href": "/docs/atmo/runnable-api/authentication"
               },
               {
                 "type": "link",
                 "label": "Accessing cache",
-                "href": "/docs/docs/atmo/runnable-api/cache"
+                "href": "/docs/atmo/runnable-api/cache"
               },
               {
                 "type": "link",
                 "label": "Example Runnable",
-                "href": "/docs/docs/atmo/runnable-api/example-runnable"
+                "href": "/docs/atmo/runnable-api/example-runnable"
               },
               {
                 "type": "link",
                 "label": "Static files",
-                "href": "/docs/docs/atmo/runnable-api/file"
+                "href": "/docs/atmo/runnable-api/file"
               },
               {
                 "type": "link",
                 "label": "GraphQL requests",
-                "href": "/docs/docs/atmo/runnable-api/graphql-requests"
+                "href": "/docs/atmo/runnable-api/graphql-requests"
               },
               {
                 "type": "link",
                 "label": "HTTP requests",
-                "href": "/docs/docs/atmo/runnable-api/http"
+                "href": "/docs/atmo/runnable-api/http"
               },
               {
                 "type": "link",
                 "label": "Structured logging",
-                "href": "/docs/docs/atmo/runnable-api/logging"
+                "href": "/docs/atmo/runnable-api/logging"
               },
               {
                 "type": "link",
                 "label": "Handling requests",
-                "href": "/docs/docs/atmo/runnable-api/request"
+                "href": "/docs/atmo/runnable-api/request"
               },
               {
                 "type": "link",
                 "label": "Modifying responses",
-                "href": "/docs/docs/atmo/runnable-api/response"
+                "href": "/docs/atmo/runnable-api/response"
               }
             ]
           },
@@ -132,52 +132,52 @@
               {
                 "type": "link",
                 "label": "Creating Runnables",
-                "href": "/docs/docs/atmo/usage/creating-runnables"
+                "href": "/docs/atmo/usage/creating-runnables"
               },
               {
                 "type": "link",
                 "label": "Creating handlers",
-                "href": "/docs/docs/atmo/usage/creating-handlers"
+                "href": "/docs/atmo/usage/creating-handlers"
               },
               {
                 "type": "link",
                 "label": "Building a Bundle",
-                "href": "/docs/docs/atmo/usage/building-a-bundle"
+                "href": "/docs/atmo/usage/building-a-bundle"
               },
               {
                 "type": "link",
                 "label": "Deploying Atmo",
-                "href": "/docs/docs/atmo/usage/deploying-atmo"
+                "href": "/docs/atmo/usage/deploying-atmo"
               },
               {
                 "type": "link",
                 "label": "Error handling",
-                "href": "/docs/docs/atmo/usage/error-handling"
+                "href": "/docs/atmo/usage/error-handling"
               },
               {
                 "type": "link",
                 "label": "Headless Mode",
-                "href": "/docs/docs/atmo/usage/headless"
+                "href": "/docs/atmo/usage/headless"
               },
               {
                 "type": "link",
                 "label": "Managing state",
-                "href": "/docs/docs/atmo/usage/managing-state"
+                "href": "/docs/atmo/usage/managing-state"
               },
               {
                 "type": "link",
                 "label": "Scheduled jobs",
-                "href": "/docs/docs/atmo/usage/schedules"
+                "href": "/docs/atmo/usage/schedules"
               },
               {
                 "type": "link",
                 "label": "Streams",
-                "href": "/docs/docs/atmo/usage/streams"
+                "href": "/docs/atmo/usage/streams"
               },
               {
                 "type": "link",
                 "label": "Using SQL databases",
-                "href": "/docs/docs/atmo/usage/using-sql-databases"
+                "href": "/docs/atmo/usage/using-sql-databases"
               }
             ]
           }

@@ -101,7 +101,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/suborbital/docs/edit/master/atmo-trial-docs',
+          editUrl: 'https://github.com/suborbital/docs',
           showLastUpdateTime: true
         },
         theme: {

@@ -1,276 +1,276 @@
 {
-  "/docs/__docusaurus/debug-208": {
+  "/__docusaurus/debug-3d6": {
     "component": "component---theme-debug-config-23-a-2ff"
   },
-  "/docs/__docusaurus/debug/config-a96": {
+  "/__docusaurus/debug/config-914": {
     "component": "component---theme-debug-config-23-a-2ff"
   },
-  "/docs/__docusaurus/debug/content-551": {
+  "/__docusaurus/debug/content-c28": {
     "component": "component---theme-debug-contentba-8-ce7",
-    "allContent": "allContent---docs-docusaurus-debug-content-246-f36"
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/docs/__docusaurus/debug/globalData-8b6": {
+  "/__docusaurus/debug/globalData-3cf": {
     "component": "component---theme-debug-global-dataede-0fa"
   },
-  "/docs/__docusaurus/debug/metadata-af3": {
+  "/__docusaurus/debug/metadata-31b": {
     "component": "component---theme-debug-site-metadata-68-e-3d4"
   },
-  "/docs/__docusaurus/debug/registry-0b9": {
+  "/__docusaurus/debug/registry-0da": {
     "component": "component---theme-debug-registry-679-501"
   },
-  "/docs/__docusaurus/debug/routes-d11": {
+  "/__docusaurus/debug/routes-244": {
     "component": "component---theme-debug-routes-946-699"
   },
-  "/docs/blog-4cc": {
+  "/blog-520": {
     "component": "component---theme-blog-list-pagea-6-a-7ba",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "content---docs-blogf-4-f-d6a"
+        "content": "content---blogf-4-f-cd7"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "content---blog-871-381"
       },
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "content---blog-925-e00"
       }
     ],
-    "metadata": "metadata---docs-blog-6-e-5-255"
+    "metadata": "metadata---blogb-2-b-df1"
   },
-  "/docs/blog/archive-508": {
+  "/blog/archive-f4c": {
     "component": "component---theme-blog-archive-page-9-e-4-1d8",
-    "archive": "archive---docs-blog-archivee-14-c5f"
+    "archive": "archive---blog-archiveb-2-f-393"
   },
-  "/docs/blog/first-blog-post-1e9": {
+  "/blog/first-blog-post-6c7": {
     "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-first-blog-poste-27-e58"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-first-blog-poste-27-4a1"
   },
-  "/docs/blog/long-blog-post-be5": {
+  "/blog/long-blog-post-f06": {
     "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-long-blog-post-736-593"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-long-blog-post-736-bc7"
   },
-  "/docs/blog/mdx-blog-post-964": {
+  "/blog/mdx-blog-post-bee": {
     "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-mdx-blog-post-593-e02"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-mdx-blog-post-593-37b"
   },
-  "/docs/blog/tags-079": {
+  "/blog/tags-e13": {
     "component": "component---theme-blog-tags-list-page-01-a-d0b",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "tags": "tags---docs-blog-tags-96-c-b2e"
+    "sidebar": "sidebar---blog-814-8ac",
+    "tags": "tags---blog-tagsa-70-da2"
   },
-  "/docs/blog/tags/docusaurus-11f": {
+  "/blog/tags/docusaurus-ddf": {
     "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "content---docs-blogf-4-f-d6a"
+        "content": "content---blogf-4-f-cd7"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "content---blog-871-381"
       },
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "content---blog-925-e00"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-docusaurus-7-d-2-514"
+    "metadata": "metadata---blog-tags-docusaurusa-80-728"
   },
-  "/docs/blog/tags/facebook-c6d": {
+  "/blog/tags/facebook-ede": {
     "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "content---blog-766-e3c"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-facebookb-50-e6d"
+    "metadata": "metadata---blog-tags-facebook-031-c52"
   },
-  "/docs/blog/tags/hello-a29": {
+  "/blog/tags/hello-4c2": {
     "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "content---blog-871-381"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-hello-8-af-133"
+    "metadata": "metadata---blog-tags-hello-30-a-bed"
   },
-  "/docs/blog/tags/hola-a2d": {
+  "/blog/tags/hola-752": {
     "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "content---blog-925-e00"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-holaf-03-9b6"
+    "metadata": "metadata---blog-tags-holae-16-18a"
   },
-  "/docs/blog/welcome-3d6": {
+  "/blog/welcome-bfa": {
     "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-welcomed-9-f-488"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-welcomed-9-f-ffb"
   },
-  "/docs/docs-b8a": {
+  "/docs-d33": {
     "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---docs-docs-935-7d8"
+    "versionMetadata": "versionMetadata---docs-935-398"
   },
-  "/docs/docs/atmo/concepts/runnables-f2d": {
+  "/docs/atmo/concepts/runnables-9eb": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-runnables-910-fcf"
+    "content": "content---docs-atmo-concepts-runnables-910-6f0"
   },
-  "/docs/docs/atmo/concepts/state-41a": {
+  "/docs/atmo/concepts/state-bbc": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-state-394-abc"
+    "content": "content---docs-atmo-concepts-state-394-c53"
   },
-  "/docs/docs/atmo/concepts/static-directory-9ac": {
+  "/docs/atmo/concepts/static-directory-f54": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-static-directoryca-1-2a8"
+    "content": "content---docs-atmo-concepts-static-directoryca-1-ccc"
   },
-  "/docs/docs/atmo/concepts/the-directive-f3e": {
+  "/docs/atmo/concepts/the-directive-ff7": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-the-directive-76-c-7ce"
+    "content": "content---docs-atmo-concepts-the-directive-76-c-f01"
   },
-  "/docs/docs/atmo/getstarted/building-and-running-2a7": {
+  "/docs/atmo/getstarted/building-and-running-7da": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-building-and-running-3-de-0bb"
+    "content": "content---docs-atmo-getstarted-building-and-running-3-de-80a"
   },
-  "/docs/docs/atmo/getstarted/creating-a-project-1f8": {
+  "/docs/atmo/getstarted/creating-a-project-93a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-creating-a-projectfc-3-bf7"
+    "content": "content---docs-atmo-getstarted-creating-a-projectfc-3-da4"
   },
-  "/docs/docs/atmo/getstarted/README-b60": {
+  "/docs/atmo/getstarted/README-3d9": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-readme-6-f-9-ca0"
+    "content": "content---docs-atmo-getstarted-readme-6-f-9-652"
   },
-  "/docs/docs/atmo/more-info/background-47a": {
+  "/docs/atmo/more-info/background-2d4": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-more-info-background-0-db-9c5"
+    "content": "content---docs-atmo-more-info-background-0-db-656"
   },
-  "/docs/docs/atmo/runnable-api/authentication-345": {
+  "/docs/atmo/runnable-api/authentication-f85": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-authenticationefa-29a"
+    "content": "content---docs-atmo-runnable-api-authenticationefa-84d"
   },
-  "/docs/docs/atmo/runnable-api/cache-9a9": {
+  "/docs/atmo/runnable-api/cache-04f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-cacheb-42-b41"
+    "content": "content---docs-atmo-runnable-api-cacheb-42-04c"
   },
-  "/docs/docs/atmo/runnable-api/example-runnable-10e": {
+  "/docs/atmo/runnable-api/example-runnable-1be": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-example-runnableb-41-5ce"
+    "content": "content---docs-atmo-runnable-api-example-runnableb-41-4ef"
   },
-  "/docs/docs/atmo/runnable-api/file-cab": {
+  "/docs/atmo/runnable-api/file-044": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-file-3-c-0-27d"
+    "content": "content---docs-atmo-runnable-api-file-3-c-0-6b5"
   },
-  "/docs/docs/atmo/runnable-api/graphql-requests-493": {
+  "/docs/atmo/runnable-api/graphql-requests-821": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-graphql-requestse-30-49f"
+    "content": "content---docs-atmo-runnable-api-graphql-requestse-30-c85"
   },
-  "/docs/docs/atmo/runnable-api/http-6ba": {
+  "/docs/atmo/runnable-api/http-ad9": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-httpa-6-c-2c3"
+    "content": "content---docs-atmo-runnable-api-httpa-6-c-c9d"
   },
-  "/docs/docs/atmo/runnable-api/introduction-9ca": {
+  "/docs/atmo/runnable-api/introduction-342": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-introductionafe-e7b"
+    "content": "content---docs-atmo-runnable-api-introductionafe-bcc"
   },
-  "/docs/docs/atmo/runnable-api/logging-028": {
+  "/docs/atmo/runnable-api/logging-0d4": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-logging-539-a40"
+    "content": "content---docs-atmo-runnable-api-logging-539-299"
   },
-  "/docs/docs/atmo/runnable-api/request-176": {
+  "/docs/atmo/runnable-api/request-f6e": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-request-246-62e"
+    "content": "content---docs-atmo-runnable-api-request-246-f1a"
   },
-  "/docs/docs/atmo/runnable-api/response-e79": {
+  "/docs/atmo/runnable-api/response-93a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-response-8-c-3-14d"
+    "content": "content---docs-atmo-runnable-api-response-8-c-3-077"
   },
-  "/docs/docs/atmo/usage/building-a-bundle-43d": {
+  "/docs/atmo/usage/building-a-bundle-109": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-building-a-bundle-340-696"
+    "content": "content---docs-atmo-usage-building-a-bundle-340-efb"
   },
-  "/docs/docs/atmo/usage/connections-982": {
+  "/docs/atmo/usage/connections-0e5": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-connections-0-c-7-f77"
+    "content": "content---docs-atmo-usage-connections-0-c-7-546"
   },
-  "/docs/docs/atmo/usage/creating-handlers-8ed": {
+  "/docs/atmo/usage/creating-handlers-472": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-creating-handlers-7-bd-a0e"
+    "content": "content---docs-atmo-usage-creating-handlers-7-bd-cd0"
   },
-  "/docs/docs/atmo/usage/creating-runnables-19c": {
+  "/docs/atmo/usage/creating-runnables-65e": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-creating-runnablesa-00-f46"
+    "content": "content---docs-atmo-usage-creating-runnablesa-00-354"
   },
-  "/docs/docs/atmo/usage/deploying-atmo-083": {
+  "/docs/atmo/usage/deploying-atmo-ba7": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-deploying-atmo-75-f-e64"
+    "content": "content---docs-atmo-usage-deploying-atmo-75-f-6a1"
   },
-  "/docs/docs/atmo/usage/error-handling-efb": {
+  "/docs/atmo/usage/error-handling-bd0": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-error-handling-7-a-9-1f7"
+    "content": "content---docs-atmo-usage-error-handling-7-a-9-9e4"
   },
-  "/docs/docs/atmo/usage/headless-090": {
+  "/docs/atmo/usage/headless-dfc": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-headless-854-769"
+    "content": "content---docs-atmo-usage-headless-854-a2f"
   },
-  "/docs/docs/atmo/usage/managing-state-c5f": {
+  "/docs/atmo/usage/managing-state-d83": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-managing-statee-0-c-afe"
+    "content": "content---docs-atmo-usage-managing-statee-0-c-58d"
   },
-  "/docs/docs/atmo/usage/schedules-219": {
+  "/docs/atmo/usage/schedules-4ad": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-schedulescf-5-4b6"
+    "content": "content---docs-atmo-usage-schedulescf-5-6a4"
   },
-  "/docs/docs/atmo/usage/streams-1df": {
+  "/docs/atmo/usage/streams-48a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-streams-072-497"
+    "content": "content---docs-atmo-usage-streams-072-3e9"
   },
-  "/docs/docs/atmo/usage/using-sql-databases-2c0": {
+  "/docs/atmo/usage/using-sql-databases-961": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-using-sql-databases-154-ed0"
+    "content": "content---docs-atmo-usage-using-sql-databases-154-542"
   },
-  "/docs/docs/intro-7d8": {
+  "/docs/intro-e84": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-intro-0-e-3-261"
+    "content": "content---docs-intro-0-e-3-be1"
   },
-  "/docs/docs/reactr/faas-ffb": {
+  "/docs/reactr/faas-08f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-faas-541-14b"
+    "content": "content---docs-reactr-faas-541-770"
   },
-  "/docs/docs/reactr/grav-c84": {
+  "/docs/reactr/grav-d47": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-gravbcf-e74"
+    "content": "content---docs-reactr-gravbcf-193"
   },
-  "/docs/docs/reactr/guide-d17": {
+  "/docs/reactr/guide-0e8": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-guide-772-a63"
+    "content": "content---docs-reactr-guide-772-403"
   },
-  "/docs/docs/reactr/wasm-9aa": {
+  "/docs/reactr/wasm-c58": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-wasmbc-9-8b0"
+    "content": "content---docs-reactr-wasmbc-9-dde"
   },
-  "/docs/docs/subo/get-started-84a": {
+  "/docs/subo/get-started-abf": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-subo-get-startedb-6-b-43f"
+    "content": "content---docs-subo-get-startedb-6-b-631"
   },
-  "/docs/docs/subo/README-01f": {
+  "/docs/subo/README-4c9": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-subo-readme-0-ba-fba"
+    "content": "content---docs-subo-readme-0-ba-97b"
   },
-  "/docs/-7fd": {
+  "/-deb": {
     "component": "component---site-src-pages-index-jsc-4-f-f99",
-    "config": "config---docs-5-e-9-4ea"
+    "config": "config---5-e-9-4f3"
   }
 }

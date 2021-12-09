@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/concepts/static-directory.md",
   "sourceDirName": "atmo/concepts",
   "slug": "/atmo/concepts/static-directory",
-  "permalink": "/docs/docs/atmo/concepts/static-directory",
+  "permalink": "/docs/atmo/concepts/static-directory",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/static-directory.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "State",
-    "permalink": "/docs/docs/atmo/concepts/state"
+    "permalink": "/docs/atmo/concepts/state"
   },
   "next": {
     "title": "The Directive",
-    "permalink": "/docs/docs/atmo/concepts/the-directive"
+    "permalink": "/docs/atmo/concepts/the-directive"
   }
 }

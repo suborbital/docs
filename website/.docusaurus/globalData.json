@@ -1,185 +1,185 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs/docs",
+      "path": "/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs/docs",
+          "path": "/docs",
           "mainDocId": "atmo/getstarted/README",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
-              "path": "/docs/docs/atmo/concepts/runnables",
+              "path": "/docs/atmo/concepts/runnables",
               "sidebar": "docs"
             },
             {
               "id": "atmo/concepts/state",
-              "path": "/docs/docs/atmo/concepts/state",
+              "path": "/docs/atmo/concepts/state",
               "sidebar": "docs"
             },
             {
               "id": "atmo/concepts/static-directory",
-              "path": "/docs/docs/atmo/concepts/static-directory",
+              "path": "/docs/atmo/concepts/static-directory",
               "sidebar": "docs"
             },
             {
               "id": "atmo/concepts/the-directive",
-              "path": "/docs/docs/atmo/concepts/the-directive",
+              "path": "/docs/atmo/concepts/the-directive",
               "sidebar": "docs"
             },
             {
               "id": "atmo/getstarted/building-and-running",
-              "path": "/docs/docs/atmo/getstarted/building-and-running",
+              "path": "/docs/atmo/getstarted/building-and-running",
               "sidebar": "docs"
             },
             {
               "id": "atmo/getstarted/creating-a-project",
-              "path": "/docs/docs/atmo/getstarted/creating-a-project",
+              "path": "/docs/atmo/getstarted/creating-a-project",
               "sidebar": "docs"
             },
             {
               "id": "atmo/getstarted/README",
-              "path": "/docs/docs/atmo/getstarted/README",
+              "path": "/docs/atmo/getstarted/README",
               "sidebar": "docs"
             },
             {
               "id": "atmo/more-info/background",
-              "path": "/docs/docs/atmo/more-info/background"
+              "path": "/docs/atmo/more-info/background"
             },
             {
               "id": "atmo/runnable-api/authentication",
-              "path": "/docs/docs/atmo/runnable-api/authentication",
+              "path": "/docs/atmo/runnable-api/authentication",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/cache",
-              "path": "/docs/docs/atmo/runnable-api/cache",
+              "path": "/docs/atmo/runnable-api/cache",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/example-runnable",
-              "path": "/docs/docs/atmo/runnable-api/example-runnable",
+              "path": "/docs/atmo/runnable-api/example-runnable",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/file",
-              "path": "/docs/docs/atmo/runnable-api/file",
+              "path": "/docs/atmo/runnable-api/file",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/graphql-requests",
-              "path": "/docs/docs/atmo/runnable-api/graphql-requests",
+              "path": "/docs/atmo/runnable-api/graphql-requests",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/http",
-              "path": "/docs/docs/atmo/runnable-api/http",
+              "path": "/docs/atmo/runnable-api/http",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/introduction",
-              "path": "/docs/docs/atmo/runnable-api/introduction",
+              "path": "/docs/atmo/runnable-api/introduction",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/logging",
-              "path": "/docs/docs/atmo/runnable-api/logging",
+              "path": "/docs/atmo/runnable-api/logging",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/request",
-              "path": "/docs/docs/atmo/runnable-api/request",
+              "path": "/docs/atmo/runnable-api/request",
               "sidebar": "docs"
             },
             {
               "id": "atmo/runnable-api/response",
-              "path": "/docs/docs/atmo/runnable-api/response",
+              "path": "/docs/atmo/runnable-api/response",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/building-a-bundle",
-              "path": "/docs/docs/atmo/usage/building-a-bundle",
+              "path": "/docs/atmo/usage/building-a-bundle",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/connections",
-              "path": "/docs/docs/atmo/usage/connections"
+              "path": "/docs/atmo/usage/connections"
             },
             {
               "id": "atmo/usage/creating-handlers",
-              "path": "/docs/docs/atmo/usage/creating-handlers",
+              "path": "/docs/atmo/usage/creating-handlers",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/creating-runnables",
-              "path": "/docs/docs/atmo/usage/creating-runnables",
+              "path": "/docs/atmo/usage/creating-runnables",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/deploying-atmo",
-              "path": "/docs/docs/atmo/usage/deploying-atmo",
+              "path": "/docs/atmo/usage/deploying-atmo",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/error-handling",
-              "path": "/docs/docs/atmo/usage/error-handling",
+              "path": "/docs/atmo/usage/error-handling",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/headless",
-              "path": "/docs/docs/atmo/usage/headless",
+              "path": "/docs/atmo/usage/headless",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/managing-state",
-              "path": "/docs/docs/atmo/usage/managing-state",
+              "path": "/docs/atmo/usage/managing-state",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/schedules",
-              "path": "/docs/docs/atmo/usage/schedules",
+              "path": "/docs/atmo/usage/schedules",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/streams",
-              "path": "/docs/docs/atmo/usage/streams",
+              "path": "/docs/atmo/usage/streams",
               "sidebar": "docs"
             },
             {
               "id": "atmo/usage/using-sql-databases",
-              "path": "/docs/docs/atmo/usage/using-sql-databases",
+              "path": "/docs/atmo/usage/using-sql-databases",
               "sidebar": "docs"
             },
             {
               "id": "intro",
-              "path": "/docs/docs/intro"
+              "path": "/docs/intro"
             },
             {
               "id": "reactr/faas",
-              "path": "/docs/docs/reactr/faas"
+              "path": "/docs/reactr/faas"
             },
             {
               "id": "reactr/grav",
-              "path": "/docs/docs/reactr/grav"
+              "path": "/docs/reactr/grav"
             },
             {
               "id": "reactr/guide",
-              "path": "/docs/docs/reactr/guide"
+              "path": "/docs/reactr/guide"
             },
             {
               "id": "reactr/wasm",
-              "path": "/docs/docs/reactr/wasm"
+              "path": "/docs/reactr/wasm"
             },
             {
               "id": "subo/get-started",
-              "path": "/docs/docs/subo/get-started"
+              "path": "/docs/subo/get-started"
             },
             {
               "id": "subo/README",
-              "path": "/docs/docs/subo/README"
+              "path": "/docs/subo/README"
             }
           ]
         }

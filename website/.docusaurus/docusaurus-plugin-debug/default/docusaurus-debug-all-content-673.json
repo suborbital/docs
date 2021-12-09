@@ -5,8 +5,8 @@
         {
           "versionName": "current",
           "versionLabel": "Next",
-          "versionPath": "/docs/docs",
-          "tagsPath": "/docs/docs/tags",
+          "versionPath": "/docs",
+          "tagsPath": "/docs/tags",
           "versionEditUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs",
           "versionEditUrlLocalized": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "versionBanner": null,
@@ -14,9 +14,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "C:\\Users\\divya\\docs\\website\\sidebars.js",
-          "contentPath": "C:\\Users\\divya\\docs\\website\\docs",
-          "contentPathLocalized": "C:\\Users\\divya\\docs\\website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "sidebarFilePath": "D:\\atmo-trial-doc\\sidebars.js",
+          "contentPath": "D:\\atmo-trial-doc\\docs",
+          "contentPathLocalized": "D:\\atmo-trial-doc\\i18n\\en\\docusaurus-plugin-content-docs\\current",
           "mainDocId": "atmo/getstarted/README",
           "docs": [
             {
@@ -28,7 +28,7 @@
               "source": "@site/docs/atmo/concepts/runnables.md",
               "sourceDirName": "atmo/concepts",
               "slug": "/atmo/concepts/runnables",
-              "permalink": "/docs/docs/atmo/concepts/runnables",
+              "permalink": "/docs/atmo/concepts/runnables",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/runnables.md",
               "tags": [],
               "version": "current",
@@ -38,11 +38,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Building and Running",
-                "permalink": "/docs/docs/atmo/getstarted/building-and-running"
+                "permalink": "/docs/atmo/getstarted/building-and-running"
               },
               "next": {
                 "title": "State",
-                "permalink": "/docs/docs/atmo/concepts/state"
+                "permalink": "/docs/atmo/concepts/state"
               }
             },
             {
@@ -54,7 +54,7 @@
               "source": "@site/docs/atmo/concepts/state.md",
               "sourceDirName": "atmo/concepts",
               "slug": "/atmo/concepts/state",
-              "permalink": "/docs/docs/atmo/concepts/state",
+              "permalink": "/docs/atmo/concepts/state",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/state.md",
               "tags": [],
               "version": "current",
@@ -64,11 +64,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Runnables",
-                "permalink": "/docs/docs/atmo/concepts/runnables"
+                "permalink": "/docs/atmo/concepts/runnables"
               },
               "next": {
                 "title": "Static Directory",
-                "permalink": "/docs/docs/atmo/concepts/static-directory"
+                "permalink": "/docs/atmo/concepts/static-directory"
               }
             },
             {
@@ -80,7 +80,7 @@
               "source": "@site/docs/atmo/concepts/static-directory.md",
               "sourceDirName": "atmo/concepts",
               "slug": "/atmo/concepts/static-directory",
-              "permalink": "/docs/docs/atmo/concepts/static-directory",
+              "permalink": "/docs/atmo/concepts/static-directory",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/static-directory.md",
               "tags": [],
               "version": "current",
@@ -90,11 +90,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "State",
-                "permalink": "/docs/docs/atmo/concepts/state"
+                "permalink": "/docs/atmo/concepts/state"
               },
               "next": {
                 "title": "The Directive",
-                "permalink": "/docs/docs/atmo/concepts/the-directive"
+                "permalink": "/docs/atmo/concepts/the-directive"
               }
             },
             {
@@ -106,7 +106,7 @@
               "source": "@site/docs/atmo/concepts/the-directive.md",
               "sourceDirName": "atmo/concepts",
               "slug": "/atmo/concepts/the-directive",
-              "permalink": "/docs/docs/atmo/concepts/the-directive",
+              "permalink": "/docs/atmo/concepts/the-directive",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/the-directive.md",
               "tags": [],
               "version": "current",
@@ -116,11 +116,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Static Directory",
-                "permalink": "/docs/docs/atmo/concepts/static-directory"
+                "permalink": "/docs/atmo/concepts/static-directory"
               },
               "next": {
                 "title": "Introduction",
-                "permalink": "/docs/docs/atmo/runnable-api/introduction"
+                "permalink": "/docs/atmo/runnable-api/introduction"
               }
             },
             {
@@ -132,7 +132,7 @@
               "source": "@site/docs/atmo/getstarted/building-and-running.md",
               "sourceDirName": "atmo/getstarted",
               "slug": "/atmo/getstarted/building-and-running",
-              "permalink": "/docs/docs/atmo/getstarted/building-and-running",
+              "permalink": "/docs/atmo/getstarted/building-and-running",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/getstarted/building-and-running.md",
               "tags": [],
               "version": "current",
@@ -142,11 +142,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Creating a Project",
-                "permalink": "/docs/docs/atmo/getstarted/creating-a-project"
+                "permalink": "/docs/atmo/getstarted/creating-a-project"
               },
               "next": {
                 "title": "Runnables",
-                "permalink": "/docs/docs/atmo/concepts/runnables"
+                "permalink": "/docs/atmo/concepts/runnables"
               }
             },
             {
@@ -158,7 +158,7 @@
               "source": "@site/docs/atmo/getstarted/creating-a-project.md",
               "sourceDirName": "atmo/getstarted",
               "slug": "/atmo/getstarted/creating-a-project",
-              "permalink": "/docs/docs/atmo/getstarted/creating-a-project",
+              "permalink": "/docs/atmo/getstarted/creating-a-project",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/getstarted/creating-a-project.md",
               "tags": [],
               "version": "current",
@@ -168,11 +168,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Get Started",
-                "permalink": "/docs/docs/atmo/getstarted/README"
+                "permalink": "/docs/atmo/getstarted/README"
               },
               "next": {
                 "title": "Building and Running",
-                "permalink": "/docs/docs/atmo/getstarted/building-and-running"
+                "permalink": "/docs/atmo/getstarted/building-and-running"
               }
             },
             {
@@ -184,7 +184,7 @@
               "source": "@site/docs/atmo/getstarted/README.md",
               "sourceDirName": "atmo/getstarted",
               "slug": "/atmo/getstarted/README",
-              "permalink": "/docs/docs/atmo/getstarted/README",
+              "permalink": "/docs/atmo/getstarted/README",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/getstarted/README.md",
               "tags": [],
               "version": "current",
@@ -194,7 +194,7 @@
               "sidebar": "docs",
               "next": {
                 "title": "Creating a Project",
-                "permalink": "/docs/docs/atmo/getstarted/creating-a-project"
+                "permalink": "/docs/atmo/getstarted/creating-a-project"
               }
             },
             {
@@ -206,7 +206,7 @@
               "source": "@site/docs/atmo/more-info/background.md",
               "sourceDirName": "atmo/more-info",
               "slug": "/atmo/more-info/background",
-              "permalink": "/docs/docs/atmo/more-info/background",
+              "permalink": "/docs/atmo/more-info/background",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/more-info/background.md",
               "tags": [],
               "version": "current",
@@ -223,7 +223,7 @@
               "source": "@site/docs/atmo/runnable-api/authentication.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/authentication",
-              "permalink": "/docs/docs/atmo/runnable-api/authentication",
+              "permalink": "/docs/atmo/runnable-api/authentication",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/authentication.md",
               "tags": [],
               "version": "current",
@@ -233,11 +233,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Introduction",
-                "permalink": "/docs/docs/atmo/runnable-api/introduction"
+                "permalink": "/docs/atmo/runnable-api/introduction"
               },
               "next": {
                 "title": "Accessing cache",
-                "permalink": "/docs/docs/atmo/runnable-api/cache"
+                "permalink": "/docs/atmo/runnable-api/cache"
               }
             },
             {
@@ -249,7 +249,7 @@
               "source": "@site/docs/atmo/runnable-api/cache.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/cache",
-              "permalink": "/docs/docs/atmo/runnable-api/cache",
+              "permalink": "/docs/atmo/runnable-api/cache",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/cache.md",
               "tags": [],
               "version": "current",
@@ -259,11 +259,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Authentication",
-                "permalink": "/docs/docs/atmo/runnable-api/authentication"
+                "permalink": "/docs/atmo/runnable-api/authentication"
               },
               "next": {
                 "title": "Example Runnable",
-                "permalink": "/docs/docs/atmo/runnable-api/example-runnable"
+                "permalink": "/docs/atmo/runnable-api/example-runnable"
               }
             },
             {
@@ -275,7 +275,7 @@
               "source": "@site/docs/atmo/runnable-api/example-runnable.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/example-runnable",
-              "permalink": "/docs/docs/atmo/runnable-api/example-runnable",
+              "permalink": "/docs/atmo/runnable-api/example-runnable",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/example-runnable.md",
               "tags": [],
               "version": "current",
@@ -285,11 +285,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Accessing cache",
-                "permalink": "/docs/docs/atmo/runnable-api/cache"
+                "permalink": "/docs/atmo/runnable-api/cache"
               },
               "next": {
                 "title": "Static files",
-                "permalink": "/docs/docs/atmo/runnable-api/file"
+                "permalink": "/docs/atmo/runnable-api/file"
               }
             },
             {
@@ -301,7 +301,7 @@
               "source": "@site/docs/atmo/runnable-api/file.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/file",
-              "permalink": "/docs/docs/atmo/runnable-api/file",
+              "permalink": "/docs/atmo/runnable-api/file",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/file.md",
               "tags": [],
               "version": "current",
@@ -311,11 +311,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Example Runnable",
-                "permalink": "/docs/docs/atmo/runnable-api/example-runnable"
+                "permalink": "/docs/atmo/runnable-api/example-runnable"
               },
               "next": {
                 "title": "GraphQL requests",
-                "permalink": "/docs/docs/atmo/runnable-api/graphql-requests"
+                "permalink": "/docs/atmo/runnable-api/graphql-requests"
               }
             },
             {
@@ -327,7 +327,7 @@
               "source": "@site/docs/atmo/runnable-api/graphql-requests.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/graphql-requests",
-              "permalink": "/docs/docs/atmo/runnable-api/graphql-requests",
+              "permalink": "/docs/atmo/runnable-api/graphql-requests",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/graphql-requests.md",
               "tags": [],
               "version": "current",
@@ -337,11 +337,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Static files",
-                "permalink": "/docs/docs/atmo/runnable-api/file"
+                "permalink": "/docs/atmo/runnable-api/file"
               },
               "next": {
                 "title": "HTTP requests",
-                "permalink": "/docs/docs/atmo/runnable-api/http"
+                "permalink": "/docs/atmo/runnable-api/http"
               }
             },
             {
@@ -353,7 +353,7 @@
               "source": "@site/docs/atmo/runnable-api/http.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/http",
-              "permalink": "/docs/docs/atmo/runnable-api/http",
+              "permalink": "/docs/atmo/runnable-api/http",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/http.md",
               "tags": [],
               "version": "current",
@@ -363,11 +363,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "GraphQL requests",
-                "permalink": "/docs/docs/atmo/runnable-api/graphql-requests"
+                "permalink": "/docs/atmo/runnable-api/graphql-requests"
               },
               "next": {
                 "title": "Structured logging",
-                "permalink": "/docs/docs/atmo/runnable-api/logging"
+                "permalink": "/docs/atmo/runnable-api/logging"
               }
             },
             {
@@ -379,7 +379,7 @@
               "source": "@site/docs/atmo/runnable-api/introduction.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/introduction",
-              "permalink": "/docs/docs/atmo/runnable-api/introduction",
+              "permalink": "/docs/atmo/runnable-api/introduction",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/introduction.md",
               "tags": [],
               "version": "current",
@@ -389,11 +389,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "The Directive",
-                "permalink": "/docs/docs/atmo/concepts/the-directive"
+                "permalink": "/docs/atmo/concepts/the-directive"
               },
               "next": {
                 "title": "Authentication",
-                "permalink": "/docs/docs/atmo/runnable-api/authentication"
+                "permalink": "/docs/atmo/runnable-api/authentication"
               }
             },
             {
@@ -405,7 +405,7 @@
               "source": "@site/docs/atmo/runnable-api/logging.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/logging",
-              "permalink": "/docs/docs/atmo/runnable-api/logging",
+              "permalink": "/docs/atmo/runnable-api/logging",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/logging.md",
               "tags": [],
               "version": "current",
@@ -415,11 +415,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "HTTP requests",
-                "permalink": "/docs/docs/atmo/runnable-api/http"
+                "permalink": "/docs/atmo/runnable-api/http"
               },
               "next": {
                 "title": "Handling requests",
-                "permalink": "/docs/docs/atmo/runnable-api/request"
+                "permalink": "/docs/atmo/runnable-api/request"
               }
             },
             {
@@ -431,7 +431,7 @@
               "source": "@site/docs/atmo/runnable-api/request.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/request",
-              "permalink": "/docs/docs/atmo/runnable-api/request",
+              "permalink": "/docs/atmo/runnable-api/request",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/request.md",
               "tags": [],
               "version": "current",
@@ -441,11 +441,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Structured logging",
-                "permalink": "/docs/docs/atmo/runnable-api/logging"
+                "permalink": "/docs/atmo/runnable-api/logging"
               },
               "next": {
                 "title": "Modifying responses",
-                "permalink": "/docs/docs/atmo/runnable-api/response"
+                "permalink": "/docs/atmo/runnable-api/response"
               }
             },
             {
@@ -457,7 +457,7 @@
               "source": "@site/docs/atmo/runnable-api/response.md",
               "sourceDirName": "atmo/runnable-api",
               "slug": "/atmo/runnable-api/response",
-              "permalink": "/docs/docs/atmo/runnable-api/response",
+              "permalink": "/docs/atmo/runnable-api/response",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/response.md",
               "tags": [],
               "version": "current",
@@ -467,11 +467,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Handling requests",
-                "permalink": "/docs/docs/atmo/runnable-api/request"
+                "permalink": "/docs/atmo/runnable-api/request"
               },
               "next": {
                 "title": "Creating Runnables",
-                "permalink": "/docs/docs/atmo/usage/creating-runnables"
+                "permalink": "/docs/atmo/usage/creating-runnables"
               }
             },
             {
@@ -483,7 +483,7 @@
               "source": "@site/docs/atmo/usage/building-a-bundle.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/building-a-bundle",
-              "permalink": "/docs/docs/atmo/usage/building-a-bundle",
+              "permalink": "/docs/atmo/usage/building-a-bundle",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/building-a-bundle.md",
               "tags": [],
               "version": "current",
@@ -493,11 +493,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Creating handlers",
-                "permalink": "/docs/docs/atmo/usage/creating-handlers"
+                "permalink": "/docs/atmo/usage/creating-handlers"
               },
               "next": {
                 "title": "Deploying Atmo",
-                "permalink": "/docs/docs/atmo/usage/deploying-atmo"
+                "permalink": "/docs/atmo/usage/deploying-atmo"
               }
             },
             {
@@ -509,7 +509,7 @@
               "source": "@site/docs/atmo/usage/connections.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/connections",
-              "permalink": "/docs/docs/atmo/usage/connections",
+              "permalink": "/docs/atmo/usage/connections",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/connections.md",
               "tags": [],
               "version": "current",
@@ -526,7 +526,7 @@
               "source": "@site/docs/atmo/usage/creating-handlers.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/creating-handlers",
-              "permalink": "/docs/docs/atmo/usage/creating-handlers",
+              "permalink": "/docs/atmo/usage/creating-handlers",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/creating-handlers.md",
               "tags": [],
               "version": "current",
@@ -536,11 +536,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Creating Runnables",
-                "permalink": "/docs/docs/atmo/usage/creating-runnables"
+                "permalink": "/docs/atmo/usage/creating-runnables"
               },
               "next": {
                 "title": "Building a Bundle",
-                "permalink": "/docs/docs/atmo/usage/building-a-bundle"
+                "permalink": "/docs/atmo/usage/building-a-bundle"
               }
             },
             {
@@ -552,7 +552,7 @@
               "source": "@site/docs/atmo/usage/creating-runnables.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/creating-runnables",
-              "permalink": "/docs/docs/atmo/usage/creating-runnables",
+              "permalink": "/docs/atmo/usage/creating-runnables",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/creating-runnables.md",
               "tags": [],
               "version": "current",
@@ -562,11 +562,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Modifying responses",
-                "permalink": "/docs/docs/atmo/runnable-api/response"
+                "permalink": "/docs/atmo/runnable-api/response"
               },
               "next": {
                 "title": "Creating handlers",
-                "permalink": "/docs/docs/atmo/usage/creating-handlers"
+                "permalink": "/docs/atmo/usage/creating-handlers"
               }
             },
             {
@@ -578,7 +578,7 @@
               "source": "@site/docs/atmo/usage/deploying-atmo.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/deploying-atmo",
-              "permalink": "/docs/docs/atmo/usage/deploying-atmo",
+              "permalink": "/docs/atmo/usage/deploying-atmo",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/deploying-atmo.md",
               "tags": [],
               "version": "current",
@@ -588,11 +588,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Building a Bundle",
-                "permalink": "/docs/docs/atmo/usage/building-a-bundle"
+                "permalink": "/docs/atmo/usage/building-a-bundle"
               },
               "next": {
                 "title": "Error handling",
-                "permalink": "/docs/docs/atmo/usage/error-handling"
+                "permalink": "/docs/atmo/usage/error-handling"
               }
             },
             {
@@ -604,7 +604,7 @@
               "source": "@site/docs/atmo/usage/error-handling.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/error-handling",
-              "permalink": "/docs/docs/atmo/usage/error-handling",
+              "permalink": "/docs/atmo/usage/error-handling",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/error-handling.md",
               "tags": [],
               "version": "current",
@@ -614,11 +614,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Deploying Atmo",
-                "permalink": "/docs/docs/atmo/usage/deploying-atmo"
+                "permalink": "/docs/atmo/usage/deploying-atmo"
               },
               "next": {
                 "title": "Headless Mode",
-                "permalink": "/docs/docs/atmo/usage/headless"
+                "permalink": "/docs/atmo/usage/headless"
               }
             },
             {
@@ -630,7 +630,7 @@
               "source": "@site/docs/atmo/usage/headless.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/headless",
-              "permalink": "/docs/docs/atmo/usage/headless",
+              "permalink": "/docs/atmo/usage/headless",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/headless.md",
               "tags": [],
               "version": "current",
@@ -640,11 +640,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Error handling",
-                "permalink": "/docs/docs/atmo/usage/error-handling"
+                "permalink": "/docs/atmo/usage/error-handling"
               },
               "next": {
                 "title": "Managing state",
-                "permalink": "/docs/docs/atmo/usage/managing-state"
+                "permalink": "/docs/atmo/usage/managing-state"
               }
             },
             {
@@ -656,7 +656,7 @@
               "source": "@site/docs/atmo/usage/managing-state.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/managing-state",
-              "permalink": "/docs/docs/atmo/usage/managing-state",
+              "permalink": "/docs/atmo/usage/managing-state",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/managing-state.md",
               "tags": [],
               "version": "current",
@@ -666,11 +666,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Headless Mode",
-                "permalink": "/docs/docs/atmo/usage/headless"
+                "permalink": "/docs/atmo/usage/headless"
               },
               "next": {
                 "title": "Scheduled jobs",
-                "permalink": "/docs/docs/atmo/usage/schedules"
+                "permalink": "/docs/atmo/usage/schedules"
               }
             },
             {
@@ -682,7 +682,7 @@
               "source": "@site/docs/atmo/usage/schedules.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/schedules",
-              "permalink": "/docs/docs/atmo/usage/schedules",
+              "permalink": "/docs/atmo/usage/schedules",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/schedules.md",
               "tags": [],
               "version": "current",
@@ -692,11 +692,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Managing state",
-                "permalink": "/docs/docs/atmo/usage/managing-state"
+                "permalink": "/docs/atmo/usage/managing-state"
               },
               "next": {
                 "title": "Streams",
-                "permalink": "/docs/docs/atmo/usage/streams"
+                "permalink": "/docs/atmo/usage/streams"
               }
             },
             {
@@ -708,7 +708,7 @@
               "source": "@site/docs/atmo/usage/streams.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/streams",
-              "permalink": "/docs/docs/atmo/usage/streams",
+              "permalink": "/docs/atmo/usage/streams",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/streams.md",
               "tags": [],
               "version": "current",
@@ -718,11 +718,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Scheduled jobs",
-                "permalink": "/docs/docs/atmo/usage/schedules"
+                "permalink": "/docs/atmo/usage/schedules"
               },
               "next": {
                 "title": "Using SQL databases",
-                "permalink": "/docs/docs/atmo/usage/using-sql-databases"
+                "permalink": "/docs/atmo/usage/using-sql-databases"
               }
             },
             {
@@ -734,7 +734,7 @@
               "source": "@site/docs/atmo/usage/using-sql-databases.md",
               "sourceDirName": "atmo/usage",
               "slug": "/atmo/usage/using-sql-databases",
-              "permalink": "/docs/docs/atmo/usage/using-sql-databases",
+              "permalink": "/docs/atmo/usage/using-sql-databases",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/usage/using-sql-databases.md",
               "tags": [],
               "version": "current",
@@ -744,7 +744,7 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Streams",
-                "permalink": "/docs/docs/atmo/usage/streams"
+                "permalink": "/docs/atmo/usage/streams"
               }
             },
             {
@@ -756,7 +756,7 @@
               "source": "@site/docs/intro.md",
               "sourceDirName": ".",
               "slug": "/intro",
-              "permalink": "/docs/docs/intro",
+              "permalink": "/docs/intro",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/intro.md",
               "tags": [],
               "version": "current",
@@ -776,7 +776,7 @@
               "source": "@site/docs/reactr/faas.md",
               "sourceDirName": "reactr",
               "slug": "/reactr/faas",
-              "permalink": "/docs/docs/reactr/faas",
+              "permalink": "/docs/reactr/faas",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/faas.md",
               "tags": [],
               "version": "current",
@@ -793,7 +793,7 @@
               "source": "@site/docs/reactr/grav.md",
               "sourceDirName": "reactr",
               "slug": "/reactr/grav",
-              "permalink": "/docs/docs/reactr/grav",
+              "permalink": "/docs/reactr/grav",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/grav.md",
               "tags": [],
               "version": "current",
@@ -810,7 +810,7 @@
               "source": "@site/docs/reactr/guide.md",
               "sourceDirName": "reactr",
               "slug": "/reactr/guide",
-              "permalink": "/docs/docs/reactr/guide",
+              "permalink": "/docs/reactr/guide",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/guide.md",
               "tags": [],
               "version": "current",
@@ -827,7 +827,7 @@
               "source": "@site/docs/reactr/wasm.md",
               "sourceDirName": "reactr",
               "slug": "/reactr/wasm",
-              "permalink": "/docs/docs/reactr/wasm",
+              "permalink": "/docs/reactr/wasm",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/reactr/wasm.md",
               "tags": [],
               "version": "current",
@@ -844,7 +844,7 @@
               "source": "@site/docs/subo/get-started.md",
               "sourceDirName": "subo",
               "slug": "/subo/get-started",
-              "permalink": "/docs/docs/subo/get-started",
+              "permalink": "/docs/subo/get-started",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/subo/get-started.md",
               "tags": [],
               "version": "current",
@@ -861,7 +861,7 @@
               "source": "@site/docs/subo/README.md",
               "sourceDirName": "subo",
               "slug": "/subo/README",
-              "permalink": "/docs/docs/subo/README",
+              "permalink": "/docs/subo/README",
               "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/subo/README.md",
               "tags": [],
               "version": "current",
@@ -1033,7 +1033,7 @@
         {
           "id": "welcome",
           "metadata": {
-            "permalink": "/docs/blog/welcome",
+            "permalink": "/blog/welcome",
             "source": "@site/blog/2021-08-26-welcome/index.md",
             "title": "Welcome",
             "description": "Docusaurus blogging features are powered by the blog plugin.",
@@ -1042,15 +1042,15 @@
             "tags": [
               {
                 "label": "facebook",
-                "permalink": "/docs/blog/tags/facebook"
+                "permalink": "/blog/tags/facebook"
               },
               {
                 "label": "hello",
-                "permalink": "/docs/blog/tags/hello"
+                "permalink": "/blog/tags/hello"
               },
               {
                 "label": "docusaurus",
-                "permalink": "/docs/blog/tags/docusaurus"
+                "permalink": "/blog/tags/docusaurus"
               }
             ],
             "readingTime": 0.405,
@@ -1073,15 +1073,15 @@
             ],
             "nextItem": {
               "title": "MDX Blog Post",
-              "permalink": "/docs/blog/mdx-blog-post"
+              "permalink": "/blog/mdx-blog-post"
             }
           },
-          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\r\n\r\nSimply add Markdown files (or folders) to the `blog` directory.\r\n\r\nRegular blog authors can be added to `authors.yml`.\r\n\r\nThe blog post date can be extracted from filenames, such as:\r\n\r\n- `2019-05-30-welcome.md`\r\n- `2019-05-30-welcome/index.md`\r\n\r\nA blog post folder can be convenient to co-locate blog post images:\r\n\r\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\r\n\r\nThe blog supports tags as well!\r\n\r\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
+          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`.\n\nThe blog post date can be extracted from filenames, such as:\n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
         },
         {
           "id": "mdx-blog-post",
           "metadata": {
-            "permalink": "/docs/blog/mdx-blog-post",
+            "permalink": "/blog/mdx-blog-post",
             "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
             "title": "MDX Blog Post",
             "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
@@ -1090,7 +1090,7 @@
             "tags": [
               {
                 "label": "docusaurus",
-                "permalink": "/docs/blog/tags/docusaurus"
+                "permalink": "/blog/tags/docusaurus"
               }
             ],
             "readingTime": 0.175,
@@ -1106,19 +1106,19 @@
             ],
             "prevItem": {
               "title": "Welcome",
-              "permalink": "/docs/blog/welcome"
+              "permalink": "/blog/welcome"
             },
             "nextItem": {
               "title": "Long Blog Post",
-              "permalink": "/docs/blog/long-blog-post"
+              "permalink": "/blog/long-blog-post"
             }
           },
-          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\r\n\r\n:::tip\r\n\r\nUse the power of React to create interactive blog posts.\r\n\r\n```js\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n```\r\n\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n\r\n:::"
+          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
         },
         {
           "id": "long-blog-post",
           "metadata": {
-            "permalink": "/docs/blog/long-blog-post",
+            "permalink": "/blog/long-blog-post",
             "source": "@site/blog/2019-05-29-long-blog-post.md",
             "title": "Long Blog Post",
             "description": "This is the summary of a very long blog post,",
@@ -1127,11 +1127,11 @@
             "tags": [
               {
                 "label": "hello",
-                "permalink": "/docs/blog/tags/hello"
+                "permalink": "/blog/tags/hello"
               },
               {
                 "label": "docusaurus",
-                "permalink": "/docs/blog/tags/docusaurus"
+                "permalink": "/blog/tags/docusaurus"
               }
             ],
             "readingTime": 2.05,
@@ -1147,19 +1147,19 @@
             ],
             "prevItem": {
               "title": "MDX Blog Post",
-              "permalink": "/docs/blog/mdx-blog-post"
+              "permalink": "/blog/mdx-blog-post"
             },
             "nextItem": {
               "title": "First Blog Post",
-              "permalink": "/docs/blog/first-blog-post"
+              "permalink": "/blog/first-blog-post"
             }
           },
-          "content": "This is the summary of a very long blog post,\r\n\r\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\r\n\r\n<!--truncate-->\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
         },
         {
           "id": "first-blog-post",
           "metadata": {
-            "permalink": "/docs/blog/first-blog-post",
+            "permalink": "/blog/first-blog-post",
             "source": "@site/blog/2019-05-28-first-blog-post.md",
             "title": "First Blog Post",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
@@ -1168,11 +1168,11 @@
             "tags": [
               {
                 "label": "hola",
-                "permalink": "/docs/blog/tags/hola"
+                "permalink": "/blog/tags/hola"
               },
               {
                 "label": "docusaurus",
-                "permalink": "/docs/blog/tags/docusaurus"
+                "permalink": "/blog/tags/docusaurus"
               }
             ],
             "readingTime": 0.12,
@@ -1188,7 +1188,7 @@
             ],
             "prevItem": {
               "title": "Long Blog Post",
-              "permalink": "/docs/blog/long-blog-post"
+              "permalink": "/blog/long-blog-post"
             }
           },
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
@@ -1197,7 +1197,7 @@
       "blogListPaginated": [
         {
           "metadata": {
-            "permalink": "/docs/blog",
+            "permalink": "/blog",
             "page": 1,
             "postsPerPage": 10,
             "totalPages": 1,
@@ -1216,22 +1216,22 @@
         }
       ],
       "blogTags": {
-        "/docs/blog/tags/facebook": {
+        "/blog/tags/facebook": {
           "name": "facebook",
           "items": [
             "welcome"
           ],
-          "permalink": "/docs/blog/tags/facebook"
+          "permalink": "/blog/tags/facebook"
         },
-        "/docs/blog/tags/hello": {
+        "/blog/tags/hello": {
           "name": "hello",
           "items": [
             "welcome",
             "long-blog-post"
           ],
-          "permalink": "/docs/blog/tags/hello"
+          "permalink": "/blog/tags/hello"
         },
-        "/docs/blog/tags/docusaurus": {
+        "/blog/tags/docusaurus": {
           "name": "docusaurus",
           "items": [
             "welcome",
@@ -1239,24 +1239,24 @@
             "long-blog-post",
             "first-blog-post"
           ],
-          "permalink": "/docs/blog/tags/docusaurus"
+          "permalink": "/blog/tags/docusaurus"
         },
-        "/docs/blog/tags/hola": {
+        "/blog/tags/hola": {
           "name": "hola",
           "items": [
             "first-blog-post"
           ],
-          "permalink": "/docs/blog/tags/hola"
+          "permalink": "/blog/tags/hola"
         }
       },
-      "blogTagsListPath": "/docs/blog/tags"
+      "blogTagsListPath": "/blog/tags"
     }
   },
   "docusaurus-plugin-content-pages": {
     "default": [
       {
         "type": "jsx",
-        "permalink": "/docs/",
+        "permalink": "/",
         "source": "@site/src/pages/index.js"
       }
     ]

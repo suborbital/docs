@@ -7,7 +7,7 @@
   "source": "@site/docs/atmo/concepts/the-directive.md",
   "sourceDirName": "atmo/concepts",
   "slug": "/atmo/concepts/the-directive",
-  "permalink": "/docs/docs/atmo/concepts/the-directive",
+  "permalink": "/docs/atmo/concepts/the-directive",
   "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/concepts/the-directive.md",
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Static Directory",
-    "permalink": "/docs/docs/atmo/concepts/static-directory"
+    "permalink": "/docs/atmo/concepts/static-directory"
   },
   "next": {
     "title": "Introduction",
-    "permalink": "/docs/docs/atmo/runnable-api/introduction"
+    "permalink": "/docs/atmo/runnable-api/introduction"
   }
 }
