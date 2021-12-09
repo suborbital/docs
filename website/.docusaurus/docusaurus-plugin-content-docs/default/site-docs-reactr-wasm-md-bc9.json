@@ -13,14 +13,5 @@
   "version": "current",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "10/14/2018",
-  "frontMatter": {},
-  "sidebar": "docs",
-  "previous": {
-    "title": "faas",
-    "permalink": "/docs/docs/reactr/faas"
-  },
-  "next": {
-    "title": "Reactr ➕ Grav",
-    "permalink": "/docs/docs/reactr/grav"
-  }
+  "frontMatter": {}
 }

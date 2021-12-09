@@ -13,10 +13,5 @@
   "version": "current",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "10/14/2018",
-  "frontMatter": {},
-  "sidebar": "docs",
-  "next": {
-    "title": "Get Started",
-    "permalink": "/docs/docs/atmo/getstarted/README"
-  }
+  "frontMatter": {}
 }

@@ -17,7 +17,7 @@
           "sidebarFilePath": "C:\\Users\\divya\\docs\\website\\sidebars.js",
           "contentPath": "C:\\Users\\divya\\docs\\website\\docs",
           "contentPathLocalized": "C:\\Users\\divya\\docs\\website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
-          "mainDocId": "subo/get-started",
+          "mainDocId": "atmo/getstarted/README",
           "docs": [
             {
               "unversionedId": "atmo/concepts/runnables",
@@ -192,10 +192,6 @@
               "formattedLastUpdatedAt": "10/14/2018",
               "frontMatter": {},
               "sidebar": "docs",
-              "previous": {
-                "title": "Get started",
-                "permalink": "/docs/docs/subo/get-started"
-              },
               "next": {
                 "title": "Creating a Project",
                 "permalink": "/docs/docs/atmo/getstarted/creating-a-project"
@@ -749,10 +745,6 @@
               "previous": {
                 "title": "Streams",
                 "permalink": "/docs/docs/atmo/usage/streams"
-              },
-              "next": {
-                "title": "Get started with Reactr 🚀",
-                "permalink": "/docs/docs/reactr/guide"
               }
             },
             {
@@ -790,16 +782,7 @@
               "version": "current",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {},
-              "sidebar": "docs",
-              "previous": {
-                "title": "Get started with Reactr 🚀",
-                "permalink": "/docs/docs/reactr/guide"
-              },
-              "next": {
-                "title": "Reactr ❤️ WebAssembly",
-                "permalink": "/docs/docs/reactr/wasm"
-              }
+              "frontMatter": {}
             },
             {
               "unversionedId": "reactr/grav",
@@ -816,12 +799,7 @@
               "version": "current",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {},
-              "sidebar": "docs",
-              "previous": {
-                "title": "Reactr ❤️ WebAssembly",
-                "permalink": "/docs/docs/reactr/wasm"
-              }
+              "frontMatter": {}
             },
             {
               "unversionedId": "reactr/guide",
@@ -838,16 +816,7 @@
               "version": "current",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {},
-              "sidebar": "docs",
-              "previous": {
-                "title": "Using SQL databases",
-                "permalink": "/docs/docs/atmo/usage/using-sql-databases"
-              },
-              "next": {
-                "title": "faas",
-                "permalink": "/docs/docs/reactr/faas"
-              }
+              "frontMatter": {}
             },
             {
               "unversionedId": "reactr/wasm",
@@ -864,16 +833,7 @@
               "version": "current",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {},
-              "sidebar": "docs",
-              "previous": {
-                "title": "faas",
-                "permalink": "/docs/docs/reactr/faas"
-              },
-              "next": {
-                "title": "Reactr ➕ Grav",
-                "permalink": "/docs/docs/reactr/grav"
-              }
+              "frontMatter": {}
             },
             {
               "unversionedId": "subo/get-started",
@@ -890,12 +850,7 @@
               "version": "current",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {},
-              "sidebar": "docs",
-              "next": {
-                "title": "Get Started",
-                "permalink": "/docs/docs/atmo/getstarted/README"
-              }
+              "frontMatter": {}
             },
             {
               "unversionedId": "subo/README",
@@ -917,26 +872,6 @@
           ],
           "sidebars": {
             "docs": [
-              {
-                "type": "category",
-                "collapsed": true,
-                "collapsible": true,
-                "label": "Subo",
-                "items": [
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Get Started",
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "subo/get-started"
-                      }
-                    ]
-                  }
-                ]
-              },
               {
                 "type": "category",
                 "collapsed": true,
@@ -1080,62 +1015,6 @@
                       {
                         "type": "doc",
                         "id": "atmo/usage/using-sql-databases"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "collapsed": true,
-                "collapsible": true,
-                "label": "Reactr",
-                "items": [
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Get Started",
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "reactr/guide"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr FAAS",
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "reactr/faas"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr and WASM",
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "reactr/wasm"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr and GRAV",
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "reactr/grav"
                       }
                     ]
                   }

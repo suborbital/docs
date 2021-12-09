@@ -13,14 +13,5 @@
   "version": "current",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "10/14/2018",
-  "frontMatter": {},
-  "sidebar": "docs",
-  "previous": {
-    "title": "Get started with Reactr 🚀",
-    "permalink": "/docs/docs/reactr/guide"
-  },
-  "next": {
-    "title": "Reactr ❤️ WebAssembly",
-    "permalink": "/docs/docs/reactr/wasm"
-  }
+  "frontMatter": {}
 }
