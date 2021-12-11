@@ -7,8 +7,8 @@
   "source": "@site/docs/atmo/runnable-api/introduction.md",
   "sourceDirName": "atmo/runnable-api",
   "slug": "/atmo/runnable-api/introduction",
-  "permalink": "/docs/atmo/runnable-api/introduction",
-  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/introduction.md",
+  "permalink": "/docs/docs/atmo/runnable-api/introduction",
+  "editUrl": "https://github.com/suborbital/docs/docs/atmo/runnable-api/introduction.md",
   "tags": [],
   "version": "current",
   "lastUpdatedAt": 1539502055,
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "The Directive",
-    "permalink": "/docs/atmo/concepts/the-directive"
+    "permalink": "/docs/docs/atmo/concepts/the-directive"
   },
   "next": {
     "title": "Authentication",
-    "permalink": "/docs/atmo/runnable-api/authentication"
+    "permalink": "/docs/docs/atmo/runnable-api/authentication"
   }
 }

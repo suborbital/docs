@@ -7,8 +7,8 @@
   "source": "@site/docs/atmo/runnable-api/example-runnable.md",
   "sourceDirName": "atmo/runnable-api",
   "slug": "/atmo/runnable-api/example-runnable",
-  "permalink": "/docs/atmo/runnable-api/example-runnable",
-  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/example-runnable.md",
+  "permalink": "/docs/docs/atmo/runnable-api/example-runnable",
+  "editUrl": "https://github.com/suborbital/docs/docs/atmo/runnable-api/example-runnable.md",
   "tags": [],
   "version": "current",
   "lastUpdatedAt": 1539502055,
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Accessing cache",
-    "permalink": "/docs/atmo/runnable-api/cache"
+    "permalink": "/docs/docs/atmo/runnable-api/cache"
   },
   "next": {
     "title": "Static files",
-    "permalink": "/docs/atmo/runnable-api/file"
+    "permalink": "/docs/docs/atmo/runnable-api/file"
   }
 }
