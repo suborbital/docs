@@ -4,311 +4,311 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug','3d6'),
+    path: '/docs/__docusaurus/debug',
+    component: ComponentCreator('/docs/__docusaurus/debug','208'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config','914'),
+    path: '/docs/__docusaurus/debug/config',
+    component: ComponentCreator('/docs/__docusaurus/debug/config','a96'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content','c28'),
+    path: '/docs/__docusaurus/debug/content',
+    component: ComponentCreator('/docs/__docusaurus/debug/content','551'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData','3cf'),
+    path: '/docs/__docusaurus/debug/globalData',
+    component: ComponentCreator('/docs/__docusaurus/debug/globalData','8b6'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata','31b'),
+    path: '/docs/__docusaurus/debug/metadata',
+    component: ComponentCreator('/docs/__docusaurus/debug/metadata','af3'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry','0da'),
+    path: '/docs/__docusaurus/debug/registry',
+    component: ComponentCreator('/docs/__docusaurus/debug/registry','0b9'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes','244'),
+    path: '/docs/__docusaurus/debug/routes',
+    component: ComponentCreator('/docs/__docusaurus/debug/routes','d11'),
     exact: true
   },
   {
-    path: '/blog',
-    component: ComponentCreator('/blog','520'),
+    path: '/docs/blog',
+    component: ComponentCreator('/docs/blog','4cc'),
     exact: true
   },
   {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive','f4c'),
+    path: '/docs/blog/archive',
+    component: ComponentCreator('/docs/blog/archive','508'),
     exact: true
   },
   {
-    path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post','6c7'),
+    path: '/docs/blog/first-blog-post',
+    component: ComponentCreator('/docs/blog/first-blog-post','1e9'),
     exact: true
   },
   {
-    path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post','f06'),
+    path: '/docs/blog/long-blog-post',
+    component: ComponentCreator('/docs/blog/long-blog-post','be5'),
     exact: true
   },
   {
-    path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post','bee'),
+    path: '/docs/blog/mdx-blog-post',
+    component: ComponentCreator('/docs/blog/mdx-blog-post','964'),
     exact: true
   },
   {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags','e13'),
+    path: '/docs/blog/tags',
+    component: ComponentCreator('/docs/blog/tags','079'),
     exact: true
   },
   {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus','ddf'),
+    path: '/docs/blog/tags/docusaurus',
+    component: ComponentCreator('/docs/blog/tags/docusaurus','11f'),
     exact: true
   },
   {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook','ede'),
+    path: '/docs/blog/tags/facebook',
+    component: ComponentCreator('/docs/blog/tags/facebook','c6d'),
     exact: true
   },
   {
-    path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello','4c2'),
+    path: '/docs/blog/tags/hello',
+    component: ComponentCreator('/docs/blog/tags/hello','a29'),
     exact: true
   },
   {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola','752'),
+    path: '/docs/blog/tags/hola',
+    component: ComponentCreator('/docs/blog/tags/hola','a2d'),
     exact: true
   },
   {
-    path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome','bfa'),
+    path: '/docs/blog/welcome',
+    component: ComponentCreator('/docs/blog/welcome','3d6'),
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs','d33'),
+    path: '/docs/docs',
+    component: ComponentCreator('/docs/docs','b8a'),
     routes: [
       {
-        path: '/docs/atmo/concepts/runnables',
-        component: ComponentCreator('/docs/atmo/concepts/runnables','9eb'),
+        path: '/docs/docs/atmo/concepts/runnables',
+        component: ComponentCreator('/docs/docs/atmo/concepts/runnables','f2d'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/concepts/state',
-        component: ComponentCreator('/docs/atmo/concepts/state','bbc'),
+        path: '/docs/docs/atmo/concepts/state',
+        component: ComponentCreator('/docs/docs/atmo/concepts/state','41a'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/concepts/static-directory',
-        component: ComponentCreator('/docs/atmo/concepts/static-directory','f54'),
+        path: '/docs/docs/atmo/concepts/static-directory',
+        component: ComponentCreator('/docs/docs/atmo/concepts/static-directory','9ac'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/concepts/the-directive',
-        component: ComponentCreator('/docs/atmo/concepts/the-directive','ff7'),
+        path: '/docs/docs/atmo/concepts/the-directive',
+        component: ComponentCreator('/docs/docs/atmo/concepts/the-directive','f3e'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/getstarted/building-and-running',
-        component: ComponentCreator('/docs/atmo/getstarted/building-and-running','7da'),
+        path: '/docs/docs/atmo/getstarted/building-and-running',
+        component: ComponentCreator('/docs/docs/atmo/getstarted/building-and-running','2a7'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/getstarted/creating-a-project',
-        component: ComponentCreator('/docs/atmo/getstarted/creating-a-project','93a'),
+        path: '/docs/docs/atmo/getstarted/creating-a-project',
+        component: ComponentCreator('/docs/docs/atmo/getstarted/creating-a-project','1f8'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/getstarted/README',
-        component: ComponentCreator('/docs/atmo/getstarted/README','3d9'),
+        path: '/docs/docs/atmo/getstarted/README',
+        component: ComponentCreator('/docs/docs/atmo/getstarted/README','b60'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/more-info/background',
-        component: ComponentCreator('/docs/atmo/more-info/background','2d4'),
+        path: '/docs/docs/atmo/more-info/background',
+        component: ComponentCreator('/docs/docs/atmo/more-info/background','47a'),
         exact: true
       },
       {
-        path: '/docs/atmo/runnable-api/authentication',
-        component: ComponentCreator('/docs/atmo/runnable-api/authentication','f85'),
+        path: '/docs/docs/atmo/runnable-api/authentication',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/authentication','345'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/cache',
-        component: ComponentCreator('/docs/atmo/runnable-api/cache','04f'),
+        path: '/docs/docs/atmo/runnable-api/cache',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/cache','9a9'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/example-runnable',
-        component: ComponentCreator('/docs/atmo/runnable-api/example-runnable','1be'),
+        path: '/docs/docs/atmo/runnable-api/example-runnable',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/example-runnable','10e'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/file',
-        component: ComponentCreator('/docs/atmo/runnable-api/file','044'),
+        path: '/docs/docs/atmo/runnable-api/file',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/file','cab'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/graphql-requests',
-        component: ComponentCreator('/docs/atmo/runnable-api/graphql-requests','821'),
+        path: '/docs/docs/atmo/runnable-api/graphql-requests',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/graphql-requests','493'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/http',
-        component: ComponentCreator('/docs/atmo/runnable-api/http','ad9'),
+        path: '/docs/docs/atmo/runnable-api/http',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/http','6ba'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/introduction',
-        component: ComponentCreator('/docs/atmo/runnable-api/introduction','342'),
+        path: '/docs/docs/atmo/runnable-api/introduction',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/introduction','9ca'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/logging',
-        component: ComponentCreator('/docs/atmo/runnable-api/logging','0d4'),
+        path: '/docs/docs/atmo/runnable-api/logging',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/logging','028'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/request',
-        component: ComponentCreator('/docs/atmo/runnable-api/request','f6e'),
+        path: '/docs/docs/atmo/runnable-api/request',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/request','176'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/runnable-api/response',
-        component: ComponentCreator('/docs/atmo/runnable-api/response','93a'),
+        path: '/docs/docs/atmo/runnable-api/response',
+        component: ComponentCreator('/docs/docs/atmo/runnable-api/response','e79'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/building-a-bundle',
-        component: ComponentCreator('/docs/atmo/usage/building-a-bundle','109'),
+        path: '/docs/docs/atmo/usage/building-a-bundle',
+        component: ComponentCreator('/docs/docs/atmo/usage/building-a-bundle','43d'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/connections',
-        component: ComponentCreator('/docs/atmo/usage/connections','0e5'),
+        path: '/docs/docs/atmo/usage/connections',
+        component: ComponentCreator('/docs/docs/atmo/usage/connections','982'),
         exact: true
       },
       {
-        path: '/docs/atmo/usage/creating-handlers',
-        component: ComponentCreator('/docs/atmo/usage/creating-handlers','472'),
+        path: '/docs/docs/atmo/usage/creating-handlers',
+        component: ComponentCreator('/docs/docs/atmo/usage/creating-handlers','8ed'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/creating-runnables',
-        component: ComponentCreator('/docs/atmo/usage/creating-runnables','65e'),
+        path: '/docs/docs/atmo/usage/creating-runnables',
+        component: ComponentCreator('/docs/docs/atmo/usage/creating-runnables','19c'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/deploying-atmo',
-        component: ComponentCreator('/docs/atmo/usage/deploying-atmo','ba7'),
+        path: '/docs/docs/atmo/usage/deploying-atmo',
+        component: ComponentCreator('/docs/docs/atmo/usage/deploying-atmo','083'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/error-handling',
-        component: ComponentCreator('/docs/atmo/usage/error-handling','bd0'),
+        path: '/docs/docs/atmo/usage/error-handling',
+        component: ComponentCreator('/docs/docs/atmo/usage/error-handling','efb'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/headless',
-        component: ComponentCreator('/docs/atmo/usage/headless','dfc'),
+        path: '/docs/docs/atmo/usage/headless',
+        component: ComponentCreator('/docs/docs/atmo/usage/headless','090'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/managing-state',
-        component: ComponentCreator('/docs/atmo/usage/managing-state','d83'),
+        path: '/docs/docs/atmo/usage/managing-state',
+        component: ComponentCreator('/docs/docs/atmo/usage/managing-state','c5f'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/schedules',
-        component: ComponentCreator('/docs/atmo/usage/schedules','4ad'),
+        path: '/docs/docs/atmo/usage/schedules',
+        component: ComponentCreator('/docs/docs/atmo/usage/schedules','219'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/streams',
-        component: ComponentCreator('/docs/atmo/usage/streams','48a'),
+        path: '/docs/docs/atmo/usage/streams',
+        component: ComponentCreator('/docs/docs/atmo/usage/streams','1df'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/atmo/usage/using-sql-databases',
-        component: ComponentCreator('/docs/atmo/usage/using-sql-databases','961'),
+        path: '/docs/docs/atmo/usage/using-sql-databases',
+        component: ComponentCreator('/docs/docs/atmo/usage/using-sql-databases','2c0'),
         exact: true,
         'sidebar': "docs"
       },
       {
-        path: '/docs/intro',
-        component: ComponentCreator('/docs/intro','e84'),
+        path: '/docs/docs/intro',
+        component: ComponentCreator('/docs/docs/intro','7d8'),
         exact: true
       },
       {
-        path: '/docs/reactr/faas',
-        component: ComponentCreator('/docs/reactr/faas','08f'),
+        path: '/docs/docs/reactr/faas',
+        component: ComponentCreator('/docs/docs/reactr/faas','ffb'),
         exact: true
       },
       {
-        path: '/docs/reactr/grav',
-        component: ComponentCreator('/docs/reactr/grav','d47'),
+        path: '/docs/docs/reactr/grav',
+        component: ComponentCreator('/docs/docs/reactr/grav','c84'),
         exact: true
       },
       {
-        path: '/docs/reactr/guide',
-        component: ComponentCreator('/docs/reactr/guide','0e8'),
+        path: '/docs/docs/reactr/guide',
+        component: ComponentCreator('/docs/docs/reactr/guide','d17'),
         exact: true
       },
       {
-        path: '/docs/reactr/wasm',
-        component: ComponentCreator('/docs/reactr/wasm','c58'),
+        path: '/docs/docs/reactr/wasm',
+        component: ComponentCreator('/docs/docs/reactr/wasm','9aa'),
         exact: true
       },
       {
-        path: '/docs/subo/get-started',
-        component: ComponentCreator('/docs/subo/get-started','abf'),
+        path: '/docs/docs/subo/get-started',
+        component: ComponentCreator('/docs/docs/subo/get-started','84a'),
         exact: true
       },
       {
-        path: '/docs/subo/README',
-        component: ComponentCreator('/docs/subo/README','4c9'),
+        path: '/docs/docs/subo/README',
+        component: ComponentCreator('/docs/docs/subo/README','01f'),
         exact: true
       }
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/','deb'),
+    path: '/docs/',
+    component: ComponentCreator('/docs/','7fd'),
     exact: true
   },
   {

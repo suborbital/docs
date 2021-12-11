@@ -7,8 +7,8 @@
   "source": "@site/docs/atmo/runnable-api/authentication.md",
   "sourceDirName": "atmo/runnable-api",
   "slug": "/atmo/runnable-api/authentication",
-  "permalink": "/docs/atmo/runnable-api/authentication",
-  "editUrl": "https://github.com/suborbital/docs/edit/master/atmo-trial-docs/docs/atmo/runnable-api/authentication.md",
+  "permalink": "/docs/docs/atmo/runnable-api/authentication",
+  "editUrl": "https://github.com/suborbital/docs/docs/atmo/runnable-api/authentication.md",
   "tags": [],
   "version": "current",
   "lastUpdatedAt": 1539502055,
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Introduction",
-    "permalink": "/docs/atmo/runnable-api/introduction"
+    "permalink": "/docs/docs/atmo/runnable-api/introduction"
   },
   "next": {
     "title": "Accessing cache",
-    "permalink": "/docs/atmo/runnable-api/cache"
+    "permalink": "/docs/docs/atmo/runnable-api/cache"
   }
 }
