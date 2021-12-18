@@ -1,276 +1,254 @@
 {
-  "/docs/__docusaurus/debug-208": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "/docs/__docusaurus/debug/config-a96": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "/docs/__docusaurus/debug/content-551": {
-    "component": "component---theme-debug-contentba-8-ce7",
-    "allContent": "allContent---docs-docusaurus-debug-content-246-f36"
-  },
-  "/docs/__docusaurus/debug/globalData-8b6": {
-    "component": "component---theme-debug-global-dataede-0fa"
-  },
-  "/docs/__docusaurus/debug/metadata-af3": {
-    "component": "component---theme-debug-site-metadata-68-e-3d4"
-  },
-  "/docs/__docusaurus/debug/registry-0b9": {
-    "component": "component---theme-debug-registry-679-501"
-  },
-  "/docs/__docusaurus/debug/routes-d11": {
-    "component": "component---theme-debug-routes-946-699"
-  },
   "/docs/blog-4cc": {
-    "component": "component---theme-blog-list-pagea-6-a-7ba",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "component": "a6aa9e1f",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "7661071f"
       },
       {
-        "content": "content---docs-blogf-4-f-d6a"
+        "content": "f4f34a3a"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "8717b14a"
       },
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "925b3f96"
       }
     ],
-    "metadata": "metadata---docs-blog-6-e-5-255"
+    "metadata": "6e59e873"
   },
   "/docs/blog/archive-508": {
-    "component": "component---theme-blog-archive-page-9-e-4-1d8",
-    "archive": "archive---docs-blog-archivee-14-c5f"
+    "component": "9e4087bc",
+    "archive": "e14e76e6"
   },
   "/docs/blog/first-blog-post-1e9": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-first-blog-poste-27-e58"
+    "component": "ccc49370",
+    "sidebar": "814f3328",
+    "content": "e273c56f"
   },
   "/docs/blog/long-blog-post-be5": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-long-blog-post-736-593"
+    "component": "ccc49370",
+    "sidebar": "814f3328",
+    "content": "73664a40"
   },
   "/docs/blog/mdx-blog-post-964": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-mdx-blog-post-593-e02"
+    "component": "ccc49370",
+    "sidebar": "814f3328",
+    "content": "59362658"
   },
   "/docs/blog/tags-079": {
-    "component": "component---theme-blog-tags-list-page-01-a-d0b",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "tags": "tags---docs-blog-tags-96-c-b2e"
+    "component": "01a85c17",
+    "sidebar": "814f3328",
+    "tags": "96cd1e66"
   },
   "/docs/blog/tags/docusaurus-11f": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "component": "6875c492",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "7661071f"
       },
       {
-        "content": "content---docs-blogf-4-f-d6a"
+        "content": "f4f34a3a"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "8717b14a"
       },
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "925b3f96"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-docusaurus-7-d-2-514"
+    "metadata": "7d2122a7"
   },
   "/docs/blog/tags/facebook-c6d": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "component": "6875c492",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "7661071f"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-facebookb-50-e6d"
+    "metadata": "b50dee57"
   },
   "/docs/blog/tags/hello-a29": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "component": "6875c492",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---docs-blog-766-eb1"
+        "content": "7661071f"
       },
       {
-        "content": "content---docs-blog-871-997"
+        "content": "8717b14a"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-hello-8-af-133"
+    "metadata": "8af6ac7f"
   },
   "/docs/blog/tags/hola-a2d": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
-    "sidebar": "sidebar---docs-blog-814-2a0",
+    "component": "6875c492",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---docs-blog-925-d65"
+        "content": "925b3f96"
       }
     ],
-    "metadata": "metadata---docs-blog-tags-holaf-03-9b6"
+    "metadata": "f03811bd"
   },
   "/docs/blog/welcome-3d6": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "sidebar": "sidebar---docs-blog-814-2a0",
-    "content": "content---docs-blog-welcomed-9-f-488"
+    "component": "ccc49370",
+    "sidebar": "814f3328",
+    "content": "d9f32620"
   },
-  "/docs/docs-b8a": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---docs-docs-935-7d8"
+  "/docs/docs-987": {
+    "component": "1be78505",
+    "versionMetadata": "935f2afb"
   },
   "/docs/docs/atmo/concepts/runnables-f2d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-runnables-910-fcf"
+    "component": "17896441",
+    "content": "910df7a2"
   },
   "/docs/docs/atmo/concepts/state-41a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-state-394-abc"
+    "component": "17896441",
+    "content": "3942733e"
   },
   "/docs/docs/atmo/concepts/static-directory-9ac": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-static-directoryca-1-2a8"
+    "component": "17896441",
+    "content": "ca167542"
   },
   "/docs/docs/atmo/concepts/the-directive-f3e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-concepts-the-directive-76-c-7ce"
+    "component": "17896441",
+    "content": "76c2f0b5"
   },
   "/docs/docs/atmo/getstarted/building-and-running-2a7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-building-and-running-3-de-0bb"
+    "component": "17896441",
+    "content": "3de0d28c"
   },
   "/docs/docs/atmo/getstarted/creating-a-project-1f8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-creating-a-projectfc-3-bf7"
+    "component": "17896441",
+    "content": "fc32cb0e"
   },
-  "/docs/docs/atmo/getstarted/README-b60": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-getstarted-readme-6-f-9-ca0"
+  "/docs/docs/atmo/getstarted/what-is-atmo-5ad": {
+    "component": "17896441",
+    "content": "0b3b929b"
   },
   "/docs/docs/atmo/more-info/background-47a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-more-info-background-0-db-9c5"
+    "component": "17896441",
+    "content": "0dba690d"
   },
   "/docs/docs/atmo/runnable-api/authentication-345": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-authenticationefa-29a"
+    "component": "17896441",
+    "content": "efa46902"
   },
   "/docs/docs/atmo/runnable-api/cache-9a9": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-cacheb-42-b41"
+    "component": "17896441",
+    "content": "b4212647"
   },
   "/docs/docs/atmo/runnable-api/example-runnable-10e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-example-runnableb-41-5ce"
+    "component": "17896441",
+    "content": "b414eb5b"
   },
   "/docs/docs/atmo/runnable-api/file-cab": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-file-3-c-0-27d"
+    "component": "17896441",
+    "content": "3c025021"
   },
   "/docs/docs/atmo/runnable-api/graphql-requests-493": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-graphql-requestse-30-49f"
+    "component": "17896441",
+    "content": "e3085eac"
   },
   "/docs/docs/atmo/runnable-api/http-6ba": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-httpa-6-c-2c3"
+    "component": "17896441",
+    "content": "a6c681d6"
   },
   "/docs/docs/atmo/runnable-api/introduction-9ca": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-introductionafe-e7b"
+    "component": "17896441",
+    "content": "afecae8d"
   },
   "/docs/docs/atmo/runnable-api/logging-028": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-logging-539-a40"
+    "component": "17896441",
+    "content": "5397975a"
   },
   "/docs/docs/atmo/runnable-api/request-176": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-request-246-62e"
+    "component": "17896441",
+    "content": "246380b4"
   },
   "/docs/docs/atmo/runnable-api/response-e79": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-runnable-api-response-8-c-3-14d"
+    "component": "17896441",
+    "content": "8c3251c9"
   },
   "/docs/docs/atmo/usage/building-a-bundle-43d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-building-a-bundle-340-696"
+    "component": "17896441",
+    "content": "340e04a9"
   },
   "/docs/docs/atmo/usage/connections-982": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-connections-0-c-7-f77"
+    "component": "17896441",
+    "content": "0c7648ce"
   },
   "/docs/docs/atmo/usage/creating-handlers-8ed": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-creating-handlers-7-bd-a0e"
+    "component": "17896441",
+    "content": "7bd01e0c"
   },
   "/docs/docs/atmo/usage/creating-runnables-19c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-creating-runnablesa-00-f46"
+    "component": "17896441",
+    "content": "a005b2c2"
   },
   "/docs/docs/atmo/usage/deploying-atmo-083": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-deploying-atmo-75-f-e64"
+    "component": "17896441",
+    "content": "75f06504"
   },
   "/docs/docs/atmo/usage/error-handling-efb": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-error-handling-7-a-9-1f7"
+    "component": "17896441",
+    "content": "7a9a5b8f"
   },
   "/docs/docs/atmo/usage/headless-090": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-headless-854-769"
+    "component": "17896441",
+    "content": "854d93b0"
   },
   "/docs/docs/atmo/usage/managing-state-c5f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-managing-statee-0-c-afe"
+    "component": "17896441",
+    "content": "e0ca7004"
   },
   "/docs/docs/atmo/usage/schedules-219": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-schedulescf-5-4b6"
+    "component": "17896441",
+    "content": "cf597f1e"
   },
   "/docs/docs/atmo/usage/streams-1df": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-streams-072-497"
+    "component": "17896441",
+    "content": "07204d21"
   },
   "/docs/docs/atmo/usage/using-sql-databases-2c0": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-atmo-usage-using-sql-databases-154-ed0"
+    "component": "17896441",
+    "content": "154251af"
   },
   "/docs/docs/intro-7d8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-intro-0-e-3-261"
+    "component": "17896441",
+    "content": "0e384e19"
   },
   "/docs/docs/reactr/faas-ffb": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-faas-541-14b"
+    "component": "17896441",
+    "content": "54195dae"
   },
   "/docs/docs/reactr/grav-c84": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-gravbcf-e74"
+    "component": "17896441",
+    "content": "bcf85698"
   },
   "/docs/docs/reactr/guide-d17": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-guide-772-a63"
+    "component": "17896441",
+    "content": "77274729"
   },
   "/docs/docs/reactr/wasm-9aa": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-reactr-wasmbc-9-8b0"
+    "component": "17896441",
+    "content": "bc95c480"
   },
   "/docs/docs/subo/get-started-84a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-subo-get-startedb-6-b-43f"
+    "component": "17896441",
+    "content": "b6bd8505"
   },
   "/docs/docs/subo/README-01f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-docs-subo-readme-0-ba-fba"
+    "component": "17896441",
+    "content": "0ba0ba35"
   },
   "/docs/-7fd": {
-    "component": "component---site-src-pages-index-jsc-4-f-f99",
-    "config": "config---docs-5-e-9-4ea"
+    "component": "c4f5d8e4",
+    "config": "5e9f5e1a"
   }
 }

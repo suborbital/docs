@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/docs",
-          "mainDocId": "atmo/getstarted/README",
+          "mainDocId": "atmo/getstarted/what-is-atmo",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
@@ -41,8 +41,8 @@
               "sidebar": "docs"
             },
             {
-              "id": "atmo/getstarted/README",
-              "path": "/docs/docs/atmo/getstarted/README",
+              "id": "atmo/getstarted/what-is-atmo",
+              "path": "/docs/docs/atmo/getstarted/what-is-atmo",
               "sidebar": "docs"
             },
             {

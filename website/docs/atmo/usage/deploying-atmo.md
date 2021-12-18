@@ -1,8 +1,7 @@
 # Deploying Atmo
 
-{% hint style="warning" %}
-Atmo is still in early Beta, and as such should not yet be used for production workloads.
-{% endhint %}
+Atmo is still in early Beta, and as such should not yet be used for 
+production workloads.
 
 Atmo is distributed as a Docker image: `suborbital/atmo`
 
@@ -20,7 +19,8 @@ This will launch Atmo, assign it to listen on port 8080, and run in HTTP mode.
 
 ## Embed Bundle
 
-To create your own Docker image with your Bundle embedded, you can use a Dockerfile similar to this:
+To create your own Docker image with your Bundle embedded, you can use 
+a Dockerfile similar to this:
 
 ```yaml
 FROM suborbital/atmo:latest
@@ -34,11 +34,18 @@ Building this Dockerfile would result in an image that doesn't need a volume mou
 
 ## Bundle upload
 
-To upload a bundle after launching Atmo, use the `--wait` flag or set the `ATMO_WAIT=true` env var. This will cause Atmo to check the disk once per second until it finds a bundle rather than exiting with an error if no bundle is found. This method allows you to launch Atmo and then upload a bundle seperately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
+To upload a bundle after launching Atmo, use the `--wait` flag or set the 
+`ATMO_WAIT=true` env var. This will cause Atmo to check the disk once per 
+second until it finds a bundle rather than exiting with an error if no bundle 
+is found. This method allows you to launch Atmo and then upload a bundle 
+separately by copying it into the running container, as with the 
+[experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 
 ### HTTPS
 
-To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com` to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag for each.
+To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com` 
+to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag 
+for each.
 
 ### Logging
 

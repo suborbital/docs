@@ -1,8 +1,21 @@
 # HTTP requests
 
-You can use the `http` namespace of the Runnable API to make HTTP requests from your Runnable code. These methods are currently the only way to access the network from Runnable code. Arbitrary socket and network access is not currently possible.
+You can use the `http` namespace of the Runnable API to make HTTP 
+requests from your Runnable code. These methods are currently the 
+only way to access the network from Runnable code. 
+Arbitrary socket and network access is not currently possible.
 
-For Rust, these methods are available under the `http` module, for example `http::get()`. For Swift, they are prefixed with `Http`, for example `Suborbital.HttpGet()` For TypeScript/AssemblyScript, they are prefixed with `http`, for example `import { httpPost } from '@suborbital/suborbital'`
+For Rust, these methods are available under the `http` module. 
+
+Example: `http::get()`
+
+For Swift, they are prefixed with `Http`.
+
+Example: `Suborbital.HttpGet()` 
+
+For TypeScript/AssemblyScript, they are prefixed with `http`. 
+
+Example `import { httpPost } from '@suborbital/suborbital'`
 
 The following namespace methods are available:
 

@@ -11,13 +11,13 @@
   "editUrl": "https://github.com/suborbital/docs/docs/atmo/getstarted/creating-a-project.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedAt": 1638971475,
+  "formattedLastUpdatedAt": "12/8/2021",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Get Started",
-    "permalink": "/docs/docs/atmo/getstarted/README"
+    "permalink": "/docs/docs/atmo/getstarted/what-is-atmo"
   },
   "next": {
     "title": "Building and Running",

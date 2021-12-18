@@ -1,0 +1,20 @@
+{
+  "unversionedId": "atmo/getstarted/what-is-atmo",
+  "id": "atmo/getstarted/what-is-atmo",
+  "isDocsHomePage": false,
+  "title": "Get Started",
+  "description": "Atmo is a self-hosted platform that uses a Runnable bundle to run your described application.",
+  "source": "@site/docs/atmo/getstarted/what-is-atmo.md",
+  "sourceDirName": "atmo/getstarted",
+  "slug": "/atmo/getstarted/what-is-atmo",
+  "permalink": "/docs/docs/atmo/getstarted/what-is-atmo",
+  "editUrl": "https://github.com/suborbital/docs/docs/atmo/getstarted/what-is-atmo.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "next": {
+    "title": "Creating a Project",
+    "permalink": "/docs/docs/atmo/getstarted/creating-a-project"
+  }
+}

@@ -2,9 +2,9 @@
 
 Here is an example of a Runnable, written in Rust.
 
-{% hint style="info" %}
-The `subo` CLI tool will automatically create new Runnables for you with the `subo create runnable` command.
-{% endhint %}
+The `subo` CLI tool will automatically create new Runnables for you with
+the `subo create runnable` command.
+
 
 ```rust
 use suborbital::runnable::*;
@@ -31,5 +31,8 @@ pub extern fn init() {
 }
 ```
 
-This Runnable uses the `req` namespace to fetch the body of the HTTP request being handled, and then returns it. To learn about all of the Runnable API namespaces, read on!
+This Runnable uses the [`req`](request) namespace to fetch the body of the 
+HTTP request being handled, and then returns it. 
+
+To learn about all of the Runnable API namespaces, read on!
 
