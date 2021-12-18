@@ -100,12 +100,12 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "C:\\Users\\divya\\docs\\website\\sidebars.js",
+          "sidebarPath": "D:\\docs\\website\\sidebars.js",
           "editUrl": "https://github.com/suborbital/docs",
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "C:\\Users\\divya\\docs\\website\\src\\css\\home.css"
+          "customCss": "D:\\docs\\website\\src\\css\\home.css"
         }
       }
     ]

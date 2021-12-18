@@ -6,11 +6,15 @@ With subo installed, you can now create a project:
 subo create project important-api
 ```
 
-The project contains two important things: a `Directive.yaml` file, and an example Runnable called `helloworld` written in Rust. The [Directive](../concepts/the-directive.md) file defines route handlers and connects [Runnables](../concepts/runnables.md) to them.
+The project contains two important things: a `Directive.yaml` file, 
+and an example Runnable called `helloworld` written in Rust. 
+The [Directive](../concepts/the-directive.md) file defines route 
+handlers and connects [Runnables](../concepts/runnables.md) to them.
 
 ### Overview
 
-In the Directive file, you'll see a handler set up for you that serves the `POST /hello` route using the `helloworld` Runnable:
+In the Directive file, you'll see a handler set up for you that 
+serves the `POST /hello` route using the `helloworld` Runnable:
 
 ```yaml
 # the Directive is a complete description of your application, including all of its business logic.

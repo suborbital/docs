@@ -1,8 +1,15 @@
 # Modifying responses
 
-When a Runnable is used to handle an HTTP request, Atmo will bind that request to the Runnable. The `resp` namespace of the Runnable API can then be used to modify the response that Atmo will send to the caller.
+When a Runnable is used to handle an HTTP request, Atmo 
+will bind that request to the Runnable. The `resp` 
+namespace of the Runnable API can then be used to modify 
+the response that Atmo will send to the caller.
 
-For Rust, these methods are available under the `resp` module, for example `resp::set_header()`. Swift and TypeScript/AssemblyScript support is coming soon.
+For Rust, these methods are available under the `resp` module.
+
+Example `resp::set_header()`
+
+Swift and TypeScript/AssemblyScript support is coming soon.
 
 The following namespace methods are available:
 
@@ -30,7 +37,8 @@ Swift:
 
 ## Content-Type
 
-An alias of `set_header` that allows easily setting the response Content-Type
+An alias of `set_header` that allows easily setting the 
+response Content-Type
 
 Rust:
 

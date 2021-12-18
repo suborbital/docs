@@ -4,41 +4,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/docs/__docusaurus/debug',
-    component: ComponentCreator('/docs/__docusaurus/debug','208'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/config',
-    component: ComponentCreator('/docs/__docusaurus/debug/config','a96'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/content',
-    component: ComponentCreator('/docs/__docusaurus/debug/content','551'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/globalData',
-    component: ComponentCreator('/docs/__docusaurus/debug/globalData','8b6'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/metadata',
-    component: ComponentCreator('/docs/__docusaurus/debug/metadata','af3'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/registry',
-    component: ComponentCreator('/docs/__docusaurus/debug/registry','0b9'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/routes',
-    component: ComponentCreator('/docs/__docusaurus/debug/routes','d11'),
-    exact: true
-  },
-  {
     path: '/docs/blog',
     component: ComponentCreator('/docs/blog','4cc'),
     exact: true
@@ -95,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','b8a'),
+    component: ComponentCreator('/docs/docs','987'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -134,8 +99,8 @@ export default [
         'sidebar': "docs"
       },
       {
-        path: '/docs/docs/atmo/getstarted/README',
-        component: ComponentCreator('/docs/docs/atmo/getstarted/README','b60'),
+        path: '/docs/docs/atmo/getstarted/what-is-atmo',
+        component: ComponentCreator('/docs/docs/atmo/getstarted/what-is-atmo','5ad'),
         exact: true,
         'sidebar': "docs"
       },

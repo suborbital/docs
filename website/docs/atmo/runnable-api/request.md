@@ -1,14 +1,30 @@
 # Handling requests
 
-When a Runnable is used to handle an HTTP request, Atmo will bind that request to the Runnable. The `req` namespace of the Runnable API can then be used to access all of the information about the request. Note if the Runnable is not being used to handle a request, then all methods in the `req` namespace will return empty or an error.
+When a Runnable is used to handle an HTTP request, Atmo will 
+bind that request to the Runnable. The `req` namespace of 
+the Runnable API can then be used to access all of the 
+information about the request. Note if the Runnable is not 
+being used to handle a request, then all methods in the 
+`req` namespace will return empty or an error.
 
-For Rust, these methods are available under the `req` module, for example `req::method()`. For Swift, they are prefixed with `Req`, for example `Suborbital.ReqMethod()`. For TypeScript/AssemblyScript, they are prefixed with `req`, for example `import { reqState } from '@suborbital/suborbital'`
+For Rust, these methods are available under the `req` module.
+
+Example: `req::method()`
+
+For Swift, they are prefixed with `Req`. 
+
+Example `Suborbital.ReqMethod()`
+
+For TypeScript/AssemblyScript, they are prefixed with `req`.
+
+Example `import { reqState } from '@suborbital/suborbital'`
 
 The following namespace methods are available:
 
 ## State
 
-Returns the value from [request state](../usage/managing-state.md) for the provided key:
+Returns the value from [request state](../usage/managing-state.md) 
+for the provided key:
 
 Rust:
 
@@ -118,7 +134,8 @@ public func ReqBodyRaw() -> String
 
 ## Body Field
 
-Returns the value for the provided key, if the request body is formatted as JSON:
+Returns the value for the provided key, if the request body 
+is formatted as JSON:
 
 Rust:
 
@@ -162,7 +179,9 @@ public func ReqHeader(key: String) -> String
 
 ## URL Parameter
 
-Returns the URL parameter for the provided key, for example `/api/v1/user/:uuid`
+Returns the URL parameter for the provided key, 
+
+Example: `/api/v1/user/:uuid`
 
 Rust:
 

@@ -5,7 +5,7 @@ module.exports ={
       Atmo:[
         {
           'Get Started':[
-            'atmo/getstarted/README',
+            'atmo/getstarted/what-is-atmo',
             'atmo/getstarted/creating-a-project',
             'atmo/getstarted/building-and-running'
           ]

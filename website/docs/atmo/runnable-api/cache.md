@@ -1,10 +1,24 @@
 # Accessing cache
 
-Runnables can access an attached cache \(such as Redis\) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime. Atmo provides a default in-memory cache if no external cache is connected.
+Runnables can access an attached cache (such as Redis) using the 
+`cache` namespace of the Runnable API. Atmo will configure the 
+cache, and will bind it to the Runnable at runtime. Atmo provides 
+a default in-memory cache if no external cache is connected.
 
-Documentation for connecting an external cache to Atmo is coming soon.
+Documentation for connecting an external cache to Atmo will be
+available soon.
 
-For Rust, these methods are available under the `cache` module, for example `cache::get()`. For Swift, they are prefixed with `Cache`, for example `Suborbital.CacheGet()`. For TypeScript/AssemblyScript, they are prefixed with `cache`, for example `import { cacheGet } from '@suborbital/suborbital'`
+For Rust, these methods are available under the `cache` module.
+
+Example:  `cache::get()`. 
+
+For Swift, they are prefixed with `Cache`
+
+Example:  `Suborbital.CacheGet()`. 
+
+For TypeScript/AssemblyScript, they are prefixed with `cache`.
+
+Example: `import { cacheGet } from '@suborbital/suborbital'`
 
 The following namespace methods are available:
 

@@ -1,8 +1,19 @@
 # Structured logging
 
-Your Runnable code can log to Atmo's structured output using the logging methods.
+Your Runnable code can log to Atmo's structured output using 
+the logging methods.
 
-For Rust, these methods are available under the `log` module, for example `log::info()`. For Swift, they are prefixed with `Log`, for example `Suborbital.LogInfo()` For TypeScript/AssemblyScript, they are prefixed with `log`, for example `import { logInfo } from '@suborbital/suborbital'`
+For Rust, these methods are available under the `log` module.
+
+Example: `log::info()`. 
+
+For Swift, they are prefixed with `Log`.
+
+Example: `Suborbital.LogInfo()` 
+
+For TypeScript/AssemblyScript they are prefixed with `log`.
+
+Example: `import { logInfo } from '@suborbital/suborbital'`
 
 The following namespace methods are available:
 
