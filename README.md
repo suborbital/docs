@@ -30,7 +30,8 @@ Navigate to the docs/website folder and start up the website
 
 ```bash
 cd docs/website
-npx docusaurus start
+npm run build
+npm run serve
 ```
 
 **OR**
