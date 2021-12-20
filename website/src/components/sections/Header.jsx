@@ -11,18 +11,18 @@ const Header = () => {
     <ResponsiveRow>
       <div className="headingLeft">
         <Heading fontWeight="bold">
-          What is <span className="">Suborbital</span> ?
+          <span className="">Suborbital</span>
         </Heading>
         <Paragraph className="spacing">
-          Use the power of WebAssembly to build delightful software faster,
+          Harness the power of WebAssembly to build delightful software faster
           without compromising security, performance, or developer experience.
         </Paragraph>
         <Row>
-          <Link to="/tutorials">
-            <ButtonFilled>Start Learning</ButtonFilled>
+          <Link to="/docs/docs/what-is-webassembly/history">
+            <ButtonFilled>What is WebAssembly?</ButtonFilled>
           </Link>
           <span style={{ width: '1rem' }} />
-          <Link to="/docs/subo/get-started">
+          <Link to="/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem">
             <ButtonOutlined>Get Started</ButtonOutlined>
           </Link>
         </Row>
