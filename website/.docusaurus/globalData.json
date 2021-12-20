@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/docs",
-          "mainDocId": "suborbital-ecosystem/the-suborbital-ecosystem",
+          "mainDocId": "what-is-webassembly/history",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
@@ -159,19 +159,23 @@
             },
             {
               "id": "reactr/faas",
-              "path": "/docs/docs/reactr/faas"
+              "path": "/docs/docs/reactr/faas",
+              "sidebar": "docs"
             },
             {
               "id": "reactr/grav",
-              "path": "/docs/docs/reactr/grav"
+              "path": "/docs/docs/reactr/grav",
+              "sidebar": "docs"
             },
             {
               "id": "reactr/guide",
-              "path": "/docs/docs/reactr/guide"
+              "path": "/docs/docs/reactr/guide",
+              "sidebar": "docs"
             },
             {
               "id": "reactr/wasm",
-              "path": "/docs/docs/reactr/wasm"
+              "path": "/docs/docs/reactr/wasm",
+              "sidebar": "docs"
             },
             {
               "id": "subo/get-started",
@@ -188,11 +192,13 @@
             },
             {
               "id": "what-is-webassembly/history",
-              "path": "/docs/docs/what-is-webassembly/history"
+              "path": "/docs/docs/what-is-webassembly/history",
+              "sidebar": "docs"
             },
             {
               "id": "what-is-webassembly/why-webassembly",
-              "path": "/docs/docs/what-is-webassembly/why-webassembly"
+              "path": "/docs/docs/what-is-webassembly/why-webassembly",
+              "sidebar": "docs"
             }
           ]
         }

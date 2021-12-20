@@ -13,5 +13,14 @@
   "version": "current",
   "lastUpdatedAt": 1638971475,
   "formattedLastUpdatedAt": "12/8/2021",
-  "frontMatter": {}
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Using SQL databases",
+    "permalink": "/docs/docs/atmo/usage/using-sql-databases"
+  },
+  "next": {
+    "title": "Reactr ❤️ WebAssembly",
+    "permalink": "/docs/docs/reactr/wasm"
+  }
 }

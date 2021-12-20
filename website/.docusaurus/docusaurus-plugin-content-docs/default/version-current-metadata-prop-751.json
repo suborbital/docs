@@ -18,6 +18,24 @@
             "type": "category",
             "collapsed": true,
             "collapsible": true,
+            "label": "Basics of WebAssembly",
+            "items": [
+              {
+                "type": "link",
+                "label": "History of the Internet",
+                "href": "/docs/docs/what-is-webassembly/history"
+              },
+              {
+                "type": "link",
+                "label": "Why WebAssembly",
+                "href": "/docs/docs/what-is-webassembly/why-webassembly"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
             "label": "Building blocks",
             "items": [
               {
@@ -197,6 +215,66 @@
                     "type": "link",
                     "label": "Using SQL databases",
                     "href": "/docs/docs/atmo/usage/using-sql-databases"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Reactr",
+            "items": [
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Start Here",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Get started with Reactr 🚀",
+                    "href": "/docs/docs/reactr/guide"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and WASM",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Reactr ❤️ WebAssembly",
+                    "href": "/docs/docs/reactr/wasm"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and GRAV",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Reactr ➕ Grav",
+                    "href": "/docs/docs/reactr/grav"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and FaaS",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "faas",
+                    "href": "/docs/docs/reactr/faas"
                   }
                 ]
               }
