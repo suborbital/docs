@@ -13,5 +13,14 @@
   "version": "current",
   "lastUpdatedAt": 1638971475,
   "formattedLastUpdatedAt": "12/8/2021",
-  "frontMatter": {}
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Get started with Reactr 🚀",
+    "permalink": "/docs/docs/reactr/guide"
+  },
+  "next": {
+    "title": "Reactr ➕ Grav",
+    "permalink": "/docs/docs/reactr/grav"
+  }
 }

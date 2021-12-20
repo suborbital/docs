@@ -13,5 +13,14 @@
   "version": "current",
   "lastUpdatedAt": 1638971475,
   "formattedLastUpdatedAt": "12/8/2021",
-  "frontMatter": {}
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Reactr ❤️ WebAssembly",
+    "permalink": "/docs/docs/reactr/wasm"
+  },
+  "next": {
+    "title": "faas",
+    "permalink": "/docs/docs/reactr/faas"
+  }
 }

@@ -11,5 +11,16 @@
   "editUrl": "https://github.com/suborbital/docs/docs/what-is-webassembly/why-webassembly.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {}
+  "lastUpdatedAt": 1639979001,
+  "formattedLastUpdatedAt": "12/20/2021",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "History of the Internet",
+    "permalink": "/docs/docs/what-is-webassembly/history"
+  },
+  "next": {
+    "title": "The Suborbital ecosystem",
+    "permalink": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+  }
 }

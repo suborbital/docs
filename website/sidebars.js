@@ -3,6 +3,12 @@ module.exports ={
     {
       'The Suborbital Ecosystem':[
         {
+          'Basics of WebAssembly':[
+            'what-is-webassembly/history',
+            'what-is-webassembly/why-webassembly'
+          ]
+        },
+        {
           'Building blocks':[
             'suborbital-ecosystem/the-suborbital-ecosystem'
           ]
@@ -50,6 +56,30 @@ module.exports ={
                 'atmo/usage/schedules',
                 'atmo/usage/streams',
                 'atmo/usage/using-sql-databases'
+              ]
+            }
+          ]
+        },
+        {
+          Reactr:[
+            {
+              'Start Here':[
+                'reactr/guide'
+              ]
+            },
+            {
+              'Reactr and WASM':[
+                'reactr/wasm'
+              ]
+            },
+            {
+              'Reactr and GRAV':[
+                'reactr/grav'
+              ]
+            },
+            {
+              'Reactr and FaaS':[
+                'reactr/faas'
               ]
             }
           ]

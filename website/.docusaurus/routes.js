@@ -60,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','a1c'),
+    component: ComponentCreator('/docs/docs','2f2'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -241,23 +241,27 @@ export default [
       },
       {
         path: '/docs/docs/reactr/faas',
-        component: ComponentCreator('/docs/docs/reactr/faas','ffb'),
-        exact: true
+        component: ComponentCreator('/docs/docs/reactr/faas','e3e'),
+        exact: true,
+        'sidebar': "docs"
       },
       {
         path: '/docs/docs/reactr/grav',
-        component: ComponentCreator('/docs/docs/reactr/grav','c84'),
-        exact: true
+        component: ComponentCreator('/docs/docs/reactr/grav','0c9'),
+        exact: true,
+        'sidebar': "docs"
       },
       {
         path: '/docs/docs/reactr/guide',
-        component: ComponentCreator('/docs/docs/reactr/guide','d17'),
-        exact: true
+        component: ComponentCreator('/docs/docs/reactr/guide','c7a'),
+        exact: true,
+        'sidebar': "docs"
       },
       {
         path: '/docs/docs/reactr/wasm',
-        component: ComponentCreator('/docs/docs/reactr/wasm','9aa'),
-        exact: true
+        component: ComponentCreator('/docs/docs/reactr/wasm','a2b'),
+        exact: true,
+        'sidebar': "docs"
       },
       {
         path: '/docs/docs/subo/get-started',
@@ -277,13 +281,15 @@ export default [
       },
       {
         path: '/docs/docs/what-is-webassembly/history',
-        component: ComponentCreator('/docs/docs/what-is-webassembly/history','baf'),
-        exact: true
+        component: ComponentCreator('/docs/docs/what-is-webassembly/history','25b'),
+        exact: true,
+        'sidebar': "docs"
       },
       {
         path: '/docs/docs/what-is-webassembly/why-webassembly',
-        component: ComponentCreator('/docs/docs/what-is-webassembly/why-webassembly','ae2'),
-        exact: true
+        component: ComponentCreator('/docs/docs/what-is-webassembly/why-webassembly','424'),
+        exact: true,
+        'sidebar': "docs"
       }
     ]
   },

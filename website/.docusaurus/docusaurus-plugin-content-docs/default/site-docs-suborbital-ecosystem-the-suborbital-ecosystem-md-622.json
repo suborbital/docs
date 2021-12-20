@@ -11,8 +11,14 @@
   "editUrl": "https://github.com/suborbital/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem.md",
   "tags": [],
   "version": "current",
+  "lastUpdatedAt": 1639979001,
+  "formattedLastUpdatedAt": "12/20/2021",
   "frontMatter": {},
   "sidebar": "docs",
+  "previous": {
+    "title": "Why WebAssembly",
+    "permalink": "/docs/docs/what-is-webassembly/why-webassembly"
+  },
   "next": {
     "title": "Get Started",
     "permalink": "/docs/docs/atmo/getstarted/what-is-atmo"

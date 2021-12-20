@@ -11,5 +11,12 @@
   "editUrl": "https://github.com/suborbital/docs/docs/what-is-webassembly/history.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {}
+  "lastUpdatedAt": 1639979001,
+  "formattedLastUpdatedAt": "12/20/2021",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "next": {
+    "title": "Why WebAssembly",
+    "permalink": "/docs/docs/what-is-webassembly/why-webassembly"
+  }
 }
