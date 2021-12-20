@@ -99,7 +99,7 @@
     "sidebar": "814f3328",
     "content": "d9f32620"
   },
-  "/docs/docs-987": {
+  "/docs/docs-a1c": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
@@ -246,6 +246,18 @@
   "/docs/docs/subo/README-01f": {
     "component": "17896441",
     "content": "0ba0ba35"
+  },
+  "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem-f89": {
+    "component": "17896441",
+    "content": "62267c0a"
+  },
+  "/docs/docs/what-is-webassembly/history-baf": {
+    "component": "17896441",
+    "content": "ef657a6c"
+  },
+  "/docs/docs/what-is-webassembly/why-webassembly-ae2": {
+    "component": "17896441",
+    "content": "dda73f74"
   },
   "/docs/-7fd": {
     "component": "c4f5d8e4",

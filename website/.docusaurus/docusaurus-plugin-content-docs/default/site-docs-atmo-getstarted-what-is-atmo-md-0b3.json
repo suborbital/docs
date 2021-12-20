@@ -11,8 +11,14 @@
   "editUrl": "https://github.com/suborbital/docs/docs/atmo/getstarted/what-is-atmo.md",
   "tags": [],
   "version": "current",
+  "lastUpdatedAt": 1639810469,
+  "formattedLastUpdatedAt": "12/18/2021",
   "frontMatter": {},
   "sidebar": "docs",
+  "previous": {
+    "title": "The Suborbital ecosystem",
+    "permalink": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+  },
   "next": {
     "title": "Creating a Project",
     "permalink": "/docs/docs/atmo/getstarted/creating-a-project"

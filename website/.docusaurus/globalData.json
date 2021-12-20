@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/docs",
-          "mainDocId": "atmo/getstarted/what-is-atmo",
+          "mainDocId": "suborbital-ecosystem/the-suborbital-ecosystem",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
@@ -180,6 +180,19 @@
             {
               "id": "subo/README",
               "path": "/docs/docs/subo/README"
+            },
+            {
+              "id": "suborbital-ecosystem/the-suborbital-ecosystem",
+              "path": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem",
+              "sidebar": "docs"
+            },
+            {
+              "id": "what-is-webassembly/history",
+              "path": "/docs/docs/what-is-webassembly/history"
+            },
+            {
+              "id": "what-is-webassembly/why-webassembly",
+              "path": "/docs/docs/what-is-webassembly/why-webassembly"
             }
           ]
         }
