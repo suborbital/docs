@@ -60,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','987'),
+    component: ComponentCreator('/docs/docs','a1c'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -267,6 +267,22 @@ export default [
       {
         path: '/docs/docs/subo/README',
         component: ComponentCreator('/docs/docs/subo/README','01f'),
+        exact: true
+      },
+      {
+        path: '/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem',
+        component: ComponentCreator('/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem','f89'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/what-is-webassembly/history',
+        component: ComponentCreator('/docs/docs/what-is-webassembly/history','baf'),
+        exact: true
+      },
+      {
+        path: '/docs/docs/what-is-webassembly/why-webassembly',
+        component: ComponentCreator('/docs/docs/what-is-webassembly/why-webassembly','ae2'),
         exact: true
       }
     ]
