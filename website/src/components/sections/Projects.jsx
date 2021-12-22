@@ -2,33 +2,33 @@ import React from 'react'
 import { Link } from '../link'
 import { Paragraph, SubHeading } from '../texts'
 import '../../css/home.css'
-import { OpenSourceProjects, OtherOfferings } from './data'
+import { PrimaryOfferings, OtherOfferings } from './data'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 const Projects = ({ type }) => {
   return (
     <>
-      {type === 'OpenSourceProjects' ? (
+      {type === 'PrimaryOfferings' ? (
         <div style={{ marginTop: '3rem' }}>
-          <b><SubHeading>Our Open Source projects</SubHeading></b>
+          <SubHeading>Our projects</SubHeading>
           <div className="grid">
-            {OpenSourceProjects.map(OpenSourceProject => (
-              <div className="OpenSourceProjectsDiv">
-                <Link className="OpenSourceProjectLogo" to={OpenSourceProject.url}>
-                  <img className="OpenSourceProjectLogo" src={useBaseUrl(OpenSourceProject.icon)} alt={OpenSourceProject.icon} />
+            {PrimaryOfferings.map(PrimaryOffering => (
+              <div className="PrimaryOfferingsDiv">
+                <Link className="PrimaryOfferingsLogo" to={PrimaryOffering.url}>
+                  <img className="PrimaryOfferingsLogo" src={useBaseUrl(PrimaryOffering.icon)} alt={PrimaryOffering.icon} />
                 </Link>
                 <br />
-                <Link className="subHeadingOS" to={OpenSourceProject.url}>
-                  <b>{OpenSourceProject.heading}</b>
+                <Link className="subHeadingPO" to={PrimaryOffering.url}>
+                  <b>{PrimaryOffering.heading}</b>
                 </Link>
-                <Paragraph>{OpenSourceProject.description}</Paragraph>
+                <Paragraph>{PrimaryOffering.description}</Paragraph>
               </div>
             ))}
           </div>
         </div>
       ) : (
         <div style={{ marginTop: '5rem' }}>
-          <SubHeading>Other Offerings from Suborbital</SubHeading>
+          <SubHeading>Building Blocks</SubHeading>
           <div className="grid">
             {OtherOfferings.map(OtherOffering => (
               <div className="OtherOfferingsDiv">

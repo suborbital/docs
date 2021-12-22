@@ -79,17 +79,17 @@
   }
 }
 
-.OpenSourceProjectsDiv {
+.PrimaryOfferingsDiv {
   height: 100%;
   margin: 1rem 0;
 }
 
-.OpenSourceProjectLogo{
+.PrimaryOfferingsLogo{
   height: 200px;
   width: 200px;
 }
 
-.subHeadingOS {
+.subHeadingPO {
   font-weight: 600;
   color:  #2d3e50;
   font-size: 1.4rem;
