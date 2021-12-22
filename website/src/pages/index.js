@@ -13,7 +13,7 @@ export default function Home() {
           <SectionLight>
             <Header />
             <br />
-            <Projects type={'OpenSourceProjects'} />
+            <Projects type={'PrimaryOfferings'} />
             <br />
           </SectionLight>
           <SectionDark>

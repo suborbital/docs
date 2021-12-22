@@ -16,8 +16,8 @@
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
-    "title": "Using SQL databases",
-    "permalink": "/docs/docs/atmo/usage/using-sql-databases"
+    "title": "The Suborbital ecosystem",
+    "permalink": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
   },
   "next": {
     "title": "Reactr ❤️ WebAssembly",

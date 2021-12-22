@@ -1,4 +1,4 @@
-export const OpenSourceProjects = [
+export const PrimaryOfferings = [
   {
     icon: 'img/SOS_Atmo-Long-FullColour0.svg',
     heading: 'Atmo',
@@ -6,19 +6,20 @@ export const OpenSourceProjects = [
     url: 'docs/atmo/getstarted/what-is-atmo'
   },
   {
-    icon: 'img/SOS_Reactr-Long-FullColour0.svg',
-    heading: 'Reactr',
-    description: 'Next generation, fast, and performant function scheduler for Go and WebAssembly.',
-    url: 'docs/reactr/guide'
-  },
-]
-
-export const OtherOfferings = [
-  {
     icon: 'img/undraw_docusaurus_mountain.svg',
     heading: 'Suborbital Compute',
     description: 'The Cloud Native SaaS Extension Engine',
     url: 'docs/atmo/getstarted/what-is-atmo'
+  },
+
+]
+
+export const OtherOfferings = [
+  {
+    icon: 'img/SOS_Reactr-Long-FullColour0.svg',
+    heading: 'Reactr',
+    description: 'Next generation, fast, and performant function scheduler for Go and WebAssembly.',
+    url: 'docs/reactr/guide'
   },
 ]
 
