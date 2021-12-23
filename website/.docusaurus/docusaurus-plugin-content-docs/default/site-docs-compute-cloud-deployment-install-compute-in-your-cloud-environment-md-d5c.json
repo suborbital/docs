@@ -1,0 +1,20 @@
+{
+  "unversionedId": "compute/cloud-deployment/install-compute-in-your-cloud-environment",
+  "id": "compute/cloud-deployment/install-compute-in-your-cloud-environment",
+  "isDocsHomePage": false,
+  "title": "Deploy Compute to your cloud environment",
+  "description": "To install Compute in the cloud, you'll use the subo tool to automatically install the Suborbital Compute Core into a Kubernetes cluster. You need to ensure you have some pre-requisites ready:",
+  "source": "@site/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment.md",
+  "sourceDirName": "compute/cloud-deployment",
+  "slug": "/compute/cloud-deployment/install-compute-in-your-cloud-environment",
+  "permalink": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Configure capabilities",
+    "permalink": "/docs/docs/compute/cloud-deployment/configure-capabilities"
+  }
+}

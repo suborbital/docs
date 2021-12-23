@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/concepts/data-plane-vs-control-plane",
+  "id": "compute/concepts/data-plane-vs-control-plane",
+  "isDocsHomePage": false,
+  "title": "Data Plane vs Control Plane",
+  "description": "There are two components of Compute: the Data Plane and the Control Plane.",
+  "source": "@site/docs/compute/concepts/data-plane-vs-control-plane.md",
+  "sourceDirName": "compute/concepts",
+  "slug": "/compute/concepts/data-plane-vs-control-plane",
+  "permalink": "/docs/docs/compute/concepts/data-plane-vs-control-plane",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/concepts/data-plane-vs-control-plane.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Using Compute from Go",
+    "permalink": "/docs/docs/compute/quickstart/client-libraries/golang"
+  },
+  "next": {
+    "title": "Fully-qualified function names",
+    "permalink": "/docs/docs/compute/concepts/fully-qualified-function-names"
+  }
+}

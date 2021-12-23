@@ -7,9 +7,9 @@ export const PrimaryOfferings = [
   },
   {
     icon: 'img/undraw_docusaurus_mountain.svg',
-    heading: 'Suborbital Compute',
+    heading: 'Suborbital Compute Network',
     description: 'The Cloud Native SaaS Extension Engine',
-    url: 'docs/atmo/getstarted/what-is-atmo'
+    url: 'docs/compute/what-is-compute'
   },
 
 ]

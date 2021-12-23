@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/concepts/fully-qualified-function-names",
+  "id": "compute/concepts/fully-qualified-function-names",
+  "isDocsHomePage": false,
+  "title": "Fully-qualified function names",
+  "description": "Each function uploaded by your users has a unique name called a fully-qualified function name, or FQFN. The string representation of an FQFN is as follows:",
+  "source": "@site/docs/compute/concepts/fully-qualified-function-names.md",
+  "sourceDirName": "compute/concepts",
+  "slug": "/compute/concepts/fully-qualified-function-names",
+  "permalink": "/docs/docs/compute/concepts/fully-qualified-function-names",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/concepts/fully-qualified-function-names.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Data Plane vs Control Plane",
+    "permalink": "/docs/docs/compute/concepts/data-plane-vs-control-plane"
+  },
+  "next": {
+    "title": "Namespaces",
+    "permalink": "/docs/docs/compute/concepts/namespaces"
+  }
+}

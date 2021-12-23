@@ -154,6 +154,93 @@
               "sidebar": "docs"
             },
             {
+              "id": "compute/api-reference/api-reference",
+              "path": "/docs/docs/compute/api-reference/api-reference"
+            },
+            {
+              "id": "compute/building-functions/github-integration",
+              "path": "/docs/docs/compute/building-functions/github-integration"
+            },
+            {
+              "id": "compute/cloud-deployment/configure-capabilities",
+              "path": "/docs/docs/compute/cloud-deployment/configure-capabilities",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/cloud-deployment/install-compute-in-your-cloud-environment",
+              "path": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/concepts/data-plane-vs-control-plane",
+              "path": "/docs/docs/compute/concepts/data-plane-vs-control-plane",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/concepts/fully-qualified-function-names",
+              "path": "/docs/docs/compute/concepts/fully-qualified-function-names",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/concepts/namespaces",
+              "path": "/docs/docs/compute/concepts/namespaces",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/customizing-functions/custom-function-templates",
+              "path": "/docs/docs/compute/customizing-functions/custom-function-templates",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/customizing-functions/custom-libraries",
+              "path": "/docs/docs/compute/customizing-functions/custom-libraries",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/installing/create-an-environment-token-with-subo",
+              "path": "/docs/docs/compute/installing/create-an-environment-token-with-subo"
+            },
+            {
+              "id": "compute/integrate-the-function-editor/code-editor",
+              "path": "/docs/docs/compute/integrate-the-function-editor/code-editor",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/client-libraries/golang",
+              "path": "/docs/docs/compute/quickstart/client-libraries/golang",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/client-libraries/nodejs",
+              "path": "/docs/docs/compute/quickstart/client-libraries/nodejs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/connect-your-application",
+              "path": "/docs/docs/compute/quickstart/connect-your-application",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/create-an-environment-token-with-subo",
+              "path": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/run-compute-locally",
+              "path": "/docs/docs/compute/quickstart/run-compute-locally",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/quickstart/write-functions",
+              "path": "/docs/docs/compute/quickstart/write-functions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "compute/what-is-compute",
+              "path": "/docs/docs/compute/what-is-compute",
+              "sidebar": "docs"
+            },
+            {
               "id": "intro",
               "path": "/docs/docs/intro"
             },

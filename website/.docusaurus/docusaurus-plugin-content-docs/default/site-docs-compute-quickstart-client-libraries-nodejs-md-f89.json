@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/quickstart/client-libraries/nodejs",
+  "id": "compute/quickstart/client-libraries/nodejs",
+  "isDocsHomePage": false,
+  "title": "Using Compute from JavaScript or TypeScript",
+  "description": "Use this library to easily interact with Compute's APIs.",
+  "source": "@site/docs/compute/quickstart/client-libraries/nodejs.md",
+  "sourceDirName": "compute/quickstart/client-libraries",
+  "slug": "/compute/quickstart/client-libraries/nodejs",
+  "permalink": "/docs/docs/compute/quickstart/client-libraries/nodejs",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/quickstart/client-libraries/nodejs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Connect your application",
+    "permalink": "/docs/docs/compute/quickstart/connect-your-application"
+  },
+  "next": {
+    "title": "Using Compute from Go",
+    "permalink": "/docs/docs/compute/quickstart/client-libraries/golang"
+  }
+}

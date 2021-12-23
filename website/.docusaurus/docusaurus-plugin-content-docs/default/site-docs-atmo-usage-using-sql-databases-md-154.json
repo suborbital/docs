@@ -18,5 +18,9 @@
   "previous": {
     "title": "Streams",
     "permalink": "/docs/docs/atmo/usage/streams"
+  },
+  "next": {
+    "title": "Start Here",
+    "permalink": "/docs/docs/compute/what-is-compute"
   }
 }

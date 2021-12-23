@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/what-is-compute",
+  "id": "compute/what-is-compute",
+  "isDocsHomePage": false,
+  "title": "Start Here",
+  "description": "Suborbital Compute is a platform that allows your users to write and deploy serverless extensions for your app so they can develop custom integrations, customizations, and workflows. We're using cutting-edge technology to help your users get the most out of your product. Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.",
+  "source": "@site/docs/compute/what-is-compute.md",
+  "sourceDirName": "compute",
+  "slug": "/compute/what-is-compute",
+  "permalink": "/docs/docs/compute/what-is-compute",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/what-is-compute.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Using SQL databases",
+    "permalink": "/docs/docs/atmo/usage/using-sql-databases"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo"
+  }
+}
