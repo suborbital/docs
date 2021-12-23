@@ -99,7 +99,7 @@
     "sidebar": "814f3328",
     "content": "d9f32620"
   },
-  "/docs/docs-2f2": {
+  "/docs/docs-e51": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
@@ -218,6 +218,78 @@
   "/docs/docs/atmo/usage/using-sql-databases-2c0": {
     "component": "17896441",
     "content": "154251af"
+  },
+  "/docs/docs/compute/api-reference/api-reference-261": {
+    "component": "17896441",
+    "content": "93ee3a96"
+  },
+  "/docs/docs/compute/building-functions/github-integration-ce7": {
+    "component": "17896441",
+    "content": "52268289"
+  },
+  "/docs/docs/compute/cloud-deployment/configure-capabilities-516": {
+    "component": "17896441",
+    "content": "4b21a08b"
+  },
+  "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment-5df": {
+    "component": "17896441",
+    "content": "d5c63a9f"
+  },
+  "/docs/docs/compute/concepts/data-plane-vs-control-plane-020": {
+    "component": "17896441",
+    "content": "f572465d"
+  },
+  "/docs/docs/compute/concepts/fully-qualified-function-names-27c": {
+    "component": "17896441",
+    "content": "50a72a21"
+  },
+  "/docs/docs/compute/concepts/namespaces-f7f": {
+    "component": "17896441",
+    "content": "645e36fd"
+  },
+  "/docs/docs/compute/customizing-functions/custom-function-templates-e69": {
+    "component": "17896441",
+    "content": "0d09c707"
+  },
+  "/docs/docs/compute/customizing-functions/custom-libraries-082": {
+    "component": "17896441",
+    "content": "7b9d4f9a"
+  },
+  "/docs/docs/compute/installing/create-an-environment-token-with-subo-c0f": {
+    "component": "17896441",
+    "content": "f3a9d95b"
+  },
+  "/docs/docs/compute/integrate-the-function-editor/code-editor-316": {
+    "component": "17896441",
+    "content": "bf5f80be"
+  },
+  "/docs/docs/compute/quickstart/client-libraries/golang-315": {
+    "component": "17896441",
+    "content": "9571057b"
+  },
+  "/docs/docs/compute/quickstart/client-libraries/nodejs-690": {
+    "component": "17896441",
+    "content": "f8918d82"
+  },
+  "/docs/docs/compute/quickstart/connect-your-application-002": {
+    "component": "17896441",
+    "content": "bf3539f0"
+  },
+  "/docs/docs/compute/quickstart/create-an-environment-token-with-subo-604": {
+    "component": "17896441",
+    "content": "ec7c2c98"
+  },
+  "/docs/docs/compute/quickstart/run-compute-locally-8cd": {
+    "component": "17896441",
+    "content": "873bb7ea"
+  },
+  "/docs/docs/compute/quickstart/write-functions-bb9": {
+    "component": "17896441",
+    "content": "15e60b46"
+  },
+  "/docs/docs/compute/what-is-compute-cc3": {
+    "component": "17896441",
+    "content": "932779a9"
   },
   "/docs/docs/intro-7d8": {
     "component": "17896441",

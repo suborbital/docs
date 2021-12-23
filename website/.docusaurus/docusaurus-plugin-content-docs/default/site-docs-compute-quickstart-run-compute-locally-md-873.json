@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/quickstart/run-compute-locally",
+  "id": "compute/quickstart/run-compute-locally",
+  "isDocsHomePage": false,
+  "title": "Run Compute locally",
+  "description": "To run Compute locally, you'll use the Subo CLI and Docker Compose, both of which must be installed before continuing.",
+  "source": "@site/docs/compute/quickstart/run-compute-locally.md",
+  "sourceDirName": "compute/quickstart",
+  "slug": "/compute/quickstart/run-compute-locally",
+  "permalink": "/docs/docs/compute/quickstart/run-compute-locally",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/quickstart/run-compute-locally.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo"
+  },
+  "next": {
+    "title": "Working with functions",
+    "permalink": "/docs/docs/compute/quickstart/write-functions"
+  }
+}

@@ -60,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','2f2'),
+    component: ComponentCreator('/docs/docs','e51'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -231,6 +231,111 @@ export default [
       {
         path: '/docs/docs/atmo/usage/using-sql-databases',
         component: ComponentCreator('/docs/docs/atmo/usage/using-sql-databases','2c0'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/api-reference/api-reference',
+        component: ComponentCreator('/docs/docs/compute/api-reference/api-reference','261'),
+        exact: true
+      },
+      {
+        path: '/docs/docs/compute/building-functions/github-integration',
+        component: ComponentCreator('/docs/docs/compute/building-functions/github-integration','ce7'),
+        exact: true
+      },
+      {
+        path: '/docs/docs/compute/cloud-deployment/configure-capabilities',
+        component: ComponentCreator('/docs/docs/compute/cloud-deployment/configure-capabilities','516'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment',
+        component: ComponentCreator('/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment','5df'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/concepts/data-plane-vs-control-plane',
+        component: ComponentCreator('/docs/docs/compute/concepts/data-plane-vs-control-plane','020'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/concepts/fully-qualified-function-names',
+        component: ComponentCreator('/docs/docs/compute/concepts/fully-qualified-function-names','27c'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/concepts/namespaces',
+        component: ComponentCreator('/docs/docs/compute/concepts/namespaces','f7f'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/customizing-functions/custom-function-templates',
+        component: ComponentCreator('/docs/docs/compute/customizing-functions/custom-function-templates','e69'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/customizing-functions/custom-libraries',
+        component: ComponentCreator('/docs/docs/compute/customizing-functions/custom-libraries','082'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/installing/create-an-environment-token-with-subo',
+        component: ComponentCreator('/docs/docs/compute/installing/create-an-environment-token-with-subo','c0f'),
+        exact: true
+      },
+      {
+        path: '/docs/docs/compute/integrate-the-function-editor/code-editor',
+        component: ComponentCreator('/docs/docs/compute/integrate-the-function-editor/code-editor','316'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/client-libraries/golang',
+        component: ComponentCreator('/docs/docs/compute/quickstart/client-libraries/golang','315'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/client-libraries/nodejs',
+        component: ComponentCreator('/docs/docs/compute/quickstart/client-libraries/nodejs','690'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/connect-your-application',
+        component: ComponentCreator('/docs/docs/compute/quickstart/connect-your-application','002'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/create-an-environment-token-with-subo',
+        component: ComponentCreator('/docs/docs/compute/quickstart/create-an-environment-token-with-subo','604'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/run-compute-locally',
+        component: ComponentCreator('/docs/docs/compute/quickstart/run-compute-locally','8cd'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/quickstart/write-functions',
+        component: ComponentCreator('/docs/docs/compute/quickstart/write-functions','bb9'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/compute/what-is-compute',
+        component: ComponentCreator('/docs/docs/compute/what-is-compute','cc3'),
         exact: true,
         'sidebar': "docs"
       },

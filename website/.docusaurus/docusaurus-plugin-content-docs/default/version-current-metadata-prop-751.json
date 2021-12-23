@@ -289,6 +289,137 @@
             ]
           }
         ]
+      },
+      {
+        "type": "category",
+        "collapsed": true,
+        "collapsible": true,
+        "label": "Compute",
+        "items": [
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "What is Compute?",
+            "items": [
+              {
+                "type": "link",
+                "label": "Start Here",
+                "href": "/docs/docs/compute/what-is-compute"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Quickstart",
+            "items": [
+              {
+                "type": "link",
+                "label": "Setup",
+                "href": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo"
+              },
+              {
+                "type": "link",
+                "label": "Run Compute locally",
+                "href": "/docs/docs/compute/quickstart/run-compute-locally"
+              },
+              {
+                "type": "link",
+                "label": "Working with functions",
+                "href": "/docs/docs/compute/quickstart/write-functions"
+              },
+              {
+                "type": "link",
+                "label": "Connect your application",
+                "href": "/docs/docs/compute/quickstart/connect-your-application"
+              },
+              {
+                "type": "link",
+                "label": "Using Compute from JavaScript or TypeScript",
+                "href": "/docs/docs/compute/quickstart/client-libraries/nodejs"
+              },
+              {
+                "type": "link",
+                "label": "Using Compute from Go",
+                "href": "/docs/docs/compute/quickstart/client-libraries/golang"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Concepts",
+            "items": [
+              {
+                "type": "link",
+                "label": "Data Plane vs Control Plane",
+                "href": "/docs/docs/compute/concepts/data-plane-vs-control-plane"
+              },
+              {
+                "type": "link",
+                "label": "Fully-qualified function names",
+                "href": "/docs/docs/compute/concepts/fully-qualified-function-names"
+              },
+              {
+                "type": "link",
+                "label": "Namespaces",
+                "href": "/docs/docs/compute/concepts/namespaces"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Integrating the Function Editor",
+            "items": [
+              {
+                "type": "link",
+                "label": "Function editor",
+                "href": "/docs/docs/compute/integrate-the-function-editor/code-editor"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Customizing functions",
+            "items": [
+              {
+                "type": "link",
+                "label": "Custom function templates",
+                "href": "/docs/docs/compute/customizing-functions/custom-function-templates"
+              },
+              {
+                "type": "link",
+                "label": "Custom libraries",
+                "href": "/docs/docs/compute/customizing-functions/custom-libraries"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Cloud Deployment",
+            "items": [
+              {
+                "type": "link",
+                "label": "Configure capabilities",
+                "href": "/docs/docs/compute/cloud-deployment/configure-capabilities"
+              },
+              {
+                "type": "link",
+                "label": "Deploy Compute to your cloud environment",
+                "href": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

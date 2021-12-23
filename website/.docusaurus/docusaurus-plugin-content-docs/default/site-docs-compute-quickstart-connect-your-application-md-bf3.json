@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/quickstart/connect-your-application",
+  "id": "compute/quickstart/connect-your-application",
+  "isDocsHomePage": false,
+  "title": "Connect your application",
+  "description": "Now that you have set up Compute and created your first function, use the Compute client libraries to start integrating functions into your application:",
+  "source": "@site/docs/compute/quickstart/connect-your-application.md",
+  "sourceDirName": "compute/quickstart",
+  "slug": "/compute/quickstart/connect-your-application",
+  "permalink": "/docs/docs/compute/quickstart/connect-your-application",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/quickstart/connect-your-application.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Working with functions",
+    "permalink": "/docs/docs/compute/quickstart/write-functions"
+  },
+  "next": {
+    "title": "Using Compute from JavaScript or TypeScript",
+    "permalink": "/docs/docs/compute/quickstart/client-libraries/nodejs"
+  }
+}

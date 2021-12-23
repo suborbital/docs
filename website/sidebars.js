@@ -89,6 +89,49 @@ module.exports ={
               ]
         }
         ]
+    },
+    {
+      'Compute':[
+        {
+          'What is Compute?':[
+            'compute/what-is-compute'
+          ]
+        },
+        {
+          'Quickstart':[
+            'compute/quickstart/create-an-environment-token-with-subo',
+            'compute/quickstart/run-compute-locally',
+            'compute/quickstart/write-functions',
+            'compute/quickstart/connect-your-application',
+            'compute/quickstart/client-libraries/nodejs',
+            'compute/quickstart/client-libraries/golang'
+          ]
+        },
+        {
+          'Concepts':[
+            'compute/concepts/data-plane-vs-control-plane',
+            'compute/concepts/fully-qualified-function-names',
+            'compute/concepts/namespaces'
+          ]
+        },
+        {
+          'Integrating the Function Editor':[
+            'compute/integrate-the-function-editor/code-editor'
+          ]
+        },
+        {
+          'Customizing functions':[
+            'compute/customizing-functions/custom-function-templates',
+            'compute/customizing-functions/custom-libraries'
+          ]
+        },
+        {
+          'Cloud Deployment':[
+            'compute/cloud-deployment/configure-capabilities',
+            'compute/cloud-deployment/install-compute-in-your-cloud-environment'
+          ]
+        }
+      ]
     }
     ]
 }

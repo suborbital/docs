@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/customizing-functions/custom-function-templates",
+  "id": "compute/customizing-functions/custom-function-templates",
+  "isDocsHomePage": false,
+  "title": "Custom function templates",
+  "description": "When your users interact with Compute, you want them to have an experience that is tailored to your product. To ensure they get the most out of Compute, you can create custom function templates to control what your users see when they create a new function. You can also create custom libraries with utilities specific to your application for users to import from, which we'll explore in the next section.",
+  "source": "@site/docs/compute/customizing-functions/custom-function-templates.md",
+  "sourceDirName": "compute/customizing-functions",
+  "slug": "/compute/customizing-functions/custom-function-templates",
+  "permalink": "/docs/docs/compute/customizing-functions/custom-function-templates",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/customizing-functions/custom-function-templates.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Function editor",
+    "permalink": "/docs/docs/compute/integrate-the-function-editor/code-editor"
+  },
+  "next": {
+    "title": "Custom libraries",
+    "permalink": "/docs/docs/compute/customizing-functions/custom-libraries"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "compute/integrate-the-function-editor/code-editor",
+  "id": "compute/integrate-the-function-editor/code-editor",
+  "isDocsHomePage": false,
+  "title": "Function editor",
+  "description": "The Compute code editor is available for you to embed in your application, so your customers can build their functions quickly and easily:",
+  "source": "@site/docs/compute/integrate-the-function-editor/code-editor.md",
+  "sourceDirName": "compute/integrate-the-function-editor",
+  "slug": "/compute/integrate-the-function-editor/code-editor",
+  "permalink": "/docs/docs/compute/integrate-the-function-editor/code-editor",
+  "editUrl": "https://github.com/suborbital/docs/docs/compute/integrate-the-function-editor/code-editor.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Namespaces",
+    "permalink": "/docs/docs/compute/concepts/namespaces"
+  },
+  "next": {
+    "title": "Custom function templates",
+    "permalink": "/docs/docs/compute/customizing-functions/custom-function-templates"
+  }
+}
