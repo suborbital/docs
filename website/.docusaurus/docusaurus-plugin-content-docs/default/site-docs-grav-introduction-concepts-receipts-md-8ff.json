@@ -1,0 +1,24 @@
+{
+  "unversionedId": "grav/introduction/concepts/receipts",
+  "id": "grav/introduction/concepts/receipts",
+  "isDocsHomePage": false,
+  "title": "Reciepts",
+  "description": "When you send a message using a Pod, it will return a MsgReceipt. This object is a reference to the message that you sent, and allows you to easily get replies to the message. A receipt is an extension of the Pod that sent the original message, so any methods that you call are essentially called on the Pod itself. This means that calling receipt.WaitOn(msgFunc) is a shortcut for calling WaitOn on the Pod itself \\(with filtering enabled to only receive replies to the original message\\).",
+  "source": "@site/docs/grav/introduction/concepts/receipts.md",
+  "sourceDirName": "grav/introduction/concepts",
+  "slug": "/grav/introduction/concepts/receipts",
+  "permalink": "/docs/docs/grav/introduction/concepts/receipts",
+  "editUrl": "https://github.com/suborbital/docs/docs/grav/introduction/concepts/receipts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pods",
+    "permalink": "/docs/docs/grav/introduction/concepts/pods"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/docs/grav/usage/getting-started/start-here"
+  }
+}

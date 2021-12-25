@@ -1,0 +1,24 @@
+{
+  "unversionedId": "grav/networking/transports/getting-started-transports",
+  "id": "grav/networking/transports/getting-started-transports",
+  "isDocsHomePage": false,
+  "title": "Transports",
+  "description": "Transports are plugins that allow Grav instances to connect",
+  "source": "@site/docs/grav/networking/transports/getting-started-transports.md",
+  "sourceDirName": "grav/networking/transports",
+  "slug": "/grav/networking/transports/getting-started-transports",
+  "permalink": "/docs/docs/grav/networking/transports/getting-started-transports",
+  "editUrl": "https://github.com/suborbital/docs/docs/grav/networking/transports/getting-started-transports.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Grav Instance Options",
+    "permalink": "/docs/docs/grav/usage/getting-started/grav-instance-options"
+  },
+  "next": {
+    "title": "HTTP Transport",
+    "permalink": "/docs/docs/grav/networking/transports/http-transport"
+  }
+}

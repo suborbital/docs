@@ -16,6 +16,43 @@ module.exports ={
         {
           'Building blocks':[
             {
+              Grav:[
+                {
+                  'What is Grav':[
+                    'grav/what-is-grav'
+                  ]
+                },
+                {
+                  'Concepts':[
+                    'grav/introduction/concepts/a-brief-overview',
+                    'grav/introduction/concepts/the-grav-instance',
+                    'grav/introduction/concepts/pods',
+                    'grav/introduction/concepts/receipts'
+                  ]
+                },
+                {
+                  'Usage':[
+                    'grav/usage/getting-started/start-here',
+                    'grav/usage/getting-started/using-the-grav-instance',
+                    'grav/usage/getting-started/sending-messages',
+                    'grav/usage/getting-started/receiving-messages',
+                    'grav/usage/getting-started/request-reply',
+                    'grav/usage/getting-started/grav-instance-options'
+                  ]
+                },
+                {
+                  'Networked Usage':[
+                    'grav/networking/transports/getting-started-transports',
+                    'grav/networking/transports/http-transport',
+                    'grav/networking/transports/websocket-transport',
+                    'grav/networking/transports/nats-transport',
+                    'grav/networking/discovery/getting-started-discovery',
+                    'grav/networking/discovery/local-network-discovery'
+                  ]
+                }
+              ]
+            },
+            {
                 Reactr:[
                   {
                     'Start Here':[

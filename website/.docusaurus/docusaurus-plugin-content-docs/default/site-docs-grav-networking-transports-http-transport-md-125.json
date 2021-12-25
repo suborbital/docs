@@ -1,0 +1,24 @@
+{
+  "unversionedId": "grav/networking/transports/http-transport",
+  "id": "grav/networking/transports/http-transport",
+  "isDocsHomePage": false,
+  "title": "HTTP Transport",
+  "description": "Full documentation of the HTTP Transport is coming soon. See the transport directory for example code.",
+  "source": "@site/docs/grav/networking/transports/http-transport.md",
+  "sourceDirName": "grav/networking/transports",
+  "slug": "/grav/networking/transports/http-transport",
+  "permalink": "/docs/docs/grav/networking/transports/http-transport",
+  "editUrl": "https://github.com/suborbital/docs/docs/grav/networking/transports/http-transport.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Transports",
+    "permalink": "/docs/docs/grav/networking/transports/getting-started-transports"
+  },
+  "next": {
+    "title": "Websocket Transport",
+    "permalink": "/docs/docs/grav/networking/transports/websocket-transport"
+  }
+}

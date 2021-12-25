@@ -60,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','e51'),
+    component: ComponentCreator('/docs/docs','87e'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -336,6 +336,108 @@ export default [
       {
         path: '/docs/docs/compute/what-is-compute',
         component: ComponentCreator('/docs/docs/compute/what-is-compute','cc3'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/introduction/concepts/a-brief-overview',
+        component: ComponentCreator('/docs/docs/grav/introduction/concepts/a-brief-overview','555'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/introduction/concepts/pods',
+        component: ComponentCreator('/docs/docs/grav/introduction/concepts/pods','ec8'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/introduction/concepts/receipts',
+        component: ComponentCreator('/docs/docs/grav/introduction/concepts/receipts','ffb'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/introduction/concepts/the-grav-instance',
+        component: ComponentCreator('/docs/docs/grav/introduction/concepts/the-grav-instance','612'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/discovery/getting-started-discovery',
+        component: ComponentCreator('/docs/docs/grav/networking/discovery/getting-started-discovery','b6c'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/discovery/local-network-discovery',
+        component: ComponentCreator('/docs/docs/grav/networking/discovery/local-network-discovery','125'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/transports/getting-started-transports',
+        component: ComponentCreator('/docs/docs/grav/networking/transports/getting-started-transports','eac'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/transports/http-transport',
+        component: ComponentCreator('/docs/docs/grav/networking/transports/http-transport','331'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/transports/nats-transport',
+        component: ComponentCreator('/docs/docs/grav/networking/transports/nats-transport','bf1'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/networking/transports/websocket-transport',
+        component: ComponentCreator('/docs/docs/grav/networking/transports/websocket-transport','c48'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/grav-instance-options',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/grav-instance-options','093'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/receiving-messages',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/receiving-messages','016'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/request-reply',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/request-reply','93c'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/sending-messages',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/sending-messages','6e1'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/start-here',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/start-here','ea6'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/usage/getting-started/using-the-grav-instance',
+        component: ComponentCreator('/docs/docs/grav/usage/getting-started/using-the-grav-instance','bdb'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/grav/what-is-grav',
+        component: ComponentCreator('/docs/docs/grav/what-is-grav','6c2'),
         exact: true,
         'sidebar': "docs"
       },
