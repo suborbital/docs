@@ -16,8 +16,8 @@
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
-    "title": "The Suborbital ecosystem",
-    "permalink": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+    "title": "Local Network Discovery",
+    "permalink": "/docs/docs/grav/networking/discovery/local-network-discovery"
   },
   "next": {
     "title": "Reactr ❤️ WebAssembly",

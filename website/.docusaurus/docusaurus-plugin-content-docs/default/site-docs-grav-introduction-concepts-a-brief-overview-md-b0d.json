@@ -1,0 +1,24 @@
+{
+  "unversionedId": "grav/introduction/concepts/a-brief-overview",
+  "id": "grav/introduction/concepts/a-brief-overview",
+  "isDocsHomePage": false,
+  "title": "A brief overview",
+  "description": "Since Grav is embedded, it is instantiated as a grav.Grav object",
+  "source": "@site/docs/grav/introduction/concepts/a-brief-overview.md",
+  "sourceDirName": "grav/introduction/concepts",
+  "slug": "/grav/introduction/concepts/a-brief-overview",
+  "permalink": "/docs/docs/grav/introduction/concepts/a-brief-overview",
+  "editUrl": "https://github.com/suborbital/docs/docs/grav/introduction/concepts/a-brief-overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "What is Grav?",
+    "permalink": "/docs/docs/grav/what-is-grav"
+  },
+  "next": {
+    "title": "The Grav Instance",
+    "permalink": "/docs/docs/grav/introduction/concepts/the-grav-instance"
+  }
+}

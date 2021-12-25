@@ -1,0 +1,24 @@
+{
+  "unversionedId": "grav/usage/getting-started/receiving-messages",
+  "id": "grav/usage/getting-started/receiving-messages",
+  "isDocsHomePage": false,
+  "title": "Receiving Messages",
+  "description": "Pods have several different methods beyond On to help with receiving messages in different scenarios. There are two types of receive methods: asynchronous and synchronous. Synchronous receive methods block until the desired message is received, whereas asynchronous receive methods run \"in the background\" and do not block at the callsite.",
+  "source": "@site/docs/grav/usage/getting-started/receiving-messages.md",
+  "sourceDirName": "grav/usage/getting-started",
+  "slug": "/grav/usage/getting-started/receiving-messages",
+  "permalink": "/docs/docs/grav/usage/getting-started/receiving-messages",
+  "editUrl": "https://github.com/suborbital/docs/docs/grav/usage/getting-started/receiving-messages.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Sending Messages",
+    "permalink": "/docs/docs/grav/usage/getting-started/sending-messages"
+  },
+  "next": {
+    "title": "Request / Reply",
+    "permalink": "/docs/docs/grav/usage/getting-started/request-reply"
+  }
+}
