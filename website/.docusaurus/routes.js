@@ -60,7 +60,7 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','87e'),
+    component: ComponentCreator('/docs/docs','357'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -483,6 +483,18 @@ export default [
       {
         path: '/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem',
         component: ComponentCreator('/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem','f89'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/vektor/getting-started',
+        component: ComponentCreator('/docs/docs/vektor/getting-started','48d'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/vektor/testing-vk-servers',
+        component: ComponentCreator('/docs/docs/vektor/testing-vk-servers','c2b'),
         exact: true,
         'sidebar': "docs"
       },

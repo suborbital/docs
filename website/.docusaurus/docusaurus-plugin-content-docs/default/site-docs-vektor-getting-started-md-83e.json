@@ -1,0 +1,24 @@
+{
+  "unversionedId": "vektor/getting-started",
+  "id": "vektor/getting-started",
+  "isDocsHomePage": false,
+  "title": "The Vektor Guide 🗺",
+  "description": "Vektor's goal is to help you develop web services faster.",
+  "source": "@site/docs/vektor/getting-started.md",
+  "sourceDirName": "vektor",
+  "slug": "/vektor/getting-started",
+  "permalink": "/docs/docs/vektor/getting-started",
+  "editUrl": "https://github.com/suborbital/docs/docs/vektor/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "faas",
+    "permalink": "/docs/docs/reactr/faas"
+  },
+  "next": {
+    "title": "Testing Vektor Servers",
+    "permalink": "/docs/docs/vektor/testing-vk-servers"
+  }
+}
