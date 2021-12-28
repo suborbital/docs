@@ -363,6 +363,16 @@
               "sidebar": "docs"
             },
             {
+              "id": "vektor/getting-started",
+              "path": "/docs/docs/vektor/getting-started",
+              "sidebar": "docs"
+            },
+            {
+              "id": "vektor/testing-vk-servers",
+              "path": "/docs/docs/vektor/testing-vk-servers",
+              "sidebar": "docs"
+            },
+            {
               "id": "what-is-webassembly/history",
               "path": "/docs/docs/what-is-webassembly/history",
               "sidebar": "docs"

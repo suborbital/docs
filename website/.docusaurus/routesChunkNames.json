@@ -99,7 +99,7 @@
     "sidebar": "814f3328",
     "content": "d9f32620"
   },
-  "/docs/docs-87e": {
+  "/docs/docs-357": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
@@ -390,6 +390,14 @@
   "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem-f89": {
     "component": "17896441",
     "content": "62267c0a"
+  },
+  "/docs/docs/vektor/getting-started-48d": {
+    "component": "17896441",
+    "content": "83ef7cb6"
+  },
+  "/docs/docs/vektor/testing-vk-servers-c2b": {
+    "component": "17896441",
+    "content": "d85db04a"
   },
   "/docs/docs/what-is-webassembly/history-25b": {
     "component": "17896441",

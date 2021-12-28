@@ -235,6 +235,40 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Vektor",
+                "items": [
+                  {
+                    "type": "category",
+                    "collapsed": true,
+                    "collapsible": true,
+                    "label": "Getting Started",
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "The Vektor Guide 🗺",
+                        "href": "/docs/docs/vektor/getting-started"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "collapsed": true,
+                    "collapsible": true,
+                    "label": "Testing vektor",
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "Testing Vektor Servers",
+                        "href": "/docs/docs/vektor/testing-vk-servers"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }

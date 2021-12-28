@@ -75,6 +75,20 @@ module.exports ={
                     ]
                   }
                 ]
+            },
+            {
+              Vektor:[
+                {
+                  'Getting Started':[
+                    'vektor/getting-started'
+                  ]
+                },
+                {
+                  'Testing vektor':[
+                    'vektor/testing-vk-servers'
+                  ]
+                }
+              ]
             } 
           ]
         }
