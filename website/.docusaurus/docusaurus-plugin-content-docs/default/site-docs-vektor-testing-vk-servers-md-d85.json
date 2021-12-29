@@ -3,7 +3,7 @@
   "id": "vektor/testing-vk-servers",
   "isDocsHomePage": false,
   "title": "Testing Vektor Servers",
-  "description": "vtest is a powerful package for testing your Vektor servers without running an HTTP server bound to a port. vtest uses the standard Go testing package, which lets you integrate server route testing into your test suite. Let's explore a simple wordcount API server and add some tests to it.",
+  "description": "vtest is a powerful package for testing your Vektor",
   "source": "@site/docs/vektor/testing-vk-servers.md",
   "sourceDirName": "vektor",
   "slug": "/vektor/testing-vk-servers",
@@ -11,6 +11,8 @@
   "editUrl": "https://github.com/suborbital/docs/docs/vektor/testing-vk-servers.md",
   "tags": [],
   "version": "current",
+  "lastUpdatedAt": 1640700715,
+  "formattedLastUpdatedAt": "12/28/2021",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
