@@ -16,10 +16,22 @@ export const PrimaryOfferings = [
 
 export const OtherOfferings = [
   {
+    icon: 'img/SOS_Grav-Long-FullColour.svg',
+    heading: 'Grav',
+    description: 'Embedded, decentralized message bus.',
+    url: 'docs/grav/what-is-grav'
+  },
+  {
     icon: 'img/SOS_Reactr-Long-FullColour0.svg',
     heading: 'Reactr',
     description: 'Next generation, fast, and performant function scheduler for Go and WebAssembly.',
     url: 'docs/reactr/guide'
+  },
+  {
+    icon: 'img/SOS_Vektor-Long-FullColour.svg',
+    heading: 'Vektor',
+    description: 'Opinionated production-grade HTTP server framework for Go.',
+    url: 'docs/vektor/what-is-getting-started'
   },
 ]
 
