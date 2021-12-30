@@ -31,7 +31,7 @@ export const OtherOfferings = [
     icon: 'img/SOS_Vektor-Long-FullColour.svg',
     heading: 'Vektor',
     description: 'Opinionated production-grade HTTP server framework for Go.',
-    url: 'docs/vektor/what-is-getting-started'
+    url: 'docs/vektor/getting-started'
   },
 ]
 
