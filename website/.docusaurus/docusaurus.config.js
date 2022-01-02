@@ -80,7 +80,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2021 Suborbital Authors. Built with Docusaurus."
+      "copyright": "Copyright © 2022 Suborbital Authors. Built with Docusaurus."
     },
     "docs": {
       "versionPersistence": "localStorage"
