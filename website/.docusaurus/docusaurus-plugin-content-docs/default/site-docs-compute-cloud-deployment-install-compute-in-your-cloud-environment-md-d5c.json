@@ -11,12 +11,16 @@
   "editUrl": "https://github.com/suborbital/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1640267248,
-  "formattedLastUpdatedAt": "12/23/2021",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Configure capabilities",
     "permalink": "/docs/docs/compute/cloud-deployment/configure-capabilities"
+  },
+  "next": {
+    "title": "Get Started",
+    "permalink": "/docs/docs/atmo/getstarted/what-is-atmo"
   }
 }

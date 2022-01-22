@@ -1,0 +1,26 @@
+{
+  "unversionedId": "intro-to-webassembly/history",
+  "id": "intro-to-webassembly/history",
+  "isDocsHomePage": false,
+  "title": "History of the Internet",
+  "description": "The World Wide Web originally started out as a document exchange network to",
+  "source": "@site/docs/intro-to-webassembly/history.md",
+  "sourceDirName": "intro-to-webassembly",
+  "slug": "/intro-to-webassembly/history",
+  "permalink": "/docs/docs/intro-to-webassembly/history",
+  "editUrl": "https://github.com/suborbital/docs/docs/intro-to-webassembly/history.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "The Suborbital Ecosystem",
+    "permalink": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+  },
+  "next": {
+    "title": "Why WebAssembly",
+    "permalink": "/docs/docs/intro-to-webassembly/why-webassembly"
+  }
+}

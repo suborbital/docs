@@ -7,7 +7,7 @@
 const communities = [
   {
     label: 'Discord',
-    href: 'https://discord.com/invite/Jv3nMgT8kW',
+    href: 'https://chat.suborbital.dev',
   },
   {
     label: 'GitHub',
@@ -21,17 +21,17 @@ const communities = [
 
 const resources = [
   {
-    label: 'Docs',
-    href: 'https://docs.suborbital.dev/'
+    label: 'Blog',
+    href: 'https://blog.suborbital.dev/'
   },
   {
-    label: 'FAQ',
-    href: 'https://docs.suborbital.dev/docs/faq/'
+    label: 'Website',
+    href: 'https://suborbital.dev/'
   }
 ]
 
 module.exports = {
-  title: 'Suborbital Docs Home',
+  title: 'Suborbital Documentation',
   tagline: 'Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.',
   url: 'https://docs.suborbital.dev',
   baseUrl: '/docs/',
@@ -59,7 +59,6 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/suborbital',
           label: 'GitHub',
@@ -91,7 +90,7 @@ module.exports = {
           items: resources
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Suborbital Authors. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Suborbital Contributors. Built with Docusaurus.`,
       
     }
   },

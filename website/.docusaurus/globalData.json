@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/docs",
-          "mainDocId": "what-is-webassembly/history",
+          "mainDocId": "suborbital-ecosystem/the-suborbital-ecosystem",
           "docs": [
             {
               "id": "atmo/concepts/runnables",
@@ -330,6 +330,16 @@
               "path": "/docs/docs/intro"
             },
             {
+              "id": "intro-to-webassembly/history",
+              "path": "/docs/docs/intro-to-webassembly/history",
+              "sidebar": "docs"
+            },
+            {
+              "id": "intro-to-webassembly/why-webassembly",
+              "path": "/docs/docs/intro-to-webassembly/why-webassembly",
+              "sidebar": "docs"
+            },
+            {
               "id": "reactr/faas",
               "path": "/docs/docs/reactr/faas",
               "sidebar": "docs"
@@ -370,16 +380,6 @@
             {
               "id": "vektor/testing-vk-servers",
               "path": "/docs/docs/vektor/testing-vk-servers",
-              "sidebar": "docs"
-            },
-            {
-              "id": "what-is-webassembly/history",
-              "path": "/docs/docs/what-is-webassembly/history",
-              "sidebar": "docs"
-            },
-            {
-              "id": "what-is-webassembly/why-webassembly",
-              "path": "/docs/docs/what-is-webassembly/why-webassembly",
               "sidebar": "docs"
             }
           ]

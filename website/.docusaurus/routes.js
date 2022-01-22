@@ -4,8 +4,38 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/docs/blog',
-    component: ComponentCreator('/docs/blog','4cc'),
+    path: '/docs/__docusaurus/debug',
+    component: ComponentCreator('/docs/__docusaurus/debug','208'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/config',
+    component: ComponentCreator('/docs/__docusaurus/debug/config','a96'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/content',
+    component: ComponentCreator('/docs/__docusaurus/debug/content','551'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/globalData',
+    component: ComponentCreator('/docs/__docusaurus/debug/globalData','8b6'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/metadata',
+    component: ComponentCreator('/docs/__docusaurus/debug/metadata','af3'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/registry',
+    component: ComponentCreator('/docs/__docusaurus/debug/registry','0b9'),
+    exact: true
+  },
+  {
+    path: '/docs/__docusaurus/debug/routes',
+    component: ComponentCreator('/docs/__docusaurus/debug/routes','d11'),
     exact: true
   },
   {
@@ -14,53 +44,8 @@ export default [
     exact: true
   },
   {
-    path: '/docs/blog/first-blog-post',
-    component: ComponentCreator('/docs/blog/first-blog-post','1e9'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/long-blog-post',
-    component: ComponentCreator('/docs/blog/long-blog-post','be5'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/mdx-blog-post',
-    component: ComponentCreator('/docs/blog/mdx-blog-post','964'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/tags',
-    component: ComponentCreator('/docs/blog/tags','079'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/tags/docusaurus',
-    component: ComponentCreator('/docs/blog/tags/docusaurus','11f'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/tags/facebook',
-    component: ComponentCreator('/docs/blog/tags/facebook','c6d'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/tags/hello',
-    component: ComponentCreator('/docs/blog/tags/hello','a29'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/tags/hola',
-    component: ComponentCreator('/docs/blog/tags/hola','a2d'),
-    exact: true
-  },
-  {
-    path: '/docs/blog/welcome',
-    component: ComponentCreator('/docs/blog/welcome','3d6'),
-    exact: true
-  },
-  {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','357'),
+    component: ComponentCreator('/docs/docs','9fe'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -447,6 +432,18 @@ export default [
         exact: true
       },
       {
+        path: '/docs/docs/intro-to-webassembly/history',
+        component: ComponentCreator('/docs/docs/intro-to-webassembly/history','19d'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/intro-to-webassembly/why-webassembly',
+        component: ComponentCreator('/docs/docs/intro-to-webassembly/why-webassembly','83a'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
         path: '/docs/docs/reactr/faas',
         component: ComponentCreator('/docs/docs/reactr/faas','e3e'),
         exact: true,
@@ -495,18 +492,6 @@ export default [
       {
         path: '/docs/docs/vektor/testing-vk-servers',
         component: ComponentCreator('/docs/docs/vektor/testing-vk-servers','c2b'),
-        exact: true,
-        'sidebar': "docs"
-      },
-      {
-        path: '/docs/docs/what-is-webassembly/history',
-        component: ComponentCreator('/docs/docs/what-is-webassembly/history','25b'),
-        exact: true,
-        'sidebar': "docs"
-      },
-      {
-        path: '/docs/docs/what-is-webassembly/why-webassembly',
-        component: ComponentCreator('/docs/docs/what-is-webassembly/why-webassembly','424'),
         exact: true,
         'sidebar': "docs"
       }

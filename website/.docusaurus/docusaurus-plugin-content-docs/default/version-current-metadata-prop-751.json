@@ -9,20 +9,25 @@
   "docsSidebars": {
     "docs": [
       {
+        "type": "link",
+        "label": "The Suborbital Ecosystem",
+        "href": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+      },
+      {
         "type": "category",
         "collapsed": true,
         "collapsible": true,
-        "label": "Basics of WebAssembly",
+        "label": "Intro to WebAssembly",
         "items": [
           {
             "type": "link",
             "label": "History of the Internet",
-            "href": "/docs/docs/what-is-webassembly/history"
+            "href": "/docs/docs/intro-to-webassembly/history"
           },
           {
             "type": "link",
             "label": "Why WebAssembly",
-            "href": "/docs/docs/what-is-webassembly/why-webassembly"
+            "href": "/docs/docs/intro-to-webassembly/why-webassembly"
           }
         ]
       },
@@ -30,18 +35,18 @@
         "type": "category",
         "collapsed": true,
         "collapsible": true,
-        "label": "The Suborbital Ecosystem",
+        "label": "Compute",
         "items": [
           {
             "type": "category",
             "collapsed": true,
             "collapsible": true,
-            "label": "A primer on the ecosystem",
+            "label": "What is Compute?",
             "items": [
               {
                 "type": "link",
-                "label": "The Suborbital ecosystem",
-                "href": "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem"
+                "label": "Start Here",
+                "href": "/docs/docs/compute/what-is-compute"
               }
             ]
           },
@@ -49,226 +54,109 @@
             "type": "category",
             "collapsed": true,
             "collapsible": true,
-            "label": "Building blocks",
+            "label": "Quickstart",
             "items": [
               {
-                "type": "category",
-                "collapsed": true,
-                "collapsible": true,
-                "label": "Grav",
-                "items": [
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "What is Grav",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "What is Grav?",
-                        "href": "/docs/docs/grav/what-is-grav"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Concepts",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "A brief overview",
-                        "href": "/docs/docs/grav/introduction/concepts/a-brief-overview"
-                      },
-                      {
-                        "type": "link",
-                        "label": "The Grav Instance",
-                        "href": "/docs/docs/grav/introduction/concepts/the-grav-instance"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Pods",
-                        "href": "/docs/docs/grav/introduction/concepts/pods"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Reciepts",
-                        "href": "/docs/docs/grav/introduction/concepts/receipts"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Usage",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Getting Started",
-                        "href": "/docs/docs/grav/usage/getting-started/start-here"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Using the Grav Instance",
-                        "href": "/docs/docs/grav/usage/getting-started/using-the-grav-instance"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Sending Messages",
-                        "href": "/docs/docs/grav/usage/getting-started/sending-messages"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Receiving Messages",
-                        "href": "/docs/docs/grav/usage/getting-started/receiving-messages"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Request / Reply",
-                        "href": "/docs/docs/grav/usage/getting-started/request-reply"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Grav Instance Options",
-                        "href": "/docs/docs/grav/usage/getting-started/grav-instance-options"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Networked Usage",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Transports",
-                        "href": "/docs/docs/grav/networking/transports/getting-started-transports"
-                      },
-                      {
-                        "type": "link",
-                        "label": "HTTP Transport",
-                        "href": "/docs/docs/grav/networking/transports/http-transport"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Websocket Transport",
-                        "href": "/docs/docs/grav/networking/transports/websocket-transport"
-                      },
-                      {
-                        "type": "link",
-                        "label": "NATS Transport",
-                        "href": "/docs/docs/grav/networking/transports/nats-transport"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Discovery",
-                        "href": "/docs/docs/grav/networking/discovery/getting-started-discovery"
-                      },
-                      {
-                        "type": "link",
-                        "label": "Local Network Discovery",
-                        "href": "/docs/docs/grav/networking/discovery/local-network-discovery"
-                      }
-                    ]
-                  }
-                ]
+                "type": "link",
+                "label": "Setup",
+                "href": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo"
               },
               {
-                "type": "category",
-                "collapsed": true,
-                "collapsible": true,
-                "label": "Reactr",
-                "items": [
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Start Here",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Get started with Reactr 🚀",
-                        "href": "/docs/docs/reactr/guide"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr and WASM",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Reactr ❤️ WebAssembly",
-                        "href": "/docs/docs/reactr/wasm"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr and GRAV",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Reactr ➕ Grav",
-                        "href": "/docs/docs/reactr/grav"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Reactr and FaaS",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "faas",
-                        "href": "/docs/docs/reactr/faas"
-                      }
-                    ]
-                  }
-                ]
+                "type": "link",
+                "label": "Run Compute locally",
+                "href": "/docs/docs/compute/quickstart/run-compute-locally"
               },
               {
-                "type": "category",
-                "collapsed": true,
-                "collapsible": true,
-                "label": "Vektor",
-                "items": [
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Getting Started",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "The Vektor Guide 🗺",
-                        "href": "/docs/docs/vektor/getting-started"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "collapsed": true,
-                    "collapsible": true,
-                    "label": "Testing vektor",
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Testing Vektor Servers",
-                        "href": "/docs/docs/vektor/testing-vk-servers"
-                      }
-                    ]
-                  }
-                ]
+                "type": "link",
+                "label": "Working with functions",
+                "href": "/docs/docs/compute/quickstart/write-functions"
+              },
+              {
+                "type": "link",
+                "label": "Connect your application",
+                "href": "/docs/docs/compute/quickstart/connect-your-application"
+              },
+              {
+                "type": "link",
+                "label": "Using Compute from JavaScript or TypeScript",
+                "href": "/docs/docs/compute/quickstart/client-libraries/nodejs"
+              },
+              {
+                "type": "link",
+                "label": "Using Compute from Go",
+                "href": "/docs/docs/compute/quickstart/client-libraries/golang"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Concepts",
+            "items": [
+              {
+                "type": "link",
+                "label": "Data Plane vs Control Plane",
+                "href": "/docs/docs/compute/concepts/data-plane-vs-control-plane"
+              },
+              {
+                "type": "link",
+                "label": "Fully-qualified function names",
+                "href": "/docs/docs/compute/concepts/fully-qualified-function-names"
+              },
+              {
+                "type": "link",
+                "label": "Namespaces",
+                "href": "/docs/docs/compute/concepts/namespaces"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Integrating the Function Editor",
+            "items": [
+              {
+                "type": "link",
+                "label": "Function editor",
+                "href": "/docs/docs/compute/integrate-the-function-editor/code-editor"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Customizing functions",
+            "items": [
+              {
+                "type": "link",
+                "label": "Custom function templates",
+                "href": "/docs/docs/compute/customizing-functions/custom-function-templates"
+              },
+              {
+                "type": "link",
+                "label": "Custom libraries",
+                "href": "/docs/docs/compute/customizing-functions/custom-libraries"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Cloud Deployment",
+            "items": [
+              {
+                "type": "link",
+                "label": "Configure capabilities",
+                "href": "/docs/docs/compute/cloud-deployment/configure-capabilities"
+              },
+              {
+                "type": "link",
+                "label": "Deploy Compute to your cloud environment",
+                "href": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment"
               }
             ]
           }
@@ -453,18 +341,190 @@
         "type": "category",
         "collapsed": true,
         "collapsible": true,
-        "label": "Compute",
+        "label": "Building Blocks",
         "items": [
           {
             "type": "category",
             "collapsed": true,
             "collapsible": true,
-            "label": "What is Compute?",
+            "label": "Grav",
             "items": [
               {
-                "type": "link",
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "What is Grav",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "What is Grav?",
+                    "href": "/docs/docs/grav/what-is-grav"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Concepts",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "A brief overview",
+                    "href": "/docs/docs/grav/introduction/concepts/a-brief-overview"
+                  },
+                  {
+                    "type": "link",
+                    "label": "The Grav Instance",
+                    "href": "/docs/docs/grav/introduction/concepts/the-grav-instance"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Pods",
+                    "href": "/docs/docs/grav/introduction/concepts/pods"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Reciepts",
+                    "href": "/docs/docs/grav/introduction/concepts/receipts"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Usage",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Getting Started",
+                    "href": "/docs/docs/grav/usage/getting-started/start-here"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Using the Grav Instance",
+                    "href": "/docs/docs/grav/usage/getting-started/using-the-grav-instance"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Sending Messages",
+                    "href": "/docs/docs/grav/usage/getting-started/sending-messages"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Receiving Messages",
+                    "href": "/docs/docs/grav/usage/getting-started/receiving-messages"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Request / Reply",
+                    "href": "/docs/docs/grav/usage/getting-started/request-reply"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Grav Instance Options",
+                    "href": "/docs/docs/grav/usage/getting-started/grav-instance-options"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Networked Usage",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Transports",
+                    "href": "/docs/docs/grav/networking/transports/getting-started-transports"
+                  },
+                  {
+                    "type": "link",
+                    "label": "HTTP Transport",
+                    "href": "/docs/docs/grav/networking/transports/http-transport"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Websocket Transport",
+                    "href": "/docs/docs/grav/networking/transports/websocket-transport"
+                  },
+                  {
+                    "type": "link",
+                    "label": "NATS Transport",
+                    "href": "/docs/docs/grav/networking/transports/nats-transport"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Discovery",
+                    "href": "/docs/docs/grav/networking/discovery/getting-started-discovery"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Local Network Discovery",
+                    "href": "/docs/docs/grav/networking/discovery/local-network-discovery"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "collapsed": true,
+            "collapsible": true,
+            "label": "Reactr",
+            "items": [
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
                 "label": "Start Here",
-                "href": "/docs/docs/compute/what-is-compute"
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Get started with Reactr 🚀",
+                    "href": "/docs/docs/reactr/guide"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and WASM",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Reactr ❤️ WebAssembly",
+                    "href": "/docs/docs/reactr/wasm"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and GRAV",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Reactr ➕ Grav",
+                    "href": "/docs/docs/reactr/grav"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Reactr and FaaS",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "faas",
+                    "href": "/docs/docs/reactr/faas"
+                  }
+                ]
               }
             ]
           },
@@ -472,109 +532,33 @@
             "type": "category",
             "collapsed": true,
             "collapsible": true,
-            "label": "Quickstart",
+            "label": "Vektor",
             "items": [
               {
-                "type": "link",
-                "label": "Setup",
-                "href": "/docs/docs/compute/quickstart/create-an-environment-token-with-subo"
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Getting Started",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "The Vektor Guide 🗺",
+                    "href": "/docs/docs/vektor/getting-started"
+                  }
+                ]
               },
               {
-                "type": "link",
-                "label": "Run Compute locally",
-                "href": "/docs/docs/compute/quickstart/run-compute-locally"
-              },
-              {
-                "type": "link",
-                "label": "Working with functions",
-                "href": "/docs/docs/compute/quickstart/write-functions"
-              },
-              {
-                "type": "link",
-                "label": "Connect your application",
-                "href": "/docs/docs/compute/quickstart/connect-your-application"
-              },
-              {
-                "type": "link",
-                "label": "Using Compute from JavaScript or TypeScript",
-                "href": "/docs/docs/compute/quickstart/client-libraries/nodejs"
-              },
-              {
-                "type": "link",
-                "label": "Using Compute from Go",
-                "href": "/docs/docs/compute/quickstart/client-libraries/golang"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "collapsed": true,
-            "collapsible": true,
-            "label": "Concepts",
-            "items": [
-              {
-                "type": "link",
-                "label": "Data Plane vs Control Plane",
-                "href": "/docs/docs/compute/concepts/data-plane-vs-control-plane"
-              },
-              {
-                "type": "link",
-                "label": "Fully-qualified function names",
-                "href": "/docs/docs/compute/concepts/fully-qualified-function-names"
-              },
-              {
-                "type": "link",
-                "label": "Namespaces",
-                "href": "/docs/docs/compute/concepts/namespaces"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "collapsed": true,
-            "collapsible": true,
-            "label": "Integrating the Function Editor",
-            "items": [
-              {
-                "type": "link",
-                "label": "Function editor",
-                "href": "/docs/docs/compute/integrate-the-function-editor/code-editor"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "collapsed": true,
-            "collapsible": true,
-            "label": "Customizing functions",
-            "items": [
-              {
-                "type": "link",
-                "label": "Custom function templates",
-                "href": "/docs/docs/compute/customizing-functions/custom-function-templates"
-              },
-              {
-                "type": "link",
-                "label": "Custom libraries",
-                "href": "/docs/docs/compute/customizing-functions/custom-libraries"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "collapsed": true,
-            "collapsible": true,
-            "label": "Cloud Deployment",
-            "items": [
-              {
-                "type": "link",
-                "label": "Configure capabilities",
-                "href": "/docs/docs/compute/cloud-deployment/configure-capabilities"
-              },
-              {
-                "type": "link",
-                "label": "Deploy Compute to your cloud environment",
-                "href": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment"
+                "type": "category",
+                "collapsed": true,
+                "collapsible": true,
+                "label": "Testing vektor",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Testing Vektor Servers",
+                    "href": "/docs/docs/vektor/testing-vk-servers"
+                  }
+                ]
               }
             ]
           }
