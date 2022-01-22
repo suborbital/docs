@@ -53,11 +53,21 @@ module.exports = {
         src: 'img/SOS_Alt-Long-FullColour.svg'
       },
       items: [
+        // {
+        //   type: 'doc',
+        //   docId: 'intro',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
         {
-          type: 'doc',
-          docId: 'intro',
+          href: 'https://suborbital.dev',
+          label: 'Homepage',
           position: 'left',
-          label: 'Tutorial',
+        },
+        {
+          href: 'https://blog.suborbital.dev',
+          label: 'Blog',
+          position: 'left',
         },
         {
           href: 'https://github.com/suborbital',
