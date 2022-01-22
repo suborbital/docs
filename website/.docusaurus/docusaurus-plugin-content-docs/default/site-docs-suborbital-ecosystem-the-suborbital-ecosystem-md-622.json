@@ -2,7 +2,7 @@
   "unversionedId": "suborbital-ecosystem/the-suborbital-ecosystem",
   "id": "suborbital-ecosystem/the-suborbital-ecosystem",
   "isDocsHomePage": false,
-  "title": "The Suborbital ecosystem",
+  "title": "The Suborbital Ecosystem",
   "description": "",
   "source": "@site/docs/suborbital-ecosystem/the-suborbital-ecosystem.md",
   "sourceDirName": "suborbital-ecosystem",
@@ -11,16 +11,12 @@
   "editUrl": "https://github.com/suborbital/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1639979001,
-  "formattedLastUpdatedAt": "12/20/2021",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
-  "previous": {
-    "title": "Why WebAssembly",
-    "permalink": "/docs/docs/what-is-webassembly/why-webassembly"
-  },
   "next": {
-    "title": "What is Grav?",
-    "permalink": "/docs/docs/grav/what-is-grav"
+    "title": "History of the Internet",
+    "permalink": "/docs/docs/intro-to-webassembly/history"
   }
 }

@@ -1,5 +1,5 @@
 export default {
-  "title": "Suborbital Docs Home",
+  "title": "Suborbital Documentation",
   "tagline": "Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.",
   "url": "https://docs.suborbital.dev",
   "baseUrl": "/docs/",
@@ -21,11 +21,6 @@ export default {
           "docId": "intro",
           "position": "left",
           "label": "Tutorial"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
         },
         {
           "href": "https://github.com/suborbital",
@@ -54,7 +49,7 @@ export default {
           "items": [
             {
               "label": "Discord",
-              "href": "https://discord.com/invite/Jv3nMgT8kW"
+              "href": "https://chat.suborbital.dev"
             },
             {
               "label": "GitHub",
@@ -70,17 +65,17 @@ export default {
           "title": "Resources",
           "items": [
             {
-              "label": "Docs",
-              "href": "https://docs.suborbital.dev/"
+              "label": "Blog",
+              "href": "https://blog.suborbital.dev/"
             },
             {
-              "label": "FAQ",
-              "href": "https://docs.suborbital.dev/docs/faq/"
+              "label": "Website",
+              "href": "https://suborbital.dev/"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2022 Suborbital Authors. Built with Docusaurus."
+      "copyright": "Copyright © 2022 Suborbital Contributors. Built with Docusaurus."
     },
     "docs": {
       "versionPersistence": "localStorage"
@@ -100,12 +95,12 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "D:\\docs\\website\\sidebars.js",
+          "sidebarPath": "/Users/cohix-14/Workspaces/suborbital/docs/website/sidebars.js",
           "editUrl": "https://github.com/suborbital/docs",
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "D:\\docs\\website\\src\\css\\home.css"
+          "customCss": "/Users/cohix-14/Workspaces/suborbital/docs/website/src/css/home.css"
         }
       }
     ]

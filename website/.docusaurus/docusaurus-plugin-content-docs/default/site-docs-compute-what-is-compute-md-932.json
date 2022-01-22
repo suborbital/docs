@@ -11,13 +11,13 @@
   "editUrl": "https://github.com/suborbital/docs/docs/compute/what-is-compute.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1640267248,
-  "formattedLastUpdatedAt": "12/23/2021",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
-    "title": "Using SQL databases",
-    "permalink": "/docs/docs/atmo/usage/using-sql-databases"
+    "title": "Why WebAssembly",
+    "permalink": "/docs/docs/intro-to-webassembly/why-webassembly"
   },
   "next": {
     "title": "Setup",

@@ -11,16 +11,12 @@
   "editUrl": "https://github.com/suborbital/docs/docs/vektor/testing-vk-servers.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1640752780,
-  "formattedLastUpdatedAt": "12/29/2021",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "The Vektor Guide 🗺",
     "permalink": "/docs/docs/vektor/getting-started"
-  },
-  "next": {
-    "title": "Get Started",
-    "permalink": "/docs/docs/atmo/getstarted/what-is-atmo"
   }
 }

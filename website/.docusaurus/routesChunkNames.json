@@ -1,414 +1,340 @@
 {
-  "/docs/blog-4cc": {
-    "component": "a6aa9e1f",
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "f4f34a3a"
-      },
-      {
-        "content": "8717b14a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "metadata": "6e59e873"
+  "/docs/__docusaurus/debug-208": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/docs/__docusaurus/debug/config-a96": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/docs/__docusaurus/debug/content-551": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docs-docusaurus-debug-content-246-f36"
+  },
+  "/docs/__docusaurus/debug/globalData-8b6": {
+    "component": "component---theme-debug-global-dataede-0fa"
+  },
+  "/docs/__docusaurus/debug/metadata-af3": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4"
+  },
+  "/docs/__docusaurus/debug/registry-0b9": {
+    "component": "component---theme-debug-registry-679-501"
+  },
+  "/docs/__docusaurus/debug/routes-d11": {
+    "component": "component---theme-debug-routes-946-699"
   },
   "/docs/blog/archive-508": {
-    "component": "9e4087bc",
-    "archive": "e14e76e6"
+    "component": "component---theme-blog-archive-page-9-e-4-1d8",
+    "archive": "archive---docs-blog-archivee-14-c5f"
   },
-  "/docs/blog/first-blog-post-1e9": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "e273c56f"
-  },
-  "/docs/blog/long-blog-post-be5": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "73664a40"
-  },
-  "/docs/blog/mdx-blog-post-964": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "59362658"
-  },
-  "/docs/blog/tags-079": {
-    "component": "01a85c17",
-    "sidebar": "814f3328",
-    "tags": "96cd1e66"
-  },
-  "/docs/blog/tags/docusaurus-11f": {
-    "component": "6875c492",
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "f4f34a3a"
-      },
-      {
-        "content": "8717b14a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "metadata": "7d2122a7"
-  },
-  "/docs/blog/tags/facebook-c6d": {
-    "component": "6875c492",
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      }
-    ],
-    "metadata": "b50dee57"
-  },
-  "/docs/blog/tags/hello-a29": {
-    "component": "6875c492",
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "8717b14a"
-      }
-    ],
-    "metadata": "8af6ac7f"
-  },
-  "/docs/blog/tags/hola-a2d": {
-    "component": "6875c492",
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "metadata": "f03811bd"
-  },
-  "/docs/blog/welcome-3d6": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "d9f32620"
-  },
-  "/docs/docs-357": {
-    "component": "1be78505",
-    "versionMetadata": "935f2afb"
+  "/docs/docs-9fe": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-docs-935-7d8"
   },
   "/docs/docs/atmo/concepts/runnables-f2d": {
-    "component": "17896441",
-    "content": "910df7a2"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-concepts-runnables-910-fcf"
   },
   "/docs/docs/atmo/concepts/state-41a": {
-    "component": "17896441",
-    "content": "3942733e"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-concepts-state-394-abc"
   },
   "/docs/docs/atmo/concepts/static-directory-9ac": {
-    "component": "17896441",
-    "content": "ca167542"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-concepts-static-directoryca-1-2a8"
   },
   "/docs/docs/atmo/concepts/the-directive-f3e": {
-    "component": "17896441",
-    "content": "76c2f0b5"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-concepts-the-directive-76-c-7ce"
   },
   "/docs/docs/atmo/getstarted/building-and-running-2a7": {
-    "component": "17896441",
-    "content": "3de0d28c"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-getstarted-building-and-running-3-de-0bb"
   },
   "/docs/docs/atmo/getstarted/creating-a-project-1f8": {
-    "component": "17896441",
-    "content": "fc32cb0e"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-getstarted-creating-a-projectfc-3-bf7"
   },
   "/docs/docs/atmo/getstarted/what-is-atmo-5ad": {
-    "component": "17896441",
-    "content": "0b3b929b"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-getstarted-what-is-atmo-0-b-3-722"
   },
   "/docs/docs/atmo/more-info/background-47a": {
-    "component": "17896441",
-    "content": "0dba690d"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-more-info-background-0-db-9c5"
   },
   "/docs/docs/atmo/runnable-api/authentication-345": {
-    "component": "17896441",
-    "content": "efa46902"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-authenticationefa-29a"
   },
   "/docs/docs/atmo/runnable-api/cache-9a9": {
-    "component": "17896441",
-    "content": "b4212647"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-cacheb-42-b41"
   },
   "/docs/docs/atmo/runnable-api/example-runnable-10e": {
-    "component": "17896441",
-    "content": "b414eb5b"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-example-runnableb-41-5ce"
   },
   "/docs/docs/atmo/runnable-api/file-cab": {
-    "component": "17896441",
-    "content": "3c025021"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-file-3-c-0-27d"
   },
   "/docs/docs/atmo/runnable-api/graphql-requests-493": {
-    "component": "17896441",
-    "content": "e3085eac"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-graphql-requestse-30-49f"
   },
   "/docs/docs/atmo/runnable-api/http-6ba": {
-    "component": "17896441",
-    "content": "a6c681d6"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-httpa-6-c-2c3"
   },
   "/docs/docs/atmo/runnable-api/introduction-9ca": {
-    "component": "17896441",
-    "content": "afecae8d"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-introductionafe-e7b"
   },
   "/docs/docs/atmo/runnable-api/logging-028": {
-    "component": "17896441",
-    "content": "5397975a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-logging-539-a40"
   },
   "/docs/docs/atmo/runnable-api/request-176": {
-    "component": "17896441",
-    "content": "246380b4"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-request-246-62e"
   },
   "/docs/docs/atmo/runnable-api/response-e79": {
-    "component": "17896441",
-    "content": "8c3251c9"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-runnable-api-response-8-c-3-14d"
   },
   "/docs/docs/atmo/usage/building-a-bundle-43d": {
-    "component": "17896441",
-    "content": "340e04a9"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-building-a-bundle-340-696"
   },
   "/docs/docs/atmo/usage/connections-982": {
-    "component": "17896441",
-    "content": "0c7648ce"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-connections-0-c-7-f77"
   },
   "/docs/docs/atmo/usage/creating-handlers-8ed": {
-    "component": "17896441",
-    "content": "7bd01e0c"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-creating-handlers-7-bd-a0e"
   },
   "/docs/docs/atmo/usage/creating-runnables-19c": {
-    "component": "17896441",
-    "content": "a005b2c2"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-creating-runnablesa-00-f46"
   },
   "/docs/docs/atmo/usage/deploying-atmo-083": {
-    "component": "17896441",
-    "content": "75f06504"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-deploying-atmo-75-f-e64"
   },
   "/docs/docs/atmo/usage/error-handling-efb": {
-    "component": "17896441",
-    "content": "7a9a5b8f"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-error-handling-7-a-9-1f7"
   },
   "/docs/docs/atmo/usage/headless-090": {
-    "component": "17896441",
-    "content": "854d93b0"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-headless-854-769"
   },
   "/docs/docs/atmo/usage/managing-state-c5f": {
-    "component": "17896441",
-    "content": "e0ca7004"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-managing-statee-0-c-afe"
   },
   "/docs/docs/atmo/usage/schedules-219": {
-    "component": "17896441",
-    "content": "cf597f1e"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-schedulescf-5-4b6"
   },
   "/docs/docs/atmo/usage/streams-1df": {
-    "component": "17896441",
-    "content": "07204d21"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-streams-072-497"
   },
   "/docs/docs/atmo/usage/using-sql-databases-2c0": {
-    "component": "17896441",
-    "content": "154251af"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-atmo-usage-using-sql-databases-154-ed0"
   },
   "/docs/docs/compute/api-reference/api-reference-261": {
-    "component": "17896441",
-    "content": "93ee3a96"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-api-reference-api-reference-93-e-0c1"
   },
   "/docs/docs/compute/building-functions/github-integration-ce7": {
-    "component": "17896441",
-    "content": "52268289"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-building-functions-github-integration-522-05e"
   },
   "/docs/docs/compute/cloud-deployment/configure-capabilities-516": {
-    "component": "17896441",
-    "content": "4b21a08b"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-cloud-deployment-configure-capabilities-4-b-2-6da"
   },
   "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment-5df": {
-    "component": "17896441",
-    "content": "d5c63a9f"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-cloud-deployment-install-compute-in-your-cloud-environmentd-5-c-245"
   },
   "/docs/docs/compute/concepts/data-plane-vs-control-plane-020": {
-    "component": "17896441",
-    "content": "f572465d"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-concepts-data-plane-vs-control-planef-57-5ca"
   },
   "/docs/docs/compute/concepts/fully-qualified-function-names-27c": {
-    "component": "17896441",
-    "content": "50a72a21"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-concepts-fully-qualified-function-names-50-a-710"
   },
   "/docs/docs/compute/concepts/namespaces-f7f": {
-    "component": "17896441",
-    "content": "645e36fd"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-concepts-namespaces-645-e3e"
   },
   "/docs/docs/compute/customizing-functions/custom-function-templates-e69": {
-    "component": "17896441",
-    "content": "0d09c707"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-customizing-functions-custom-function-templates-0-d-0-d14"
   },
   "/docs/docs/compute/customizing-functions/custom-libraries-082": {
-    "component": "17896441",
-    "content": "7b9d4f9a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-customizing-functions-custom-libraries-7-b-9-4c1"
   },
   "/docs/docs/compute/installing/create-an-environment-token-with-subo-c0f": {
-    "component": "17896441",
-    "content": "f3a9d95b"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-installing-create-an-environment-token-with-subof-3-a-0b0"
   },
   "/docs/docs/compute/integrate-the-function-editor/code-editor-316": {
-    "component": "17896441",
-    "content": "bf5f80be"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-integrate-the-function-editor-code-editorbf-5-e5b"
   },
   "/docs/docs/compute/quickstart/client-libraries/golang-315": {
-    "component": "17896441",
-    "content": "9571057b"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-client-libraries-golang-957-9db"
   },
   "/docs/docs/compute/quickstart/client-libraries/nodejs-690": {
-    "component": "17896441",
-    "content": "f8918d82"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-client-libraries-nodejsf-89-65c"
   },
   "/docs/docs/compute/quickstart/connect-your-application-002": {
-    "component": "17896441",
-    "content": "bf3539f0"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-connect-your-applicationbf-3-e85"
   },
   "/docs/docs/compute/quickstart/create-an-environment-token-with-subo-604": {
-    "component": "17896441",
-    "content": "ec7c2c98"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-create-an-environment-token-with-suboec-7-a59"
   },
   "/docs/docs/compute/quickstart/run-compute-locally-8cd": {
-    "component": "17896441",
-    "content": "873bb7ea"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-run-compute-locally-873-498"
   },
   "/docs/docs/compute/quickstart/write-functions-bb9": {
-    "component": "17896441",
-    "content": "15e60b46"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-quickstart-write-functions-15-e-c4d"
   },
   "/docs/docs/compute/what-is-compute-cc3": {
-    "component": "17896441",
-    "content": "932779a9"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-compute-what-is-compute-932-e31"
   },
   "/docs/docs/grav/introduction/concepts/a-brief-overview-555": {
-    "component": "17896441",
-    "content": "b0d7ff8a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-introduction-concepts-a-brief-overviewb-0-d-aed"
   },
   "/docs/docs/grav/introduction/concepts/pods-ec8": {
-    "component": "17896441",
-    "content": "f735af37"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-introduction-concepts-podsf-73-253"
   },
   "/docs/docs/grav/introduction/concepts/receipts-ffb": {
-    "component": "17896441",
-    "content": "8ffc8937"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-introduction-concepts-receipts-8-ff-889"
   },
   "/docs/docs/grav/introduction/concepts/the-grav-instance-612": {
-    "component": "17896441",
-    "content": "f1a55ce3"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-introduction-concepts-the-grav-instancef-1-a-9ba"
   },
   "/docs/docs/grav/networking/discovery/getting-started-discovery-b6c": {
-    "component": "17896441",
-    "content": "ca197876"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-discovery-getting-started-discoveryca-1-571"
   },
   "/docs/docs/grav/networking/discovery/local-network-discovery-125": {
-    "component": "17896441",
-    "content": "aa65154a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-discovery-local-network-discoveryaa-6-ad7"
   },
   "/docs/docs/grav/networking/transports/getting-started-transports-eac": {
-    "component": "17896441",
-    "content": "949e1742"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-transports-getting-started-transports-949-869"
   },
   "/docs/docs/grav/networking/transports/http-transport-331": {
-    "component": "17896441",
-    "content": "1258d5d1"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-transports-http-transport-125-700"
   },
   "/docs/docs/grav/networking/transports/nats-transport-bf1": {
-    "component": "17896441",
-    "content": "3a477d14"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-transports-nats-transport-3-a-4-20f"
   },
   "/docs/docs/grav/networking/transports/websocket-transport-c48": {
-    "component": "17896441",
-    "content": "431b404e"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-networking-transports-websocket-transport-431-a59"
   },
   "/docs/docs/grav/usage/getting-started/grav-instance-options-093": {
-    "component": "17896441",
-    "content": "e96ed9dd"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-grav-instance-optionse-96-e2a"
   },
   "/docs/docs/grav/usage/getting-started/receiving-messages-016": {
-    "component": "17896441",
-    "content": "8d1d2613"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-receiving-messages-8-d-1-a25"
   },
   "/docs/docs/grav/usage/getting-started/request-reply-93c": {
-    "component": "17896441",
-    "content": "68eac8a0"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-request-reply-68-e-d76"
   },
   "/docs/docs/grav/usage/getting-started/sending-messages-6e1": {
-    "component": "17896441",
-    "content": "98f9b3c1"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-sending-messages-98-f-3f5"
   },
   "/docs/docs/grav/usage/getting-started/start-here-ea6": {
-    "component": "17896441",
-    "content": "92616b7d"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-start-here-926-2f5"
   },
   "/docs/docs/grav/usage/getting-started/using-the-grav-instance-bdb": {
-    "component": "17896441",
-    "content": "61e733b9"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-usage-getting-started-using-the-grav-instance-61-e-16e"
   },
   "/docs/docs/grav/what-is-grav-6c2": {
-    "component": "17896441",
-    "content": "24103774"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-grav-what-is-grav-241-816"
   },
   "/docs/docs/intro-7d8": {
-    "component": "17896441",
-    "content": "0e384e19"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-intro-0-e-3-261"
+  },
+  "/docs/docs/intro-to-webassembly/history-19d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-intro-to-webassembly-history-2-a-4-4ca"
+  },
+  "/docs/docs/intro-to-webassembly/why-webassembly-83a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-intro-to-webassembly-why-webassembly-211-11a"
   },
   "/docs/docs/reactr/faas-e3e": {
-    "component": "17896441",
-    "content": "54195dae"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reactr-faas-541-14b"
   },
   "/docs/docs/reactr/grav-0c9": {
-    "component": "17896441",
-    "content": "bcf85698"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reactr-gravbcf-e74"
   },
   "/docs/docs/reactr/guide-c7a": {
-    "component": "17896441",
-    "content": "77274729"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reactr-guide-772-a63"
   },
   "/docs/docs/reactr/wasm-a2b": {
-    "component": "17896441",
-    "content": "bc95c480"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-reactr-wasmbc-9-8b0"
   },
   "/docs/docs/subo/get-started-84a": {
-    "component": "17896441",
-    "content": "b6bd8505"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-subo-get-startedb-6-b-43f"
   },
   "/docs/docs/subo/README-01f": {
-    "component": "17896441",
-    "content": "0ba0ba35"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-subo-readme-0-ba-fba"
   },
   "/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem-f89": {
-    "component": "17896441",
-    "content": "62267c0a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-suborbital-ecosystem-the-suborbital-ecosystem-622-14c"
   },
   "/docs/docs/vektor/getting-started-48d": {
-    "component": "17896441",
-    "content": "83ef7cb6"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-vektor-getting-started-83-e-c30"
   },
   "/docs/docs/vektor/testing-vk-servers-c2b": {
-    "component": "17896441",
-    "content": "d85db04a"
-  },
-  "/docs/docs/what-is-webassembly/history-25b": {
-    "component": "17896441",
-    "content": "ef657a6c"
-  },
-  "/docs/docs/what-is-webassembly/why-webassembly-424": {
-    "component": "17896441",
-    "content": "dda73f74"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docs-vektor-testing-vk-serversd-85-aab"
   },
   "/docs/-7fd": {
-    "component": "c4f5d8e4",
-    "config": "5e9f5e1a"
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---docs-5-e-9-4ea"
   }
 }

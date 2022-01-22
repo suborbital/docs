@@ -11,13 +11,13 @@
   "editUrl": "https://github.com/suborbital/docs/docs/atmo/getstarted/what-is-atmo.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1639810469,
-  "formattedLastUpdatedAt": "12/18/2021",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
-    "title": "Testing Vektor Servers",
-    "permalink": "/docs/docs/vektor/testing-vk-servers"
+    "title": "Deploy Compute to your cloud environment",
+    "permalink": "/docs/docs/compute/cloud-deployment/install-compute-in-your-cloud-environment"
   },
   "next": {
     "title": "Creating a Project",
