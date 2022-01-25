@@ -241,6 +241,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "contributing-guide/contributing-to-suborbital",
+              "path": "/docs/docs/contributing-guide/contributing-to-suborbital",
+              "sidebar": "docs"
+            },
+            {
               "id": "grav/introduction/concepts/a-brief-overview",
               "path": "/docs/docs/grav/introduction/concepts/a-brief-overview",
               "sidebar": "docs"

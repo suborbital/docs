@@ -563,6 +563,11 @@
             ]
           }
         ]
+      },
+      {
+        "type": "link",
+        "label": "Contributing to Suborbital",
+        "href": "/docs/docs/contributing-guide/contributing-to-suborbital"
       }
     ]
   }

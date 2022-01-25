@@ -95,12 +95,12 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/cohix-14/Workspaces/suborbital/docs/website/sidebars.js",
+          "sidebarPath": "D:\\docs\\website\\sidebars.js",
           "editUrl": "https://github.com/suborbital/docs",
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "/Users/cohix-14/Workspaces/suborbital/docs/website/src/css/home.css"
+          "customCss": "D:\\docs\\website\\src\\css\\home.css"
         }
       }
     ]

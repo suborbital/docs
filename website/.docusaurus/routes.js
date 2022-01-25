@@ -4,48 +4,13 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/docs/__docusaurus/debug',
-    component: ComponentCreator('/docs/__docusaurus/debug','208'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/config',
-    component: ComponentCreator('/docs/__docusaurus/debug/config','a96'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/content',
-    component: ComponentCreator('/docs/__docusaurus/debug/content','551'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/globalData',
-    component: ComponentCreator('/docs/__docusaurus/debug/globalData','8b6'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/metadata',
-    component: ComponentCreator('/docs/__docusaurus/debug/metadata','af3'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/registry',
-    component: ComponentCreator('/docs/__docusaurus/debug/registry','0b9'),
-    exact: true
-  },
-  {
-    path: '/docs/__docusaurus/debug/routes',
-    component: ComponentCreator('/docs/__docusaurus/debug/routes','d11'),
-    exact: true
-  },
-  {
     path: '/docs/blog/archive',
     component: ComponentCreator('/docs/blog/archive','508'),
     exact: true
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs','9fe'),
+    component: ComponentCreator('/docs/docs','246'),
     routes: [
       {
         path: '/docs/docs/atmo/concepts/runnables',
@@ -321,6 +286,12 @@ export default [
       {
         path: '/docs/docs/compute/what-is-compute',
         component: ComponentCreator('/docs/docs/compute/what-is-compute','cc3'),
+        exact: true,
+        'sidebar': "docs"
+      },
+      {
+        path: '/docs/docs/contributing-guide/contributing-to-suborbital',
+        component: ComponentCreator('/docs/docs/contributing-guide/contributing-to-suborbital','5bb'),
         exact: true,
         'sidebar': "docs"
       },
