@@ -1,4 +1,7 @@
 
+install:
+	npm install --prefix website
+
 start:
 	npm run start --prefix website
 
