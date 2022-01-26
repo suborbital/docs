@@ -1,6 +1,7 @@
 
 website/node_modules
 website/build
+website/.docusaurus
 
 website/yarn.lock
 website/package-lock.json
