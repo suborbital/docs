@@ -9,11 +9,7 @@ module.exports ={
     },
     {
       'Compute':[
-        {
-          'What is Compute?':[
-            'compute/what-is-compute'
-          ]
-        },
+        'compute/what-is-compute',
         {
           'Quickstart':[
             'compute/quickstart/create-an-environment-token-with-subo',
@@ -62,10 +58,24 @@ module.exports ={
         {
         'Concepts':[
             'atmo/concepts/runnables',
+            'atmo/concepts/the-directive',
             'atmo/concepts/state',
-            'atmo/concepts/static-directory',
-            'atmo/concepts/the-directive'
+            'atmo/concepts/static-directory'
             ]
+        },
+        {
+          'Usage':[
+              'atmo/usage/creating-runnables',
+              'atmo/usage/creating-handlers',
+              'atmo/usage/building-a-bundle',
+              'atmo/usage/deploying-atmo',
+              'atmo/usage/error-handling',
+              'atmo/usage/headless',
+              'atmo/usage/managing-state',
+              'atmo/usage/schedules',
+              'atmo/usage/streams',
+              'atmo/usage/using-sql-databases'
+                ]
         },
         {
         'Runnable API':[
@@ -79,20 +89,6 @@ module.exports ={
             'atmo/runnable-api/logging',
             'atmo/runnable-api/request',
             'atmo/runnable-api/response'
-              ]
-        },
-        {
-        'Usage':[
-            'atmo/usage/creating-runnables',
-            'atmo/usage/creating-handlers',
-            'atmo/usage/building-a-bundle',
-            'atmo/usage/deploying-atmo',
-            'atmo/usage/error-handling',
-            'atmo/usage/headless',
-            'atmo/usage/managing-state',
-            'atmo/usage/schedules',
-            'atmo/usage/streams',
-            'atmo/usage/using-sql-databases'
               ]
         }
         ]

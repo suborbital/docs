@@ -18,11 +18,11 @@ const Header = () => {
           without compromising security, performance, or developer experience.
         </Paragraph>
         <Row>
-          <Link to="/docs/docs/intro-to-webassembly/history">
+          <Link to="/docs/what-is-webassembly/history">
             <ButtonFilled>What is WebAssembly?</ButtonFilled>
           </Link>
           <span style={{ width: '1rem' }} />
-          <Link to="/docs/docs/suborbital-ecosystem/the-suborbital-ecosystem">
+          <Link to="/docs/suborbital-ecosystem/the-suborbital-ecosystem">
             <ButtonOutlined>Get Started</ButtonOutlined>
           </Link>
         </Row>
