@@ -18,7 +18,7 @@ const Header = () => {
           without compromising security, performance, or developer experience.
         </Paragraph>
         <Row>
-          <Link to="/docs/what-is-webassembly/history">
+          <Link to="/docs/intro-to-webassembly/why-webassembly">
             <ButtonFilled>What is WebAssembly?</ButtonFilled>
           </Link>
           <span style={{ width: '1rem' }} />
