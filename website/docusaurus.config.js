@@ -34,7 +34,7 @@ module.exports = {
   title: 'Suborbital Documentation',
   tagline: 'Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.',
   url: 'https://docs.suborbital.dev',
-  baseUrl: '/docs/',
+  baseUrl: '/',
   favicon: 'img/SOS_SubOrb-Icon-FullColour.ico',
   organizationName: 'suborbital',
   projectName: 'docs',
@@ -53,11 +53,21 @@ module.exports = {
         src: 'img/SOS_Alt-Long-FullColour.svg'
       },
       items: [
+        // {
+        //   type: 'doc',
+        //   docId: 'intro',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
         {
-          type: 'doc',
-          docId: 'intro',
+          href: 'https://suborbital.dev',
+          label: 'Homepage',
           position: 'left',
-          label: 'Tutorial',
+        },
+        {
+          href: 'https://blog.suborbital.dev',
+          label: 'Blog',
+          position: 'left',
         },
         {
           href: 'https://github.com/suborbital',
