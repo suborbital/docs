@@ -1,17 +1,17 @@
-module.exports ={
+module.exports = {
   docs: [
     'suborbital-ecosystem/the-suborbital-ecosystem',
     {
-        'Intro to WebAssembly':[
-          'intro-to-webassembly/history',
-          'intro-to-webassembly/why-webassembly'
-        ]
+      'Intro to WebAssembly': [
+        'intro-to-webassembly/history',
+        'intro-to-webassembly/why-webassembly'
+      ]
     },
     {
-      'Compute':[
+      'Compute': [
         'compute/what-is-compute',
         {
-          'Quickstart':[
+          'Quickstart': [
             'compute/quickstart/create-an-environment-token-with-subo',
             'compute/quickstart/run-compute-locally',
             'compute/quickstart/write-functions',
@@ -21,25 +21,25 @@ module.exports ={
           ]
         },
         {
-          'Concepts':[
+          'Concepts': [
             'compute/concepts/data-plane-vs-control-plane',
             'compute/concepts/fully-qualified-function-names',
             'compute/concepts/namespaces'
           ]
         },
         {
-          'Integrating the Function Editor':[
+          'Integrating the Function Editor': [
             'compute/integrate-the-function-editor/code-editor'
           ]
         },
         {
-          'Customizing functions':[
+          'Customizing functions': [
             'compute/customizing-functions/custom-function-templates',
             'compute/customizing-functions/custom-libraries'
           ]
         },
         {
-          'Cloud Deployment':[
+          'Cloud Deployment': [
             'compute/cloud-deployment/configure-capabilities',
             'compute/cloud-deployment/install-compute-in-your-cloud-environment'
           ]
@@ -47,38 +47,38 @@ module.exports ={
       ]
     },
     {
-    'Atmo':[
+      'Atmo': [
         {
-        'Get Started':[
+          'Get Started': [
             'atmo/getstarted/what-is-atmo',
             'atmo/getstarted/creating-a-project',
             'atmo/getstarted/building-and-running'
-            ]
+          ]
         },
         {
-        'Concepts':[
+          'Concepts': [
             'atmo/concepts/runnables',
             'atmo/concepts/the-directive',
             'atmo/concepts/state',
             'atmo/concepts/static-directory'
-            ]
+          ]
         },
         {
-          'Usage':[
-              'atmo/usage/creating-runnables',
-              'atmo/usage/creating-handlers',
-              'atmo/usage/building-a-bundle',
-              'atmo/usage/deploying-atmo',
-              'atmo/usage/error-handling',
-              'atmo/usage/headless',
-              'atmo/usage/managing-state',
-              'atmo/usage/schedules',
-              'atmo/usage/streams',
-              'atmo/usage/using-sql-databases'
-                ]
+          'Usage': [
+            'atmo/usage/creating-runnables',
+            'atmo/usage/creating-handlers',
+            'atmo/usage/building-a-bundle',
+            'atmo/usage/deploying-atmo',
+            'atmo/usage/error-handling',
+            'atmo/usage/headless',
+            'atmo/usage/managing-state',
+            'atmo/usage/schedules',
+            'atmo/usage/streams',
+            'atmo/usage/using-sql-databases'
+          ]
         },
         {
-        'Runnable API':[
+          'Runnable API': [
             'atmo/runnable-api/introduction',
             'atmo/runnable-api/authentication',
             'atmo/runnable-api/cache',
@@ -89,21 +89,21 @@ module.exports ={
             'atmo/runnable-api/logging',
             'atmo/runnable-api/request',
             'atmo/runnable-api/response'
-              ]
+          ]
         }
-        ]
+      ]
     },
     {
-      'Building Blocks':[
+      'Building Blocks': [
         {
-          Grav:[
+          Grav: [
             {
-              'What is Grav':[
+              'What is Grav': [
                 'grav/what-is-grav'
               ]
             },
             {
-              'Concepts':[
+              'Concepts': [
                 'grav/introduction/concepts/a-brief-overview',
                 'grav/introduction/concepts/the-grav-instance',
                 'grav/introduction/concepts/pods',
@@ -111,7 +111,7 @@ module.exports ={
               ]
             },
             {
-              'Usage':[
+              'Usage': [
                 'grav/usage/getting-started/start-here',
                 'grav/usage/getting-started/using-the-grav-instance',
                 'grav/usage/getting-started/sending-messages',
@@ -121,7 +121,7 @@ module.exports ={
               ]
             },
             {
-              'Networked Usage':[
+              'Networked Usage': [
                 'grav/networking/transports/getting-started-transports',
                 'grav/networking/transports/http-transport',
                 'grav/networking/transports/websocket-transport',
@@ -133,46 +133,46 @@ module.exports ={
           ]
         },
         {
-            Reactr:[
-              {
-                'Start Here':[
-                  'reactr/guide'
-                ]
-              },
-              {
-                'Reactr and WASM':[
-                  'reactr/wasm'
-                ]
-              },
-              {
-                'Reactr and GRAV':[
-                  'reactr/grav'
-                ]
-              },
-              {
-                'Reactr and FaaS':[
-                  'reactr/faas'
-                ]
-              }
-            ]
+          Reactr: [
+            {
+              'Start Here': [
+                'reactr/guide'
+              ]
+            },
+            {
+              'Reactr and WASM': [
+                'reactr/wasm'
+              ]
+            },
+            {
+              'Reactr and GRAV': [
+                'reactr/grav'
+              ]
+            },
+            {
+              'Reactr and FaaS': [
+                'reactr/faas'
+              ]
+            }
+          ]
         },
         {
-          Vektor:[
+          Vektor: [
             {
-              'Getting Started':[
+              'Getting Started': [
                 'vektor/getting-started'
               ]
             },
             {
-              'Testing vektor':[
+              'Testing vektor': [
                 'vektor/testing-vk-servers'
               ]
             }
           ]
-        } 
+        }
       ]
     },
     'contributing-guide/contributing-to-suborbital'
-    ]
+  ]
 }
 

@@ -1,6 +1,6 @@
 # Connections
 
-In order to build a useful application, Atmo needs to be able to connect to external resources. Currently, Atmo can connect to [NATS](https://nats.io/) and [Redis](https://redis.io/), and upcoming releases will include additional types such as databases and more.
+In order to build a useful application, Atmo needs to be able to connect to external resources. Currently, Atmo can connect to [NATS](https://nats.io/), [Redis](https://redis.io/), [Kafka](https://kafka.apache.org/), [MySQL](https://www.mysql.com/), and [PostgreSQL](https://www.postgresql.org/). Upcoming releases will include additional data sources as well.
 
 To create connections, add a `connections` section to your Directive. When Atmo starts up, it will establish the connections you've configured, and make them available to your application in a few different ways.
 
