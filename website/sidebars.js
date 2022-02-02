@@ -2,14 +2,23 @@ module.exports = {
   docs: [
     'suborbital-ecosystem/the-suborbital-ecosystem',
     {
-      'Intro to WebAssembly': [
+      type: 'category',
+      label: 'Intro to WebAssembly',
+      collapsible: false,
+      items: [
         'intro-to-webassembly/history',
         'intro-to-webassembly/why-webassembly'
       ]
     },
     {
-      'Compute': [
-        'compute/what-is-compute',
+      type: 'category',
+      label: 'Compute',
+      collapsible: false,
+      link: {
+        type: 'doc',
+        id: 'compute/what-is-compute',
+      },
+      items: [
         {
           'Quickstart': [
             'compute/quickstart/create-an-environment-token-with-subo',
@@ -47,7 +56,14 @@ module.exports = {
       ]
     },
     {
-      'Atmo': [
+      type: 'category',
+      label: 'Atmo',
+      collapsible: false,
+      link: {
+        type: 'doc',
+        id: 'atmo/getstarted/what-is-atmo'
+      },
+      items: [
         {
           'Get Started': [
             'atmo/getstarted/what-is-atmo',
@@ -94,17 +110,21 @@ module.exports = {
       ]
     },
     {
-      'Building Blocks': [
+      type: 'category',
+      label: 'Building Blocks',
+      collapsible: false,
+      items: [
         {
-          Grav: [
-            {
-              'What is Grav': [
-                'grav/what-is-grav'
-              ]
-            },
+          type: 'category',
+          label: 'Grav',
+          link: {
+            type: 'doc',
+            id: 'grav/what-is-grav'
+          },
+          items: [
+            'grav/introduction/concepts/a-brief-overview',
             {
               'Concepts': [
-                'grav/introduction/concepts/a-brief-overview',
                 'grav/introduction/concepts/the-grav-instance',
                 'grav/introduction/concepts/pods',
                 'grav/introduction/concepts/receipts'
@@ -133,41 +153,43 @@ module.exports = {
           ]
         },
         {
-          Reactr: [
+          type: 'category',
+          label: 'Reactr',
+          link: {
+            type: 'doc',
+            id: 'reactr/guide'
+          },
+          items: [
             {
-              'Start Here': [
-                'reactr/guide'
-              ]
+              type: 'doc',
+              label: 'Reactr and WASM',
+              id: 'reactr/wasm'
             },
             {
-              'Reactr and WASM': [
-                'reactr/wasm'
-              ]
+              type: 'doc',
+              label: 'Reactr and GRAV',
+              id: 'reactr/grav'
             },
             {
-              'Reactr and GRAV': [
-                'reactr/grav'
-              ]
-            },
-            {
-              'Reactr and FaaS': [
-                'reactr/faas'
-              ]
+              type: 'doc',
+              label: 'Reactr and FaaS',
+              id: 'reactr/faas'
             }
           ]
         },
         {
-          Vektor: [
+          type: 'category',
+          label: 'Vektor',
+          link: {
+            type: 'doc',
+            id: 'vektor/getting-started'
+          },
+          items: [
             {
-              'Getting Started': [
-                'vektor/getting-started'
-              ]
+              type: 'doc',
+              label: 'Testing Vektor',
+              id: 'vektor/testing-vk-servers'
             },
-            {
-              'Testing vektor': [
-                'vektor/testing-vk-servers'
-              ]
-            }
           ]
         }
       ]
