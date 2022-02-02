@@ -45,3 +45,4 @@ with a body to it:
 curl localhost:8080/hello -d 'from the Kármán line!'
 ```
 
+Atmo runs and responds successfuly if you get a 200 OK response with the request body replayed to you in the response.
