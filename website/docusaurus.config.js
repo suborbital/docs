@@ -44,7 +44,7 @@ module.exports = {
 //    algolia: {
 //      apiKey: '',
 //      indexName: '',
-//      contextualSearch: 
+//      contextualSearch:
 //    },
     navbar: {
       title: '',
@@ -62,12 +62,12 @@ module.exports = {
         {
           href: 'https://suborbital.dev',
           label: 'Homepage',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://blog.suborbital.dev',
           label: 'Blog',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://github.com/suborbital',
@@ -101,7 +101,7 @@ module.exports = {
         }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Suborbital Contributors. Built with Docusaurus.`,
-      
+
     }
   },
   presets: [
