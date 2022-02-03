@@ -30,13 +30,16 @@ const resources = [
   }
 ]
 
+const baseUrl = process.env.GITHUB_ACTION ? '/docs/' : '/'
+console.log('Using baseUrl: ', baseUrl)
+
 module.exports = {
   title: 'Suborbital Documentation',
   tagline: 'Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.',
   url: 'https://docs.suborbital.dev',
   // When deploying, use /docs as the directory root
   // NOTE: don't forget to remove this once deploying into a root domain (CNAME)
-  baseUrl: process.env.GITHUB_ACTION ? '/docs' : '/',
+  baseUrl,
   favicon: 'img/SOS_SubOrb-Icon-FullColour.ico',
   organizationName: 'suborbital',
   projectName: 'docs',
