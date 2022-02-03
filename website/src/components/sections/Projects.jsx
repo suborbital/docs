@@ -14,10 +14,10 @@ const Projects = ({ type }) => {
           <div className="grid">
             {PrimaryOfferings.map(PrimaryOffering => (
               <div className="PrimaryOfferingsDiv">
-                <Link className="PrimaryOfferingsLogo" to={PrimaryOffering.url}>
+                <Link className="PrimaryOfferingsLogo" to={useBaseUrl(PrimaryOffering.url)}>
                   <img className="PrimaryOfferingsLogo" src={useBaseUrl(PrimaryOffering.icon)} alt={PrimaryOffering.icon} />
                 </Link>
-                <Link className="subHeadingPO" to={PrimaryOffering.url}>
+                <Link className="subHeadingPO" to={useBaseUrl(PrimaryOffering.url)}>
                   <b>{PrimaryOffering.heading}</b>
                 </Link>
                 <Paragraph>{PrimaryOffering.description}</Paragraph>
@@ -31,10 +31,10 @@ const Projects = ({ type }) => {
           <div className="grid">
             {OtherOfferings.map(OtherOffering => (
               <div className="OtherOfferingsDiv">
-               <Link className="OtherOfferingsLogo" to={OtherOffering.url}>
+               <Link className="OtherOfferingsLogo" to={useBaseUrl(OtherOffering.url)}>
                 <img className="OtherOfferingsLogo" src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
                </Link>
-                <Link className="subHeadingOO" to={OtherOffering.url}>
+                <Link className="subHeadingOO" to={useBaseUrl(OtherOffering.url)}>
                   <b>{OtherOffering.heading}</b>
                 </Link>
                 <Paragraph>{OtherOffering.description}</Paragraph>
