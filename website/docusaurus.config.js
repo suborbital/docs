@@ -30,11 +30,16 @@ const resources = [
   }
 ]
 
+const baseUrl = process.env.GITHUB_ACTION ? '/docs/' : '/'
+console.log('Using baseUrl: ', baseUrl)
+
 module.exports = {
   title: 'Suborbital Documentation',
   tagline: 'Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.',
   url: 'https://docs.suborbital.dev',
-  baseUrl: '/',
+  // When deploying, use /docs as the directory root
+  // NOTE: don't forget to remove this once deploying into a root domain (CNAME)
+  baseUrl,
   favicon: 'img/SOS_SubOrb-Icon-FullColour.ico',
   organizationName: 'suborbital',
   projectName: 'docs',
@@ -44,7 +49,7 @@ module.exports = {
 //    algolia: {
 //      apiKey: '',
 //      indexName: '',
-//      contextualSearch: 
+//      contextualSearch:
 //    },
     navbar: {
       title: '',
@@ -62,12 +67,12 @@ module.exports = {
         {
           href: 'https://suborbital.dev',
           label: 'Homepage',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://blog.suborbital.dev',
           label: 'Blog',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://github.com/suborbital',
@@ -101,7 +106,7 @@ module.exports = {
         }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Suborbital Contributors. Built with Docusaurus.`,
-      
+
     }
   },
   presets: [
@@ -109,12 +114,17 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          // enable docs-only mode: https://docusaurus.io/docs/docs-introduction#docs-only-mode
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/suborbital/docs',
           showLastUpdateTime: true
         },
         theme: {
-          customCss: require.resolve('./src/css/home.css')
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/home.css'),
+          ]
         }
       }
     ]

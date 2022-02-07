@@ -9,16 +9,19 @@ const Projects = ({ type }) => {
   return (
     <>
       {type === 'PrimaryOfferings' ? (
-        <div style={{ marginTop: '3rem' }}>
-          <SubHeading>Our projects</SubHeading>
+        <div style={{ marginTop: '4rem' }}>
+          <SubHeading>
+            <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
+              The Suborbital Ecosystem
+            </Link>
+          </SubHeading>
           <div className="grid">
             {PrimaryOfferings.map(PrimaryOffering => (
-              <div className="PrimaryOfferingsDiv">
-                <Link className="PrimaryOfferingsLogo" to={PrimaryOffering.url}>
+              <div className="PrimaryOfferingsDiv" key={PrimaryOffering.key}>
+                <Link className="PrimaryOfferingsLogo" to={useBaseUrl(PrimaryOffering.url)}>
                   <img className="PrimaryOfferingsLogo" src={useBaseUrl(PrimaryOffering.icon)} alt={PrimaryOffering.icon} />
                 </Link>
-                <br />
-                <Link className="subHeadingPO" to={PrimaryOffering.url}>
+                <Link className="subHeadingPO" to={useBaseUrl(PrimaryOffering.url)}>
                   <b>{PrimaryOffering.heading}</b>
                 </Link>
                 <Paragraph>{PrimaryOffering.description}</Paragraph>
@@ -27,16 +30,15 @@ const Projects = ({ type }) => {
           </div>
         </div>
       ) : (
-        <div style={{ marginTop: '5rem' }}>
+        <div style={{ marginTop: '2rem' }}>
           <SubHeading>Building Blocks</SubHeading>
           <div className="grid">
             {OtherOfferings.map(OtherOffering => (
-              <div className="OtherOfferingsDiv">
-               <Link className="OtherOfferingsLogo" to={OtherOffering.url}>
+              <div className="OtherOfferingsDiv" key={OtherOffering.key}>
+               <Link className="OtherOfferingsLogo" to={useBaseUrl(OtherOffering.url)}>
                 <img className="OtherOfferingsLogo" src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
-               </Link> 
-                <br />
-                <Link className="subHeadingOO" to={OtherOffering.url}>
+               </Link>
+                <Link className="subHeadingOO" to={useBaseUrl(OtherOffering.url)}>
                   <b>{OtherOffering.heading}</b>
                 </Link>
                 <Paragraph>{OtherOffering.description}</Paragraph>

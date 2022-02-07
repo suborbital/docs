@@ -1,23 +1,23 @@
 .responsiveRow {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: end;
 }
 
-@media (max-width: 890px) {
+.projectLogoMain {
+  max-height: 6rem;
+  margin: 1rem 0;
+}
+
+.projectLogo {
+  max-height: 4rem;
+  margin: .5rem 0;
+}
+
+@media (max-width: 767px) {
   .responsiveRow {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: left;
+    grid-template-columns: 1fr;
   }
 }
-/*# sourceMappingURL=responsiveRow.css.map */

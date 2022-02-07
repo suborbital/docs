@@ -1,37 +1,42 @@
 export const PrimaryOfferings = [
   {
+    key: 'atmo',
     icon: 'img/SOS_Atmo-Long-FullColour0.svg',
     heading: 'Atmo',
     description: 'WebAssembly server application environment that scales with your team.',
-    url: 'docs/atmo/getstarted/what-is-atmo'
+    url: 'atmo/about-atmo'
   },
   {
-    icon: 'img/undraw_docusaurus_mountain.svg',
-    heading: 'Suborbital Compute Network',
-    description: 'The Cloud Native SaaS Extension Engine',
-    url: 'docs/compute/what-is-compute'
+    key: 'sat',
+    icon: 'img/SOS_Sat-placeholder.svg',
+    heading: 'Sat',
+    description: 'A Cloud Native function executor that does one thing well.',
+    url: 'sat/about-sat'
   },
 
 ]
 
 export const OtherOfferings = [
   {
-    icon: 'img/SOS_Grav-Long-FullColour.svg',
-    heading: 'Grav',
-    description: 'Embedded, decentralized message bus.',
-    url: 'docs/grav/what-is-grav'
-  },
-  {
+    key: 'reactr',
     icon: 'img/SOS_Reactr-Long-FullColour0.svg',
     heading: 'Reactr',
     description: 'Next generation, fast, and performant function scheduler for Go and WebAssembly.',
-    url: 'docs/reactr/guide'
+    url: 'reactr/guide'
   },
   {
+    key: 'vektor',
     icon: 'img/SOS_Vektor-Long-FullColour.svg',
     heading: 'Vektor',
     description: 'Opinionated production-grade HTTP server framework for Go.',
-    url: 'docs/vektor/getting-started'
+    url: 'vektor/getting-started'
+  },
+  {
+    key: 'grav',
+    icon: 'img/SOS_Grav-Long-FullColour.svg',
+    heading: 'Grav',
+    description: 'Embedded, decentralized message bus.',
+    url: 'grav/what-is-grav'
   },
 ]
 

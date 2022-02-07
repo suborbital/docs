@@ -1,11 +1,11 @@
 # The Vektor Guide 🗺
 
-Vektor's goal is to help you develop web services faster. 
-Vektor handles much of the boilerplate needed to start 
-building a Go server, so you can serve a request in 
+Vektor's goal is to help you develop web services faster.
+Vektor handles much of the boilerplate needed to start
+building a Go server, so you can serve a request in
 less than 10 lines of code:
 
-```golang
+```go
 import "github.com/suborbital/vektor/vk"
 
 server := vk.New(vk.UseAppName("Vektor API Server"), vk.UseDomain("vektor.example.com"))
@@ -20,36 +20,36 @@ func HandlePing(r *http.Request, ctx *vk.Ctx) (interface{}, error) {
 	return "pong", nil
 }
 ```
-Those are the basics, but Vektor is capable of 
-scaling up to serve powerful production workloads, 
+Those are the basics, but Vektor is capable of
+scaling up to serve powerful production workloads,
 using its full suite of API-oriented features.
 
 # Set up `vk`
 
 ## The server object
 
-The `vk.Server` type contains everything needed to 
-build a web service. It includes the router, 
-a middleware system, customizable plug-in points, 
-and handy built-in components like LetsEncrypt 
+The `vk.Server` type contains everything needed to
+build a web service. It includes the router,
+a middleware system, customizable plug-in points,
+and handy built-in components like LetsEncrypt
 support and CORS handlers.
 
-Creating a server object is done with `vk.New()` 
-and accepts an optional list of `OptionModifiers` 
+Creating a server object is done with `vk.New()`
+and accepts an optional list of `OptionModifiers`
 which allow customization of the server:
 
-```golang
+```go
 server := vk.New(
 	vk.UseAppName("Vektor API Server"),
 	vk.UseDomain("vektor.example.com"),
 )
 ```
 
-To create a server object without TLS support, 
-omit the `vk.UseDomain()` modifier and specify 
+To create a server object without TLS support,
+omit the `vk.UseDomain()` modifier and specify
 an HTTP port to listen on.
 
-```golang
+```go
 server := vk.New(
 	vk.UseAppName("Vektor API HTTP-only"),
 	vk.UseHTTPPort(8000),
@@ -75,30 +75,30 @@ Each of the options can be set using the modifier function, or by setting the as
 ## Handler functions
 
 `vk`'s handler function definition is:
-```golang
+```go
 func HandlePing(r *http.Request, ctx *vk.Ctx) (interface{}, error)
 ```
 Here's a breakdown of each part:
 
 `r *http.Request`: The request object for the request being handled.
 
-`ctx *vk.Ctx`: A context object containing more options for 
+`ctx *vk.Ctx`: A context object containing more options for
 interacting with the request. See more below.
 
 `(interface{}, error)`: The return types of the handler allow you
-to respond to HTTP requests by simply returning values. If an 
+to respond to HTTP requests by simply returning values. If an
 error is returned, `vk` will interpret it as a failed request and
-respond with an error code, if error is `nil`, then the `interface{}` 
-value is used to respond based on the response handling rules. 
+respond with an error code, if error is `nil`, then the `interface{}`
+value is used to respond based on the response handling rules.
 **Responding to requests is handled in depth below in [Responding to requests](#responding-to-requests)**
 
 
 ## Mounting routes
 
-To define routes for your `vk` server, use the HTTP method 
+To define routes for your `vk` server, use the HTTP method
 functions on the server object:
 
-```golang
+```go
 server := vk.New(
 	vk.UseAppName("Vektor API Server"),
 	vk.UseDomain("vektor.example.com"),
@@ -114,7 +114,7 @@ If you prefer to pass the HTTP method as an argument, use `server.Handle()` inst
 ## Route groups
 
 `vk` allows grouping routes by a common path prefix. For example, if you want a group of routes to begin with the `/api/` path, you can create an API route group and then mount all of your handlers to that group.
-```golang
+```go
 apiGroup := vk.Group("/api")
 apiGroup.GET("/events", HandleGetEvents)
 
@@ -123,7 +123,7 @@ server.AddGroup(apiGroup)
 Calling `AddGroup` will calculate the full paths for all routes and mount them to the server. In the example above, the handler would be mounted at `/api/events`.
 
 Groups can even be added to groups!
-```golang
+```go
 v1 := vk.Group("/v1")
 v1.GET("/events", HandleEventsV1)
 
@@ -136,21 +136,21 @@ apiGroup.AddGroup(v2)
 
 server.AddGroup(api)
 ```
-This will create a natural grouping of your routes, 
-with the above example creating the `/api/v1/events` 
+This will create a natural grouping of your routes,
+with the above example creating the `/api/v1/events`
 and `/api/v2/events` routes.
 
 
 ## Middleware and Afterware
 
-Groups become even more powerful when combined with Middleware 
-and Afterware. Middleware are pseudo request handlers that run 
-in sequence before the mounted `vk.HandlerFunc` is run. 
-Middleware functions can modify a request and its context, 
-or they can return an error, which causes the request handling 
+Groups become even more powerful when combined with Middleware
+and Afterware. Middleware are pseudo request handlers that run
+in sequence before the mounted `vk.HandlerFunc` is run.
+Middleware functions can modify a request and its context,
+or they can return an error, which causes the request handling
 to be terminated immediately. Two examples:
 
-```golang
+```go
 func headerMiddleware(r *http.Request, ctx *vk.Ctx) error {
 	ctx.Headers.Set("X-Vektor-Test", "foobar")
 
@@ -170,7 +170,7 @@ func denyMiddleware(r *http.Request, ctx *vk.Ctx) error {
 Middleware have a similar function signature to `vk.HandlerFunc`, but only return an error. The first example modifies the request context to add a response header. The second example detects a hacker and returns an error, which is handled exactly like any other error response (see below). Returning an error from a Middleware prevents the request from ever reaching the registered handler.
 
 Middleware are applied to route groups with the `Before` method:
-```golang
+```go
 v1 := vk.Group("/v1").Before(vk.ContentTypeMiddleware("application/json"), denyMiddleware, headerMiddleware)
 v1.GET("/events", HandleEventsV1)
 ```
@@ -178,7 +178,7 @@ This example shows a group created with three middleware. The first adds the `Co
 
 Afterware is similar, but is run _after_ the request handler. Who knew! Afterware cannot modify response body or status code, but can modify response headers using the `ctx` object. Afterware will **always run**, even if something earlier in the request chain fails. Here's an example:
 
-```golang
+```go
 func logAfter(r *http.Request, ctx *vk.Ctx) {
 	ctx.Log.Info("request completed")
 }
@@ -194,13 +194,13 @@ Middleware and Afterware in `vk` is designed to be easily composable, creating c
 
 ## Response types
 
-`vk` includes two types, `Response` and `Error` 
-(with helper functions `vk.Respond(...)` and 
-`vk.Err(...)`) that can be used to gain extra 
-control over the response code and contents 
+`vk` includes two types, `Response` and `Error`
+(with helper functions `vk.Respond(...)` and
+`vk.Err(...)`) that can be used to gain extra
+control over the response code and contents
 that you want to return:
 
-```golang
+```go
 type createdResponse struct {
 	Name string `json:"name"`
 	UUID string `json:"uuid"`
@@ -224,7 +224,7 @@ func HandleDelete(r *http.Request, ctx *vk.Ctx) (interface{}, error) {
 	return nil, vk.Err(http.StatusConflict, "the user is already deleted") // responds with HTTP status 409 and body {"status": 409, "message": "the user is already deleted"}
 }
 ```
-`vk.Respond` and `vk.Err` can be used with their shortcuts 
+`vk.Respond` and `vk.Err` can be used with their shortcuts
 `vk.R` and `vk.E` if you like your code to be terse.
 
 ## Response handling rules
@@ -257,7 +257,7 @@ Handler returns... | Status Code | Response body | Content-Type
 `vk.Error` is an interface that can be used to control the behaviour of error responses. `vk.ErrorResponse` is a concrete type that implements `vk.Error`. Any errors that do NOT implement `vk.Error` will be treated as potentially unsafe, and their contents will be logged but not returned to the caller. Use `vk.Wrap(...)` if you'd like to wrap an `error` in `vk.ErrorResponse`. `vk.Err` returns a `vk.Error`.
 
 `vk.Error` looks like this:
-```golang
+```go
 type Error interface {
 	Error() string // this ensures all Errors will also conform to the normal error interface
 
@@ -266,14 +266,14 @@ type Error interface {
 }
 ```
 
-Errors returned from middleware or `HandlerFunc`s are 
+Errors returned from middleware or `HandlerFunc`s are
 handled as follows:
 
-1. If the type is `vk.Error`, set the HTTP status code 
+1. If the type is `vk.Error`, set the HTTP status code
 provided and respond with JSON as follows: `{"status": err.Status(), "message": err.Message()}`
 
-2. If the type is NOT `vk.Error`, log the potentially 
-unsafe error contents, set the HTTP status code to 500, 
+2. If the type is NOT `vk.Error`, log the potentially
+unsafe error contents, set the HTTP status code to 500,
 and respond with "Internal Server Error"
 
 Examples:
@@ -286,55 +286,55 @@ Handler returns... | Status Code | Response body | Content-Type
 
 ## Standard http.HandlerFunc
 `vk` can use standard `http.HandlerFunc` handlers
-by mounting them with `server.HandleHTTP`. This 
+by mounting them with `server.HandleHTTP`. This
 is useful for mounting handler functions provided
-by third party libraries (such as Prometheus), 
-but they are not able to take advantage of many `vk` 
+by third party libraries (such as Prometheus),
+but they are not able to take advantage of many `vk`
 features such as middleware or route groups currently.
 
 ## The Ctx Object
 Each request handler is passed a `vk.Ctx` object,
-which is a context object for the request. It is 
-similar to the `context.Context` type (and uses 
-one under the hood), but `Ctx` has been augmented 
+which is a context object for the request. It is
+similar to the `context.Context` type (and uses
+one under the hood), but `Ctx` has been augmented
 for use in web service development.
 
-`Ctx` includes a standard Go `context.Context` 
-which can be used as a pseudo key/value store using 
-`ctx.Set()` and `ctx.Get()`. This allows passing 
-things into request handlers such as database 
-connections or other persistent objects. Middleware 
-and Afterware can access the `Ctx` to modify it, 
+`Ctx` includes a standard Go `context.Context`
+which can be used as a pseudo key/value store using
+`ctx.Set()` and `ctx.Get()`. This allows passing
+things into request handlers such as database
+connections or other persistent objects. Middleware
+and Afterware can access the `Ctx` to modify it,
 or access data from it.
 
-The server's configured `vlog.Logger` object is 
-included (`ctx.Log`) for logging within request 
-handlers, and a shortcut for setting the logger's 
-scope for the current request exists with 
-`ctx.UseScope(...)`. You can learn about scope 
-in [the vlog docs](../vlog/README.md). A default 
+The server's configured `vlog.Logger` object is
+included (`ctx.Log`) for logging within request
+handlers, and a shortcut for setting the logger's
+scope for the current request exists with
+`ctx.UseScope(...)`. You can learn about scope
+in [the vlog docs](../vlog/README.md). A default
 scope will always be set with the request ID included.
 
-Accessing the URL params for the request 
-(such as `/users/:uuid`) is done with `ctx.Params`, 
+Accessing the URL params for the request
+(such as `/users/:uuid`) is done with `ctx.Params`,
 and `ctx.RespHeaders` can be used to set response headers
 if needed.
 
-`Ctx` can also be used to easily get a request ID, 
-with `ctx.RequestID()`. The Request ID is generated 
-and cached on the object, and so calling it multiple 
-times will return the same value. If you prefer to 
-set your own Request ID, `ctx.UseRequestID()` will do 
-the trick. However it will mean the first log message 
-for the request will have a different ID as it uses 
+`Ctx` can also be used to easily get a request ID,
+with `ctx.RequestID()`. The Request ID is generated
+and cached on the object, and so calling it multiple
+times will return the same value. If you prefer to
+set your own Request ID, `ctx.UseRequestID()` will do
+the trick. However it will mean the first log message
+for the request will have a different ID as it uses
 the default ID generated for the `ctx`.
 
 ## What's to come?
 
-`Vektor` is under active development. It intertwines 
-closely with [Reactr](https://github.com/suborbital/reactr) and [Grav](https://github.com/suborbital/grav) to 
-achieve Suborbital's goal of creating a platform for building 
-scalable web services. Reactr and Vektor together 
+`Vektor` is under active development. It intertwines
+closely with [Reactr](https://github.com/suborbital/reactr) and [Grav](https://github.com/suborbital/grav) to
+achieve Suborbital's goal of creating a platform for building
+scalable web services. Reactr and Vektor together
 can handle very large scale systems, and will be further
-integrated together to enable FaaS, WASM-based web service logic, 
+integrated together to enable FaaS, WASM-based web service logic,
 and vastly improved developer experience and productivity.
