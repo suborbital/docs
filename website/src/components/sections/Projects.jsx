@@ -13,7 +13,7 @@ const Projects = ({ type }) => {
           <SubHeading>Our projects</SubHeading>
           <div className="grid">
             {PrimaryOfferings.map(PrimaryOffering => (
-              <div className="PrimaryOfferingsDiv">
+              <div className="PrimaryOfferingsDiv" key={PrimaryOffering.key}>
                 <Link className="PrimaryOfferingsLogo" to={useBaseUrl(PrimaryOffering.url)}>
                   <img className="PrimaryOfferingsLogo" src={useBaseUrl(PrimaryOffering.icon)} alt={PrimaryOffering.icon} />
                 </Link>
@@ -30,7 +30,7 @@ const Projects = ({ type }) => {
           <SubHeading>Building Blocks</SubHeading>
           <div className="grid">
             {OtherOfferings.map(OtherOffering => (
-              <div className="OtherOfferingsDiv">
+              <div className="OtherOfferingsDiv" key={OtherOffering.key}>
                <Link className="OtherOfferingsLogo" to={useBaseUrl(OtherOffering.url)}>
                 <img className="OtherOfferingsLogo" src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
                </Link>
