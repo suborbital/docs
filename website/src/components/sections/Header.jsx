@@ -25,7 +25,7 @@ const Header = () => {
       </div>
 
       <div>
-        <img className="projectLogo" src="/img/webassembly-logo-wide.svg" alt="WebAssembly" />
+        <img className="projectLogo" src={useBaseUrl('/img/webassembly-logo-wide.svg')} alt="WebAssembly" />
 
         {/* <Heading>Powered by WebAssembly</Heading> */}
         <Paragraph className="spacing">
