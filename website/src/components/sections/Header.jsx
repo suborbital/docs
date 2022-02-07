@@ -2,32 +2,42 @@ import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../css/home.css'
-import { ButtonFilled, ButtonOutlined } from '../button'
+import { DocButton } from '../button'
 import { ResponsiveRow, Row } from '../layout'
 import { Heading, Paragraph } from '../texts'
 
 const Header = () => {
   return (
     <ResponsiveRow>
-      <div className="headingLeft">
-        <Heading fontWeight="bold">
-          <span className="">Suborbital</span>
-        </Heading>
+      <div>
+        <img src={useBaseUrl('/img/suborbital-logo-wide.svg')} alt="Suborbital" />
+
+        {/* <Heading>Suborbital Compute Network</Heading> */}
         <Paragraph className="spacing">
-          Harness the power of WebAssembly to build delightful software faster
-          without compromising security, performance, or developer experience.
+          Suborbital Compute is a platform that allows your users to write and deploy serverless extensions for your app.
+          Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
-          <Link to={useBaseUrl('intro-to-webassembly/why-webassembly')}>
-            <ButtonFilled>What is WebAssembly?</ButtonFilled>
-          </Link>
-          <span style={{ width: '1rem' }} />
           <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
-            <ButtonOutlined>Get Started</ButtonOutlined>
+            <DocButton>Get Started with Suborbital Compute</DocButton>
           </Link>
         </Row>
       </div>
-      <img className="headerImage" src={useBaseUrl('/img/header.png')} alt="Header Image" />
+
+      <div>
+        <img src="/img/webassembly-logo-wide.svg" alt="WebAssembly" />
+
+        {/* <Heading>Powered by WebAssembly</Heading> */}
+        <Paragraph className="spacing">
+          Many Suborbital projects are built on <Link to="https://webassembly.org">WebAssembly</Link>, a technology which enables the creation of fast, secure, platform-independent applications.
+        </Paragraph>
+        <Row>
+          <Link to={useBaseUrl('intro-to-webassembly/why-webassembly')}>
+            <DocButton>Learn more about WebAssembly</DocButton>
+          </Link>
+        </Row>
+      </div>
+
     </ResponsiveRow>
   )
 }

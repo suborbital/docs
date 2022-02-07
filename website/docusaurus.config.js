@@ -121,7 +121,10 @@ module.exports = {
           showLastUpdateTime: true
         },
         theme: {
-          customCss: require.resolve('./src/css/home.css')
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/home.css'),
+          ]
         }
       }
     ]
