@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <ResponsiveRow>
       <div>
-        <img src={useBaseUrl('/img/suborbital-logo-wide.svg')} alt="Suborbital" />
+        <img className="projectLogoMain" src={useBaseUrl('/img/suborbital-logo-wide.svg')} alt="Suborbital" />
 
         {/* <Heading>Suborbital Compute Network</Heading> */}
         <Paragraph className="spacing">
@@ -18,14 +18,14 @@ const Header = () => {
           Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
-          <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
+          <Link to={useBaseUrl('compute/what-is-compute')}>
             <DocButton>Get Started with Suborbital Compute</DocButton>
           </Link>
         </Row>
       </div>
 
       <div>
-        <img src="/img/webassembly-logo-wide.svg" alt="WebAssembly" />
+        <img className="projectLogo" src="/img/webassembly-logo-wide.svg" alt="WebAssembly" />
 
         {/* <Heading>Powered by WebAssembly</Heading> */}
         <Paragraph className="spacing">

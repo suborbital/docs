@@ -10,7 +10,11 @@ const Projects = ({ type }) => {
     <>
       {type === 'PrimaryOfferings' ? (
         <div style={{ marginTop: '4rem' }}>
-          <SubHeading>Our projects</SubHeading>
+          <SubHeading>
+            <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
+              The Suborbital Ecosystem
+            </Link>
+          </SubHeading>
           <div className="grid">
             {PrimaryOfferings.map(PrimaryOffering => (
               <div className="PrimaryOfferingsDiv" key={PrimaryOffering.key}>

@@ -3,9 +3,21 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 4rem;
+  align-items: end;
 }
 
-.responsiveRow img {
-  height: 6em;
-  margin: 1em 0;
+.projectLogoMain {
+  max-height: 6rem;
+  margin: 1rem 0;
+}
+
+.projectLogo {
+  max-height: 4rem;
+  margin: .5rem 0;
+}
+
+@media (max-width: 767px) {
+  .responsiveRow {
+    grid-template-columns: 1fr;
+  }
 }

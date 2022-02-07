@@ -61,12 +61,12 @@ module.exports = {
       collapsible: false,
       link: {
         type: 'doc',
-        id: 'atmo/getstarted/what-is-atmo'
+        id: 'atmo/about-atmo'
       },
       items: [
         {
           'Get Started': [
-            'atmo/getstarted/what-is-atmo',
+            'atmo/getstarted/prerequisites',
             'atmo/getstarted/creating-a-project',
             'atmo/getstarted/building-and-running'
           ]
@@ -107,6 +107,21 @@ module.exports = {
             'atmo/runnable-api/response'
           ]
         }
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Sat',
+      collapsible: false,
+      link: {
+        type: 'doc',
+        id: 'sat/about-sat'
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'sat/about-sat'
+        },
       ]
     },
     {
