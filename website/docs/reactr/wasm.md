@@ -15,7 +15,7 @@ To get started with Wasm Runnables, install Reactr's WebAssembly package `rwasm`
 go get github.com/suborbital/reactr/rwasm
 ```
 
-```golang
+```go
 r := rt.New()
 
 doWasm := r.Register("wasm", rwasm.NewRunner("path/to/runnable/file.wasm"))

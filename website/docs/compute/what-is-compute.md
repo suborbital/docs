@@ -1,4 +1,4 @@
-# Start Here
+# About the Suborbital Compute Network
 
 Suborbital Compute is a platform that allows your users to write and deploy serverless extensions for your app so they can develop custom integrations, customizations, and workflows. We're using cutting-edge technology to help your users get the most out of your product. Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
 

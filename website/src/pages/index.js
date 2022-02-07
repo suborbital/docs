@@ -12,13 +12,9 @@ export default function Home() {
        <div className="homeMainContent">
           <SectionLight>
             <Header />
-            <br />
             <Projects type={'PrimaryOfferings'} />
-            <br />
+            <Projects type={'OtherOfferings'} />
           </SectionLight>
-          <SectionDark>
-          <Projects type={'OtherOfferings'} />
-          </SectionDark>
         </div>
       </main>
     </Layout>

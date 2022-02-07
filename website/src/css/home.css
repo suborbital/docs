@@ -84,9 +84,12 @@
   margin: 1rem 0;
 }
 
-.PrimaryOfferingsLogo{
-  height: 200px;
+.PrimaryOfferingsLogo {
+  height: auto;
+  max-height: 200px;
   width: 200px;
+  /* counter logo whitespace on the left */
+  margin-left: -18px;
 }
 
 .subHeadingPO {
@@ -106,9 +109,12 @@
   margin: 1rem 0;
 }
 
-.OtherOfferingsLogo{
-  height: 200px;
+.OtherOfferingsLogo {
+  height: auto;
+  max-height: 200px;
   width: 200px;
+  /* counter logo whitespace on the left */
+  margin-left: -18px;
 }
 
 
