@@ -85,11 +85,10 @@
 }
 
 .PrimaryOfferingsLogo {
-  height: auto;
-  max-height: 200px;
-  width: 200px;
+  height: 5rem;
+  max-width: 100%;
   /* counter logo whitespace on the left */
-  margin-left: -18px;
+  margin-left: -1rem;
 }
 
 .subHeadingPO {

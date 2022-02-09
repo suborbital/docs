@@ -1,14 +1,14 @@
 export const PrimaryOfferings = [
   {
     key: 'atmo',
-    icon: 'img/SOS_Atmo-Long-FullColour0.svg',
+    icon: 'img/logo-atmo-wide.svg',
     heading: 'Atmo',
     description: 'WebAssembly server application environment that scales with your team.',
     url: 'atmo/about-atmo'
   },
   {
     key: 'sat',
-    icon: 'img/SOS_Sat-placeholder.svg',
+    icon: 'img/logo-sat-wide.svg',
     heading: 'Sat',
     description: 'A Cloud Native function executor that does one thing well.',
     url: 'sat/about-sat'
