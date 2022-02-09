@@ -13,7 +13,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Compute',
-      collapsible: false,
+      collapsible: true,
       link: {
         type: 'doc',
         id: 'compute/what-is-compute',
@@ -58,7 +58,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Atmo',
-      collapsible: false,
+      collapsible: true,
       link: {
         type: 'doc',
         id: 'atmo/about-atmo'
@@ -112,7 +112,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Sat',
-      collapsible: false,
+      collapsible: true,
       link: {
         type: 'doc',
         id: 'sat/about-sat'
@@ -127,7 +127,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Building Blocks',
-      collapsible: false,
+      collapsible: true,
       items: [
         {
           type: 'category',

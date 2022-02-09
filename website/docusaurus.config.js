@@ -46,6 +46,7 @@ module.exports = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
   themeConfig: {
+    autoCollapseSidebarCategories: true,
 //    algolia: {
 //      apiKey: '',
 //      indexName: '',
