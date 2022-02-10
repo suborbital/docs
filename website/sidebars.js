@@ -65,11 +65,8 @@ module.exports = {
       },
       items: [
         {
-          'Get Started': [
-            'atmo/getstarted/prerequisites',
-            'atmo/getstarted/creating-a-project',
-            'atmo/getstarted/building-and-running'
-          ]
+          type: 'doc',
+          id: 'atmo/get-started'
         },
         {
           'Concepts': [
