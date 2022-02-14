@@ -69,7 +69,10 @@ module.exports = {
           id: 'atmo/get-started'
         },
         {
-          'Concepts': [
+          collapsed: false,
+          type: 'category',
+          label: 'Concepts',
+          items: [
             'atmo/concepts/runnables',
             'atmo/concepts/the-directive',
             'atmo/concepts/state',
@@ -77,7 +80,9 @@ module.exports = {
           ]
         },
         {
-          'Usage': [
+          type: 'category',
+          label: 'Usage',
+          items: [
             'atmo/usage/creating-runnables',
             'atmo/usage/creating-handlers',
             'atmo/usage/building-a-bundle',
@@ -91,8 +96,13 @@ module.exports = {
           ]
         },
         {
-          'Runnable API': [
-            'atmo/runnable-api/introduction',
+          type: 'category',
+          label: 'Runnable API',
+          link: {
+            type: 'doc',
+            id: 'atmo/runnable-api/introduction'
+          },
+          items: [
             'atmo/runnable-api/authentication',
             'atmo/runnable-api/cache',
             'atmo/runnable-api/example-runnable',

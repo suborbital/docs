@@ -1,19 +1,14 @@
 # Getting started
 
-## Prerequisites
+The following guide will help you install the tooling and spin up an Atmo instance on your computer for local development.
 
-:::info
-You will need to install the `subo` CLI tool and [Docker](https://www.docker.com/get-started) to use Atmo.
-:::
+## Prerequisites
 
 :::caution
 _As of writing this_ subo is not compatible with the Windows operating system. However, you may use [WSL2](https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2) for installation purposes.
 :::
 
-To install subo, [visit its GitHub repository](https://github.com/suborbital/subo).
-
-[Docker](https://www.docker.com/get-started) is used to build Runnables and run the Atmo
-development server.
+First, you will need to have the subo CLI and Docker installed. [Docker](https://www.docker.com/get-started) will be used to build Runnables and run the Atmo development server. To install subo, [visit its GitHub repository](https://github.com/suborbital/subo) and follow the instructions in the README.
 
 
 ## Creating a Project
@@ -28,6 +23,7 @@ The project contains two important things: a `Directive.yaml` file,
 and an example Runnable called `helloworld` written in Rust.
 The [Directive](../concepts/the-directive.md) file defines route
 handlers and connects [Runnables](../concepts/runnables.md) to them.
+
 
 ### Overview
 
@@ -61,7 +57,7 @@ The `subo` command line tool is used again here to build and run your Atmo proje
 
 Inside the `important-api` directory run:
 
-```text
+```bash
 subo build .
 ```
 
@@ -86,7 +82,7 @@ Now that we have our application bundle built, we can start a development server
 
 In the `important-api` directory, run:
 
-```text
+```bash
 subo dev
 ```
 
@@ -96,7 +92,7 @@ the container, and starts an Atmo server listening on `http://localhost:8080`.
 You can test the `/hello` route in a second terminal by sending a POST request
 with a body to it:
 
-```text
+```bash
 curl localhost:8080/hello -d 'from the Kármán line!'
 ```
 
