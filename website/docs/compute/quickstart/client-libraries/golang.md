@@ -1,5 +1,5 @@
 # Using Compute from Go
-The [`compute-go`](https://github.com/suborbital/compute-go) library helps you easily interact with the Compute API from your Go application. Suborbital Compute is designed to run alongside your application in a Kubernetes or Docker Compose environment. 
+The [`compute-go`](https://github.com/suborbital/compute-go) library helps you easily interact with the Compute API from your Go application. Suborbital Compute is designed to run alongside your application in a Kubernetes or Docker Compose environment.
 
 ## Documentation
 Like most Go packages, complete and up to date technical documentation for `compute-go` can be [found on `pkg.go.dev`](https://pkg.go.dev/github.com/suborbital/compute-go#section-readme). Those docs are generated from inline comments in the `compute-go` [source code](https://github.com/suborbital/compute-go).
@@ -14,8 +14,7 @@ go get github.com/suborbital/compute-go@latest
 ### Configuration
 This example sets up a basic client with the token generated in [Step 1](../1.-create-an-environment-token-with-subo.md) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. The code for this example can be found [here](https://github.com/suborbital/compute-go/blob/main/examples/app).
 
-{% code title="client.go" %}
-```go
+```go title="client.go"
 package main
 
 import (
@@ -27,19 +26,17 @@ import (
 func client() *compute.Client {
 	token, _ := os.LookupEnv("SCC_ENV_TOKEN")
 	client, _ := compute.NewClient(compute.LocalConfig(), token)
-	
+
 	return client
 }
 ```
-{% endcode %}
 
 ### Build and run a function
 We can now integrate Compute into an application. `compute-go` has access to all of Compute's APIs. It can run builds, list existing functions, run tests, and execute functions.
 
 Behind the scenes, `compute-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the Compute API.
 
-{% code title="app.go" %}
-```go
+```go title="app.go"
 package main
 
 import (
@@ -79,6 +76,5 @@ func main() {
 	log.Println(string(result))
 }
 ```
-{% endcode %}
 
 Now that the Runnable has been built, it can be executed as much as you like without rebuilding using [`client.Exec`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.Exec) or [`client.ExecString`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.ExecString).

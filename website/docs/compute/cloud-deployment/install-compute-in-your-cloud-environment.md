@@ -9,9 +9,9 @@ To install Compute in the cloud, you'll use the `subo` tool to automatically ins
 3. Ensure you have access to modify your company's DNS records, as you need to create a domain name for the builder service (it must run on HTTPS, which requires a domain)
 4. Ensure you've run the `subo compute create token <email>` command from [Create an environment token](../quickstart/1.-create-an-environment-token-with-subo.md) before attempting the install
 
-{% hint style="info" %}
+:::info
 `subo` creates a `suborbital` Kubernetes namespace and installs the `KEDA` autoscaler. Don't worry about existing applications installed in the cluster; this won't affect them!
-{% endhint %}
+:::
 
 Once you have the pre-requisites in place, navigate to the `suborbital` directory you created in the [quickstart guide](../quickstart/1.-create-an-environment-token-with-subo.md) and use `subo` to install:
 
@@ -34,6 +34,10 @@ When you deploy, a `LoadBalancer` is created for the builder called `scc-builder
 
 ## What's next
 
-The manifest files that were installed can be found in the `.suborbital` directory. If you would like to modify the deployment, edit the files and then run `kubectl apply -f .suborbital/` to deploy the changes.
+The manifest files that were installed can be found in the `.suborbital` directory. If you would like to modify the deployment, edit the files and then deploy the changes by running:
 
-As always, don't hesitate to reach out if you have any issues with this or any other aspect of Compute!
+```bash
+kubectl apply -f .suborbital/
+```
+
+*As always, don't hesitate to reach out if you have any issues with this or any other aspect of Compute!*
