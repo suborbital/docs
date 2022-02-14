@@ -47,6 +47,9 @@ module.exports = {
   onBrokenMarkdownLinks: 'ignore',
   themeConfig: {
     autoCollapseSidebarCategories: true,
+    prism: {
+      additionalLanguages: ['rust'],
+    },
 //    algolia: {
 //      apiKey: '',
 //      indexName: '',
