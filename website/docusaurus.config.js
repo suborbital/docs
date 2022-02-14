@@ -59,7 +59,7 @@ module.exports = {
       title: '',
       logo: {
         alt: 'Suborbital Logo',
-        src: 'img/SOS_Alt-Long-FullColour.svg'
+        src: 'img/suborbital-logo-wide-trim.svg'
       },
       items: [
         // {
