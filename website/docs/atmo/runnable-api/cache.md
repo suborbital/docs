@@ -1,34 +1,54 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+
 # Accessing cache
 
-Runnables can access an attached cache (such as Redis) using the
-`cache` namespace of the Runnable API. Atmo will configure the
-cache, and will bind it to the Runnable at runtime. Atmo provides
-a default in-memory cache if no external cache is connected.
+Runnables can access an attached cache (such as Redis) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime. Atmo provides a default in-memory cache if no external cache is connected.
 
-Documentation for connecting an external cache to Atmo will be
-available soon.
+:::note
+Documentation for connecting an external cache to Atmo is coming soon.
+:::
+
 
 <Tabs groupId="reactr-language">
 
 <TabItem value="rust" label="Rust">
-  For Rust, these methods are available under the `cache` module.
 
-  Example: `cache::get()`
+In Rust these methods are available under the `cache` module:
+
+```rust
+# Use the "cache" module
+use suborbital::cache;
+
+# Invoke the "Get" method
+cache::get(…)
+```
+
 </TabItem>
 
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
-  For TypeScript/AssemblyScript, they are prefixed with `cache`.
 
-  Example: `import { cacheGet } from '@suborbital/suborbital'`
+In TypeScript/AssemblyScript all methods are prefixed with `cache`:
+
+```typescript
+// Import then invoke "Get" method
+import { cacheGet } from '@suborbital/suborbital'
+
+cacheGet(…)
+```
+
 </TabItem>
 
 <TabItem value="swift" label="Swift 🧪">
-  For Swift, they are prefixed with `Cache`
 
-  Example: `Suborbital.CacheGet()`
+In Swift these methods are prefixed with `Cache`:
+
+```swift
+// Invoke the "Get" method
+Suborbital.CacheGet(…)
+```
+
 </TabItem>
 
 </Tabs>
@@ -101,5 +121,5 @@ Get the provided key from the cache.
 
 </Tabs>
 
-Additional cache operations are coming soon.
+*Additional cache operations are coming soon.*
 
