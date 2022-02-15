@@ -112,7 +112,11 @@ module.exports = {
             'atmo/runnable-api/cache',
             'atmo/runnable-api/file',
           ]
-        }
+        },
+        {
+          type: 'doc',
+          id: 'atmo/background'
+        },
       ]
     },
     {
