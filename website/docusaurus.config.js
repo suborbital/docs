@@ -48,7 +48,7 @@ module.exports = {
   themeConfig: {
     autoCollapseSidebarCategories: true,
     prism: {
-      additionalLanguages: ['rust'],
+      additionalLanguages: ['rust', 'swift'],
     },
 //    algolia: {
 //      apiKey: '',
