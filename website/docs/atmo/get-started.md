@@ -4,11 +4,13 @@ The following guide will help you install the tooling and spin up an Atmo instan
 
 ## Prerequisites
 
-:::caution
-_As of writing this_ subo is not compatible with the Windows operating system. However, you may use [WSL2](https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2) for installation purposes.
+:::note
+As of the time of writing, `subo` does not officially support the Windows operating system. You may, however, try installing and using `subo` on [WSL2](https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2).
 :::
 
-First, you will need to have the subo CLI and Docker installed. [Docker](https://www.docker.com/get-started) will be used to build Runnables and run the Atmo development server. To install subo, [visit its GitHub repository](https://github.com/suborbital/subo) and follow the instructions in the README.
+First, you will need to have the subo CLI and Docker installed.
+- [Docker](https://www.docker.com/get-started) will be used to build Runnables and run the Atmo development server.
+- To install subo, [visit its GitHub repository](https://github.com/suborbital/subo) and follow the instructions in the README.
 
 
 ## Creating a Project
