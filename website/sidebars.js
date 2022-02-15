@@ -92,7 +92,6 @@ module.exports = {
             'atmo/usage/managing-state',
             'atmo/usage/schedules',
             'atmo/usage/streams',
-            'atmo/usage/using-sql-databases'
           ]
         },
         {
@@ -109,6 +108,7 @@ module.exports = {
             'atmo/runnable-api/http',
             'atmo/runnable-api/graphql-requests',
             'atmo/runnable-api/authentication',
+            'atmo/usage/using-sql-databases',
             'atmo/runnable-api/cache',
             'atmo/runnable-api/file',
           ]
