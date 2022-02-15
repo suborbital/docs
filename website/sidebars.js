@@ -103,15 +103,14 @@ module.exports = {
             id: 'atmo/runnable-api/introduction'
           },
           items: [
+            'atmo/runnable-api/request',
+            'atmo/runnable-api/response',
+            'atmo/runnable-api/logging',
+            'atmo/runnable-api/http',
+            'atmo/runnable-api/graphql-requests',
             'atmo/runnable-api/authentication',
             'atmo/runnable-api/cache',
-            'atmo/runnable-api/example-runnable',
             'atmo/runnable-api/file',
-            'atmo/runnable-api/graphql-requests',
-            'atmo/runnable-api/http',
-            'atmo/runnable-api/logging',
-            'atmo/runnable-api/request',
-            'atmo/runnable-api/response'
           ]
         }
       ]
