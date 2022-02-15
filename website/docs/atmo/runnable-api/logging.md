@@ -1,85 +1,164 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 # Structured logging
 
-Your Runnable code can log to Atmo's structured output using 
-the logging methods.
+Your Runnable code can log to Atmo's structured output using the logging methods.
 
-For Rust, these methods are available under the `log` module.
 
-Example: `log::info()`. 
+<Tabs groupId="reactr-language">
 
-For Swift, they are prefixed with `Log`.
+<TabItem value="rust" label="Rust">
 
-Example: `Suborbital.LogInfo()` 
+In Rust these methods are available under the `log` module:
 
-For TypeScript/AssemblyScript they are prefixed with `log`.
+```rust
+# Use the "log" module
+use suborbital::log;
 
-Example: `import { logInfo } from '@suborbital/suborbital'`
+# Invoke the "Info" method
+log::info(…)
+```
+
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+
+In TypeScript/AssemblyScript all methods are prefixed with `log`:
+
+```typescript
+// Import then invoke "Info" method
+import { reqInfo } from '@suborbital/suborbital'
+
+logInfo(…)
+```
+
+</TabItem>
+
+<TabItem value="swift" label="Swift 🧪">
+
+In Swift these methods are prefixed with `Log`:
+
+```swift
+// Invoke the "Info" method
+Suborbital.LogInfo(…)
+```
+
+</TabItem>
+
+</Tabs>
 
 The following namespace methods are available:
+
 
 ## Info
 
 Logs the message with the 'info' level:
 
-Rust:
+<Tabs groupId="reactr-language">
+
+<TabItem value="rust" label="Rust">
 
 ```rust
 pub fn info(msg: &str)
 ```
 
-AssemblyScript:
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
 ```typescript
 function logInfo(msg: string): void
 ```
 
-Swift:
+</TabItem>
+
+<TabItem value="swift" label="Swift 🧪">
 
 ```swift
 public func LogInfo(msg: String)
 ```
 
+</TabItem>
+
+</Tabs>
+
+
 ## Warn
 
 Logs the message with the 'warn' level:
 
-Rust:
+<Tabs groupId="reactr-language">
+
+<TabItem value="rust" label="Rust">
 
 ```rust
 pub fn warn(msg: &str)
 ```
 
-AssemblyScript:
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
 ```typescript
 function logWarn(msg: string): void
 ```
 
-Swift:
+</TabItem>
+
+<TabItem value="swift" label="Swift 🧪">
 
 ```swift
 public func LogWarn(msg: String)
 ```
 
+</TabItem>
+
+</Tabs>
+
+
 ## Error
 
 Logs the message with the 'err' level:
 
-Rust:
+<Tabs groupId="reactr-language">
+
+<TabItem value="rust" label="Rust">
 
 ```rust
 pub fn error(msg: &str)
 ```
 
-AssemblyScript:
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
 ```typescript
 function logErr(msg: string): void
 ```
 
-Swift:
+</TabItem>
+
+
+For Rust, these methods are available under the `http` module.
+
+Example: `http::get()`
+
+For Swift, they are prefixed with `Http`.
+
+Example: `Suborbital.HttpGet()`
+
+For TypeScript/AssemblyScript, they are prefixed with `http`.
+
+Example `import { httpPost } from '@suborbital/suborbital'`
+
+<TabItem value="swift" label="Swift 🧪">
 
 ```swift
 public func LogErr(msg: String)
 ```
 
+</TabItem>
+
+</Tabs>
