@@ -12,8 +12,8 @@ export default function Home() {
        <div className="homeMainContent">
           <SectionLight>
             <Header />
-            <Projects type={'PrimaryOfferings'} />
-            <Projects type={'OtherOfferings'} />
+            <Projects type={'flagship'} />
+            <Projects type={'other'} />
           </SectionLight>
         </div>
       </main>

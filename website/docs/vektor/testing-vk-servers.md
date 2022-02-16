@@ -1,14 +1,8 @@
 # Testing Vektor Servers
 
-`vtest` is a powerful package for testing your Vektor 
-servers without running an HTTP server bound to a port. 
-`vtest` uses the standard Go `testing` package, which 
-lets you integrate server route testing into your test 
-suite. Let's explore a simple wordcount API server and 
-add some tests to it.
+`vtest` is a powerful package for testing your Vektor servers without running an HTTP server bound to a port. `vtest` uses the standard Go `testing` package, which lets you integrate server route testing into your test suite. Let's explore a simple wordcount API server and add some tests to it.
 
-All of the code on this page is runnable and can be 
-found on [GitHub](https://github.com/suborbital/vektor/tree/main/docs/examples/wordcount). Some code samples have been slightly shortened or simplified for clarity.
+All of the code on this page is runnable and can be found on [GitHub](https://github.com/suborbital/vektor/tree/main/docs/examples/wordcount). Some code samples have been slightly shortened or simplified for clarity.
 
 ## The Server
 
@@ -16,8 +10,7 @@ Our API consists of helper functions, a middleware function to call the helper f
 
 The `Wordcount` type is a simple wrapper around `string` that adds some handy helper methods similar to the ubiquitous UNIX program `wc`.
 
-{% code title="wordcount.go" %}
-```go
+```go title="wordcount.go"
 type Wordcount string
 
 func (w Wordcount) Words() int {
@@ -33,14 +26,12 @@ func (w Wordcount) Characters() int {
     return len(runes)
 }
 ```
-{% endcode %}
 
 There are a few interesting things to point out in our server that are relevant to testing. The `setupServer()` function is reused later to setup our testing server in the same way it is used in `main()`. This is useful if you have a more complex routing setup.
 
 The other thing to note here is the `WCResponse` struct. We can reuse it directly to make writing tests a breeze.
 
-{% code title="server.go" %}
-```go
+```go title="server.go"
 func setupServer() *vk.Server {
     server := vk.New(vk.UseAppName("wordcount"), vk.UseHTTPPort(9090))
     api := vk.Group("/api/v1").Before(createWordcountMiddleware)
@@ -91,11 +82,10 @@ func main() {
     }
 }
 ```
-{% endcode %}
 
 As a quick check, let's run our wordcount server.
 
-```text
+```bash
 cd docs/examples/wordcount
 go run .
 ```
@@ -110,7 +100,7 @@ You should see the default logger output:
 
 Let's send it a request. In a separate terminal run:
 
-```text
+```bash
 curl http://localhost:9090/api/v1/wc -d "Hello, word count"
 ```
 
@@ -125,16 +115,16 @@ Which should produce:
 Now that our server seems to be running as expected,
 let's write tests with the `vtest` package.
 
-The `vtest` package is part of Vektor and can be imported as 
+The `vtest` package is part of Vektor and can be imported as
 [github.com/suborbital/vektor/vtest](https://github.com/suborbital/vektor/tree/main/vtest).
 
-Tests written with `vtest` use the usual Go testing idioms. 
-If you're not familiar with the `testing` package, you can 
-[read about it here](https://golang.org/doc/tutorial/add-a-test) 
+Tests written with `vtest` use the usual Go testing idioms.
+If you're not familiar with the `testing` package, you can
+[read about it here](https://golang.org/doc/tutorial/add-a-test)
 as part of the official Go tutorial.
 
 
-Here is a complete test function for a Vektor server. 
+Here is a complete test function for a Vektor server.
 Let's break it down.
 
 ```go
@@ -157,27 +147,24 @@ func TestWordcount(t *testing.T) {
 }
 ```
 
-The only thing different from creating a regular Vektor 
-server is that we construct a `vtest.VTest` struct with 
-`vtest.New()`.
+The only thing different from creating a regular Vektor server is that we construct a `vtest.VTest` struct with `vtest.New()`.
 
 ```go
 server := setupServer()
 vt := vtest.New(server)
 ```
 
-Next, we create a normal HTTP request with Go standard 
-library functions. 
+Next, we create a normal HTTP request with Go standard library functions.
 
 ```go
 body := strings.NewReader("Hello!")
 req, err := http.NewRequest(http.MethodPost, "/api/v1/wc", body)
 ```
 
-And finally, the interesting part, passing the request 
-to our `vt` object. Note that we use the exact same 
-struct here as was used in the server itself. This is 
-super useful if you have defined a custom `MarshalJSON` 
+And finally, the interesting part, passing the request
+to our `vt` object. Note that we use the exact same
+struct here as was used in the server itself. This is
+super useful if you have defined a custom `MarshalJSON`
 method, for example.
 
 ```go
@@ -190,8 +177,8 @@ vt.Do(req, t).
     })
 ```
 
-`Do()` returns a `*Response` object, as do each of the 
-`Assert` methods of `Response`, which lets us chain 
+`Do()` returns a `*Response` object, as do each of the
+`Assert` methods of `Response`, which lets us chain
 assertions together without rerunning the request.
 
 ```go
@@ -206,14 +193,14 @@ Just as you would test any other standard Go package, simply run:
 go test . -v
 ```
 
-The `-v` \(verbose\) flag lets us see details of tests, 
-even if they pass. One thing to note here is that certain assertion 
-helpers, such as `AssertJSON()`, perform more than one test. 
-`vtest` creates subtests automatically for you in these cases. 
-These are shown indented below. Another example is the `AssertHeaders()` 
+The `-v` \(verbose\) flag lets us see details of tests,
+even if they pass. One thing to note here is that certain assertion
+helpers, such as `AssertJSON()`, perform more than one test.
+`vtest` creates subtests automatically for you in these cases.
+These are shown indented below. Another example is the `AssertHeaders()`
 helper, which performs a nested subtest for each header.
 
-`vtest` tries to stick to standard Go testing idioms 
+`vtest` tries to stick to standard Go testing idioms
 while making common testing tasks easy to do.
 
 ```text
@@ -235,11 +222,11 @@ All of our tests have passed. Great!
 
 ## Documentation
 
-Further documentation for `vtest` and Vektor itself can 
-always be found in [go doc](https://pkg.go.dev/github.com/suborbital/vektor/vtest#Response) online or on the command line. 
+Further documentation for `vtest` and Vektor itself can
+always be found in [go doc](https://pkg.go.dev/github.com/suborbital/vektor/vtest#Response) online or on the command line.
 There are also more examples in the `vk/test` and `vtest/` directories.
 
-```text
+```bash
 go doc github.com/suborbital/vektor/vtest Response
 ```
 

@@ -15,9 +15,9 @@ The Control Plane is comprised of two components; `scc-control-plane` and `scc-b
 * `scc-builder` is the component that builds your users' functions and provides the embedded code editor. It can compile various languages to WebAssembly, it powers the [code editor](../integrate-the-function-editor/code-editor.md), and it provides CI/CD functionality for your users' code.
 * `scc-control-plane` acts as a 'director' for Atmo, and controls things like autoscaling, collecting usage and error metrics, connecting to the Suborbital Telemetry service, and providing administrative APIs. It also manages the functions kept in your storage bucket.
 
-{% hint style="info" %}
+:::info
 The control plane connects to `https://api.suborbital.network`, our authentication, billing, metadata, and telemetry service. An environment token is needed for the control plane to operate.
-{% endhint %}
+:::
 
 ## Architecture Diagram
 

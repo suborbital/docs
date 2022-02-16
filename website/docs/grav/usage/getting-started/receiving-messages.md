@@ -1,6 +1,6 @@
 # Receiving Messages
 
-Pods have several different methods beyond `On` to help with receiving messages in different scenarios. There are two types of receive methods: asynchronous and synchronous. Synchronous receive methods block until the desired message is received, whereas asynchronous receive methods run "in the background" and do not block at the callsite. 
+Pods have several different methods beyond `On` to help with receiving messages in different scenarios. There are two types of receive methods: asynchronous and synchronous. Synchronous receive methods block until the desired message is received, whereas asynchronous receive methods run "in the background" and do not block at the callsite.
 
 `On` and `OnType` are async, and they are shown here:
 
@@ -92,9 +92,9 @@ func sendMessages(p *grav.Pod) {
 
 ```
 
-{% hint style="info" %}
+:::info
 The sync receive methods set the Pod's receive function to `nil` after returning, so the Pod stops accepting new messages. The async methods however will cause the Pod to continue receiving until the Pod is disconnected or the receive function is set to `nil`. This can be done with `pod.On(nil)`
-{% endhint %}
+:::
 
 For sync receive methods, the `grav.ErrMsgNotWanted` error is used to indicate that the desired message has not yet been received. Returning `nil` or another error will let the Pod know that the operation has completed, and the return value will be propagated to the caller if desired.
 

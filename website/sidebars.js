@@ -13,7 +13,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Compute',
-      collapsible: false,
+      collapsible: true,
       link: {
         type: 'doc',
         id: 'compute/what-is-compute',
@@ -58,21 +58,21 @@ module.exports = {
     {
       type: 'category',
       label: 'Atmo',
-      collapsible: false,
+      collapsible: true,
       link: {
         type: 'doc',
         id: 'atmo/about-atmo'
       },
       items: [
         {
-          'Get Started': [
-            'atmo/getstarted/prerequisites',
-            'atmo/getstarted/creating-a-project',
-            'atmo/getstarted/building-and-running'
-          ]
+          type: 'doc',
+          id: 'atmo/get-started'
         },
         {
-          'Concepts': [
+          collapsed: false,
+          type: 'category',
+          label: 'Concepts',
+          items: [
             'atmo/concepts/runnables',
             'atmo/concepts/the-directive',
             'atmo/concepts/state',
@@ -80,7 +80,9 @@ module.exports = {
           ]
         },
         {
-          'Usage': [
+          type: 'category',
+          label: 'Usage',
+          items: [
             'atmo/usage/creating-runnables',
             'atmo/usage/creating-handlers',
             'atmo/usage/building-a-bundle',
@@ -90,83 +92,43 @@ module.exports = {
             'atmo/usage/managing-state',
             'atmo/usage/schedules',
             'atmo/usage/streams',
-            'atmo/usage/using-sql-databases'
           ]
         },
         {
-          'Runnable API': [
-            'atmo/runnable-api/introduction',
-            'atmo/runnable-api/authentication',
-            'atmo/runnable-api/cache',
-            'atmo/runnable-api/example-runnable',
-            'atmo/runnable-api/file',
-            'atmo/runnable-api/graphql-requests',
-            'atmo/runnable-api/http',
-            'atmo/runnable-api/logging',
+          type: 'category',
+          label: 'Runnable API',
+          link: {
+            type: 'doc',
+            id: 'atmo/runnable-api/introduction'
+          },
+          items: [
             'atmo/runnable-api/request',
-            'atmo/runnable-api/response'
+            'atmo/runnable-api/response',
+            'atmo/runnable-api/logging',
+            'atmo/runnable-api/http',
+            'atmo/runnable-api/graphql-requests',
+            'atmo/runnable-api/authentication',
+            'atmo/usage/using-sql-databases',
+            'atmo/runnable-api/cache',
+            'atmo/runnable-api/file',
           ]
-        }
+        },
+        {
+          type: 'doc',
+          id: 'atmo/background'
+        },
       ]
     },
     {
-      type: 'category',
+      type: 'doc',
       label: 'Sat',
-      collapsible: false,
-      link: {
-        type: 'doc',
-        id: 'sat/about-sat'
-      },
-      items: [
-        {
-          type: 'doc',
-          id: 'sat/about-sat'
-        },
-      ]
+      id: 'sat/about-sat'
     },
     {
       type: 'category',
       label: 'Building Blocks',
-      collapsible: false,
+      collapsible: true,
       items: [
-        {
-          type: 'category',
-          label: 'Grav',
-          link: {
-            type: 'doc',
-            id: 'grav/what-is-grav'
-          },
-          items: [
-            'grav/introduction/concepts/a-brief-overview',
-            {
-              'Concepts': [
-                'grav/introduction/concepts/the-grav-instance',
-                'grav/introduction/concepts/pods',
-                'grav/introduction/concepts/receipts'
-              ]
-            },
-            {
-              'Usage': [
-                'grav/usage/getting-started/start-here',
-                'grav/usage/getting-started/using-the-grav-instance',
-                'grav/usage/getting-started/sending-messages',
-                'grav/usage/getting-started/receiving-messages',
-                'grav/usage/getting-started/request-reply',
-                'grav/usage/getting-started/grav-instance-options'
-              ]
-            },
-            {
-              'Networked Usage': [
-                'grav/networking/transports/getting-started-transports',
-                'grav/networking/transports/http-transport',
-                'grav/networking/transports/websocket-transport',
-                'grav/networking/transports/nats-transport',
-                'grav/networking/discovery/getting-started-discovery',
-                'grav/networking/discovery/local-network-discovery'
-              ]
-            }
-          ]
-        },
         {
           type: 'category',
           label: 'Reactr',
@@ -205,6 +167,44 @@ module.exports = {
               label: 'Testing Vektor',
               id: 'vektor/testing-vk-servers'
             },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Grav',
+          link: {
+            type: 'doc',
+            id: 'grav/what-is-grav'
+          },
+          items: [
+            'grav/introduction/concepts/a-brief-overview',
+            {
+              'Concepts': [
+                'grav/introduction/concepts/the-grav-instance',
+                'grav/introduction/concepts/pods',
+                'grav/introduction/concepts/receipts'
+              ]
+            },
+            {
+              'Usage': [
+                'grav/usage/getting-started/start-here',
+                'grav/usage/getting-started/using-the-grav-instance',
+                'grav/usage/getting-started/sending-messages',
+                'grav/usage/getting-started/receiving-messages',
+                'grav/usage/getting-started/request-reply',
+                'grav/usage/getting-started/grav-instance-options'
+              ]
+            },
+            {
+              'Networked Usage': [
+                'grav/networking/transports/getting-started-transports',
+                'grav/networking/transports/http-transport',
+                'grav/networking/transports/websocket-transport',
+                'grav/networking/transports/nats-transport',
+                'grav/networking/discovery/getting-started-discovery',
+                'grav/networking/discovery/local-network-discovery'
+              ]
+            }
           ]
         }
       ]
