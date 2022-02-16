@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Custom libraries
 
 To continue to tailor your users' experience to your product, you can create a custom library with functions and utilities designed specifically for your product. For example, your users will import library functions from `@acmeco/acmeco` instead of `@suborbital/suborbital`, and you'll be able to export library functions such as `acmeco.getUsers` versus the plain `suborbital.httpGet`.
@@ -8,17 +11,15 @@ We want to help! Creating custom templates and libraries are an important aspect
 
 We provide a base library for you to modify and publish to the language-specific package manager, which can then be included as a project dependency in a custom function template.
 
-{% hint style="info" %}
+If you haven't already, create a fork of the [`runnable-templates`](https://github.com/suborbital/runnable-templates) git repository. Once the repo has been forked into your company or personal account, you can begin editing the libraries in the `library` directory.
+
+:::info
 Custom libraries are currently only officially supported for AssemblyScript, with more coming soon.
-{% endhint %}
+:::
 
-If you haven't already, create a fork of the `runnable-templates` git repository:
+<Tabs groupId="language-selection">
 
-[GitHub - suborbital/runnable-templates: Custom templates for Atmo, Reactr, and Compute](https://github.com/suborbital/runnable-templates)
-
-Once the repo has been forked into your company or personal account, you can begin editing the libraries in the `library` directory.
-
-### AssemblyScript
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 The AssemblyScript library is located in `library/assemblyscript`. As your custom library will need to be published, you will need to give it a custom name. In `library/assemblyscript/package.json`, replace all instances of `acmeco` with your desired name. Add your custom library as a dependency in `templates/assemblyscript/package.json.tmpl` so your users' functions can use it:
 
@@ -38,6 +39,11 @@ cd library/assemblyscript
 npm publish --access public
 ```
 
+</TabItem>
+
+</Tabs>
+
+
 ## Configuring Compute
 
 Since your custom library is listed as a dependency of the template project, it will be installed when your users' functions are built for the first time.
@@ -46,10 +52,13 @@ In your Compute installation, you will need to configure the `SCC_TEMPLATES_REPO
 
 - For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
 - For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:
+  ```yaml
+  - name: SCC_TEMPLATES_REPO
+    value: "{your fork}"
+  ```
 
-```yaml
-- name: SCC_TEMPLATES_REPO
-  value: "{your fork}"
+Apply the change by running:
+
+```bash
+kubectl apply -f .suborbital/
 ```
-
-Then run `kubectl apply -f .suborbital/` to apply the change.

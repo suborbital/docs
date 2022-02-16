@@ -1,22 +1,22 @@
-export const PrimaryOfferings = [
+export const FlagshipProjects = [
   {
     key: 'atmo',
-    icon: 'img/SOS_Atmo-Long-FullColour0.svg',
+    icon: 'img/logo-atmo-wide.svg',
     heading: 'Atmo',
-    description: 'WebAssembly server application environment that scales with your team.',
+    description: 'Application framework for cloud native WebAssembly.',
     url: 'atmo/about-atmo'
   },
   {
     key: 'sat',
-    icon: 'img/SOS_Sat-placeholder.svg',
+    icon: 'img/logo-sat-wide.svg',
     heading: 'Sat',
-    description: 'A Cloud Native function executor that does one thing well.',
+    description: 'Tiny & fast WebAssembly edge compute server.',
     url: 'sat/about-sat'
   },
 
 ]
 
-export const OtherOfferings = [
+export const BuildingBlocks = [
   {
     key: 'reactr',
     icon: 'img/SOS_Reactr-Long-FullColour0.svg',
