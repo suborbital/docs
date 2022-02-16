@@ -140,19 +140,6 @@ function logErr(msg: string): void
 
 </TabItem>
 
-
-For Rust, these methods are available under the `http` module.
-
-Example: `http::get()`
-
-For Swift, they are prefixed with `Http`.
-
-Example: `Suborbital.HttpGet()`
-
-For TypeScript/AssemblyScript, they are prefixed with `http`.
-
-Example `import { httpPost } from '@suborbital/suborbital'`
-
 <TabItem value="swift" label="Swift 🧪">
 
 ```swift
