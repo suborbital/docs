@@ -1,4 +1,4 @@
-export const PrimaryOfferings = [
+export const FlagshipProjects = [
   {
     key: 'atmo',
     icon: 'img/logo-atmo-wide.svg',
@@ -16,7 +16,7 @@ export const PrimaryOfferings = [
 
 ]
 
-export const OtherOfferings = [
+export const BuildingBlocks = [
   {
     key: 'reactr',
     icon: 'img/SOS_Reactr-Long-FullColour0.svg',

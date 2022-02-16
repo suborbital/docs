@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from '../link'
 import { Paragraph, SubHeading } from '../texts'
 import '../../css/home.css'
-import { PrimaryOfferings, OtherOfferings } from './data'
+import { FlagshipProjects, BuildingBlocks } from './data'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 const Projects = ({ type }) => {
   return (
     <>
-      {type === 'PrimaryOfferings' ? (
+      {type === 'flagship' ? (
         <div style={{ marginTop: '4rem' }}>
           <SubHeading>
             <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
@@ -16,15 +16,15 @@ const Projects = ({ type }) => {
             </Link>
           </SubHeading>
           <div className="grid">
-            {PrimaryOfferings.map(PrimaryOffering => (
-              <div className="PrimaryOfferingsDiv" key={PrimaryOffering.key}>
-                <Link className="PrimaryOfferingsLogo" to={useBaseUrl(PrimaryOffering.url)}>
-                  <img className="PrimaryOfferingsLogo" src={useBaseUrl(PrimaryOffering.icon)} alt={PrimaryOffering.icon} />
+            {FlagshipProjects.map(project => (
+              <div className="home__flagship__item" key={project.key}>
+                <Link className="home__flagship__logo" to={useBaseUrl(project.url)}>
+                  <img className="home__flagship__logo" src={useBaseUrl(project.icon)} alt={project.icon} />
                 </Link>
-                <Link className="subHeadingPO" to={useBaseUrl(PrimaryOffering.url)}>
-                  <b>{PrimaryOffering.heading}</b>
+                <Link className="subHeadingPO" to={useBaseUrl(project.url)}>
+                  <b>{project.heading}</b>
                 </Link>
-                <Paragraph>{PrimaryOffering.description}</Paragraph>
+                <Paragraph>{project.description}</Paragraph>
               </div>
             ))}
           </div>
@@ -33,15 +33,15 @@ const Projects = ({ type }) => {
         <div style={{ marginTop: '2rem' }}>
           <SubHeading>Building Blocks</SubHeading>
           <div className="grid">
-            {OtherOfferings.map(OtherOffering => (
-              <div className="OtherOfferingsDiv" key={OtherOffering.key}>
-               <Link className="OtherOfferingsLogo" to={useBaseUrl(OtherOffering.url)}>
-                <img className="OtherOfferingsLogo" src={useBaseUrl(OtherOffering.icon)} alt={OtherOffering.icon} />
+            {BuildingBlocks.map(project => (
+              <div className="home__other__item" key={project.key}>
+               <Link className="home__other__logo" to={useBaseUrl(project.url)}>
+                <img className="home__other__logo" src={useBaseUrl(project.icon)} alt={project.icon} />
                </Link>
-                <Link className="subHeadingOO" to={useBaseUrl(OtherOffering.url)}>
-                  <b>{OtherOffering.heading}</b>
+                <Link className="subHeadingOO" to={useBaseUrl(project.url)}>
+                  <b>{project.heading}</b>
                 </Link>
-                <Paragraph>{OtherOffering.description}</Paragraph>
+                <Paragraph>{project.description}</Paragraph>
               </div>
             ))}
           </div>

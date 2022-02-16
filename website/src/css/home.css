@@ -79,12 +79,12 @@
   }
 }
 
-.PrimaryOfferingsDiv {
+.home__flagship__item {
   height: 100%;
   margin: 1rem 0;
 }
 
-.PrimaryOfferingsLogo {
+.home__flagship__logo {
   height: 5rem;
   max-width: 100%;
   /* counter logo whitespace on the left */
@@ -103,12 +103,12 @@
   font-size: 1.4rem;
 }
 
-.OtherOfferingsDiv {
+.home__other__item {
   height: 100%;
   margin: 1rem 0;
 }
 
-.OtherOfferingsLogo {
+.home__other__logo {
   height: auto;
   max-height: 200px;
   width: 200px;
