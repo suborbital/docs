@@ -69,6 +69,6 @@ that looks like this:
 }
 ```
 
-`subo` will validate your directive to help ensure that your Directive is correct, 
+As outlined in the [Directive page](../concepts/the-directive.md), `subo` will automatically validate your Directive,
 including validating that you're not accessing keys that don't exist in state.
 
