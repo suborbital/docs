@@ -19,10 +19,10 @@ handlers:
     method: POST
     steps:
       - group:
-          - fn: modify-url
-          - fn: helloworld-rs
-            onErr:
-              any: continue
+        - fn: modify-url
+        - fn: helloworld-rs
+          onErr:
+            any: continue
 
       - fn: fetch
 
