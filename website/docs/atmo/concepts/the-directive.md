@@ -15,10 +15,10 @@ handlers:
     method: POST
     steps:
       - group:
-        - fn: modify-url
-        - fn: helloworld-rs
-          onErr:
-            any: continue
+          - fn: modify-url
+          - fn: helloworld-rs
+            onErr:
+              any: continue
 
       - fn: fetch
 
@@ -39,3 +39,7 @@ This directive encapsulates all of the logic for your application. It describes 
 
 Atmo uses the Directive to build your application and run it automatically, without any need to write boilerplate yourself.
 
+:::note
+`subo` will validate your directive to help ensure that your Directive is correct,
+including validating that you're not accessing keys that don't exist in state.
+:::
