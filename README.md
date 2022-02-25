@@ -54,3 +54,5 @@ docker build . -t subo/docs
 docker run -p 8080:80 subo/docs
 ```
 
+After the second command, you won't see any output, but can open the docs at `localhost:8000`
+
