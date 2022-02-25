@@ -1,7 +1,5 @@
 # Authentication
 
-While not a direct part of the Runnable API, Atmo does include a method of 
-providing authentication for HTTP and GraphQL made by the Runnable API. 
 Atmo helps with authenticating these requests by injecting the `Authorization` 
 header to your Runnable's requests based on the configuration in your Directive. 
 
