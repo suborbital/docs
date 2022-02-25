@@ -121,9 +121,17 @@ module.exports = {
       ]
     },
     {
-      type: 'doc',
+      type: 'category',
       label: 'Sat',
-      id: 'sat/about-sat'
+      link: {
+        type: 'doc',
+        id: 'sat/about-sat'
+      },
+      items: [
+        'sat/using-sat',
+        'sat/building-sat',
+        'sat/constellations',
+      ]
     },
     {
       type: 'category',
