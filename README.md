@@ -26,19 +26,31 @@ git clone https://github.com/suborbital/docs.git
 
 ## Running the website locally
 
-Navigate to the docs/website folder and start up the website
+Navigate to the docs/website folder and start up the website.
+
+There are three ways of building and running the website:
+
+## npm
 
 ```bash
 cd docs/website
+npm install
 npm run build
 npm run serve
 ```
 
-**OR**
+### yarn
 
 ```bash
 cd docs/website
+yarn
 yarn run start
 ```
 
+### Docker
+
+```bash
+docker build . -t subo/docs
+docker run -p 8080:80 subo/docs
+```
 
