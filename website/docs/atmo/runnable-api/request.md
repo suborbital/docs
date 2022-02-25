@@ -50,40 +50,6 @@ Suborbital.ReqState(…)
 
 The following namespace methods are available:
 
-
-## State
-
-Returns the value from [request state](../usage/managing-state.md) for the provided key:
-
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
-
-```rust
-pub fn state(key: &str) -> Option<String>
-```
-
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
-```typescript
-function reqState(key: string): string
-```
-
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
-
-```swift
-public func State(key: String) -> String
-```
-
-</TabItem>
-
-</Tabs>
-
-
 ## Method
 
 Returns the HTTP method for the request:
@@ -318,3 +284,37 @@ public func ReqParam(key: String) -> String
 </TabItem>
 
 </Tabs>
+
+
+## State
+
+Returns the value from [request state](../usage/managing-state.md) for the provided key:
+
+<Tabs groupId="reactr-language">
+
+<TabItem value="rust" label="Rust">
+
+```rust
+pub fn state(key: &str) -> Option<String>
+```
+
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+
+```typescript
+function reqState(key: string): string
+```
+
+</TabItem>
+
+<TabItem value="swift" label="Swift 🧪">
+
+```swift
+public func State(key: String) -> String
+```
+
+</TabItem>
+
+</Tabs>
+
