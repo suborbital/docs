@@ -1,4 +1,4 @@
-# Building a Bundle
+# Build your Application
 
 To run your Atmo application, we need to create a Runnable Bundle.
 A Bundle is a `.wasm.zip` file that includes your Directive, along
@@ -11,6 +11,7 @@ first argument:
 ```bash
 subo build .
 ```
+
 :::note
 If building the example project with subo from the root of the repository,
 pass the directory: subo build ./example-project
@@ -40,8 +41,4 @@ Atmo developement server will not start correctly.
 
 Make a request to `POST localhost:8080/hello` with a request body to see it in action.
 
-
 The version of Atmo being run by `subo dev` is dictated by the `atmoVersion` key in your Directive.
-
-To learn how to operate Atmo in real-world scenarios.
-
