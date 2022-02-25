@@ -1,15 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 # Accessing cache
 
 Runnables can access an attached cache (such as Redis) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime. Atmo provides a default in-memory cache if no external cache is connected.
 
 :::note
-Documentation for connecting an external cache to Atmo is coming soon.
+Documentation for connecting an external cache to Atmo can be found [here](../usage/connections.md).
 :::
-
 
 <Tabs groupId="reactr-language">
 
@@ -55,7 +53,6 @@ Suborbital.CacheGet(…)
 
 The following namespace methods are available:
 
-
 ## Set
 
 Set a given key's value in the cache. The provided TTL is in seconds.
@@ -64,30 +61,29 @@ Set a given key's value in the cache. The provided TTL is in seconds.
 
 <TabItem value="rust" label="Rust">
 
-  ```rust
-  pub fn set(key: &str, val: Vec<u8>, ttl: i32)
-  ```
+```rust
+pub fn set(key: &str, val: Vec<u8>, ttl: i32)
+```
 
 </TabItem>
 
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-  ```typescript
-  function cacheSet(key: string, value: ArrayBuffer, ttl: i32): void
-  ```
+```typescript
+function cacheSet(key: string, value: ArrayBuffer, ttl: i32): void;
+```
 
 </TabItem>
 
 <TabItem value="swift" label="Swift 🧪">
 
-  ```swift
-  public func CacheSet(key: String, value: String, ttl: Int)
-  ```
+```swift
+public func CacheSet(key: String, value: String, ttl: Int)
+```
 
 </TabItem>
 
 </Tabs>
-
 
 ## Get
 
@@ -97,29 +93,28 @@ Get the provided key from the cache.
 
 <TabItem value="rust" label="Rust">
 
-  ```rust
-  pub fn get(key: &str) -> Result<Vec<u8>, RunErr>
-  ```
+```rust
+pub fn get(key: &str) -> Result<Vec<u8>, RunErr>
+```
 
 </TabItem>
 
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-  ```typescript
-  function cacheGet(key: string): ArrayBuffer
-  ```
+```typescript
+function cacheGet(key: string): ArrayBuffer;
+```
 
 </TabItem>
 
 <TabItem value="swift" label="Swift 🧪">
 
-  ```swift
-  public func CacheGet(key: String) -> String
-  ```
+```swift
+public func CacheGet(key: String) -> String
+```
 
 </TabItem>
 
 </Tabs>
 
-*Additional cache operations are coming soon.*
-
+_Additional cache operations are coming soon._

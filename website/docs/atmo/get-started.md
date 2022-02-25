@@ -9,9 +9,9 @@ As of the time of writing, `subo` does not officially support the Windows operat
 :::
 
 First, you will need to have the subo CLI and Docker installed.
+
 - [Docker](https://www.docker.com/get-started) will be used to build Runnables and run the Atmo development server.
 - To install subo, [visit its GitHub repository](https://github.com/suborbital/subo) and follow the instructions in the README.
-
 
 ## Creating a Project
 
@@ -23,9 +23,8 @@ subo create project important-api
 
 The project contains two important things: a `Directive.yaml` file,
 and an example Runnable called `helloworld` written in Rust.
-The [Directive](../concepts/the-directive.md) file defines route
-handlers and connects [Runnables](../concepts/runnables.md) to them.
-
+The [Directive](./concepts/the-directive.md) file defines route
+handlers and connects [Runnables](./concepts/runnables.md) to them.
 
 ### Overview
 
@@ -41,7 +40,6 @@ identifier: com.suborbital.important-api
 appVersion: v0.1.0
 atmoVersion: v0.2.3
 
-
 handlers:
   - type: request
     resource: /hello
@@ -49,7 +47,6 @@ handlers:
     steps:
       - fn: helloworld
 ```
-
 
 ## Building and Running
 

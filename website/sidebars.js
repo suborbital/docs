@@ -85,13 +85,15 @@ module.exports = {
           items: [
             'atmo/usage/creating-runnables',
             'atmo/usage/creating-handlers',
-            'atmo/usage/building-a-bundle',
+            'atmo/usage/build-your-application',
             'atmo/usage/deploying-atmo',
+            'atmo/usage/authentication',
             'atmo/usage/error-handling',
             'atmo/usage/headless',
             'atmo/usage/managing-state',
             'atmo/usage/schedules',
             'atmo/usage/streams',
+            'atmo/usage/connections',
           ]
         },
         {
@@ -105,9 +107,8 @@ module.exports = {
             'atmo/runnable-api/request',
             'atmo/runnable-api/response',
             'atmo/runnable-api/logging',
-            'atmo/runnable-api/http',
-            'atmo/runnable-api/graphql-requests',
-            'atmo/runnable-api/authentication',
+            'atmo/runnable-api/http-client',
+            'atmo/runnable-api/graphql-client',
             'atmo/usage/using-sql-databases',
             'atmo/runnable-api/cache',
             'atmo/runnable-api/file',
@@ -120,9 +121,17 @@ module.exports = {
       ]
     },
     {
-      type: 'doc',
+      type: 'category',
       label: 'Sat',
-      id: 'sat/about-sat'
+      link: {
+        type: 'doc',
+        id: 'sat/about-sat'
+      },
+      items: [
+        'sat/using-sat',
+        'sat/building-sat',
+        'sat/constellations',
+      ]
     },
     {
       type: 'category',
