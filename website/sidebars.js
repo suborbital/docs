@@ -85,7 +85,7 @@ module.exports = {
           items: [
             'atmo/usage/creating-runnables',
             'atmo/usage/creating-handlers',
-            'atmo/usage/building-a-bundle',
+            'atmo/usage/build-your-application',
             'atmo/usage/deploying-atmo',
             'atmo/usage/error-handling',
             'atmo/usage/headless',
