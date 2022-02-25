@@ -1,7 +1,6 @@
 # Deploying Atmo
 
-Atmo is still in early Beta, and as such should not yet be used for
-production workloads.
+Atmo is in beta, and is suitable production workloads. If you're using Atmo in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
 
 Atmo is distributed as a Docker image: `suborbital/atmo`
 
@@ -51,10 +50,9 @@ for each.
 
 To control logging in Atmo, you can use its environment variables:
 
-* `ATMO_LOG_LEVEL` can be set to any of `trace, debug, info, warn, error`
-* `ATMO_LOG_FILE` can be set to a file to log to \(stdout will become plaintext logs, structured logs will be written to the file\)
+- `ATMO_LOG_LEVEL` can be set to any of `trace, debug, info, warn, error`
+- `ATMO_LOG_FILE` can be set to a file to log to \(stdout will become plaintext logs, structured logs will be written to the file\)
 
 ### Schedules
 
 To prevent an Atmo instance from executing the [Schedules](schedules.md) defined in your Directive, you can set the `ATMO_RUN_SCHEDULES=false` env var. This can be useful for running non-idempotent jobs on a specific worker instance.
-

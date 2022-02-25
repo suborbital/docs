@@ -42,5 +42,3 @@ Atmo developement server will not start correctly.
 Make a request to `POST localhost:8080/hello` with a request body to see it in action.
 
 The version of Atmo being run by `subo dev` is dictated by the `atmoVersion` key in your Directive.
-
-To learn how to operate Atmo in real-world scenarios.
