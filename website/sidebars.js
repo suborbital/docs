@@ -92,6 +92,7 @@ module.exports = {
             'atmo/usage/managing-state',
             'atmo/usage/schedules',
             'atmo/usage/streams',
+            'atmo/usage/connections',
           ]
         },
         {

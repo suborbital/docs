@@ -18,8 +18,7 @@ This will launch Atmo, assign it to listen on port 8080, and run in HTTP mode.
 
 ## Embed Bundle
 
-To create your own Docker image with your Bundle embedded, you can use
-a Dockerfile similar to this:
+To create your own Docker image with your Bundle embedded, you can use the Dockerfile that was created for your project by Subo:
 
 ```yaml
 FROM suborbital/atmo:latest
