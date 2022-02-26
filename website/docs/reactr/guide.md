@@ -1,6 +1,70 @@
 # Get started with Reactr 🚀
 
-Reactr is the underlying component that provides the runtime for executing the individual WebAssembly functions, the [Runnables](atmo/concepts/runnables). Once you've picked up on the [basics of Runnables](atmo/usage/creating-runnables), follow along here to learn what makes Reactr so powerful.
+### The Basics
+
+First, install Reactr's core package `rt`:
+```bash
+go get github.com/suborbital/reactr/rt
+```
+
+And then get started by defining something `Runnable`:
+```golang
+package main
+
+import (
+	"fmt"
+
+	"github.com/suborbital/reactr/rt"
+)
+
+type generic struct{}
+
+// Run runs a generic job
+func (g generic) Run(job rt.Job, ctx *rt.Ctx) (interface{}, error) {
+	fmt.Println("doing job:", job.String()) // get the string value of the job's data
+
+	// do your work here
+
+	return fmt.Sprintf("finished %s", job.String()), nil
+}
+
+// OnChange is called when Reactr starts or stops a worker to handle jobs,
+// and allows the Runnable to set up before receiving jobs or tear down if needed.
+func (g generic) OnChange(change rt.ChangeEvent) error {
+	return nil
+}
+```
+A `Runnable` is something that can take care of a job, all it needs to do is conform to the `Runnable` interface as you see above.
+
+Once you have a Runnable, create a Reactr instance, register it, and `Do` some work:
+```golang
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/suborbital/reactr/rt"
+)
+
+func main() {
+	r := rt.New()
+
+	r.Register("generic", generic{})
+
+	result := r.Do(r.Job("generic", "hard work"))
+
+	res, err := result.Then()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("done!", res.(string))
+}
+```
+When you `Do` some work, you get a `Result`. A result is like a Rust future or a JavaScript promise, it is something you can get the job's result from once it is finished.
+
+Calling `Then()` will block until the job is complete, and then give you the return value from the Runnable's `Run`. Cool, right?
 
 ## Runnables pt. 2
 
@@ -203,4 +267,4 @@ The `Register` function returns an optional helper function. Instead of passing 
 
 Reactr can integrate with [Grav](https://github.com/suborbital/grav), which is the decentralized message bus developed as part of the Suborbital Development Platform. Read about the integration on [the grav documentation page.](./grav.md)
 
-Reactr provides the building blocks for scalable asynchronous systems. This should be everything you need to help you improve the performance of your application. When you are looking to take advantage of Reactr's other features, check out its [FaaS](./faas.md) and [Wasm](./wasm.md) capabilities!
+Reactr provides the building blocks for scalable asynchronous systems. This should be everything you need to help you improve the performance of your application. When you are looking to take advantage of Reactr's other features, check out its [Wasm](./wasm.md) capabilities!
