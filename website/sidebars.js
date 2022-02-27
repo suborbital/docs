@@ -155,11 +155,6 @@ module.exports = {
               type: 'doc',
               label: 'Reactr and GRAV',
               id: 'reactr/grav'
-            },
-            {
-              type: 'doc',
-              label: 'Reactr and FaaS',
-              id: 'reactr/faas'
             }
           ]
         },
@@ -186,7 +181,6 @@ module.exports = {
             id: 'grav/what-is-grav'
           },
           items: [
-            'grav/introduction/concepts/a-brief-overview',
             {
               'Concepts': [
                 'grav/introduction/concepts/the-grav-instance',
