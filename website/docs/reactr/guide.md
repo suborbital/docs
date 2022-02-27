@@ -34,7 +34,7 @@ func (g generic) OnChange(change rt.ChangeEvent) error {
 	return nil
 }
 ```
-A `Runnable` is something that can take care of a job, all it needs to do is conform to the `Runnable` interface as you see above.
+A `Runnable` is something that can take care of a job - all it needs to do is conform to the `Runnable` interface as you see above.
 
 Once you have a Runnable, create a Reactr instance, register it, and `Do` some work:
 ```golang
@@ -62,7 +62,7 @@ func main() {
 	fmt.Println("done!", res.(string))
 }
 ```
-When you `Do` some work, you get a `Result`. A result is like a Rust future or a JavaScript promise, it is something you can get the job's result from once it is finished.
+When you `Do` some work, you get a `Result`. A result is like a Rust future or a JavaScript promise; it is something you can get the job's result from once it is finished.
 
 Calling `Then()` will block until the job is complete, and then give you the return value from the Runnable's `Run`. Cool, right?
 
