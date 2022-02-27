@@ -328,13 +328,3 @@ set your own Request ID, `ctx.UseRequestID()` will do
 the trick. However it will mean the first log message
 for the request will have a different ID as it uses
 the default ID generated for the `ctx`.
-
-## What's to come?
-
-`Vektor` is under active development. It intertwines
-closely with [Reactr](https://github.com/suborbital/reactr) and [Grav](https://github.com/suborbital/grav) to
-achieve Suborbital's goal of creating a platform for building
-scalable web services. Reactr and Vektor together
-can handle very large scale systems, and will be further
-integrated together to enable FaaS, WASM-based web service logic,
-and vastly improved developer experience and productivity.

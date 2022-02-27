@@ -21,21 +21,21 @@ export const BuildingBlocks = [
     key: 'reactr',
     icon: 'img/SOS_Reactr-Long-FullColour0.svg',
     heading: 'Reactr',
-    description: 'Next generation, fast, and performant function scheduler for Go and WebAssembly.',
+    description: 'Function scheduler for Go and Wasm.',
     url: 'reactr/guide'
   },
   {
     key: 'vektor',
     icon: 'img/SOS_Vektor-Long-FullColour.svg',
     heading: 'Vektor',
-    description: 'Opinionated production-grade HTTP server framework for Go.',
+    description: 'Opinionated server framework for Go.',
     url: 'vektor/getting-started'
   },
   {
     key: 'grav',
     icon: 'img/SOS_Grav-Long-FullColour.svg',
     heading: 'Grav',
-    description: 'Embedded, decentralized message bus.',
+    description: 'Async message bus for Go.',
     url: 'grav/what-is-grav'
   },
 ]
