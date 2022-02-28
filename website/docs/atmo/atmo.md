@@ -2,7 +2,11 @@
 pagination_prev: null
 ---
 
-# About Atmo
+# Atmo
+
+### The application framework for cloud native WebAssembly
+
+![](/img/logo-atmo-wide.svg)
 
 Atmo is an application framework for cloud native WebAssembly. It allows you to build polyglot server apps that execute in a high performance sandboxed execution engine. Atmo applications are comprised of functions compiled into WebAssembly modules from various languages
 such as JavaScript, Rust Go, and Grain.

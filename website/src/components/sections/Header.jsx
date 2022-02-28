@@ -18,7 +18,7 @@ const Header = () => {
           Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
-          <Link to={useBaseUrl('compute/what-is-compute')}>
+          <Link to={useBaseUrl('compute')}>
             <DocButton>Get Started with Suborbital Compute</DocButton>
           </Link>
         </Row>

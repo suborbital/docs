@@ -1,4 +1,12 @@
-# The Vektor Guide 🗺
+---
+pagination_prev: null
+---
+
+# Vektor
+
+### The opinionated, production-grade server framework for Go
+
+![](/img/SOS_Vektor-Long-FullColour.svg)
 
 Vektor's goal is to help you develop web services faster.
 Vektor handles much of the boilerplate needed to start

@@ -1,4 +1,12 @@
-# Get started with Reactr 🚀
+---
+pagination_prev: null
+---
+
+# Reactr
+
+### The next-gen function scheduler for Go and WebAssembly
+
+![](/img/SOS_Reactr-Long-FullColour0.svg)
 
 ### The Basics
 
