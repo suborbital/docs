@@ -1,4 +1,11 @@
-# About Suborbital Compute
+---
+pagination_prev: null
+---
+# Suborbital Compute
+
+### The SaaS extensibility platform
+
+![](/img/suborbital-logo-wide.svg)
 
 Suborbital Compute is a platform that allows your users to write and deploy serverless extensions for your app so they can develop custom integrations, customizations, and workflows. Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
 

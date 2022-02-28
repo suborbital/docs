@@ -4,7 +4,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Intro to WebAssembly',
-      collapsible: false,
+      collapsible: true,
       items: [
         'intro-to-webassembly/history',
         'intro-to-webassembly/why-webassembly'
@@ -16,7 +16,7 @@ module.exports = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'compute/what-is-compute',
+        id: 'compute/compute',
       },
       items: [
         {
@@ -61,7 +61,7 @@ module.exports = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'atmo/about-atmo'
+        id: 'atmo/atmo'
       },
       items: [
         {
@@ -125,12 +125,23 @@ module.exports = {
       label: 'Sat',
       link: {
         type: 'doc',
-        id: 'sat/about-sat'
+        id: 'sat/sat'
       },
       items: [
         'sat/using-sat',
         'sat/building-sat',
         'sat/constellations',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Subo',
+      link: {
+        type: 'doc',
+        id: 'subo/subo'
+      },
+      items: [
+        'subo/usage',
       ]
     },
     {
@@ -143,7 +154,7 @@ module.exports = {
           label: 'Reactr',
           link: {
             type: 'doc',
-            id: 'reactr/guide'
+            id: 'reactr/reactr'
           },
           items: [
             {
@@ -163,13 +174,13 @@ module.exports = {
           label: 'Vektor',
           link: {
             type: 'doc',
-            id: 'vektor/getting-started'
+            id: 'vektor/vektor'
           },
           items: [
             {
               type: 'doc',
               label: 'Testing Vektor',
-              id: 'vektor/testing-vk-servers'
+              id: 'vektor/vektor'
             },
           ]
         },
@@ -178,7 +189,7 @@ module.exports = {
           label: 'Grav',
           link: {
             type: 'doc',
-            id: 'grav/what-is-grav'
+            id: 'grav/grav'
           },
           items: [
             {

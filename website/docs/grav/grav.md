@@ -1,4 +1,12 @@
-# What is Grav?
+---
+pagination_prev: null
+---
+
+# Grav
+
+### The distributed async message bus for Go
+
+![](/img/SOS_Grav-Long-FullColour.svg)
 
 Grav is an embedded distributed messaging library for Go applications 
 that allows interconnected components of your system to communicate 
