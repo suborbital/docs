@@ -11,11 +11,9 @@ WORKDIR /tmp/docubuild
 # Leverage build cache for installed npm packages
 COPY website/package*.json ./website/
 
-WORKDIR website
-RUN npm install
+WORKDIR /tmp/docubuild/website
 
-# TODO: maybe use ci (do we need the dev dependencies?)
-# RUN npm ci --only=production
+RUN npm install
 
 # Copy docs sources
 COPY website .
@@ -26,9 +24,8 @@ COPY .git ../.git
 # Generate static build in website/build
 RUN npm run build
 
-
-# Stripped-down Static Web Server container for serving the files
-FROM joseluisq/static-web-server:2
+# Webserver for serving static files
+FROM caddy:2
 
 # Copy generated static build over from builder stage
-COPY --from=builder /tmp/docubuild/website/build /public
+COPY --from=builder /tmp/docubuild/website/build /usr/share/caddy

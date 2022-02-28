@@ -1,4 +1,4 @@
-# Get started
+# Usage
 
 Subo includes the WebAssembly toolchain for Suborbital projects.
 
