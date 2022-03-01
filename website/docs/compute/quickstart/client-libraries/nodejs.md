@@ -1,6 +1,6 @@
 # Using Compute from JavaScript or TypeScript
 
-Use this library to easily interact with Compute's APIs.
+Use [this](https://suborbital.github.io/docs/compute/quickstart/client-libraries/nodejs.md) library to easily interact with Compute's APIs.
 
 ## Installation
 
