@@ -10,7 +10,7 @@ You can create a new Runnable with subo:
 subo create runnable myfunction
 ```
 
-By default, Rust will be used. To use JavaScipt, pass `--lang`:
+By default, Rust will be used. To use JavaScript, pass `--lang`:
 
 ```bash
 subo create runnable myjavascriptfunction --lang=javascript
