@@ -10,10 +10,10 @@ You can create a new Runnable with subo:
 subo create runnable myfunction
 ```
 
-By default, Rust will be used. To use Swift, pass `--lang`:
+By default, Rust will be used. To use JavaScript, pass `--lang`:
 
 ```bash
-subo create runnable myswiftfunction --lang=swift
+subo create runnable myjavascriptfunction --lang=javascript
 ```
 
 Each runnable has a `.runnable.yaml` that describes it.
