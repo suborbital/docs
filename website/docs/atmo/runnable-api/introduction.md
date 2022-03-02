@@ -8,6 +8,9 @@ import Admonition from '@theme/Admonition';
 //import MyComponentSource from '!!raw-loader!./myComponent';
 import { reactrLanguages, reactrLanguageSupport } from '../../../reactr-lang.json'
 
+import Link from '@docusaurus/Link'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+
 
 <!-- Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component -->
 export const getCodeBlockLangs = (children) =>
@@ -32,7 +35,6 @@ export const getCodeBlockForLang = (lang, children) => {
         getCodeBlockLangType(block), block
     ))
     const component = langMap.get(lang)
-    console.log(component)
     /* Allow the changing the effective syntax highlighting scheme using the 'highlight' field */
     if (component && reactrLanguageSupport[lang].highlighting) {
         /* Change highlighting for CodeBlock components */
@@ -60,6 +62,24 @@ export const getCodeBlockForLang = (lang, children) => {
     return component
 }
 
+export const reactrLanguageStatusBadges = (status) => {
+    if (status === "stable") {
+        return <Link to={useBaseUrl('reactr/language-support#stable')}>
+            <Admonition type="tip" title="STATUS: STABLE" />
+        </Link>
+    }
+    if (status === "beta") {
+        return <Link to={useBaseUrl('reactr/language-support#beta')}>
+            <Admonition type="info" title="STATUS: BETA" />
+        </Link>
+    }
+    if (status === "preview") {
+        return <Link to={useBaseUrl('reactr/language-support#preview')}>
+            <Admonition type="caution" title="STATUS: PREVIEW" />
+        </Link>
+    }
+}
+
 export const MyCode = ({children}) => (
     <>
         <Tabs groupId="reactr-language" defaultValue={null}>
@@ -69,8 +89,8 @@ export const MyCode = ({children}) => (
                         value={lang}
                         label={name}
                     >
+                    {reactrLanguageStatusBadges(status)}
                     {getCodeBlockForLang(lang, children)}
-                    {console.log(getCodeBlockForLang(lang, children))}
                     </TabItem>
             )}
         </Tabs>
@@ -102,11 +122,11 @@ export const MyCode = ({children}) => (
 
 <MyCode>
 
-```rust
-pub trait Runnable {
-    fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
-}
-```
+<CodeBlock language="rust" title="lib.rs">
+    {`pub trait Runnable {
+fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
+}`}
+</CodeBlock>
 
 ```assemblyscript
 export function run(input: ArrayBuffer): ArrayBuffer
@@ -114,16 +134,6 @@ export function run(input: ArrayBuffer): ArrayBuffer
 
 </MyCode>
 
-<MyCode>
-    <CodeBlock language="rust">
-        {`pub trait Runnable {
-    fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
-}`}
-    </CodeBlock>
-    <CodeBlock language="assemblyscript" source="/examples/assemblyscript/run.as">
-        export function run(input: ArrayBuffer): ArrayBuffer
-    </CodeBlock>
-</MyCode>
 
 The Runnables that you write for your Atmo application are compiled to
 WebAssembly, and are run in a controlled sandbox. The **Runnable API**
