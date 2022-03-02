@@ -80,7 +80,7 @@ export const reactrLanguageStatusBadges = (status) => {
     }
 }
 
-export const MyCode = ({children}) => (
+export const MultiLanguageCodeBlock = ({children}) => (
     <>
         <Tabs groupId="reactr-language" defaultValue={null}>
             {getCodeBlockLangs(children).map(
@@ -97,30 +97,8 @@ export const MyCode = ({children}) => (
     </>
 );
 
-<!--
-export const MyCode = ({children}) => (
-    <Fragment>
-        <Tabs groupId="reactr-language">
-            {React.Children.map(children, (code) =>
-                <TabItem value={code.props.language} label={code.props.language}>
-                    {(code.props.language === 'rust') ? (
-                        <Admonition type="tip" title="STATUS: STABLE">
-                            The Rust Runnable API crate is considered stable.
-                        </Admonition>
-                    ) : (
-                        <Admonition type="caution" title="STATUS: EXPERIMENTAL">
-                            The AssemblyScript Runnable API library is still considered experimental.
-                        </Admonition>
-                    )}
-                    {code}
-                </TabItem>
-            )}
-        </Tabs>
-    </Fragment>
-);
--->
 
-<MyCode>
+<MultiLanguageCodeBlock>
 
 <CodeBlock language="rust" title="lib.rs">
     {`pub trait Runnable {
@@ -132,7 +110,7 @@ fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
 export function run(input: ArrayBuffer): ArrayBuffer
 ```
 
-</MyCode>
+</MultiLanguageCodeBlock>
 
 
 The Runnables that you write for your Atmo application are compiled to
