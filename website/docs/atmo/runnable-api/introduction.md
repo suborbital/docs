@@ -6,41 +6,8 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import Admonition from '@theme/Admonition';
 //import MyComponentSource from '!!raw-loader!./myComponent';
+import { reactrLanguages, reactrLanguageSupport } from '../../../reactr-lang.json'
 
-export const reactrLanguages = [ 'rust','go','assemblyscript','grain','js','swift' ];
-export const reactrLanguageSupport = {
-    'rust': {
-        lang: 'rust',
-        name: 'Rust',
-        status: 'stable'
-    },
-    'go': {
-        lang: 'go',
-        name: 'Go',
-        status: 'stable'
-    },
-    'assemblyscript': {
-        lang: 'assemblyscript',
-        name: 'AssemblyScript',
-        status: 'stable',
-        highlighting: 'typescript'
-    },
-    'grain': {
-        lang: 'grain',
-        name: 'Grain',
-        status: 'stable'
-    },
-    'js': {
-        lang: 'js',
-        name: 'JS/TS',
-        status: 'stable'
-    },
-    'swift': {
-        lang: 'swift',
-        name: 'Swift',
-        status: 'stable'
-    },
-};
 
 <!-- Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component -->
 export const getCodeBlockLangs = (children) =>
