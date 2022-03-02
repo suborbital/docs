@@ -98,21 +98,6 @@ export const MultiLanguageCodeBlock = ({children}) => (
 );
 
 
-<MultiLanguageCodeBlock>
-
-<CodeBlock language="rust" title="lib.rs">
-    {`pub trait Runnable {
-fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
-}`}
-</CodeBlock>
-
-```assemblyscript
-export function run(input: ArrayBuffer): ArrayBuffer
-```
-
-</MultiLanguageCodeBlock>
-
-
 The Runnables that you write for your Atmo application are compiled to
 WebAssembly, and are run in a controlled sandbox. The **Runnable API**
 is the set of capabilities Atmo grants to the sandbox which can be used
@@ -139,13 +124,7 @@ provide an instance of an object that conforms to this interface.
 It is very simple, and only requires one method, `run`.
 
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
-
-:::tip STATUS: STABLE
-The Rust Runnable API crate is considered stable.
-:::
+<MultiLanguageCodeBlock>
 
 ```rust
 pub trait Runnable {
@@ -153,28 +132,9 @@ pub trait Runnable {
 }
 ```
 
-</TabItem>
-
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
-:::caution STATUS: EXPERIMENTAL
-The TypeScript/AssemblyScript Runnable API library is still considered experimental.
-:::
-
-```typescript
+```assemblyscript
 export function run(input: ArrayBuffer): ArrayBuffer
 ```
-
-</TabItem>
-
-
-<TabItem value="swift" label="Swift 🧪">
-
-:::caution STATUS: EXPERIMENTAL
-The Swift Runnable API library is still considered experimental, and tends to lag
-slightly behind the others in terms of available features.
-:::
 
 ```swift
 public protocol Runnable {
@@ -182,22 +142,13 @@ public protocol Runnable {
 }
 ```
 
-</TabItem>
-
-
-<TabItem value="tinygo" label="Tiny Go 🧪">
-
-:::caution STATUS: PREVIEW
-Todo: Go/TinyGo API
-:::
-
 ```go
-...
 ```
 
-</TabItem>
+```js
+```
 
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 Your Runnable object will be created automatically by `subo` when you use the
