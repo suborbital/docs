@@ -19,7 +19,7 @@ To install on Linux (or macOS without Homebrew), you can download [Subo directly
 You can get a Compute Environment token either with our [web app](https://suborbital.network/) or with the `subo` command line tool.
 
 :::info
-The domain of your email address should match the `environment` you configure for Compute, i.e. if your email is `sally@awesomeco.com`, your Compute environment would be called `com.awesomeco` See [Fully-qualified function names](../concepts/fully-qualified-function-names.md) for more information.
+The domain of your email address should match the `environment` you configure for Compute, i.e. if your email is `sally@awesomeco.com`, your Compute environment would be called `com.awesomeco`. See [Fully-qualified function names](../concepts/fully-qualified-function-names.md) for more information.
 :::
 
 To create your token, run:
