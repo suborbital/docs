@@ -1,7 +1,162 @@
+# Introduction to the Runnable API
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introduction to the Runnable API
+import CodeBlock from '@theme/CodeBlock';
+import Admonition from '@theme/Admonition';
+//import MyComponentSource from '!!raw-loader!./myComponent';
+
+export const reactrLanguages = [ 'rust','go','assemblyscript','grain','js','swift' ];
+export const reactrLanguageSupport = {
+    'rust': {
+        lang: 'rust',
+        name: 'Rust',
+        status: 'stable'
+    },
+    'go': {
+        lang: 'go',
+        name: 'Go',
+        status: 'stable'
+    },
+    'assemblyscript': {
+        lang: 'assemblyscript',
+        name: 'AssemblyScript',
+        status: 'stable',
+        highlighting: 'typescript'
+    },
+    'grain': {
+        lang: 'grain',
+        name: 'Grain',
+        status: 'stable'
+    },
+    'js': {
+        lang: 'js',
+        name: 'JS/TS',
+        status: 'stable'
+    },
+    'swift': {
+        lang: 'swift',
+        name: 'Swift',
+        status: 'stable'
+    },
+};
+
+<!-- Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component -->
+export const getCodeBlockLangs = (children) =>
+    reactrLanguages
+        .filter(lang => !!getCodeBlockForLang(lang, children))
+        .map(lang => reactrLanguageSupport[lang])
+
+<!-- Finds the lang type of the code block in the supplied React component -->
+export const getCodeBlockLangType = (component) => {
+    /* Works with toplevel <CodeBlock> elements */
+    if (component.props.mdxType === 'CodeBlock') return component.props.language
+    /* Works with markdown fenced code blocks: ```lang ... */
+    if (component.props.mdxType === 'pre' && component.props.children?.props.mdxType === 'code') return component.props.children.props.className.replace('language-','')
+    /* TODO: divs? */
+    return null
+}
+
+<!-- Returns from a list of Code Block children the one that corresponds with the selected language -->
+export const getCodeBlockForLang = (lang, children) => {
+    const langMap = new Map()
+    React.Children.forEach(children, block => langMap.set(
+        getCodeBlockLangType(block), block
+    ))
+    const component = langMap.get(lang)
+    console.log(component)
+    /* Allow the changing the effective syntax highlighting scheme using the 'highlight' field */
+    if (component && reactrLanguageSupport[lang].highlighting) {
+        /* Change highlighting for CodeBlock components */
+        if (component.props.mdxType === 'CodeBlock') {
+            console.log(`Highlighting ${component.props.language} CodeBlock as ${reactrLanguageSupport[lang].highlighting}`)
+            /* Replace the component with a new one with an overridden language prop */
+            return React.cloneElement(
+                component,
+                { language: reactrLanguageSupport[lang].highlighting }
+            )
+        }
+        /* Change highlighting for markdown fenced code blocks */
+        if (component.props.mdxType === 'pre' && component.props.children?.props.mdxType === 'code') {
+            console.log(`Highlighting ${component.props.children.props.className} fenced code block as ${reactrLanguageSupport[lang].highlighting}`)
+            /* We clone the wrapper element untouched then change the embedded code block's highlighting in the className */
+            return React.cloneElement(
+                component, {},
+                React.cloneElement(
+                    component.props.children,
+                    { className: 'language-'+reactrLanguageSupport[lang].highlighting }
+                )
+            )
+        }
+    }
+    return component
+}
+
+export const MyCode = ({children}) => (
+    <>
+        <Tabs groupId="reactr-language" defaultValue={null}>
+            {getCodeBlockLangs(children).map(
+                ({lang,name,status}) =>
+                    <TabItem
+                        value={lang}
+                        label={name}
+                    >
+                    {getCodeBlockForLang(lang, children)}
+                    {console.log(getCodeBlockForLang(lang, children))}
+                    </TabItem>
+            )}
+        </Tabs>
+    </>
+);
+
+<!--
+export const MyCode = ({children}) => (
+    <Fragment>
+        <Tabs groupId="reactr-language">
+            {React.Children.map(children, (code) =>
+                <TabItem value={code.props.language} label={code.props.language}>
+                    {(code.props.language === 'rust') ? (
+                        <Admonition type="tip" title="STATUS: STABLE">
+                            The Rust Runnable API crate is considered stable.
+                        </Admonition>
+                    ) : (
+                        <Admonition type="caution" title="STATUS: EXPERIMENTAL">
+                            The AssemblyScript Runnable API library is still considered experimental.
+                        </Admonition>
+                    )}
+                    {code}
+                </TabItem>
+            )}
+        </Tabs>
+    </Fragment>
+);
+-->
+
+<MyCode>
+
+```rust
+pub trait Runnable {
+    fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
+}
+```
+
+```assemblyscript
+export function run(input: ArrayBuffer): ArrayBuffer
+```
+
+</MyCode>
+
+<MyCode>
+    <CodeBlock language="rust">
+        {`pub trait Runnable {
+    fn run(&self, input: Vec<u8>) -> Result<Vec<u8>, RunErr>;
+}`}
+    </CodeBlock>
+    <CodeBlock language="assemblyscript" source="/examples/assemblyscript/run.as">
+        export function run(input: ArrayBuffer): ArrayBuffer
+    </CodeBlock>
+</MyCode>
 
 The Runnables that you write for your Atmo application are compiled to
 WebAssembly, and are run in a controlled sandbox. The **Runnable API**

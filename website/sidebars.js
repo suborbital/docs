@@ -166,6 +166,11 @@ module.exports = {
               type: 'doc',
               label: 'Reactr and GRAV',
               id: 'reactr/grav'
+            },
+            {
+              type: 'doc',
+              label: 'Language support',
+              id: 'reactr/language-support'
             }
           ]
         },
