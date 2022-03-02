@@ -10,6 +10,14 @@
   src: url('/static/Montserrat-Regular.ttf') format('ttf');
 }
 
+/**
+ * Code blocks without copy button, credit to:
+ * https://stackoverflow.com/a/70770033
+ */
+.no-copy button {
+  display: none;
+}
+
 :root {
   --ifm-color-primary: #0e4e87;
   --ifm-color-secondary: #57c5af;

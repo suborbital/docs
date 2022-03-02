@@ -63,7 +63,7 @@ subo build .
 This automatically compiles each of your Runnables in a Docker container and bundles
 them together in `runnables.wasm.zip` to be used in Atmo.
 
-```text
+```no-copy
 ⏩ START: building runnables in .
 ℹ️  🐳 using Docker toolchain
 ⏩ START: building runnable: helloworld (rust)
