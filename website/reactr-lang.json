@@ -16,28 +16,28 @@
     "go": {
         "lang": "go",
         "name": "Go",
-        "status": "stable"
+        "status": "beta"
     },
     "assemblyscript": {
         "lang": "assemblyscript",
         "name": "AssemblyScript",
-        "status": "stable",
+        "status": "beta",
         "highlighting": "typescript"
     },
     "grain": {
         "lang": "grain",
         "name": "Grain",
-        "status": "stable"
+        "status": "beta"
     },
     "js": {
         "lang": "js",
         "name": "JS/TS",
-        "status": "stable"
+        "status": "preview"
     },
     "swift": {
         "lang": "swift",
         "name": "Swift",
-        "status": "stable"
+        "status": "preview"
     }
   }
 }
