@@ -112,13 +112,13 @@ These are all of the available methods.
 ### Admin:
 
 #### `suborbital.admin.getToken` 
-Description: Description: Retrieves an authentication token for the given function, typically used to authenticate calls to the Builder API.
-Args: An object containing `environment`, `userId`, `namespace`, `fnName`
-Result: A string containing the token used for authorization.
+**Description**: Retrieves an authentication token for the given function, typically used to authenticate calls to the Builder API.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
+**Result:** A string containing the token used for authorization.
 #### `suborbital.admin.getFunctions`
-Description: Returns a list of available functions for the given user in the given namespace.
-Args: An object containing `userId`, `namespace`
-Result:
+**Description:** Returns a list of available functions for the given user in the given namespace.  
+**Args:** An object containing `userId`, `namespace`.  
+**Result:**
 ```json
 {
     "functions": [
@@ -136,9 +136,9 @@ Result:
 }
 ```
 #### `suborbital.admin.getFunctionResults`
-Description: Returns the most recent results (up to 5) produced by the execution of the given function.
-Args: An object containing `environment`,`userId`,`namespace`, `fnName`,`version`
-Result:
+**Description:** Returns the most recent results (up to 5) produced by the execution of the given function.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
+**Result:**
 ```json
 {
     "results": [
@@ -151,9 +151,9 @@ Result:
 }
 ```
 #### `suborbital.admin.getFunctionErrors`
-Description: Returns the most recent errors (up to 5) produced by the execution of the given function.
-Args: An object containing `environment`,`userId`,`namespace`, `fnName`,`version`
-Result:
+**Description:** Returns the most recent errors (up to 5) produced by the execution of the given function.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
+**Result:**
 ```json
 {
     "errors": [
@@ -169,32 +169,32 @@ Result:
 ### Exec:
 
 #### `suborbital.exec.run`
-Description: Executes the given function, with the provided body, params and state loaded into the function at runtime.
-Args: An object containing `environment`,`userId`,`namespace`, `fnName`,`version`
-Result: The result of the executed function.
+**Description:** Executes the given function, with the provided body, params and state loaded into the function at runtime.  
+**Args:** An object containing `environment`,`userId`,`namespace`, `fnName`,`version`.  
+**Result:** The result of the executed function.
 
 ### Builder:
 
 #### `suborbital.builder.build`
-Description: Builds the provided code using the specified language toolchain.
-Args: An object containing `language`, `environment`, `userId`, `namespace`, `fnName`, `token`
-Result: A string containing the logs for the build.
+**Description:** Builds the provided code using the specified language toolchain.  
+**Args:** An object containing `language`, `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Result:** A string containing the logs for the build.  
 #### `suborbital.builder.getDraft`
-Description: Gets the draft for the specified runnable.
-Args: An object containing `environment`, `userId`, `namespace`, `fnName`, `token`
-Result: A specified runnable.
+**Description:** Gets the draft for the specified runnable.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Result:** A specified runnable.  
 #### `suborbital.builder.deployDraft`
-Description: Deploys the specified runnable.
-Args: An object containing `environment`, `userId`, `namespace`, `fnName`, `token`
-Result: A string containing the version.
+**Description:** Deploys the specified runnable.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Result:** A string containing the version.  
 #### `suborbital.builder.testDraft`
-Description: Tests the draft for the specified runnable.
-Args: An object containing `environment`, `userId`, `namespace`, `fnName`
-Result: A string containing the result.
+**Description:** Tests the draft for the specified runnable.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
+**Result:** A string containing the result.  
 #### `suborbital.builder.getTemplate`
-Description: Gets the template (which controls what your users see when they create a new function) for a new function of the given language.
-Args: An object containing `fnName`,`language`
-Result:
+**Description:** Gets the template (which controls what your users see when they create a new function) for a new function of the given language.  
+**Args:** An object containing `fnName`, `language`.  
+**Result:**
 ```rust
   //Example template for rust language 
   import { logInfo } from "@suborbital/suborbital"
