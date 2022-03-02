@@ -143,9 +143,19 @@ public protocol Runnable {
 ```
 
 ```go
+type Runnable interface {
+	Run(input []byte) ([]byte, error)
+}
 ```
 
 ```js
+export function run(input: String): String
+```
+
+```grain
+export let run = input => {
+    Ok()
+}
 ```
 
 </MultiLanguageCodeBlock>
