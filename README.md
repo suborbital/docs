@@ -7,7 +7,7 @@ We are so glad that you want to contribute!
 
 You can preview, use, and edit this repository locally using [Docusaurus](https://docusaurus.io/).
 We use Docusaurus v2 and you would need the below listed prerequisites
-installed locally to use the repository.
+installed locally to use the repository. Note: Docusaurus is automatically installed as a Nodejs module (see below).
 
 ## Prerequisites
 
