@@ -3,7 +3,6 @@ import React from 'react'
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-//import CodeBlock from '@theme/CodeBlock'
 import Admonition from '@theme/Admonition'
 import { reactrLanguages, reactrLanguageSupport } from '@site/reactr-lang.json'
 
@@ -12,13 +11,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 
 /* Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component */
-export const getCodeBlockLangs = (children) =>
+const getCodeBlockLangs = (children) =>
     reactrLanguages
         .filter(lang => !!getCodeBlockForLang(lang, children))
         .map(lang => reactrLanguageSupport[lang])
 
 /* Finds the lang type of the code block in the supplied React component */
-export const getCodeBlockLangType = (component) => {
+const getCodeBlockLangType = (component) => {
     /* Works with toplevel <CodeBlock> elements */
     if (component.props.mdxType === 'CodeBlock') return component.props.language
     /* Works with markdown fenced code blocks: ```lang ... */
@@ -28,7 +27,7 @@ export const getCodeBlockLangType = (component) => {
 }
 
 /* Returns from a list of Code Block children the one that corresponds with the selected language */
-export const getCodeBlockForLang = (lang, children) => {
+const getCodeBlockForLang = (lang, children) => {
     const langMap = new Map()
     React.Children.forEach(children, block => langMap.set(
         getCodeBlockLangType(block), block
@@ -38,7 +37,6 @@ export const getCodeBlockForLang = (lang, children) => {
     if (component && reactrLanguageSupport[lang].highlighting) {
         /* Change highlighting for CodeBlock components */
         if (component.props.mdxType === 'CodeBlock') {
-            console.log(`Highlighting ${component.props.language} CodeBlock as ${reactrLanguageSupport[lang].highlighting}`)
             /* Replace the component with a new one with an overridden language prop */
             return React.cloneElement(
                 component,
@@ -47,7 +45,6 @@ export const getCodeBlockForLang = (lang, children) => {
         }
         /* Change highlighting for markdown fenced code blocks */
         if (component.props.mdxType === 'pre' && component.props.children?.props.mdxType === 'code') {
-            console.log(`Highlighting ${component.props.children.props.className} fenced code block as ${reactrLanguageSupport[lang].highlighting}`)
             /* We clone the wrapper element untouched then change the embedded code block's highlighting in the className */
             return React.cloneElement(
                 component, {},
@@ -61,7 +58,7 @@ export const getCodeBlockForLang = (lang, children) => {
     return component
 }
 
-export const reactrLanguageStatusBadges = (status) => {
+const reactrLanguageStatusBadges = (status) => {
     if (status === "stable") {
         return <Link to={useBaseUrl('reactr/language-support#stable')}>
             <Admonition type="tip" title="STATUS: STABLE" />
