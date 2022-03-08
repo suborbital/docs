@@ -1,44 +1,34 @@
 {
-  "reactrLanguages": [
-    "rust",
-    "go",
-    "assemblyscript",
-    "grain",
-    "js",
-    "swift"
-  ],
-  "reactrLanguageSupport": {
-    "rust": {
-        "lang": "rust",
-        "name": "Rust",
-        "status": "stable"
-    },
-    "go": {
-        "lang": "go",
-        "name": "Go",
-        "status": "beta"
-    },
-    "assemblyscript": {
-        "lang": "assemblyscript",
-        "name": "AssemblyScript",
-        "status": "beta",
-        "highlighting": "typescript"
-    },
-    "grain": {
-        "lang": "grain",
-        "name": "Grain",
-        "status": "beta"
-    },
-    "js": {
-        "lang": "js",
-        "name": "JavaScript & TypeScript",
-        "status": "preview",
-        "alts": [ "javascript", "typescript" ]
-    },
-    "swift": {
-        "lang": "swift",
-        "name": "Swift",
-        "status": "preview"
-    }
+  "rust": {
+    "lang": "rust",
+    "name": "Rust",
+    "status": "stable"
+  },
+  "go": {
+    "lang": "go",
+    "name": "Go",
+    "status": "beta"
+  },
+  "assemblyscript": {
+    "lang": "assemblyscript",
+    "name": "AssemblyScript",
+    "status": "beta",
+    "highlighting": "typescript"
+  },
+  "grain": {
+    "lang": "grain",
+    "name": "Grain",
+    "status": "beta"
+  },
+  "js": {
+    "lang": "js",
+    "name": "JavaScript & TypeScript",
+    "status": "preview",
+    "alts": [ "javascript", "typescript" ]
+  },
+  "swift": {
+    "lang": "swift",
+    "name": "Swift",
+    "status": "preview"
   }
 }

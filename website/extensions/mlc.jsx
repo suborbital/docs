@@ -4,10 +4,13 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 import Admonition from '@theme/Admonition'
-import { reactrLanguages, reactrLanguageSupport } from '@site/reactr-lang.json'
+import reactrLanguageSupport from '@site/reactr-lang.json'
 
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
+
+// List of supported languages
+const LANGS = Object.keys(reactrLanguageSupport)
 
 // Mappings of language alternatives to their canonical counterparts
 const LANG_ALTS = new Map()
@@ -21,7 +24,7 @@ Object.entries(reactrLanguageSupport).forEach(([ canonical, metadata ]) => {
 
 /* Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component */
 const getCodeBlockLangs = (children) =>
-    reactrLanguages
+    LANGS
         .filter(lang => !!getCodeBlockForLang(lang, children))
         .map(lang => reactrLanguageSupport[lang])
 
