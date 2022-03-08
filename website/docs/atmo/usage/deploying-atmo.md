@@ -52,6 +52,22 @@ To control logging in Atmo, you can use its environment variables:
 - `ATMO_LOG_LEVEL` can be set to any of `trace, debug, info, warn, error`
 - `ATMO_LOG_FILE` can be set to a file to log to \(stdout will become plaintext logs, structured logs will be written to the file\)
 
+### Tracing
+
+We have added functionality, so you can send trace data to either an OpenTelemetry collector running on the same machine, or within the same cluster, or to send data to HoneyComb directly, if you have an account with them. This only works if Atmo is running in proxy mode.
+
+If you don't configure any of the two tracers, Atmo is going to use a noop tracer that does nothing.
+
+Options are set via environment variables. The full list is:
+
+- `ATMO_TRACER_TYPE` can be set to any of `"", "none", "collector", "honeycomb"`. The default is `"none"`. Specifies the tracer to use. Any other value not listed in the list above is going to leave a log warning, and fall back to the "none" tracer.
+- `ATMO_TRACER_PROBABILITY` is a float between 0 and 1 where 0 means no requests are traced, and 1 means 100% of the requests are traced. The default is `0.5`
+- `ATMO_TRACER_SERVICENAME` can be set to any string. The default is `"atmo"`. This gets added to the traced spans as an attribute passed to this conversion function: [semconv.ServiceNameKey.String](https://pkg.go.dev/go.opentelemetry.io/otel/attribute#Key.String). The `semconv.ServiceNameKey` is an otel attribute key.
+- `ATMO_TRACER_COLLECTOR_ENDPOINT` is only used if the tracer type is `"collector"`. Can be set to a string that [`grpc.DialContext`](https://pkg.go.dev/google.golang.org/grpc#DialContext) accepts as valid target. Default: not set, required if collector is used.
+- `ATMO_TRACER_HONEYCOMB_ENDPOINT` is only used if the tracer type is `"honeycomb"`. Can be set to any string that [`otlptracegrpc.WithEndpoint`](https://pkg.go.dev/go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc#WithEndpoint) will take. Default is not set, though required if tracer type is set to `honeycomb`. For example: `api.honeycomb.io:443`. It will need an address and a port, but no scheme.
+- `ATMO_TRACER_HONEYCOMB_APIKEY` is only used if the tracer type is `"honeycomb"`. It's your account's API key. Required if honeycomb is used.
+- `ATMO_TRACER_HONEYCOMB_DATASET` is a non-empty string. Only used for honeycomb tracer. Default is not set, but required if trace type is `honeycomb`. It's the name of the dataset within honeycomb that will group the traces together in.
+
 ### Schedules
 
 To prevent an Atmo instance from executing the [Schedules](schedules.md) defined in your Directive, you can set the `ATMO_RUN_SCHEDULES=false` env var. This can be useful for running non-idempotent jobs on a specific worker instance.
