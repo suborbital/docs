@@ -1,8 +1,8 @@
 # Using Compute from Go
-The [`compute-go`](https://github.com/suborbital/compute-go) library helps you easily interact with the Compute API from your Go application. Suborbital Compute is designed to run alongside your application in a Kubernetes or Docker Compose environment.
+The [`compute-go` library](https://github.com/suborbital/compute-go) helps you easily interact with the Compute API from your Go application. Suborbital Compute is designed to run alongside your application in a Kubernetes or Docker Compose environment.
 
 ## Documentation
-Like most Go packages, complete and up to date technical documentation for `compute-go` can be [found on `pkg.go.dev`](https://pkg.go.dev/github.com/suborbital/compute-go#section-readme). Those docs are generated from inline comments in the `compute-go` [source code](https://github.com/suborbital/compute-go).
+Like most Go packages, you can find [complete and up to date technical documentation for `compute-go` on `pkg.go.dev`](https://pkg.go.dev/github.com/suborbital/compute-go#section-readme). Those docs are generated from inline comments in the [`compute-go` source code](https://github.com/suborbital/compute-go).
 
 ## Installation
 In a directory with a `go.mod` file, run:
@@ -12,7 +12,7 @@ go get github.com/suborbital/compute-go@latest
 
 ## Basic Usage
 ### Configuration
-This example sets up a basic client with the token generated in [Step 1](../1.-create-an-environment-token-with-subo.md) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. The code for this example can be found [here](https://github.com/suborbital/compute-go/blob/main/examples/app).
+This example sets up a basic client with the token generated in [Step 1](../1.-create-an-environment-token-with-subo.md) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
 
 ```go title="client.go"
 package main

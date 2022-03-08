@@ -3,7 +3,7 @@
 To install Compute in the cloud, you'll use the `subo` tool to automatically install the Suborbital Compute Core into a Kubernetes cluster. You need to ensure you have some **pre-requisites** ready:
 
 1. Deploy a Kubernetes cluster into your cloud provider of choice (if you have a pre-existing one, that works too!).
-   * Ensure there is a [storage class](https://kubernetes.io/docs/concepts/storage/storage-classes/) available. Some cloud providers such as AWS do not have a default storage class. See [this great guide from GitLab](https://docs.gitlab.com/charts/installation/storage.html#configuring-cluster-storage) to set up a storage class.
+   * [Ensure there is a storage class available](https://kubernetes.io/docs/concepts/storage/storage-classes/). Some cloud providers such as AWS do not have a default storage class. See [this great guide from GitLab](https://docs.gitlab.com/charts/installation/storage.html#configuring-cluster-storage) to set up a storage class.
    * If you would like assistance with storage, [send us an email](mailto:team@suborbital.dev)!
 2. [Install the `kubectl` tool](https://kubernetes.io/docs/tasks/tools/#kubectl) and authenticate it with the cluster you want to use.
 3. Ensure you have access to modify your company's DNS records, as you need to create a domain name for the builder service (it must run on HTTPS, which requires a domain)
