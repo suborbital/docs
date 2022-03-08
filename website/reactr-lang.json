@@ -32,7 +32,8 @@
     "js": {
         "lang": "js",
         "name": "JavaScript & TypeScript",
-        "status": "preview"
+        "status": "preview",
+        "alts": [ "javascript", "typescript" ]
     },
     "swift": {
         "lang": "swift",

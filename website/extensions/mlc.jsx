@@ -9,6 +9,15 @@ import { reactrLanguages, reactrLanguageSupport } from '@site/reactr-lang.json'
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
+// Mappings of language alternatives to their canonical counterparts
+const LANG_ALTS = new Map()
+
+// Expand alts and map them to the canonical lang
+Object.entries(reactrLanguageSupport).forEach(([ canonical, metadata ]) => {
+    metadata.alts?.forEach(alt => {
+        LANG_ALTS.set(alt, canonical)
+    })
+})
 
 /* Creates a new iteratable, ordered list of supported languages filtered by only the code blocks present in the component */
 const getCodeBlockLangs = (children) =>
@@ -25,14 +34,23 @@ const getCodeBlockLangType = (component) => {
     /* TODO: divs? */
     return null
 }
-
+/* Normalize language definition alternatives to canonical language id */
+const normalizeAlts = (lang) => {
+    return LANG_ALTS.get(lang) ?? lang
+}
 /* Returns from a list of Code Block children the one that corresponds with the selected language */
 const getCodeBlockForLang = (lang, children) => {
-    const langMap = new Map()
-    React.Children.forEach(children, block => langMap.set(
-        getCodeBlockLangType(block), block
-    ))
-    const component = langMap.get(lang)
+    // Try to find the requested language block in the list of child components
+    let component
+    React.Children.forEach(children,
+        block => {
+            if (lang === normalizeAlts(getCodeBlockLangType(block))) {
+                component = block
+            }
+        }
+    )
+    // Component not found
+    if (!component) console.log(lang, ' not found.')
     /* Allow the changing the effective syntax highlighting scheme using the 'highlight' field */
     if (component && reactrLanguageSupport[lang].highlighting) {
         /* Change highlighting for CodeBlock components */
