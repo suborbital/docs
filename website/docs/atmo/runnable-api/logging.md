@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 
 # Structured logging
@@ -23,9 +24,21 @@ log::info(…)
 
 </TabItem>
 
+<TabItem value="js" label="JavaScript/TypeScript 🧪">
+
+In JavaScript and TypeScript the methods live on the `log` import:
+
+```typescript
+import { log } from "@suborbital/runnable"
+
+log.info(…)
+```
+
+</TabItem>
+
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-In TypeScript/AssemblyScript all methods are prefixed with `log`:
+In AssemblyScript all methods are prefixed with `log`:
 
 ```typescript
 // Import then invoke "Info" method
@@ -56,96 +69,97 @@ The following namespace methods are available:
 
 Logs the message with the 'info' level:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn info(msg: &str)
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function logInfo(msg: string): void
+log.info(message: string): void
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function logInfo(msg: string): void
+```
 
 ```swift
 public func LogInfo(msg: String)
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 ## Warn
 
 Logs the message with the 'warn' level:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn warn(msg: &str)
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function logWarn(msg: string): void
+log.warn(message: string): void
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function logWarn(msg: string): void
+```
 
 ```swift
 public func LogWarn(msg: String)
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 ## Error
 
 Logs the message with the 'err' level:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn error(msg: &str)
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function logErr(msg: string): void
+log.error(message: string): void
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function logErr(msg: string): void
+```
 
 ```swift
 public func LogErr(msg: String)
 ```
 
-</TabItem>
+</MultiLanguageCodeBlock>
 
-</Tabs>
+
+## Debug
+
+Logs the message with the 'debug' level:
+
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn debug(msg: &str)
+```
+
+```typescript
+log.debug(message: string): void
+```
+
+```assemblyscript
+function logDebug(msg: string): void
+```
+
+```swift
+public func LogDebug(msg: String)
+```
+
+</MultiLanguageCodeBlock>

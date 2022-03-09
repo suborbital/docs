@@ -37,7 +37,7 @@ request.state(…)
 
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-In TypeScript/AssemblyScript all methods are prefixed with `req`:
+In AssemblyScript all methods are prefixed with `req`:
 
 ```typescript
 // Import then invoke "State" method
