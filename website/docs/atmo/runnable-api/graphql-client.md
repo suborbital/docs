@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 
 # GraphQL client
@@ -23,9 +24,21 @@ graphql::query(…)
 
 </TabItem>
 
+<TabItem value="js" label="JavaScript/TypeScript 🧪">
+
+In JavaScript and TypeScript the methods live on the `graphql` import:
+
+```typescript
+import { graphql } from "@suborbital/runnable"
+
+graphql.query(…)
+```
+
+</TabItem>
+
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-In TypeScript/AssemblyScript all methods are prefixed with `graphQL`:
+In AssemblyScript all methods are prefixed with `graphQL`:
 
 ```typescript
 // Import then invoke "Get" method
@@ -44,6 +57,10 @@ graphQLQuery(…)
 
 </Tabs>
 
+:::info NOTE
+Currently the GraphQL API is not supported on Swift, [this is tracked in this issue](https://github.com/suborbital/reactr/issues/215).
+:::
+
 The following namespace methods are available:
 
 
@@ -52,28 +69,22 @@ The following namespace methods are available:
 Performs a graphQL query:
 
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn query(endpoint: &str, query: &str) -> Result<Vec<u8>,super::runnable::RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
+graphql.query(
+  endpoint: string,
+  query: string,
+  headers?: { [key: string]: string }
+): string
+```
+
+```assemblyscript
 function graphQLQuery(endpoint: string, query: string): ArrayBuffer
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
-
-*Swift support is coming soon*
-
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
