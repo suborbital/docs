@@ -109,7 +109,7 @@ module.exports = {
             'atmo/runnable-api/logging',
             'atmo/runnable-api/http-client',
             'atmo/runnable-api/graphql-client',
-            'atmo/usage/using-sql-databases',
+            'atmo/runnable-api/sql-databases',
             'atmo/runnable-api/cache',
             'atmo/runnable-api/file',
           ]

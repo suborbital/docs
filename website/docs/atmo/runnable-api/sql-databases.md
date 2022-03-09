@@ -1,14 +1,10 @@
 # Using SQL databases
 
-To connect Atmo with your SQL database, you will define the
-connection using the `connections` section of the Directive,
-and then define queries that your Runnables can execute.
-Runnables are not allowed to execute arbitrary queries.
-Instead, a list of named queries are provided in a Queries.yaml file.
-Your Runnables are then allowed to execute them.
+To connect Atmo with your SQL database, you will define the connection using the `connections` section of the Directive, and then define queries that your Runnables can execute.
 
-If you haven't already, take a look at Connections to define the connection
-to your database, then come back here.
+Runnables are not allowed to execute arbitrary queries. Instead, a list of named queries are provided in a `Queries.yaml` file. Your Runnables are then allowed to execute them.
+
+If you haven't already, take a look at [Connections](../usage/connections.md) to define the connection to your database, then come back here.
 
 :::info This feature is in preview!
 Atmo's Database capability is in preview, and we would love your feedback on
@@ -20,8 +16,7 @@ Please join our [Discord](http://chat.suborbital.dev) to give us feedback.
 
 ## Defining queries
 
-Once the connection to your database is defined, create a `Queries.yaml` file
-in your project's directory, right next to `Directive.yaml`.
+Once the connection to your database is defined, create a `Queries.yaml` file in your project's directory, right next to `Directive.yaml`.
 
 It will have this structure:
 
@@ -45,23 +40,18 @@ queries:
 
 You can define any number of queries. Each query must have a name and a query value.
 
-Queries can optionally have a `type` field (specifying `select | update | insert | delete`)
-and a `varCount` field to specify the number of variables in the query. In most circumstances,
-these optional fields are detected automatically by Atmo, but if for any reason they are
-detected incorrectly, you can set them explicitly.
+Queries can optionally have a `type` field (specifying `select | update | insert | delete`) and a `varCount` field to specify the number of variables in the query. In most circumstances, these optional fields are detected automatically by Atmo, but if for any reason they are detected incorrectly, you can set them explicitly.
 
 ## Query variables
 Queries can contain variables in either the MySQL style `?` or in the PostgreSQL style `$1`.
-Both will be auto-detected by Atmo, and Runnables will be required to provide the correct
-number of arguments to fill those variables whenever a query is called.
 
-## How it works
-SQL queries in Atmo are automatically turned into prepared statements that ensure your
-queries are executed safely. Atmo uses industry-standard database drivers to maintain
-a connection pool with your database. Runnables are allowed to execute the defined
-queries and provide the arguments to be inserted into those queries. Your code does
-not need to concern itself with the underlying database connections, pooling, credentials, etc.
-You can focus on building your business logic.
+Both will be auto-detected by Atmo, and Runnables will be required to provide the correct number of arguments to fill those variables whenever a query is called.
+
+:::tip How does it work?
+SQL queries in Atmo are automatically turned into prepared statements that ensure your queries are executed safely. Atmo uses industry-standard database drivers to maintain a connection pool with your database. Runnables are allowed to execute the defined queries and provide the arguments to be inserted into those queries.
+
+Your code does not need to concern itself with the underlying database connections, pooling, credentials, etc. -- you can focus on building your business logic.
+:::
 
 ## Executing queries
 Once you've defined queries in your Queries.yaml file,
@@ -122,3 +112,29 @@ pub extern fn _start() {
 Runnables can execute any of the queries defined in `Queries.yaml`.
 The `args` they provide are inserted into the queries' variables by Atmo, and then executed.
 The query's results are returned to the Runnable in JSON form.
+
+The API is also available for JavaScript and TypeScript via the `db` import:
+
+```typescript
+import { db } from "@suborbital/runnable"
+
+db.select(
+    name: string,
+    variables?: Variables
+): object
+
+db.insert(
+    name: string,
+    variables?: Variables
+): { lastInsertID?: number | string }
+
+db.update(
+    name: string,
+    variables?: Variables
+): { rowsAffected: number }
+
+db.delete(
+    name: string,
+    variables?: Variables
+): { rowsAffected: number }
+```
