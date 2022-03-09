@@ -4,6 +4,12 @@
     "name": "Rust",
     "status": "stable"
   },
+  "js": {
+    "lang": "js",
+    "name": "JavaScript & TypeScript",
+    "status": "preview",
+    "alts": [ "javascript", "typescript" ]
+  },
   "go": {
     "lang": "go",
     "name": "Go",
@@ -19,12 +25,6 @@
     "lang": "grain",
     "name": "Grain",
     "status": "beta"
-  },
-  "js": {
-    "lang": "js",
-    "name": "JavaScript & TypeScript",
-    "status": "preview",
-    "alts": [ "javascript", "typescript" ]
   },
   "swift": {
     "lang": "swift",
