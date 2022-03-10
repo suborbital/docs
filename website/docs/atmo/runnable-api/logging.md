@@ -40,7 +40,7 @@ log.info(…)
 
 In AssemblyScript all methods are prefixed with `log`:
 
-```typescript
+```assemblyscript
 // Import then invoke "Info" method
 import { reqInfo } from '@suborbital/suborbital'
 
