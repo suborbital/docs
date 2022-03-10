@@ -51,15 +51,15 @@ graphQLQuery(…)
 
 <TabItem value="swift" label="Swift 🧪">
 
-*Swift support is coming soon*
+:::caution NOT SUPPORTED
+[This API is currently not available for Swift.](https://github.com/suborbital/reactr/issues/215)
+:::
+
 
 </TabItem>
 
 </Tabs>
 
-:::info NOTE
-Currently the GraphQL API is not supported on Swift, [this is tracked in this issue](https://github.com/suborbital/reactr/issues/215).
-:::
 
 The following namespace methods are available:
 
