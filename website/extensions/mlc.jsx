@@ -34,6 +34,7 @@ const getCodeBlockLangType = (component) => {
     if (component.props.mdxType === 'CodeBlock') return component.props.language
     /* Works with markdown fenced code blocks: ```lang ... */
     if (component.props.mdxType === 'pre' && component.props.children?.props.mdxType === 'code') return component.props.children.props.className.replace('language-','')
+    /* NOTE: this breaks if multiple children exist (props becomes an []) */
     /* TODO: divs? */
     return null
 }
