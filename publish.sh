@@ -20,7 +20,7 @@ rm -rf "${OUTPUT_DIRECTORY}"
 git clone --branch "${INPUT_BRANCH}" "${remote_repo}" "${OUTPUT_DIRECTORY}"
 mv "${OUTPUT_DIRECTORY}/.git" output.git
 rm -rf "${OUTPUT_SUBDIR}"
-mkdir -p "${OUTPUT_SUBDIR}"
+mkdir -p "$(dirname ${OUTPUT_SUBDIR})"
 cp -r "${INPUT_DIRECTORY}" "${OUTPUT_SUBDIR}"
 
 rm -rf "${OUTPUT_DIRECTORY}/.git"
