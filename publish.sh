@@ -27,6 +27,7 @@ rm -rf "${OUTPUT_DIRECTORY}/.git"
 mv output.git "${OUTPUT_DIRECTORY}/.git"
 cd "${OUTPUT_DIRECTORY}"
 touch .nojekyll
+echo '<!DOCTYPE html><html><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Refresh" content="0; url=/docs/preview/"></head><body><p>Redirecting to docs preview at <a href="/docs/preview/">suborbital.github.io/docs/preview/</a>.</p></body></html>' >> index.html
 
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
