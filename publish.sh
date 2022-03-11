@@ -4,6 +4,10 @@ set -e
 INPUT_BRANCH=${INPUT_BRANCH:-gh-pages}
 INPUT_DIRECTORY=${INPUT_DIRECTORY:-'website/build'}
 OUTPUT_DIRECTORY=${OUTPUT_DIRECTORY:-'gh-pages'}
+OUTPUT_SUBDIR=${OUTPUT_DIRECTORY}/${GITHUB_REF_NAME}
+echo "Publishing INPUT_BRANCH=${INPUT_BRANCH} >> OUTPUT_SUBDIR=${OUTPUT_SUBDIR}";
+echo "This is a test, stopping deployment."
+exit 0;
 
 echo "Push to branch $INPUT_BRANCH";
 [ -z "${GITHUB_TOKEN}" ] && {
