@@ -29,6 +29,7 @@ Languages in this stage:
 * [Go](#go)
 * [AssemblyScript](#assemblyscript)
 * [Grain](#grain)
+* [JavaScript / Typescript](#js-ts)
 
 
 ### Preview
@@ -39,7 +40,6 @@ Languages in this stage:
 Support for the language has only been recently landed, or is considered experimental. Some language features may not work, or fail. Some Runnable APIs might not be implemented yet, or may not work as intended.
 
 Languages in this stage:
-* [JavaScript / Typescript](#js-ts)
 * [Swift](#swift)
 
 

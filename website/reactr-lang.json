@@ -7,7 +7,7 @@
   "js": {
     "lang": "js",
     "name": "JavaScript & TypeScript",
-    "status": "preview",
+    "status": "beta",
     "alts": [ "javascript", "typescript" ]
   },
   "go": {
