@@ -142,7 +142,7 @@ module.exports = {
           // enable docs-only mode: https://docusaurus.io/docs/docs-introduction#docs-only-mode
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/suborbital/docs',
+          editUrl: 'https://github.com/suborbital/docs/edit/main/website',
           showLastUpdateTime: true
         },
         theme: {
