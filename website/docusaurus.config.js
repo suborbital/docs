@@ -30,7 +30,28 @@ const resources = [
   }
 ]
 
-const baseUrl = process.env.GITHUB_ACTION ? '/docs/' : '/'
+const ghAction = !!process.env.GITHUB_ACTION
+
+// https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+const branch = process.env.GITHUB_HEAD_REF
+
+const baseUrlParts = ['']
+
+// Deploys on suborbital.github.io need to be placed in /docs/
+if (ghAction) {
+  baseUrlParts.push('docs')
+
+  // Branch deploys should go into their respective subfolders
+  if (branch) {
+    baseUrlParts.push(branch)
+
+  // Main branch deploys under /docs/preview/
+  } else {
+    baseUrlParts.push('preview')
+  }
+}
+
+const baseUrl = baseUrlParts.join('/')+ '/'
 console.log('Using baseUrl: ', baseUrl)
 
 module.exports = {
