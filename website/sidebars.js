@@ -5,6 +5,10 @@ module.exports = {
       type: 'category',
       label: 'Intro to WebAssembly',
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'intro-to-webassembly/intro-to-wasm',
+      },
       items: [
         'intro-to-webassembly/history',
         'intro-to-webassembly/why-webassembly'
