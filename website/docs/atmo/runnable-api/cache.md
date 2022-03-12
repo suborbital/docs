@@ -1,12 +1,14 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
+
 
 # Accessing cache
 
-Runnables can access an attached cache (such as Redis) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime. Atmo provides a default in-memory cache if no external cache is connected.
+Runnables can access an attached cache (such as Redis) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime.
 
 :::note
-Documentation for connecting an external cache to Atmo can be found [here](../usage/connections.md).
+Atmo provides a default in-memory cache when there is no external cache is configured. Refer to the [Connections docs](../usage/connections.md) to learn how to connect an external cache to Atmo.
 :::
 
 <Tabs groupId="reactr-language">
@@ -25,9 +27,21 @@ cache::get(…)
 
 </TabItem>
 
+<TabItem value="js" label="JavaScript/TypeScript 🧪">
+
+In JavaScript and TypeScript the methods live on the `cache` import:
+
+```typescript
+import { cache } from "@suborbital/runnable"
+
+cache.get(…)
+```
+
+</TabItem>
+
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-In TypeScript/AssemblyScript all methods are prefixed with `cache`:
+In AssemblyScript all methods are prefixed with `cache`:
 
 ```typescript
 // Import then invoke "Get" method
@@ -53,68 +67,59 @@ Suborbital.CacheGet(…)
 
 The following namespace methods are available:
 
+
 ## Set
 
 Set a given key's value in the cache. The provided TTL is in seconds.
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn set(key: &str, val: Vec<u8>, ttl: i32)
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function cacheSet(key: string, value: ArrayBuffer, ttl: i32): void;
+cache.set(key: string, value: string | Uint8Array, ttl: number): void
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function cacheSet(key: string, value: ArrayBuffer, ttl: i32): void;
+```
 
 ```swift
 public func CacheSet(key: String, value: String, ttl: Int)
 ```
 
-</TabItem>
+</MultiLanguageCodeBlock>
 
-</Tabs>
 
 ## Get
 
 Get the provided key from the cache.
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn get(key: &str) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function cacheGet(key: string): ArrayBuffer;
+# Get key value as a string
+cache.get(key: string): string
+
+# Get raw bytes
+cache.getBytes(key: string): Uint8Array
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function cacheGet(key: string): ArrayBuffer;
+```
 
 ```swift
 public func CacheGet(key: String) -> String
 ```
 
-</TabItem>
+</MultiLanguageCodeBlock>
 
-</Tabs>
 
 _Additional cache operations are coming soon._

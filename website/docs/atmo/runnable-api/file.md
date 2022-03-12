@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 
 # Static files
@@ -22,9 +23,23 @@ file::get_static(…)
 
 </TabItem>
 
+<TabItem value="js" label="JavaScript/TypeScript 🧪">
+
+In JavaScript and TypeScript the methods live on the `file` import:
+
+```typescript
+import { file } from "@suborbital/runnable"
+
+file.getStatic(…)
+```
+
+</TabItem>
+
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
 
-*Not yet supported*
+:::caution NOT SUPPORTED
+[This API is currently not available for AssemblyScript.](https://github.com/suborbital/reactr/issues/223)
+:::
 
 </TabItem>
 
@@ -48,28 +63,23 @@ The following namespace methods are available:
 
 Retrieves the contents of the static file with the given name:
 
-<Tabs groupId="reactr-language">
 
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn get_static(name: &str) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
+```typescript
+// Get file contents as a string
+file.getStatic(key: string): string
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
-*Not yet supported*
-
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+// Get raw byte contents
+file.getStaticBytes(name: string): Uint8Array
+```
 
 ```swift
 public func GetStaticFile(name: String) -> String
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>

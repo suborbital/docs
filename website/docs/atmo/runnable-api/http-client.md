@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 
 # HTTP client
@@ -24,11 +25,40 @@ http::get(…)
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript 🧪">
 
-In TypeScript/AssemblyScript all methods are prefixed with `http`:
+In JavaScript and TypeScript the methods live on the `http` import:
 
 ```typescript
+import { http } from "@suborbital/runnable"
+```
+
+All HTTP requests return a `HttpResponse` object supporting various payload formats:
+
+```typescript
+export class HttpResponse {
+  arrayBuffer(): ArrayBuffer {}
+
+  json(): object {}
+
+  text(): string {}
+}
+```
+
+The `headers` parameter may be specified as string header name/value pairs:
+
+```typescript
+type Headers = { [key: string]: string };
+```
+
+
+</TabItem>
+
+<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+
+In AssemblyScript all methods are prefixed with `http`:
+
+```assemblyscript
 // Import then invoke "Get" method
 import { httpGet } from '@suborbital/suborbital'
 
@@ -61,130 +91,97 @@ The following namespace methods are available:
 
 Performs an HTTP GET request:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn get(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function httpGet(url: string, headers: Map<string, string> | null): ArrayBuffer
+http.get(url: string, headers?: Headers): HttpResponse
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function httpGet(url: string, headers: Map<string, string> | null): ArrayBuffer
+```
 
 ```swift
 public func HttpGet(url: String) -> String
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 ## POST
 
 Performs an HTTP POST request:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn post(url: &str, body: Option<Vec<u8>>, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function httpPost(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
+http.post(url: string, body: string | Uint8Array, headers?: Headers): HttpResponse
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function httpPost(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
+```
 
 ```swift
 public func HttpPost(url: String, body: String) -> String
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 ## PATCH
 
 Performs an HTTP PATCH request:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn patch(url: &str, body: Option<Vec<u8>>, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function httpPatch(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
+http.patch(url: string, body: string | Uint8Array, headers?: Headers): HttpResponse
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function httpPatch(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
+```
 
 ```swift
 public func HttpPatch(url: String, body: String) -> String
 ```
 
-</TabItem>
-
-</Tabs>
+</MultiLanguageCodeBlock>
 
 
 ## DELETE
 
 Performs an HTTP DELETE request:
 
-<Tabs groupId="reactr-language">
-
-<TabItem value="rust" label="Rust">
+<MultiLanguageCodeBlock>
 
 ```rust
 pub fn delete(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, RunErr>
 ```
 
-</TabItem>
-
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
-
 ```typescript
-function httpDelete(url: string, headers: Map<string, string> | null): ArrayBuffer
+http.delete(url: string, headers?: Headers): HttpResponse
 ```
 
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
+```assemblyscript
+function httpDelete(url: string, headers: Map<string, string> | null): ArrayBuffer
+```
 
 ```swift
 public func HttpDelete(url: String) -> String
 ```
 
-</TabItem>
-
-</Tabs>
-
+</MultiLanguageCodeBlock>

@@ -1,0 +1,34 @@
+{
+  "rust": {
+    "lang": "rust",
+    "name": "Rust",
+    "status": "stable"
+  },
+  "js": {
+    "lang": "js",
+    "name": "JavaScript & TypeScript",
+    "status": "beta",
+    "alts": [ "javascript", "typescript" ]
+  },
+  "go": {
+    "lang": "go",
+    "name": "Go",
+    "status": "beta"
+  },
+  "assemblyscript": {
+    "lang": "assemblyscript",
+    "name": "AssemblyScript",
+    "status": "beta",
+    "highlighting": "typescript"
+  },
+  "grain": {
+    "lang": "grain",
+    "name": "Grain",
+    "status": "beta"
+  },
+  "swift": {
+    "lang": "swift",
+    "name": "Swift",
+    "status": "preview"
+  }
+}
