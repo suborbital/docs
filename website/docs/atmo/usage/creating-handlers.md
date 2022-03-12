@@ -75,4 +75,4 @@ can be re-used among many handlers. Each Runnable in your project can
 be called by its name. The `subo` tool will validate your directive to
 ensure it is not calling any Runnables that don't exist in your project.
 
-The `as` and `with` clauses shown above are discussed [here](managing-state.md).
+The `as` and `with` clauses shown above are addressed further in [Managing State](managing-state.md).
