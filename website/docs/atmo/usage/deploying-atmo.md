@@ -11,7 +11,7 @@ To run Atmo, you can mount your Runnable Bundle as a volume, build your own cont
 To mount as a volume:
 
 ```bash
-docker run -v /path/to/bundle/directory:/home/atmo -e ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
+docker run -v $(pwd):/home/atmo -e ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
 ```
 
 This will launch Atmo, assign it to listen on port 8080, and run in HTTP mode.
