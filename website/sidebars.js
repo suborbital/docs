@@ -73,6 +73,7 @@ module.exports = {
           type: 'category',
           label: 'Concepts',
           items: [
+            'atmo/concepts/glossary',
             'atmo/concepts/runnables',
             'atmo/concepts/the-directive',
             'atmo/concepts/state',
