@@ -7,5 +7,3 @@ If you're new to WebAssembly, here are some some links to get you going!
 [Building for a Future Based on WebAssembly](https://blog.suborbital.dev/building-for-a-future-based-on-webassembly)
 
 [How to Think About WebAssembly (Amid the Hype)](https://www.fermyon.com/blog/how-to-think-about-wasm)
-
-[Interpretative vs Declarative Programming](https://ui.dev/imperative-vs-declarative-programming)
