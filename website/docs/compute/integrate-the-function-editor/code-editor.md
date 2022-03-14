@@ -6,7 +6,7 @@ The Compute code editor is available for you to embed in your application, so yo
 
 The editor is hosted at `https://editor.suborbital.network`, and uses URL parameters to configure its connection to your builder service.
 
-You will host the Compute builder service](../concepts/data-plane-vs-control-plane.md) in your cloud infrastructure with a configured DNS name. In order to use the editor, an HTTPS connection to the builder is required.
+[You will host the Compute builder service](../concepts/data-plane-vs-control-plane.md) in your cloud infrastructure with a configured DNS name. In order to use the editor, an HTTPS connection to the builder is required.
 
 To launch the editor, you can either [embed the editor in a frame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within your own webpage, or launch it in a new tab.
 
