@@ -13,10 +13,10 @@ brew install subo
 
 Then, run `subo --version` to ensure the installation was successful. **The `version` must be at least `v0.2.1` for full Compute support.**
 
-To install on Linux (or macOS without Homebrew), you can download [Subo directly](https://github.com/suborbital/subo/releases).
+To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
 
 ## Generate your token
-You can get a Compute Environment token either with our [web app](https://suborbital.network/) or with the `subo` command line tool.
+You can get a Compute Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
 
 :::info
 The domain of your email address should match the `environment` you configure for Compute, i.e. if your email is `sally@awesomeco.com`, your Compute environment would be called `com.awesomeco`. See [Fully-qualified function names](../concepts/fully-qualified-function-names.md) for more information.
