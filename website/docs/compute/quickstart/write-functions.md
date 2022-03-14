@@ -29,7 +29,7 @@ https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as
 
 The important differences to note between these URLs are the local and public hostnames and HTTP and HTTPS schemes for the editor itself and the `&builder=` parameter.
 
-Complete documentation for each of the URL parameters [can be found here](../integrate-the-function-editor/code-editor.md#configuration).
+For more information, check out our [complete documentation for each of the URL parameters](../integrate-the-function-editor/code-editor.md#configuration).
 
 ## Build, test and deploy functions
 Once inside the editor, you can edit, build, test, and deploy your functions all in one place.

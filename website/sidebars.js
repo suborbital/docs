@@ -6,8 +6,8 @@ module.exports = {
       label: 'Intro to WebAssembly',
       collapsible: true,
       items: [
-        'intro-to-webassembly/history',
-        'intro-to-webassembly/why-webassembly'
+        'intro-to-webassembly/why-webassembly',
+        'intro-to-webassembly/history'
       ]
     },
     {

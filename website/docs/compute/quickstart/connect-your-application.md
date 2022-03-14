@@ -6,4 +6,4 @@ If your application is written in JavaScript or TypeScript in Node.js, use our [
 
 If your application is written in Go, use our [Go Library](./client-libraries/golang.md). 
 ## API Reference
-We also provide [reference documentation](https://suborbital-compute.readme.io/reference/api-reference) for each of the Compute APIs.
+We also provide [reference documentation for each of the Compute APIs](https://suborbital-compute.readme.io/reference/api-reference).

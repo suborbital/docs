@@ -47,7 +47,7 @@ connections:
   redis:
     serverAddress: localhost:6379
 ```
-SQL database connections of type `mysql` and `postgresql` are available, and they are discussed in detail in the [next section](./using-sql-databases.md).
+SQL database connections of type `mysql` and `postgresql` are also available, and they are discussed in detail in the [Using SQL Databases](./using-sql-databases.md) section.
 
 Redis connections are made available to Runnables utilizing the `cache` capability:
 ```rust
