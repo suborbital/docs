@@ -35,7 +35,7 @@ subo --help
 
 
 ## Getting started
-**To get started with Subo, visit the [Get started guide](./docs/get-started.md).**
+**To get started with Subo, visit the [Get started guide](./atmo/get-started.md).**
 
 ## Builders
 This repo contains builders for the various languages supported by Wasm Runnables. A builder is a Docker image that can build Runnables into Wasm modules, and is used internally by `subo` to build your code! See the [builders](./builder/docker) directory for more.
