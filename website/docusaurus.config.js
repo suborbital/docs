@@ -153,5 +153,41 @@ module.exports = {
         }
       }
     ]
-  ]
+  ],
+  plugins: [
+    // Allow loading raw code snippets as Webpack Source Assets when using the @code alias
+    () => ({
+      name: 'suborbital-docs-rawfiles',
+
+      // TODO: can also load this content dynamically? if we do we need to cache it to improve the perf of consecutive builds
+      async loadContent() {},
+      async contentLoaded({content, actions}) {},
+
+      // TODO: add `code` to list of watched folders?
+      getPathsToWatch() {},
+
+      configureWebpack(config) {
+        // Set a custom alias for code snippets in /website/code/
+        let siteAlias = config.resolve.alias['@site']
+        let codeAlias = siteAlias + '/code'
+
+        console.log('Using code snippets from ', codeAlias)
+        return {
+          resolve: {
+            alias: {
+              '@code': codeAlias
+            }
+          },
+          module: {
+            rules: [
+              {
+                test: (input) => { let t=/\/website\/code\//.test(input); if (t) console.log('Asset load: ',input); return t; },
+                type: 'asset/source',
+              }
+            ]
+          }
+        };
+      }
+    })
+  ],
 }

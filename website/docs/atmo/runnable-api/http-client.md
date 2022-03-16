@@ -185,3 +185,11 @@ public func HttpDelete(url: String) -> String
 ```
 
 </MultiLanguageCodeBlock>
+
+
+## Example Runnable
+
+import CodeBlock from '@theme/CodeBlock';
+import exampleCodeRustFetch from '@code/rwasm-testdata/fetch/src/lib.rs';
+
+<CodeBlock className="language-rust">{exampleCodeRustFetch}</CodeBlock>
