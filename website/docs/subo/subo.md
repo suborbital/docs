@@ -42,6 +42,7 @@ This repo contains builders for the various languages supported by Wasm Runnable
 
 ## Platforms
 The `subo` tool supports the following platforms and operating systems:
+
 |  | x86_64 | arm64
 | --- | --- | --- |
 | Mac | ✅ | ✅ |
@@ -49,6 +50,7 @@ The `subo` tool supports the following platforms and operating systems:
 | Windows | 🚫 | 🚫 |
  
 The language toolchains used by `subo` support the following platforms:
+
 | | x86_64 | arm64 | Docker |
 | --- | --- | --- | --- |
 | Rust | ✅ | ✅ | ✅ |
