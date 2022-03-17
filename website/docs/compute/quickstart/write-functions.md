@@ -3,7 +3,7 @@ Compute functions are built, tested, deployed, and run through the Compute API.
 
 The Suborbital Compute function editor uses the API to provide a low-friction environment for your users to write, build, test, and deploy functions to your Compute instance in a single place.
 
-Alternatively, the Builder API can be used programmatically, if that better suits your use case. (see [Step 4](connect-your-application)).
+Alternatively, the Builder API can be used programmatically, if that better suits your use case. (see [Connect your application](connect-your-application)).
 ## Compute function editor
 A quick way to try the editor is to use the REPL built into the Subo CLI introduced in [Step 2](2.-run-compute-locally.md). The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
 
