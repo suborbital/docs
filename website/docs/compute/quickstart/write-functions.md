@@ -5,7 +5,7 @@ The Suborbital Compute function editor uses the API to provide a low-friction en
 
 Alternatively, the Builder API can be used programmatically, if that better suits your use case. (see [Connect your application](connect-your-application)).
 ## Compute function editor
-A quick way to try the editor is to use the REPL built into the Subo CLI introduced in [Step 2](2.-run-compute-locally.md). The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
+A quick way to try the editor is to use the REPL built into the Subo CLI introduced in [Run Compute Locally](https://docs.suborbital.dev/compute/quickstart/run-compute-locally). The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
 
 By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option. 
 
