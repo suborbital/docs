@@ -4,5 +4,5 @@ matrix:
       - website/docs/**/*.md
     aspell:
       H: true
-    # pipeline:
-    #   - pyspelling.filters.html
+    pipeline:
+      - pyspelling.filters.markdown:
