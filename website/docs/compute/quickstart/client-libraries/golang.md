@@ -12,7 +12,7 @@ go get github.com/suborbital/compute-go@latest
 
 ## Basic Usage
 ### Configuration
-This example sets up a basic client with the [token generated in Step 1](../1.-create-an-environment-token-with-subo.md) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
+This example sets up a basic client with the [token generated in "Setup"](https://docs.suborbital.dev/compute/quickstart/create-an-environment-token-with-subo#generate-your-token) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
 
 ```go title="client.go"
 package main
