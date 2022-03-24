@@ -10,7 +10,22 @@ You can create a new Runnable with subo:
 subo create runnable myfunction
 ```
 
-By default, Rust will be used. To use JavaScript, pass `--lang`:
+By default, Rust will be used. To use one of the other [supported languages](https://docs.suborbital.dev/reactr/language-support), pass the relevant value of the `--lang` parameter:
+
+| Language       | `--lang=`                |
+| --------       | ----------------------- |
+| JavaScript     | `--lang=javascript`     |   
+| TypeScript     | `--lang=typescript`     |
+| Swift          | `--lang=swift`          |
+| AssemblyScript | `--lang=assemblyscript` |
+| TinyGo         | `--lang=tinygo`         |
+| Grain          |`--lang=grain`           |
+| Rust           |`--lang=rust`            |
+
+
+
+
+ For example, to use JavaScript, pass `--lang=javascript`:
 
 ```bash
 subo create runnable myjavascriptfunction --lang=javascript
