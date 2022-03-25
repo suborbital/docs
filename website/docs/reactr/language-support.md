@@ -1,8 +1,8 @@
 # Language support
 
-Reactr supports a growing number of languages for writing [Runnables](../atmo/concepts/runnables.md) in. Projects in the Suborbital ecosystem such as [Atmo](../atmo/) or [Sat](../sat/) use the Reactr runtime to execute these WebAssembly, allowing them to interface with the runtime through the [Runnable interface](../atmo/runnable-api/introduction#the-runnable-interface). The supported languages may vary across Reactr releases, and Runtime API support offered for some of these languages may be limited depending on the state of the current implementation.
+This page explains the various levels of support for the growing number of source languages supported for writing [Runnables](../atmo/concepts/runnables.md) in Reactr. Projects in the Suborbital ecosystem such as [Atmo](../atmo/) or [Sat](../sat/) use the Reactr runtime to execute these WebAssembly, allowing them to interface with the runtime through the [Runnable interface](../atmo/runnable-api/introduction#the-runnable-interface). The languages supported may vary across Reactr releases, and Runtime API support offered for some of these languages may be limited depending on the state of the current implementation.
 
-This page explains the various levels of support for source languages in Reactr. See [Creating Runnables](https://docs.suborbital.dev/atmo/usage/creating-runnables/) for the `--lang` parameters for each.
+Our [`subo`](../subo) command line tool can help you create starter templates for Runnables in the various supported languages. See [Creating Runnables](https://docs.suborbital.dev/atmo/usage/creating-runnables/) for the `--lang` parameters for each.
 
 ## Support status
 
@@ -16,7 +16,6 @@ Indicates complete support of language features and most, if not all Runnable AP
 Languages in this stage:
 * [Rust](#rust) support is implemented through the [native WebAssembly support](https://www.rust-lang.org/what/wasm) of the Rust compiler.
 
-
 ### Beta
 
 :::info STATUS: BETA
@@ -29,7 +28,6 @@ Languages in this stage:
 * [AssemblyScript](#assemblyscript)
 * [Grain](#grain)
 * [JavaScript / Typescript](#js-ts)
-
 
 ### Preview
 
