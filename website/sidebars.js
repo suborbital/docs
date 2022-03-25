@@ -229,7 +229,7 @@ module.exports = {
         }
       ]
     },
-    'contributing-guide/contributing-to-suborbital'
+    'contributing/contributing-to-suborbital'
   ]
 }
 
