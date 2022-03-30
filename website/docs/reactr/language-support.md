@@ -4,7 +4,6 @@ Reactr supports a growing number of languages for writing [Runnables](../atmo/co
 
 This page explains the various levels of support for source languages in Reactr, as well as lists the currently supported languages and the potential caveats associated with them.
 
-
 ## Support status
 
 ### Stable
@@ -16,7 +15,6 @@ Indicates complete support of language features and most, if not all Runnable AP
 
 Languages in this stage:
 * [Rust](#rust)
-
 
 ### Beta
 
@@ -31,7 +29,6 @@ Languages in this stage:
 * [Grain](#grain)
 * [JavaScript / Typescript](#js-ts)
 
-
 ### Preview
 
 :::caution STATUS: PREVIEW
@@ -41,7 +38,6 @@ Support for the language has only been recently landed, or is considered experim
 
 Languages in this stage:
 * [Swift](#swift)
-
 
 ## Supported languages
 
