@@ -143,7 +143,10 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/suborbital/docs/edit/main/website',
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
+          beforeDefaultRemarkPlugins: [
+            require('../codeblocks/')
+          ],
         },
         theme: {
           customCss: [
@@ -156,6 +159,10 @@ module.exports = {
   ],
   plugins: [
     // Allow loading raw code snippets as Webpack Source Assets when using the @code alias
+    // https://webpack.js.org/guides/asset-modules/#source-assets
+    // https://docusaurus.io/docs/markdown-features/react#importing-components
+    // https://docusaurus.io/docs/api/docusaurus-config#plugins
+    // https://docusaurus.io/docs/api/plugin-methods/lifecycle-apis#configureWebpack
     () => ({
       name: 'suborbital-docs-rawfiles',
 
