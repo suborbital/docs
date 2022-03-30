@@ -4,7 +4,6 @@ This page explains the various levels of support for the growing number of sourc
 
 Our [`subo`](../subo) command line tool can help you create starter templates for Runnables in the various supported languages. See [Creating Runnables](../atmo/usage/creating-runnables.md) for the `--lang` parameters for each.
 
-
 ## Support status
 
 ### Stable
@@ -27,14 +26,14 @@ Our [`subo`](../subo) command line tool can help you create starter templates fo
 
 Indicates complete support of language features and most, if not all Runnable APIs. The languages in this group are usually the first to receive updates when a new feature is added to the Runnable API.
 
-#### Beta
+### Beta
 
 :::info STATUS: BETA
 :::
 
 Indicative of widespread support for language features and most Runnable APIs. Some newer or more complex APIs might be missing, and certain language features might be unimplemented, or may not be completely stable.
 
-#### Preview
+### Preview
 
 :::caution STATUS: PREVIEW
 :::
