@@ -23,7 +23,7 @@ req::state(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `request` import:
 
@@ -35,7 +35,7 @@ request.state(…)
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `req`:
 
@@ -48,7 +48,7 @@ reqState(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift 🧪">
+<TabItem value="swift" label="Swift">
 
 In Swift these methods are prefixed with `Req`:
 
