@@ -100,7 +100,7 @@ const reactrLanguageStatusBadges = (status) => {
 
 export const MultiLanguageCodeBlock = ({children}) => (
     <>
-        <Tabs groupId="reactr-language" defaultValue={null}>
+        <Tabs groupId="reactr-language" defaultValue={getCodeBlockLangs(children)?.[0].lang ?? null}>
             {getCodeBlockLangs(children).map(
                 ({lang,name,status}) =>
                     <TabItem
