@@ -4,3 +4,5 @@ website/build
 website/.docusaurus
 
 website/yarn.lock
+
+**/.DS_Store
