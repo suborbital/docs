@@ -71,11 +71,12 @@ module.exports = {
     prism: {
       additionalLanguages: ['rust', 'swift'],
     },
-//    algolia: {
-//      apiKey: '',
-//      indexName: '',
-//      contextualSearch:
-//    },
+  //  algolia: {
+  //    appId: '',
+  //    apiKey: '',
+  //    indexName: '',
+  //    contextualSearch:
+  //    },
     navbar: {
       title: '',
       logo: {
