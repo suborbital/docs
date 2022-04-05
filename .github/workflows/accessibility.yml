@@ -1,0 +1,5 @@
+- name: A11yWatch - The Accessibility Suite
+  uses: a11ywatch/github-action@v1.2.44
+  with:
+    WEBSITE_URL: ${{ secrets.https://docs.suborbital.dev }}
+    FAIL_ERROR_COUNT: 1
