@@ -31,6 +31,9 @@ jobs:
       - name: Push to Github Pages branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_APP_ID }}
+          
         run: |
           chmod 755 publish.sh
           ./publish.sh
