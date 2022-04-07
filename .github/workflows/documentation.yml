@@ -18,6 +18,9 @@ jobs:
         run: npm install -g npm
         # see https://github.com/bahmutov/npm-install/issues/103#issuecomment-931226602
       - name: Test Build
+        env:
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
         run: |
           cd website
           if [ -e yarn.lock ]; then
@@ -31,8 +34,6 @@ jobs:
       - name: Push to Github Pages branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
-          DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
           
         run: |
           chmod 755 publish.sh
