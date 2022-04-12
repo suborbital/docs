@@ -229,6 +229,16 @@ module.exports = {
         }
       ]
     },
-    'contributing/contributing-to-suborbital'
+    {
+      type: 'category',
+      label: 'Contributing to Suborbital',
+      link: {
+        type: 'doc',
+        id: 'contributing/contributing-to-suborbital'
+      },
+      items: [
+        'contributing/contributing-to-suborbital',
+      ]
+    },
   ]
 }
