@@ -81,7 +81,7 @@ Flags:
 
 ## Building without Docker
 If you prefer not to use Docker, you can use the `--native` flag. This will cause subo to use your local machine's toolchain to build Runnables instead of Docker containers. You will need to install the toolchains yourself:
-- Rust: Install the latest Rust toolchain and the additional `wasm32-wasi` target.
+- Rust: Install the latest Rust toolchain and [the additional `wasm32-wasi` target](https://bytecodealliance.github.io/cargo-wasi/steps.html#managing-the-wasm32-wasi-target).
 - Swift: Install the [SwiftWasm](https://book.swiftwasm.org/getting-started/setup.html) toolchain. If using macOS, ensure XCode developer tools are installed (xcrun is required).
 
 `subo` is continually evolving alongside [Reactr](https://github.com/suborbital/reactr) and [Atmo](https://github.com/suborbital/atmo).
