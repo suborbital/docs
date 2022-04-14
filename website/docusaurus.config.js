@@ -71,11 +71,12 @@ module.exports = {
     prism: {
       additionalLanguages: ['rust', 'swift'],
     },
-//    algolia: {
-//      apiKey: '',
-//      indexName: '',
-//      contextualSearch:
-//    },
+    algolia: {
+      appId: process.env.DOCSEARCH_APP_ID,
+      apiKey: process.env.DOCSEARCH_API_KEY,
+      indexName: 'suborbital',
+      contextualSearch: true
+    },
     navbar: {
       title: '',
       logo: {
