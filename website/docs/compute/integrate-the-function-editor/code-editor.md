@@ -50,7 +50,7 @@ Let's break it down:
 
 **Template** (optional): `&template=assemblyscript`
 
-* The language template used for new functions. Currently, `assemblyscript` and `rust` are available (default `assemblyscript`), with more coming in future versions of Compute.
+* The language template used for new functions. Currently `javascript`, `typescript`, `assemblyscript`, and `rust` are available (default `assemblyscript`), with more coming in future versions of Compute.
 
 If the `fn` in question does not exist, the editor will automatically create a new function.
 
