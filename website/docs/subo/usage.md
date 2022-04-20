@@ -73,10 +73,15 @@ Usage:
   subo build [dir] [flags]
 
 Flags:
-      --docker      pass --docker to automatically build a Docker image based on your project's Dockerfile. It will be tagged with the 'identifier' and 'appVersion' from your Directive
-  -h, --help        help for build
-      --native      if passed, build runnables using native toolchain rather than Docker
-      --no-bundle   if passed, a .wasm.zip bundle will not be generated
+      --builder-tag string   use the provided tag for builder images
+      --docker               build your project's Dockerfile. It will be tagged {identifier}:{appVersion}
+  -h, --help                 help for build
+      --langs strings        build only Runnables for the listed languages (comma-separated)
+      --make string          execute the provided make target before building the project Bundle
+      --mountpath string     if passed, the Docker builders will mount their volumes at the provided path
+      --native               use native (locally installed) toolchain rather than Docker
+      --no-bundle            if passed, a .wasm.zip Bundle will not be generated
+      --relpath subo build   if passed, the Docker builders will run subo build using the provided path, relative to '--mountpath'
 ```
 
 ## Building without Docker
