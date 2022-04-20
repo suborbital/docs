@@ -5,27 +5,36 @@ Sat is designed to run in a constellation, i.e. a meshed cluster of instances. T
 Atmo applications are comprised of several functions that coordinate to create a backend system. Since these projects are [declarative](https://atmo.suborbital.dev/concepts/the-directive), it is possible to distribute the app's compute and let the constellation figure out how to efficiently execute your application. That's the goal of `constd`.
 
 `constd` uses two main components to run your application:
+
 - Sat, a small and fast WebAssembly server
 - `atmo-proxy`, an application-aware router
+
 ## Build and run constd
+
 > You'll need Go (and optionally Docker) to run Sat and `constd`, and you'll need to clone the [Sat](https://github.com/suborbital/sat) and [Atmo](https://github.com/suborbital/atmo) repos.
 
 To get started, build `atmo-proxy`. In the Atmo repo, run:
+
 ```bash
 make atmo/proxy
 ```
+
 This installs `atmo-proxy` into your `GOBIN`.
 
 Next, in the Sat repo, build `constd`:
+
 ```bash
 make constd/install
 ```
-Now launch `constd` by providing the path to a Runnable bundle:
+
+Now launch `constd` by providing the path to a Runnable [bundle](../atmo/usage/build-your-application.md):
+
 ```bash
 CONSTD_EXEC_MODE=metal constd {absolute/path/to}/atmo/example-project/runnables.wasm.zip
 ```
 
 `constd` will launch `atmo-proxy` and a constellation of Sat instances. Make a request to test it:
+
 ```bash
 curl localhost:8080/hello -d 'my friend'
 ```
@@ -33,6 +42,7 @@ curl localhost:8080/hello -d 'my friend'
 `atmo-proxy` receives the request, and proxies execution of the WebAssembly functions to the Sat constellation.
 
 Currently, the following features normally found in an Atmo project won't work very well:
+
 - Access to cache
 - Authentication for HTTP/GraphQL requests
 - Access to static files
