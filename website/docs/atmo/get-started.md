@@ -64,20 +64,20 @@ This automatically compiles each of your Runnables in a Docker container and bun
 them together in `runnables.wasm.zip` to be used in Atmo.
 
 ```no-copy
-⏩ START: building runnables in .
+⏩ START: building Runnables in .
 ℹ️  🐳 using Docker toolchain
-⏩ START: building runnable: helloworld (rust)
+⏩ START: building Runnable: helloworld (rust)
     Updating crates.io index
 [...]
 
-✅ DONE: bundle was created -> runnables.wasm.zip @ v0.1.0
+✅ DONE: Bundle was created -> runnables.wasm.zip @ v0.1.0
 ```
 
 If you prefer not to use Docker, you can also [build your Runnables natively](https://github.com/suborbital/subo/blob/main/docs/get-started.md#building-without-docker).
 
 ### Running a development server
 
-Now that we have our application bundle built, we can start a development server.
+Now that we have our application Bundle built, we can start a development server.
 
 In the `important-api` directory, run:
 

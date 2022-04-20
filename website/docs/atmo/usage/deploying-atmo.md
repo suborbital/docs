@@ -4,7 +4,7 @@ Atmo is in beta, and is suitable production workloads. If you're using Atmo in p
 
 Atmo is distributed as a Docker image: `suborbital/atmo`
 
-To run Atmo, you can mount your Runnable Bundle as a volume, build your own container image that embeds it, or set Atmo to wait for a bundle to be uploaded.
+To run Atmo, you can mount your Runnable Bundle as a volume, build your own container image that embeds it, or set Atmo to wait for a Bundle to be uploaded.
 
 ## Volume mount
 
@@ -32,10 +32,10 @@ Building this Dockerfile would result in an image that doesn't need a volume mou
 
 ## Bundle upload
 
-To upload a bundle after launching Atmo, use the `--wait` flag or set the
+To upload a Bundle after launching Atmo, use the `--wait` flag or set the
 `ATMO_WAIT=true` env var. This will cause Atmo to check the disk once per
-second until it finds a bundle rather than exiting with an error if no bundle
-is found. This method allows you to launch Atmo and then upload a bundle
+second until it finds a Bundle rather than exiting with an error if no Bundle
+is found. This method allows you to launch Atmo and then upload a Bundle
 separately by copying it into the running container, as with the
 [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 

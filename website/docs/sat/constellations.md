@@ -27,7 +27,7 @@ Next, in the Sat repo, build `constd`:
 make constd/install
 ```
 
-Now launch `constd` by providing the path to a [Runnable bundle](../atmo/usage/build-your-application.md):
+Now launch `constd` by providing the path to a [Runnable Bundle](../atmo/usage/build-your-application.md):
 
 ```bash
 CONSTD_EXEC_MODE=metal constd {absolute/path/to}/atmo/example-project/runnables.wasm.zip

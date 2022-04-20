@@ -2,7 +2,7 @@
 
 Subo includes the WebAssembly toolchain for Suborbital projects.
 
-The Suborbital Development Platform aims for Wasm to be a first-class citizen. `subo` is the toolchain for building Wasm Runnables for [Reactr](https://github.com/suborbital/reactr) and [Atmo](https://github.com/suborbital/atmo). The `subo` CLI can build Wasm Runnables, and can package several Wasm Runnables into a deployable bundle.
+The Suborbital Development Platform aims for Wasm to be a first-class citizen. `subo` is the toolchain for building Wasm Runnables for [Reactr](https://github.com/suborbital/reactr) and [Atmo](https://github.com/suborbital/atmo). The `subo` CLI can build Wasm Runnables, and can package several Wasm Runnables into a deployable Bundle.
 
 Building a Runnable in languages other than Go is designed to be simple and powerful:
 ```rust
@@ -63,9 +63,9 @@ To build your Runnable into a Wasm module for Reactr or Atmo, use the build comm
 If the current working directory is a Runnable, subo will build it. If the current directory contains many runnables, subo will build them all. Any directory with a `.runnable.yaml` file is considered a Runnable and will be built. Building Runnables is not fully tested on Windows.
 
 ## Bundles
-By default, subo will write all of the Runnables in the current directory into a bundle. Atmo uses Runnable bundles to help you build powerful web services by composing Runnables declaratively. If you want to skip bundling, you can pass `--no-bundle` to `subo build`
+By default, subo will write all of the Runnables in the current directory into a Bundle. Atmo uses Runnable Bundles to help you build powerful web services by composing Runnables declaratively. If you want to skip bundling, you can pass `--no-bundle` to `subo build`
 
-The resulting bundle can also be used with a Reactr instance by calling `h.HandleBundle({path/to/bundle})`. See the [Reactr Wasm instructions](https://github.com/suborbital/reactr/blob/master/docs/wasm.md) for details.
+The resulting Bundle can also be used with a Reactr instance by calling `h.HandleBundle({path/to/bundle})`. See the [Reactr Wasm instructions](https://github.com/suborbital/reactr/blob/master/docs/wasm.md) for details.
 
 The full options for `build`:
 ```
