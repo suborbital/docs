@@ -1,6 +1,17 @@
 module.exports = {
   docs: [
-    'suborbital-ecosystem/the-suborbital-ecosystem',
+    {
+      type: 'category',
+      label: 'The Suborbital Ecosystem',
+      collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'suborbital-ecosystem/the-suborbital-ecosystem',
+      },
+      items: [
+        'suborbital-ecosystem/glossary',
+      ]
+    },
     {
       type: 'category',
       label: 'Intro to WebAssembly',
@@ -77,7 +88,6 @@ module.exports = {
           type: 'category',
           label: 'Concepts',
           items: [
-            'atmo/concepts/glossary',
             'atmo/concepts/runnables',
             'atmo/concepts/the-directive',
             'atmo/concepts/state',

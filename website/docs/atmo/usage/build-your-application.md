@@ -20,7 +20,7 @@ pass the directory: subo build ./example-project
 The end of this command should read:
 
 ```
-✅ DONE: bundle was created -> ./runnables.wasm.zip
+✅ DONE: Bundle was created -> ./runnables.wasm.zip
 ```
 
 ## Running the Atmo development server
