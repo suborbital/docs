@@ -6,6 +6,12 @@
 # Build stage for generating the static build
 FROM node:16 as builder
 
+ARG DOCSEARCH_APP_ID
+ARG DOCSEARCH_API_KEY
+
+ENV DOCSEARCH_APP_ID=${DOCSEARCH_APP_ID}
+ENV DOCSEARCH_API_KEY=${DOCSEARCH_API_KEY}
+
 WORKDIR /tmp/docubuild
 
 # Leverage build cache for installed npm packages
