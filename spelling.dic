@@ -1,6 +1,5 @@
 0s
 1s
-acmeco
 ActiveX
 AddGroup
 adminUri
@@ -24,7 +23,6 @@ AssertStatus
 async
 atmo
 Atmo
-ATMO
 Atmo's
 atmoVersion
 Auth
@@ -32,7 +30,6 @@ Autoscale
 autoscaler
 autoscaling
 Autoscaling
-awesomeco
 backend
 badRunner
 behaviour
@@ -204,7 +201,6 @@ impl
 importantmessage
 indexHtml
 init
-inital
 InsertUser
 inStr
 integrations
@@ -304,7 +300,6 @@ param
 parametrized
 params
 Params
-particulary
 pdf
 performant
 plaintext
@@ -328,12 +323,8 @@ Reactr's
 ReadAll
 readme
 README
-reccomended
 receiveMessagesAsync
 receiveMessagesSync
-reciepts
-Reciepts
-recieve
 recurse
 redis
 REPL
