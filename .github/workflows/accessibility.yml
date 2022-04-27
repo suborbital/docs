@@ -10,8 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      uses: A11yWatch/github-action@v1.2.43
-      - uses: a11ywatch/github-action@v1.2.43
+      - uses: actions/checkout@v3
+      - uses: A11yWatch/github-action@v1.2.43
         with:
           WEBSITE_URL: https://docs.suborbital.dev
           FAIL_ERROR_COUNT: 1
