@@ -3,3 +3,4 @@
   with:
     WEBSITE_URL: ${{ secrets.https://docs.suborbital.dev }}
     FAIL_ERROR_COUNT: 1
+    A11YWATCH_TOKEN: A11YWATCH_TOKEN
