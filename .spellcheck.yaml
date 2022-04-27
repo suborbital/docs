@@ -3,6 +3,14 @@ matrix:
     sources:
       - website/docs/**/*.md
     aspell:
-      H: true
+      lang: en
+  dictionary:
+    wordlists:
+    - spelling.dic
     pipeline:
       - pyspelling.filters.markdown:
+      - pyspelling.filters.html:
+          comments: false
+          ignores:
+          - code
+          - pre
