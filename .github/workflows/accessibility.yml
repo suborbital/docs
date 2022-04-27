@@ -1,6 +1,19 @@
-- name: A11yWatch - The Accessibility Suite
-  uses: a11ywatch/github-action@v1.2.44
-  with:
-    WEBSITE_URL: ${{ secrets.https://docs.suborbital.dev }}
-    FAIL_ERROR_COUNT: 1
-    A11YWATCH_TOKEN: ${{ secrets.A11YWATCH_TOKEN }} 
+name: a11y
+
+on:
+  pull_request:
+  push:
+    branches: 
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: a11ywatch/github-action@v1.2.44
+         with:
+           WEBSITE_URL: https://docs.suborbital.dev
+           FAIL_ERROR_COUNT: 1
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           A11YWATCH_TOKEN: ${{ secrets.A11YWATCH_TOKEN }} 
