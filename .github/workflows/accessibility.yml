@@ -15,5 +15,6 @@ jobs:
         with:
           WEBSITE_URL: https://docs.suborbital.dev
           FAIL_ERROR_COUNT: 1
+          EXTERNAL: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           A11YWATCH_TOKEN: ${{ secrets.A11YWATCH_TOKEN }} 
