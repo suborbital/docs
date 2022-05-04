@@ -1,0 +1,34 @@
+name: spellcheck
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: igsekor/pyspelling-any@v1.0.4
+
+  matrix:
+    - name: Markdown
+      sources:
+        - 'website/docs/**/*.md'
+      default_encoding: utf-8
+      aspell:
+        lang: en
+    dictionary:
+      wordlists:
+      - spelling.dic
+      pipeline:
+        - pyspelling.filters.markdown:
+        - pyspelling.filters.html:
+            comments: false
+            ignores:
+            - code
+            - pre
