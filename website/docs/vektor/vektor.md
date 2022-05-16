@@ -100,6 +100,17 @@ respond with an error code, if error is `nil`, then the `interface{}`
 value is used to respond based on the response handling rules.
 **Responding to requests is handled in depth below in [Responding to requests](#responding-to-requests)**
 
+### WebSockets
+
+Similar to handlers for HTTP requests, here is the function definition for WebSocket connections:
+```go
+func(r *http.Request, ctx *Ctx, conn *websocket.Conn) error
+```
+Each of the arguments are equivalent to the arguments passed to HTTP handlers, with one additonal argument:
+
+`conn` is a `*websocket.Conn` from the [Gorilla library](https://pkg.go.dev/github.com/gorilla/websocket#Conn).
+
+View the Gorilla documentation for more information on reading and writing to the connection.
 
 ## Mounting routes
 
