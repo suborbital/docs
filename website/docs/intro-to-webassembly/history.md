@@ -1,4 +1,4 @@
-# History of the Internet
+# History of the World Wide Web
 
 The World Wide Web originally started out as a document exchange network to
 meet the demand for automated information-sharing between academics across the world.
