@@ -16,6 +16,7 @@ Our [`subo`](../subo) command line tool can help you create starter templates fo
 | [TinyGo](#go)                     | `--lang=tinygo`         | Beta           |
 | [Grain](#grain)                   |`--lang=grain`           | Beta           |
 | [Rust](#rust)                     |`--lang=rust`            | Stable         |
+| [WebAssembly Text](#wat)          |`--lang=wat`             | Stable         |
 * Rust support is implemented through the [native WebAssembly support](https://www.rust-lang.org/what/wasm) of the Rust compiler.
 * Go support uses the [Tiny Go compiler](https://tinygo.org/) to target WebAssembly.
 
