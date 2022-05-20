@@ -11,13 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: A11yWatch/github-action@v1.4.0
+      - uses: A11yWatch/github-action@v1.5.1
         with:
           WEBSITE_URL: https://docs.suborbital.dev
-          FAIL_ERROR_COUNT: 3
+          FAIL_ERRORS_COUNT: 3
           # 3 is the number of warnings we get from Docusaurus-level code we can't fix, so this will
           # be the error floor for now
-          EXTERNAL: true
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          A11YWATCH_TOKEN: ${{ secrets.A11YWATCH_TOKEN }} 
-          SITE_WIDE: true
