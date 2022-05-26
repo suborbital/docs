@@ -2,62 +2,7 @@
 
 By default, Compute will store compiled functions and function source code on the local storage in your Kubernetes cluster. For greater scalability, Compute can be configured to store artifacts in cloud-based object storage like Amazon S3 or Google Cloud Storage.
 
-## Kubernetes deployment
-
-To configure a storage bucket, provide the `SCC_STORAGE_PATH` environment variable to both the control plane and builder in `.suborbital/scc-controlplane-deployment.yaml` under the `controlplane` and `builder` containers:
-
-```yaml
-containers:
-  - name: controlplane
-    image: suborbital/scc-control-plane:v0.3.0
-    command: ["controlplane"]
-
-    ports:
-      - containerPort: 8081
-
-    env:
-      - name: SCC_HTTP_PORT
-        value: "8081"
-
-      - name: SCC_STORAGE_PATH
-        value: "s3://your-storage-bucket"
-
-  - name: builder
-    image: suborbital/scc-builder:v0.3.0
-    command: ["builder"]
-
-    ports:
-      - containerPort: 8080
-      - containerPort: 8443
-
-    env:
-      - name: SCC_DOMAIN
-        value: "example.dom"
-
-      - name: SCC_STORAGE_PATH
-        value: "s3://your-storage-bucket"
-```
-
-## Local docker-compose deployment
-
-To configure a storage bucket, provide the `SCC_STORAGE_PATH` environment variable to both the control plane and builder in `docker-compose.yaml` under the `scc-control-plane` and `scc-builder` services:
-
-```yaml
-services:
-  scc-control-plane:
-    image: suborbital/scc-control-plane:v0.3.0
-    command: controlplane
-    environment:
-      SCC_LOG_LEVEL: info
-      SCC_STORAGE_PATH: "s3://your-storage-bucket"
-
-  scc-builder:
-    image: suborbital/scc-builder:v0.3.0
-    command: builder
-    environment:
-      SCC_LOG_LEVEL: info
-      SCC_STORAGE_PATH: "s3://your-storage-bucket"
-```
+To configure a storage bucket, provide the `SCC_STORAGE_PATH` environment variable to both the control plane and builder, e.g. `s3://my-bucket` for Amazon S3 or `gs://my-bucket` for Google Cloud Storage. For Kubernetes deployments, this is done in `.suborbital/scc-controlplane-deployment.yaml` under the `controlplane` and `builder` containers sections, and for local docker-compose deployments, this is done in `docker-compose.yaml` under the `scc-control-plane` and `scc-builder` services.
 
 ## Authentication
 
@@ -141,6 +86,7 @@ volumes:
 ```
 
 A few things to note:
+
 - The addition of `GOOGLE_APPLICATION_CREDENTIALS` to both environments of the builder and control plane containers
 - The `gcs-service-account-credentials-volume` volume mount to the `volumeMounts` sections of both containers
 - The declaration of the volume itself in the `volumes` section
