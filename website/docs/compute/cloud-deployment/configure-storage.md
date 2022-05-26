@@ -140,4 +140,7 @@ volumes:
           path: sa_credentials.json
 ```
 
-Note the addition of `GOOGLE_APPLICATION_CREDENTIALS` to both environments of the builder and control plane containers, the `gcs-service-account-credentials-volume` volume mount to the `volumeMounts` sections of both containers, as well as the declaration of the volume itself in the `volumes` section.
+A few things to note:
+- The addition of `GOOGLE_APPLICATION_CREDENTIALS` to both environments of the builder and control plane containers
+- The `gcs-service-account-credentials-volume` volume mount to the `volumeMounts` sections of both containers
+- The declaration of the volume itself in the `volumes` section
