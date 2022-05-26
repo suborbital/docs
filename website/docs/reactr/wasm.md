@@ -6,19 +6,20 @@ The current supported languages are Rust (stable), TypeScript/AssemblyScript (be
 
 To create a Wasm runnable, check out the [subo CLI](https://github.com/suborbital/subo). Once you've generated a `.wasm` file, you can use it with Reactr just like any other Runnable!
 
-A multitude of example Runnables can be found in the [testdata directory](https://github.com/suborbital/reactr/tree/main/rwasm/testdata).
+A multitude of example Runnables can be found in the [testdata directory](https://github.com/suborbital/reactr/tree/main/engine/testdata).
 
 Due to the memory layout of WebAssembly, Wasm runners accept bytes (rather than arbitrary input) and return bytes. Reactr will handle the conversion of inputs and outputs automatically. Wasm runners cannot currently schedule other jobs.
 
-To get started with Wasm Runnables, install Reactr's WebAssembly package `rwasm`:
+To get started with Wasm Runnables, install Reactr's WebAssembly package `engine`:
+
 ```bash
-go get github.com/suborbital/reactr/rwasm
+go get github.com/suborbital/reactr/engine
 ```
 
 ```go
 r := rt.New()
 
-doWasm := r.Register("wasm", rwasm.NewRunner("path/to/runnable/file.wasm"))
+doWasm := r.Register("wasm", engine.NewRunner("path/to/runnable/file.wasm"))
 
 res, err := doWasm("input_will_be_converted_to_bytes").Then()
 if err != nil {
