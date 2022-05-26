@@ -65,7 +65,7 @@ Bucket authentication varies between cloud providers.
 
 ### Amazon S3
 
-You will need to also supply the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` and `AWS_REGION` environment variables to both the control plane and the builder. See the [AWS authentication documentation](https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/) for details.
+You will need to also supply the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` and `AWS_REGION` environment variables to both the control plane and the builder. See the [AWS authentication documentation](https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/) for details. It is also possible to store the configuration as a Kubernetes secret, similar to the Google Cloud Storage configuration.
 
 ### Google Cloud Storage
 
