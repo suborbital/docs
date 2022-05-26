@@ -102,7 +102,7 @@ http.get(url: string, headers?: Headers): HttpResponse
 ```
 
 ```assemblyscript
-function httpGet(url: string, headers: Map<string, string> | null): ArrayBuffer
+function httpGet(url: string, headers: Map<string, string> | null): Result
 ```
 
 ```swift
@@ -111,6 +111,23 @@ public func HttpGet(url: String) -> String
 
 </MultiLanguageCodeBlock>
 
+## HEAD
+
+Performs an HTTP HEAD request:
+
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn get(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.head(url: string, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpHead(url: string, headers: Map<string, string> | null): Result
+```
 
 ## POST
 
