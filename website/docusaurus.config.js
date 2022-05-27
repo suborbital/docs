@@ -67,7 +67,11 @@ module.exports = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
   themeConfig: {
-    autoCollapseSidebarCategories: true,
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+        },
+    },  
     prism: {
       additionalLanguages: ['rust', 'swift'],
     },
