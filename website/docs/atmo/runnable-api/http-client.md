@@ -129,6 +129,26 @@ http.head(url: string, headers?: Headers): HttpResponse
 function httpHead(url: string, headers: Map<string, string> | null): Result
 ```
 
+## OPTIONS
+
+Performs an HTTP OPTIONS request:
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn options(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.options(url: string, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpOptions(url: string, headers: Map<string, string> | null): Result
+```
+
+
+</MultiLanguageCodeBlock>
+
 ## POST
 
 Performs an HTTP POST request:
