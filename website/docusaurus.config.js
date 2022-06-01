@@ -76,8 +76,8 @@ module.exports = {
       additionalLanguages: ['rust', 'swift'],
     },
     algolia: {
-      appId: process.env.DOCSEARCH_APP_ID,
-      apiKey: process.env.DOCSEARCH_API_KEY,
+      appId: process.env.DOCSEARCH_APP_ID ||  "local",
+      apiKey: process.env.DOCSEARCH_API_KEY || "local",
       indexName: 'suborbital',
       contextualSearch: true
     },
