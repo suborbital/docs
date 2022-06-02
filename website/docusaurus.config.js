@@ -70,7 +70,7 @@ module.exports = {
     docs: {
       sidebar: {
         autoCollapseCategories: true,
-        },
+      },
     },  
     prism: {
       additionalLanguages: ['rust', 'swift'],
