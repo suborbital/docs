@@ -51,7 +51,6 @@ The `headers` parameter may be specified as string header name/value pairs:
 type Headers = { [key: string]: string };
 ```
 
-
 </TabItem>
 
 <TabItem value="assemblyscript" label="AssemblyScript 🧪">
@@ -85,7 +84,6 @@ Swift does not yet support passing headers to a request.
 </Tabs>
 
 The following namespace methods are available:
-
 
 ## GET
 
@@ -129,6 +127,12 @@ http.head(url: string, headers?: Headers): HttpResponse
 function httpHead(url: string, headers: Map<string, string> | null): Result
 ```
 
+```swift
+public func HttpHead(url: String) -> String
+```
+
+</MultiLanguageCodeBlock>
+
 ## OPTIONS
 
 Performs an HTTP OPTIONS request:
@@ -146,6 +150,9 @@ http.options(url: string, headers?: Headers): HttpResponse
 function httpOptions(url: string, headers: Map<string, string> | null): Result
 ```
 
+```swift
+public func HttpOptions(url: String) -> String
+```
 
 </MultiLanguageCodeBlock>
 
