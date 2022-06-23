@@ -25,7 +25,7 @@ http::get(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `http` import:
 
@@ -51,10 +51,9 @@ The `headers` parameter may be specified as string header name/value pairs:
 type Headers = { [key: string]: string };
 ```
 
-
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `http`:
 
@@ -67,7 +66,7 @@ httpGet(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift 🧪">
+<TabItem value="swift" label="Swift">
 
 In Swift these methods are prefixed with `Http`:
 
@@ -86,7 +85,6 @@ Swift does not yet support passing headers to a request.
 
 The following namespace methods are available:
 
-
 ## GET
 
 Performs an HTTP GET request:
@@ -102,7 +100,7 @@ http.get(url: string, headers?: Headers): HttpResponse
 ```
 
 ```assemblyscript
-function httpGet(url: string, headers: Map<string, string> | null): ArrayBuffer
+function httpGet(url: string, headers: Map<string, string> | null): Result
 ```
 
 ```swift
@@ -111,6 +109,52 @@ public func HttpGet(url: String) -> String
 
 </MultiLanguageCodeBlock>
 
+## HEAD
+
+Performs an HTTP HEAD request:
+
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn get(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.head(url: string, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpHead(url: string, headers: Map<string, string> | null): Result
+```
+
+```swift
+public func HttpHead(url: String) -> String
+```
+
+</MultiLanguageCodeBlock>
+
+## OPTIONS
+
+Performs an HTTP OPTIONS request:
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn options(url: &str, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.options(url: string, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpOptions(url: string, headers: Map<string, string> | null): Result
+```
+
+```swift
+public func HttpOptions(url: String) -> String
+```
+
+</MultiLanguageCodeBlock>
 
 ## POST
 
@@ -136,6 +180,28 @@ public func HttpPost(url: String, body: String) -> String
 
 </MultiLanguageCodeBlock>
 
+## PUT
+Performs an HTTP PUT request:
+
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn put(url: &str, body: Option<Vec<u8>>, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.put(url: string, body: string | Uint8Array, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpPut(url: string, body: ArrayBuffer, headers: Map<string, string> | null): Result
+```
+
+```swift
+public func HttpPut(url: String, body: String) -> String
+```
+
+</MultiLanguageCodeBlock>
 
 ## PATCH
 
