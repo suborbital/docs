@@ -25,7 +25,7 @@ http::get(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `http` import:
 
@@ -53,7 +53,7 @@ type Headers = { [key: string]: string };
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `http`:
 
@@ -66,7 +66,7 @@ httpGet(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift 🧪">
+<TabItem value="swift" label="Swift">
 
 In Swift these methods are prefixed with `Http`:
 
@@ -180,6 +180,28 @@ public func HttpPost(url: String, body: String) -> String
 
 </MultiLanguageCodeBlock>
 
+## PUT
+Performs an HTTP PUT request:
+
+<MultiLanguageCodeBlock>
+
+```rust
+pub fn put(url: &str, body: Option<Vec<u8>>, headers: Option<BTreeMap<&str, &str>>) -> Result<Vec<u8>, HostErr>
+```
+
+```typescript
+http.put(url: string, body: string | Uint8Array, headers?: Headers): HttpResponse
+```
+
+```assemblyscript
+function httpPut(url: string, body: ArrayBuffer, headers: Map<string, string> | null): Result
+```
+
+```swift
+public func HttpPut(url: String, body: String) -> String
+```
+
+</MultiLanguageCodeBlock>
 
 ## PATCH
 
