@@ -1,3 +1,7 @@
+---
+pagination_prev: null
+---
+
 # Using Sat
 
 To run Sat, Docker is easiest:
