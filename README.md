@@ -30,7 +30,7 @@ Navigate to the docs/website folder and start up the website.
 
 There are three ways of building and running the website:
 
-## npm
+### npm
 
 ```bash
 cd docs/website
@@ -56,3 +56,17 @@ docker run -p 8080:80 subo/docs
 
 After the second command, you won't see any output, but can open the docs at `localhost:8000`
 
+## Spellcheck
+
+In order to run spellcheck (the same way that CI runs it), you need to install the following:
+
+macOS:
+```
+brew install aspell
+pip3 install pyspelling pymdown-extensions
+```
+
+And then run 
+```
+make spellcheck
+```
