@@ -12,6 +12,15 @@ jobs:
   spellcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: sbates130272/spellcheck-github-actions@v0.7.0
-        name: Spellcheck
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: pip
+
+    - name: Install pyspelling and dependencies 
+      run: pip install pyspelling pymdown-extensions
+
+    - name: Spellcheck
+      run: pyspelling -c .spellcheck.yml
+
