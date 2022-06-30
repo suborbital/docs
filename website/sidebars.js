@@ -66,6 +66,7 @@ module.exports = {
           'Cloud Deployment': [
             'compute/cloud-deployment/configure-capabilities',
             'compute/cloud-deployment/configure-storage',
+            'compute/cloud-deployment/configure-webhooks',
             'compute/cloud-deployment/install-compute-in-your-cloud-environment'
           ]
         }
