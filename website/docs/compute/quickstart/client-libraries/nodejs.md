@@ -18,17 +18,17 @@ npm install @suborbital/compute
 
 ## Setup
 
-Import the library and configure the client. The default configuration will point the client at Compute's default production URLs in your cluster. 
+Import the library and configure the client. The default configuration will point the client at Compute's default production URLs in your cluster.
 
 A configuration for local development is also provided.
 
 ### Default Config
+
 ```typescript
 import { Suborbital } from "@suborbital/compute";
 
 const suborbital = new Suborbital(configuration);
 ```
-
 
 ### Local config
 
@@ -38,7 +38,7 @@ import { Suborbital, localConfig } from "@suborbital/compute";
 const suborbital = new Suborbital(localConfig);
 ```
 
-### Custom API URLs or ports: 
+### Custom API URLs or ports
 
 ```typescript
 import { Suborbital } from "@suborbital/compute";
@@ -53,9 +53,10 @@ const suborbital = new Suborbital(configuration);
 ```
 
 ## Getting started
+
 Using the [Compute APIs](../../api-reference/api-reference.md), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
 
-The Administrative API's `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
+The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
 
 ```typescript
 async function listAvailableFunctions() {
@@ -87,7 +88,7 @@ async function listAvailableFunctions() {
 }
 ```
 
-The result includes a function named `foo` (which for this tutorial already exists) and which we will execute using the Execution API's `run` method. 
+The result includes a function named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
 
 The `run` method takes an object with the `environment`, `userId`, `namespace`, `fnName`, and `version`, and returns the result of the executed function.
 
@@ -109,16 +110,20 @@ async function runFunction() {
 
 These are all of the available methods.
 
-### Admin:
+### Admin
 
-#### `suborbital.admin.getToken` 
+#### `suborbital.admin.getToken`
+
 **Description**: Retrieves an authentication token for the given function, typically used to authenticate calls to the Builder API.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
 **Result:** A string containing the token used for authorization.
+
 #### `suborbital.admin.getFunctions`
+
 **Description:** Returns a list of available functions for the given user in the given namespace.  
 **Args:** An object containing `userId`, `namespace`.  
 **Result:**
+
 ```json
 {
     "functions": [
@@ -135,10 +140,13 @@ These are all of the available methods.
     ]
 }
 ```
+
 #### `suborbital.admin.getFunctionResults`
+
 **Description:** Returns the most recent results (up to 5) produced by the execution of the given function.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
 **Result:**
+
 ```json
 {
     "results": [
@@ -150,10 +158,13 @@ These are all of the available methods.
     ]
 }
 ```
+
 #### `suborbital.admin.getFunctionErrors`
+
 **Description:** Returns the most recent errors (up to 5) produced by the execution of the given function.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
 **Result:**
+
 ```json
 {
     "errors": [
@@ -166,35 +177,47 @@ These are all of the available methods.
     ]
 }
 ```
-### Exec:
+
+### Exec
 
 #### `suborbital.exec.run`
+
 **Description:** Executes the given function, with the provided body, params and state loaded into the function at runtime.  
 **Args:** An object containing `environment`,`userId`,`namespace`, `fnName`,`version`.  
 **Result:** The result of the executed function.
 
-### Builder:
+### Builder
 
 #### `suborbital.builder.build`
+
 **Description:** Builds the provided code using the specified language toolchain.  
 **Args:** An object containing `language`, `environment`, `userId`, `namespace`, `fnName`, `token`.  
 **Result:** A string containing the logs for the build.  
+
 #### `suborbital.builder.getDraft`
+
 **Description:** Gets the draft for the specified runnable.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
 **Result:** A specified runnable.  
+
 #### `suborbital.builder.deployDraft`
+
 **Description:** Deploys the specified runnable.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
 **Result:** A string containing the version.  
+
 #### `suborbital.builder.testDraft`
+
 **Description:** Tests the draft for the specified runnable.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
 **Result:** A string containing the result.  
+
 #### `suborbital.builder.getTemplate`
+
 **Description:** Gets the template (which controls what your users see when they create a new function) for a new function of the given language.  
 **Args:** An object containing `fnName`, `language`.  
 **Result:**
+
 ```rust
   //Example template for rust language 
   import { logInfo } from "@suborbital/suborbital"

@@ -19,7 +19,7 @@ pass the directory: subo build ./example-project
 
 The end of this command should read:
 
-```
+```bash
 ✅ DONE: Bundle was created -> ./runnables.wasm.zip
 ```
 
@@ -36,7 +36,7 @@ logs in your terminal.
 
 :::note
 Check Docker to ensure only Atmo is running on the port or else the
-Atmo developement server will not start correctly.
+Atmo development server will not start correctly.
 :::
 
 Make a request to `POST localhost:8080/hello` with a request body to see it in action.
