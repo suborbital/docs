@@ -17,6 +17,7 @@ Args
 arrayBuffer
 asm
 assemblyscript
+AssemblyScript
 AssertHeaders
 AssertJSON
 AssertStatus
@@ -422,6 +423,7 @@ TheProject
 timeoutRunner
 TimeoutSeconds
 tinygo
+TinyGo
 tls
 TLS
 tmpl
@@ -492,8 +494,12 @@ WebAssembly's
 webpage
 webserver
 websocket
-Websocket
+WebSocket
 websockets
+webhook
+webhooks
+Webhook
+Webhooks
 wordcount
 Wordcount
 wordcountCtxKey
