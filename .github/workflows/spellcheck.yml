@@ -17,9 +17,11 @@ jobs:
       with:
         python-version: '3.9'
         cache: pip
-
+        
     - name: Install pyspelling and dependencies 
       run: pip install pyspelling pymdown-extensions
+
+    - run: sudo apt update && sudo apt install aspell
 
     - name: Spellcheck
       run: pyspelling -c .spellcheck.yml
