@@ -10,8 +10,14 @@ matrix:
       - spelling.dic
     pipeline:
       - pyspelling.filters.markdown:
-      - pyspelling.filters.html:
-          comments: false
-          ignores:
-          - code
-          - pre
+      - pyspelling.filters.context_filter:
+          context_visible_first: true
+          escapes: '\\[\\`~]'
+          delimiters:
+          # Ignore multiline content between fences (fences can have 3 or more back ticks)
+          # ```
+          # content
+          # ```
+          - open: '(?s)^(?P<open> *`{3,})$'
+            close: '^(?P=open)$'
+
