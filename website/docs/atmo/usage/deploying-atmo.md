@@ -55,11 +55,12 @@ To control logging in Atmo, you can use its environment variables:
 ### Tracing
 
 When Atmo is running in proxy mode, you can configure one of three tracers:
-1. direct export to honeycomb.io if you have an account with them
-2. local export to an opentelemetry collector running on the same machine / within the same pod
-3. no tracing
 
-Atmo is going to use a noop tracer that does nothing by default if it doesn't see any of the following configuration values.
+1. Direct export to honeycomb.io if you have an account with them
+2. Local export to an OpenTelemetry collector running on the same machine / within the same pod
+3. No tracing
+
+Atmo is going to use a no-op tracer that does nothing by default if it doesn't see any of the following configuration values.
 
 Options are set via environment variables. The full list is:
 

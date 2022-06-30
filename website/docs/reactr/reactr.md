@@ -4,9 +4,9 @@ pagination_prev: null
 
 # Reactr
 
-### The next-gen function scheduler for Go and WebAssembly
+## The next-gen function scheduler for Go and WebAssembly
 
-![](/img/SOS_Reactr-Long-FullColour0.svg)
+![Reactr Logo](/img/SOS_Reactr-Long-FullColour0.svg)
 
 ### The Basics
 
@@ -22,28 +22,28 @@ And then get started by defining something `Runnable`:
 package main
 
 import (
-	"fmt"
-
-	"github.com/suborbital/reactr/rt"
+    "fmt"
+    "github.com/suborbital/reactr/rt"
 )
 
 type generic struct{}
 
 // Run runs a generic job
 func (g generic) Run(job rt.Job, ctx *rt.Ctx) (interface{}, error) {
-	fmt.Println("doing job:", job.String()) // get the string value of the job's data
+    fmt.Println("doing job:", job.String()) // get the string value of the job's data
 
-	// do your work here
+    // do your work here
 
-	return fmt.Sprintf("finished %s", job.String()), nil
+    return fmt.Sprintf("finished %s", job.String()), nil
 }
 
 // OnChange is called when Reactr starts or stops a worker to handle jobs,
 // and allows the Runnable to set up before receiving jobs or tear down if needed.
 func (g generic) OnChange(change rt.ChangeEvent) error {
-	return nil
+    return nil
 }
 ```
+
 A `Runnable` is something that can take care of a job - all it needs to do is conform to the `Runnable` interface as you see above.
 
 Once you have a Runnable, create a Reactr instance, register it, and `Do` some work:
@@ -52,25 +52,25 @@ Once you have a Runnable, create a Reactr instance, register it, and `Do` some w
 package main
 
 import (
-	"fmt"
-	"log"
+    "fmt"
+    "log"
 
-	"github.com/suborbital/reactr/rt"
+    "github.com/suborbital/reactr/rt"
 )
 
 func main() {
-	r := rt.New()
+    r := rt.New()
 
-	r.Register("generic", generic{})
+    r.Register("generic", generic{})
 
-	result := r.Do(r.Job("generic", "hard work"))
+    result := r.Do(r.Job("generic", "hard work"))
 
-	res, err := result.Then()
-	if err != nil {
-		log.Fatal(err)
-	}
+    res, err := result.Then()
+    if err != nil {
+        log.Fatal(err)
+    }
 
-	fmt.Println("done!", res.(string))
+    fmt.Println("done!", res.(string))
 }
 ```
 
@@ -87,32 +87,34 @@ type recursive struct{}
 
 // Run runs a recursive job
 func (r recursive) Run(job rt.Job, ctx *rt.Ctx) (interface{}, error) {
-	fmt.Println("doing job:", job.String())
+    fmt.Println("doing job:", job.String())
 
-	if job.String() == "first" {
-		return ctx.Do(rt.NewJob("recursive", "second")), nil
-	} else if job.String() == "second" {
-		return ctx.Do(rt.NewJob("recursive", "last")), nil
-	}
+    if job.String() == "first" {
+        return ctx.Do(rt.NewJob("recursive", "second")), nil
+    } else if job.String() == "second" {
+        return ctx.Do(rt.NewJob("recursive", "last")), nil
+    }
 
-	return fmt.Sprintf("finished %s", job.String()), nil
+    return fmt.Sprintf("finished %s", job.String()), nil
 }
 
 func (r recursive) OnChange(change rt.ChangeEvent) error {
-	return nil
+    return nil
 }
 ```
+
 The `rt.Ctx` you see there is the job context, and one of the things it can do is run more things!
 
-Calling `ctx.Do` will schedule another job to be executed and give you a `Result`. If you return a `Result` from `Run`, then the caller will recursively recieve that `Result` when they call `Then()`!
+Calling `ctx.Do` will schedule another job to be executed and give you a `Result`. If you return a `Result` from `Run`, then the caller will recursively receive that `Result` when they call `Then()`!
 
 For example:
+
 ```go
 r := r.Do(r.Job("recursive", "first"))
 
 res, err := r.Then()
 if err != nil {
-	log.Fatal(err)
+    log.Fatal(err)
 }
 
 fmt.Println("done!", res.(string))
@@ -139,11 +141,11 @@ To do something asynchronously with the `Result` once it completes, call `ThenDo
 
 ```go
 r.Do(r.Job("generic", "first")).ThenDo(func(res interface{}, err error) {
-	if err != nil {
-		// do something with the error
-	}
+    if err != nil {
+        // do something with the error
+    }
 
-	//do something with the result
+    //do something with the result
 })
 ```
 
@@ -161,7 +163,7 @@ grp.Add(ctx.Do(rt.NewJob("generic", "group work")))
 grp.Add(ctx.Do(rt.NewJob("generic", "group work")))
 
 if err := grp.Wait(); err != nil {
-	log.Fatal(err)
+    log.Fatal(err)
 }
 ```
 
@@ -194,7 +196,7 @@ grp.Add(doGeneric("second"))
 grp.Add(doGeneric("random"))
 
 if err := grp.Wait(); err != nil {
-	log.Fatal(err)
+    log.Fatal(err)
 }
 ```
 
@@ -208,7 +210,7 @@ By default, defining a pool size causes a static number of work threads to be st
 doGeneric := r.Register("generic", generic{}, rt.Autoscale(0))
 
 for i := 0; i < 10000; i++ {
-	doGeneric("lots to do").Discard()
+    doGeneric("lots to do").Discard()
 }
 ```
 
@@ -223,6 +225,7 @@ h := rt.New()
 
 doTimeout := r.Register("timeout", timeoutRunner{}, rt.TimeoutSeconds(3))
 ```
+
 When `TimeoutSeconds` is set and a job executes for longer than the provided number of seconds, the worker will move on to the next job and `ErrJobTimeout` will be returned to the Result. The failed job will continue to execute in the background, but its result will be discarded.
 
 ### Schedules
@@ -233,8 +236,8 @@ The `r.Do` method will run your job immediately, but if you need to run a job at
 // Schedule is a type that returns an *optional* job if there is something that should be scheduled.
 // Reactr will poll the Check() method at regular intervals to see if work is available.
 type Schedule interface {
-	Check() *Job
-	Done() bool
+    Check() *Job
+    Done() bool
 }
 ```
 
@@ -247,7 +250,7 @@ r.Register("worker", &workerRunner{})
 
 // runs every hour
 r.Schedule(rt.Every(60*60, func() Job {
-	return NewJob("worker", nil)
+    return NewJob("worker", nil)
 }))
 ```
 
@@ -259,7 +262,7 @@ Scheduled jobs' results are discarded automatically using `Discard()`
 
 The `Runnable` interface defines an `OnChange` function which gives the Runnable a chance to prepare itself for changes to the worker running it. For example, when a Runnable is registered with a pool size greater than 1, the Runnable may need to provision resources for itself to enable handling jobs concurrently, and `OnChange` will be called once each time a new worker starts up. Our [Wasm implementation](https://github.com/suborbital/reactr/blob/main/engine/wasmrunnable.go) is a good example of this.
 
-Most Runnables can return `nil` from this function, however returning an error will cause the worker start to be paused and retried until the required pool size has been acheived. The number of seconds between retries (default 3) and the maximum number of retries (default 5) can be configured when registering a Runnable:
+Most Runnables can return `nil` from this function, however returning an error will cause the worker start to be paused and retried until the required pool size has been achieved. The number of seconds between retries (default 3) and the maximum number of retries (default 5) can be configured when registering a Runnable:
 
 ```go
 doBad := r.Register("badRunner", badRunner{}, rt.RetrySeconds(1), rt.MaxRetries(10))
@@ -281,16 +284,16 @@ There are also some shortcuts to make working with Reactr a bit easier:
 
 ```go
 type input struct {
-	First, Second int
+    First, Second int
 }
 
 type math struct{}
 
 // Run runs a math job
 func (g math) Run(job rt.Job, ctx *rt.Ctx) (interface{}, error) {
-	in := job.Data().(input)
+    in := job.Data().(input)
 
-	return in.First + in.Second, nil
+    return in.First + in.Second, nil
 }
 ```
 
@@ -298,8 +301,8 @@ func (g math) Run(job rt.Job, ctx *rt.Ctx) (interface{}, error) {
 doMath := r.Register("math", math{})
 
 for i := 1; i < 10; i++ {
-	equals, _ := doMath(input{i, i * 3}).ThenInt()
-	fmt.Println("result", equals)
+    equals, _ := doMath(input{i, i * 3}).ThenInt()
+    fmt.Println("result", equals)
 }
 ```
 

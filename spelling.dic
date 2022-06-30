@@ -12,11 +12,13 @@ api
 apiGroup
 APIs
 apiVersion
+appVersion
 args
 Args
 arrayBuffer
 asm
 assemblyscript
+AssemblyScript
 AssertHeaders
 AssertJSON
 AssertStatus
@@ -74,6 +76,8 @@ Ctx
 ctype
 customizable
 customizations
+dataset
+de
 deallocated
 declaratively
 defence
@@ -94,6 +98,7 @@ doMath
 doTimeout
 doWasm
 draftVersion
+Emscripten
 ENTRYPOINT
 env
 ENV
@@ -111,9 +116,8 @@ extern
 facto
 fas
 fdd
-fermyon
+Fermyon
 FFI
-Files in repository contain spelling errors
 filesystem
 filesystems
 FirstProposalMarch
@@ -128,6 +132,8 @@ FullColour
 func
 functionList
 Gav
+GCP
+GCS
 getBytes
 getDraft
 getFunctionErrors
@@ -285,6 +291,7 @@ NewWCResponse
 NeXT
 nodejs
 NodeUUID
+no-op
 npm
 ok
 Ok
@@ -292,8 +299,10 @@ OnChange
 onErr
 OnReply
 OnType
+OpenTelemetry
 OptionsModifier
 OptionsModifiers
+otel
 os
 OutputLog
 param
@@ -331,6 +340,8 @@ REPL
 ReplyTo
 repo
 REPO
+repos
+Repos
 req
 Req
 reqBody
@@ -375,14 +386,17 @@ RVG
 SaaS
 sandboxed
 scalable
+scalability
 scc
 SCC
 SCHED
 SDK
 SelectUserWithUUID
+semconv
 sendMessages
 serverAddress
 serverless
+ServiceNameKey
 SetHeader
 setupServer
 signup
@@ -423,6 +437,7 @@ TheProject
 timeoutRunner
 TimeoutSeconds
 tinygo
+TinyGo
 tls
 TLS
 tmpl
@@ -493,8 +508,13 @@ WebAssembly's
 webpage
 webserver
 websocket
-Websocket
+WebSocket
 websockets
+WebSockets
+webhook
+webhooks
+Webhook
+Webhooks
 wordcount
 Wordcount
 wordcountCtxKey

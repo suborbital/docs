@@ -12,3 +12,6 @@ build-serve:
 docker:
 	docker build . -t subo/docs
 	docker run -p 8080:80 subo/docs
+
+spellcheck:
+	pyspelling -c .spellcheck.yml

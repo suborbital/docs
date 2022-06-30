@@ -6,3 +6,7 @@ website/.docusaurus
 website/yarn.lock
 
 **/.DS_Store
+
+.vscode
+build
+dictionary.dic

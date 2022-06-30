@@ -1,0 +1,3 @@
+pymdown-extensions==9.5
+pyspelling==2.7.3
+

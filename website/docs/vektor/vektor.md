@@ -4,9 +4,9 @@ pagination_prev: null
 
 # Vektor
 
-### The opinionated, production-grade server framework for Go
+## The opinionated, production-grade server framework for Go
 
-![](/img/SOS_Vektor-Long-FullColour.svg)
+![Vektor logo](/img/SOS_Vektor-Long-FullColour.svg)
 
 Vektor's goal is to help you develop web services faster.
 Vektor handles much of the boilerplate needed to start
@@ -21,20 +21,21 @@ server := vk.New(vk.UseAppName("Vektor API Server"), vk.UseDomain("vektor.exampl
 server.GET("/ping", HandlePing)
 
 if err := server.Start(); err != nil {
-	log.Fatal(err)
+    log.Fatal(err)
 }
 
 func HandlePing(r *http.Request, ctx *vk.Ctx) (interface{}, error) {
-	return "pong", nil
+    return "pong", nil
 }
 ```
+
 Those are the basics, but Vektor is capable of
 scaling up to serve powerful production workloads,
 using its full suite of API-oriented features.
 
-# Set up `vk`
+## Set up `vk`
 
-## The server object
+### The server object
 
 The `vk.Server` type contains everything needed to
 build a web service. It includes the router,
@@ -48,8 +49,8 @@ which allow customization of the server:
 
 ```go
 server := vk.New(
-	vk.UseAppName("Vektor API Server"),
-	vk.UseDomain("vektor.example.com"),
+    vk.UseAppName("Vektor API Server"),
+    vk.UseDomain("vektor.example.com"),
 )
 ```
 
@@ -59,8 +60,8 @@ an HTTP port to listen on.
 
 ```go
 server := vk.New(
-	vk.UseAppName("Vektor API HTTP-only"),
-	vk.UseHTTPPort(8000),
+    vk.UseAppName("Vektor API HTTP-only"),
+    vk.UseHTTPPort(8000),
 )
 ```
 
@@ -83,9 +84,11 @@ Each of the options can be set using the modifier function, or by setting the as
 ## Handler functions
 
 `vk`'s handler function definition is:
+
 ```go
 func HandlePing(r *http.Request, ctx *vk.Ctx) (interface{}, error)
 ```
+
 Here's a breakdown of each part:
 
 `r *http.Request`: The request object for the request being handled.
@@ -103,45 +106,51 @@ value is used to respond based on the response handling rules.
 ### WebSockets
 
 Similar to handlers for HTTP requests, here is the function definition for WebSocket connections:
+
 ```go
 func(r *http.Request, ctx *Ctx, conn *websocket.Conn) error
 ```
-Each of the arguments are equivalent to the arguments passed to HTTP handlers, with one additonal argument:
+
+Each of the arguments are equivalent to the arguments passed to HTTP handlers, with one additional argument:
 
 `conn` is a `*websocket.Conn` from the [Gorilla library](https://pkg.go.dev/github.com/gorilla/websocket#Conn).
 
 View the Gorilla documentation for more information on reading and writing to the connection.
 
-## Mounting routes
+### Mounting routes
 
 To define routes for your `vk` server, use the HTTP method
 functions on the server object:
 
 ```go
 server := vk.New(
-	vk.UseAppName("Vektor API Server"),
-	vk.UseDomain("vektor.example.com"),
+    vk.UseAppName("Vektor API Server"),
+    vk.UseDomain("vektor.example.com"),
 )
 
 server.GET("/users", HandleGetUsers)
 server.POST("/groups", HandleCreateGroup)
 ```
+
 If you prefer to pass the HTTP method as an argument, use `server.Handle()` instead.
 
 **Note that attempting to add new handlers after calling `server.Start()` is a no-op**
 
-## Route groups
+### Route groups
 
 `vk` allows grouping routes by a common path prefix. For example, if you want a group of routes to begin with the `/api/` path, you can create an API route group and then mount all of your handlers to that group.
+
 ```go
 apiGroup := vk.Group("/api")
 apiGroup.GET("/events", HandleGetEvents)
 
 server.AddGroup(apiGroup)
 ```
+
 Calling `AddGroup` will calculate the full paths for all routes and mount them to the server. In the example above, the handler would be mounted at `/api/events`.
 
 Groups can even be added to groups!
+
 ```go
 v1 := vk.Group("/v1")
 v1.GET("/events", HandleEventsV1)
@@ -155,12 +164,12 @@ apiGroup.AddGroup(v2)
 
 server.AddGroup(api)
 ```
+
 This will create a natural grouping of your routes,
 with the above example creating the `/api/v1/events`
 and `/api/v2/events` routes.
 
-
-## Middleware and Afterware
+### Middleware and Afterware
 
 Groups become even more powerful when combined with Middleware
 and Afterware. Middleware are pseudo request handlers that run
@@ -171,35 +180,39 @@ to be terminated immediately. Two examples:
 
 ```go
 func headerMiddleware(r *http.Request, ctx *vk.Ctx) error {
-	ctx.Headers.Set("X-Vektor-Test", "foobar")
+    ctx.Headers.Set("X-Vektor-Test", "foobar")
 
-	return nil
+    return nil
 }
 
 func denyMiddleware(r *http.Request, ctx *vk.Ctx) error {
-	if strings.Contains(r.URL.Path, "hack") {
-		ctx.Log.ErrorString("HACKER!!")
+    if strings.Contains(r.URL.Path, "hack") {
+        ctx.Log.ErrorString("HACKER!!")
 
-		return vk.E(403, "begone, hacker")
-	}
+        return vk.E(403, "begone, hacker")
+    }
 
-	return nil
+    return nil
 }
+
 ```
+
 Middleware have a similar function signature to `vk.HandlerFunc`, but only return an error. The first example modifies the request context to add a response header. The second example detects a hacker and returns an error, which is handled exactly like any other error response (see below). Returning an error from a Middleware prevents the request from ever reaching the registered handler.
 
 Middleware are applied to route groups with the `Before` method:
+
 ```go
 v1 := vk.Group("/v1").Before(vk.ContentTypeMiddleware("application/json"), denyMiddleware, headerMiddleware)
 v1.GET("/events", HandleEventsV1)
 ```
+
 This example shows a group created with three middleware. The first adds the `Content-Type` response header (and is included with `vk`), the second and third are the examples from above. When the group is mounted to the server, the chain of middleware are put in place, and are run before the registered handler. When groups are nested, the middleware from the parent group are run before the middleware of any child groups. In the example of nested groups above, any middleware set on the `apiGroup` groups would run before any middleware set on the `v1` or `v2` groups.
 
 Afterware is similar, but is run _after_ the request handler. Who knew! Afterware cannot modify response body or status code, but can modify response headers using the `ctx` object. Afterware will **always run**, even if something earlier in the request chain fails. Here's an example:
 
 ```go
 func logAfter(r *http.Request, ctx *vk.Ctx) {
-	ctx.Log.Info("request completed")
+    ctx.Log.Info("request completed")
 }
 
 v2 := vk.Group("/v2").Before(vk.ContentTypeMiddleware("application/json")).After(logAfter)
@@ -208,10 +221,9 @@ v2.GET("/events", HandleEventsV2)
 
 Middleware and Afterware in `vk` is designed to be easily composable, creating chains of behaviour easily grouped to sets of routes. Middleware can also help increase security of applications, allowing authentication, request throttling, active defence, etc, to run before the registered handler and keeping sensitive code from even being reached in the case of an unauthorized request.
 
+## Responding to requests
 
-# Responding to requests
-
-## Response types
+### Response types
 
 `vk` includes two types, `Response` and `Error`
 (with helper functions `vk.Respond(...)` and
@@ -221,36 +233,37 @@ that you want to return:
 
 ```go
 type createdResponse struct {
-	Name string `json:"name"`
-	UUID string `json:"uuid"`
+    Name string `json:"name"`
+    UUID string `json:"uuid"`
 }
 
 func HandleCreate(r *http.Request, ctx *vk.Ctx) (interface{}, error) {
-	// Do some work
+    // Do some work
 
-	resp := createdResponse {
-		Name: "Wendy",
-		UUID: "jfioqerjhp98qergnjw98h23"
-	}
+    resp := createdResponse {
+        Name: "Wendy",
+        UUID: "jfioqerjhp98qergnjw98h23"
+    }
 
-	// Return 201 (Created) and JSON
-	return vk.Respond(http.StatusCreated, resp), nil
+    // Return 201 (Created) and JSON
+    return vk.Respond(http.StatusCreated, resp), nil
 }
 
 func HandleDelete(r *http.Request, ctx *vk.Ctx) (interface{}, error) {
-	// Oops, something went wrong
+    // Oops, something went wrong
 
-	return nil, vk.Err(http.StatusConflict, "the user is already deleted") // responds with HTTP status 409 and body {"status": 409, "message": "the user is already deleted"}
+    return nil, vk.Err(http.StatusConflict, "the user is already deleted") // responds with HTTP status 409 and body {"status": 409, "message": "the user is already deleted"}
 }
 ```
+
 `vk.Respond` and `vk.Err` can be used with their shortcuts
 `vk.R` and `vk.E` if you like your code to be terse.
 
-## Response handling rules
+### Response handling rules
 
-`vk` processes the `(interface{}, error)` returned by handler functions in a spcific way to ensure you always know how it will behave while still being able to use simple types in your code.
+`vk` processes the `(interface{}, error)` returned by handler functions in a specific way to ensure you always know how it will behave while still being able to use simple types in your code.
 
-### Successful responses (i.e. the `interface{}` returned by handler functions):
+#### Successful responses (i.e. the `interface{}` returned by handler functions)
 
 `vk.Response` is an (optional) type that can be used to control the behaviour of the response, if desired. `vk.Respond(...)` returns a `vk.Response`.
 
@@ -267,21 +280,22 @@ Handler returns... | Status Code | Response body | Content-Type
 --- | --- | --- | ---
 `return "Hello, World", nil` | 200 OK | "Hello World" (as UTF-8 bytes) | `text/plain`
 `return jsonBytesFromJSONMarshal, nil` | 200 OK | [JSON bytes as generated by json.Marshal] | `application/octet-stream`
-`return someStructInstance, nil` | 200 OK | [JSON respresentation of struct automatically marshalled by `vk`] | `application/json`
+`return someStructInstance, nil` | 200 OK | [JSON representation of struct automatically marshalled by `vk`] | `application/json`
 `return vk.R(http.StatusCreated, "created"), nil` | 201 Created | "created" (as UTF-8 bytes) | `text/plain`
-`return vk.R(http.StatusCreated, someStructInstance), nil` | 201 Created | [JSON respresentation of struct automatically marshalled by `vk`] | `application/json`
+`return vk.R(http.StatusCreated, someStructInstance), nil` | 201 Created | [JSON representation of struct automatically marshalled by `vk`] | `application/json`
 
-### Failure responses (i.e. the `error` returned by middleware or handler functions):
+#### Failure responses (i.e. the `error` returned by middleware or handler functions)
 
 `vk.Error` is an interface that can be used to control the behaviour of error responses. `vk.ErrorResponse` is a concrete type that implements `vk.Error`. Any errors that do NOT implement `vk.Error` will be treated as potentially unsafe, and their contents will be logged but not returned to the caller. Use `vk.Wrap(...)` if you'd like to wrap an `error` in `vk.ErrorResponse`. `vk.Err` returns a `vk.Error`.
 
 `vk.Error` looks like this:
+
 ```go
 type Error interface {
-	Error() string // this ensures all Errors will also conform to the normal error interface
+    Error() string // this ensures all Errors will also conform to the normal error interface
 
-	Message() string
-	Status() int
+    Message() string
+    Status() int
 }
 ```
 
@@ -303,7 +317,8 @@ Handler returns... | Status Code | Response body | Content-Type
 `return nil, vk.E(http.StatusForbidden, "not permitted to do this thing")` | 403 Forbidden | `{"status": 403, "message": "not permitted to do this thing"}` | `application/json`
 `return nil, vk.Wrap(http.StatusApplicationError, err)` | 434 Application Error | `{"status": 434, "message": err.Error()}` | `application/json`
 
-## Standard http.HandlerFunc
+### Standard http.HandlerFunc
+
 `vk` can use standard `http.HandlerFunc` handlers
 by mounting them with `server.HandleHTTP`. This
 is useful for mounting handler functions provided
@@ -311,7 +326,8 @@ by third party libraries (such as Prometheus),
 but they are not able to take advantage of many `vk`
 features such as middleware or route groups currently.
 
-## The Ctx Object
+### The Ctx Object
+
 Each request handler is passed a `vk.Ctx` object,
 which is a context object for the request. It is
 similar to the `context.Context` type (and uses

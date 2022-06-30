@@ -59,7 +59,7 @@ can optionally define a custom state by choosing aliases for some or all of
 the keys available in request state. This is just like choosing parameter 
 values to pass into function arguments!
 
-For example, the `fetch-test` function above will recieve a state object 
+For example, the `fetch-test` function above will receive a state object 
 that looks like this:
 
 ```text

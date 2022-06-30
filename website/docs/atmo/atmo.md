@@ -4,9 +4,9 @@ pagination_prev: null
 
 # Atmo
 
-### The application framework for cloud native WebAssembly
+## The application framework for cloud native WebAssembly
 
-![](/img/logo-atmo-wide.svg)
+![Atmo logo](/img/logo-atmo-wide.svg)
 
 Atmo was born out of a desire to simplify server-side development by making it easy to bootstrap new projects, automatically scale to handle large amounts of traffic, and ensure their security with new technology and best practices, embodying the [SUFA design pattern](https://blog.suborbital.dev/building-a-better-monolith).
 
