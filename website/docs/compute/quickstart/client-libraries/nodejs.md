@@ -24,13 +24,17 @@ A configuration for local development is also provided.
 
 ### Default Config
 
+By default, the client will point to the control plane and data plane within your Kubernetes cluster.
+
 ```typescript
 import { Suborbital } from "@suborbital/compute";
 
-const suborbital = new Suborbital(configuration);
+const suborbital = new Suborbital();
 ```
 
 ### Local config
+
+For local development with Compute running in docker-compose, the local configuration will point to the services running on your local machine.
 
 ```typescript
 import { Suborbital, localConfig } from "@suborbital/compute";
