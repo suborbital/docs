@@ -10,6 +10,10 @@ pagination_prev: null
 
 ### The Basics
 
+:::note
+Reactr depends on WasmEdge-go@v0.9
+:::
+
 First, install Reactr's core package `rt`:
 
 ```bash
