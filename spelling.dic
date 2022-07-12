@@ -496,6 +496,7 @@ wasi
 WASI
 wasm
 Wasm
+WasmEdge
 Wasmer
 wasmrunnable
 wasmtime
