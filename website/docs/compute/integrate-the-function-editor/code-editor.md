@@ -2,7 +2,7 @@
 
 The Compute code editor is available for you to embed in your application, so your customers can build their functions quickly and easily:
 
-![](../../assets/rocketship-screen.png)
+![](../../assets/editor-screen.png)
 
 The editor is hosted at `https://editor.suborbital.network`, and uses URL parameters to configure its connection to your builder service.
 

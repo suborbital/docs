@@ -34,7 +34,7 @@ For more information, check out our [complete documentation for each of the URL 
 ## Build, test and deploy functions
 Once inside the editor, you can edit, build, test, and deploy your functions all in one place.
 
-![](../../assets/rocketship-screen.png)
+![](../../assets/editor-screen.png)
 
 ## Executing functions
 Once your first function has been built and deployed, it can be run with a request to the Execution API. 
