@@ -11,7 +11,12 @@ pagination_prev: null
 ### The Basics
 
 :::note
-Reactr depends on WasmEdge-go@v0.9
+Reactr uses the Wasmer runtime by default, but supports the 
+Wasmtime and WasmEdge runtimes as well (Wasmtime is not yet supported on 
+ARM). To use WasmEdge, specify version WasmEdge-go@v0.9.
+
+To use Wasmtime or WasmEdge, pass `-tags wasmtime` or `-tags wasmedge` to any 
+`go` command.
 :::
 
 First, install Reactr's core package `rt`:
