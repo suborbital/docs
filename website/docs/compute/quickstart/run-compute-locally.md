@@ -1,6 +1,6 @@
 # Run Compute locally
 
-To run Compute locally, you'll use the Subo CLI and [Docker Compose](https://docs.docker.com/compose/), both of which must be installed before continuing.
+To run Compute locally, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
 
 ## Prepare your local environment
 
@@ -21,8 +21,8 @@ subo compute deploy core --local
 
 You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your Compute Core instance automatically. Compute runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
-## REPL
-When you run Compute, it will wait for you to press enter to start a REPL where you can add or edit functions.
+## Run Compute
+When you run Compute, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Working with Functions](../website/docs/compute/write-functions.md))
 
 ```
 ✅ DONE: ready to start installation

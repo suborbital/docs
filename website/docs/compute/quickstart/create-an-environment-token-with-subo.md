@@ -11,7 +11,7 @@ brew tap suborbital/subo
 brew install subo
 ```
 
-Then, run `subo --version` to ensure the installation was successful. **The `version` must be at least `v0.2.1` for full Compute support.**
+Then, run `subo --version` to ensure the installation was successful. 
 
 To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
 
@@ -30,6 +30,9 @@ subo compute create token <email>
 
 A verification code will be sent to your email address which will be used to authenticate you and link your Compute installation to you.
 
-**Subo will print out your token.**
+**Subo will print out your token in your terminal, and cache it for use in 
+subsequent steps.**
 
-Keep your environment token safe (store it in your password manager), and only use it when running or installing Compute.
+Keep your environment token safe (store it in your password manager), and 
+only use it when running or installing Compute. If you lose it, just repeat 
+the token generation process.
