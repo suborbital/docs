@@ -10,15 +10,6 @@ pagination_prev: null
 
 ### The Basics
 
-:::note
-Reactr uses the Wasmer runtime by default, but supports the 
-Wasmtime and WasmEdge runtimes as well (Wasmtime is not yet supported on 
-ARM). To use WasmEdge, specify version WasmEdge-go@v0.9.
-
-To use Wasmtime or WasmEdge, pass `-tags wasmtime` or `-tags wasmedge` to any 
-`go` command.
-:::
-
 First, install Reactr's core package `rt`:
 
 ```bash
@@ -322,3 +313,12 @@ The `Register` function returns an optional helper function. Instead of passing 
 Reactr can integrate with [Grav](https://github.com/suborbital/grav), which is the decentralized message bus developed as part of the Suborbital Development Platform. Read about the integration on [the grav documentation page.](./grav.md)
 
 Reactr provides the building blocks for scalable asynchronous systems. This should be everything you need to help you improve the performance of your application. When you are looking to take advantage of Reactr's other features, check out its [Wasm](./wasm.md) capabilities!
+
+## Alternative runtimes
+
+Reactr uses the Wasmer runtime by default, but supports the 
+Wasmtime and WasmEdge runtimes as well. To use WasmEdge, install the  
+[version of WasmEdge used by Reactr](https://github.com/suborbital/reactr/blob/b3f435231d3bb51b1328b8c12ccdc7d0fb42ef62/go.mod#L13).
+
+To use Wasmtime or WasmEdge, pass `-tags wasmtime` or `-tags wasmedge` to any 
+`go` command.
