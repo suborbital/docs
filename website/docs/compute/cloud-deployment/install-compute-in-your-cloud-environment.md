@@ -8,13 +8,13 @@ To install Compute in the cloud, you'll use the `subo` tool to automatically ins
    * If you would like assistance with storage, [send us an email](mailto:team@suborbital.dev)!
 2. [Install the `kubectl` tool](https://kubernetes.io/docs/tasks/tools/#kubectl) and authenticate it with the cluster you want to use.
 3. Ensure you have access to modify your company's DNS records, as you need to create a domain name for the builder service (it must run on HTTPS, which requires a domain)
-4. Ensure you've run the `subo compute create token <email>` command from [Create an environment token](../quickstart/1.-create-an-environment-token-with-subo.md) before attempting the install
+4. Ensure you've run the `subo compute create token <email>` command from [Create an environment token](docs/compute/Start here!/1.-create-an-environment-token-with-subo.md) before attempting the install
 
 :::info
 `subo` creates a `suborbital` Kubernetes namespace and installs the `KEDA` autoscaler. Don't worry about existing applications installed in the cluster; this won't affect them!
 :::
 
-Once you have the pre-requisites in place, navigate to the `suborbital` directory you created in the [quickstart guide](../quickstart/1.-create-an-environment-token-with-subo.md) and use `subo` to install:
+Once you have the pre-requisites in place, navigate to the `suborbital` directory you created in the [quickstart guide](docs/compute/Start here!/1.-create-an-environment-token-with-subo.md) and use `subo` to install:
 
 ```bash
 subo compute deploy core

@@ -34,16 +34,7 @@ module.exports = {
         id: 'compute/compute',
       },
       items: [
-        {
-          'Quickstart': [
-            'compute/quickstart/create-an-environment-token-with-subo',
-            'compute/quickstart/run-compute-locally',
-            'compute/quickstart/write-functions',
-            'compute/quickstart/connect-your-application',
-            'compute/quickstart/client-libraries/nodejs',
-            'compute/quickstart/client-libraries/golang'
-          ]
-        },
+           'compute/get-started',
         {
           'Concepts': [
             'compute/concepts/data-plane-vs-control-plane',
