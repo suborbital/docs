@@ -35,6 +35,7 @@ module.exports = {
       },
       items: [
            'compute/get-started',
+          'compute/api-reference',
         {
           'Concepts': [
             'compute/concepts/data-plane-vs-control-plane',

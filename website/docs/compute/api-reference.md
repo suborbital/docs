@@ -1,4 +1,4 @@
-# Compute APIs
+# Compute API Reference
 
 You can find a detailed specification of Compute's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
 
@@ -8,8 +8,11 @@ The Compute control plane exposes administrative APIs that are designed to help 
 
 ## Execution API
 
-The execution API is used by your application servers to **execute** the functions your users have built.
+Your application servers will use the Execution API servers to **execute** 
+the functions your users build.
 
 ## Builder API
 
-The Compute builder service that you set up with Compute is capable of automatically building WebAssembly modules for you. It exposes an API that can build **AssemblyScript and Rust functions.**
+The Compute builder service that you set up with Compute can 
+automatically build WebAssembly modules for you. It exposes an API that can 
+build **AssemblyScript and Rust functions.**

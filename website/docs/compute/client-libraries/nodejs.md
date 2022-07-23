@@ -58,7 +58,7 @@ const suborbital = new Suborbital(configuration);
 
 ## Getting started
 
-Using the [Compute APIs](docs/compute/api-reference/api-reference.md), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
+Using the [Compute APIs](docs/compute/api-reference.md), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
 
 The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
 

@@ -18,7 +18,7 @@ To authenticate the editor for a specific user to edit their own functions, the 
 
 When giving your users access to the editor, you must use an authenticated endpoint provided by your application server to fetch a token that is used to authenticate their editing session.
 
-Full details for the token API are described in the [API Reference](../api-reference/api-reference.md) section.
+Full details for the token API are described in the [API Reference](docs/compute/api-reference.md) section.
 
 ## Configuration
 
@@ -60,4 +60,4 @@ Once the customer has edited their function, the `build` button in the top right
 
 Assuming the build succeeds, the customer can choose to deploy the latest version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the customer deploys the function, it will remain at the previous version. The [API Reference](../api-reference/api-reference.md) gives you details about the draft and active versions of any function.
+Until the customer deploys the function, it will remain at the previous version. The [API Reference](docs/compute/api-reference.md) gives you details about the draft and active versions of any function.

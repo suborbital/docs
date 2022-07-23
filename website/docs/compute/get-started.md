@@ -25,7 +25,7 @@ You can get a Compute Environment token either with our [environment token gener
 The domain of your email address should match the `environment` you 
 configure for Compute; i.e., if your email is `sally@awesomeco.com`, your 
 Compute environment would be called `com.awesomeco`. See [Fully-qualified 
-function names](,/concepts/fully-qualified-function-names.md) for more 
+function names](/concepts/fully-qualified-function-names.md) for more 
 information.
 :::
 
@@ -71,7 +71,7 @@ You may be asked to enter your Environment Token, and then Subo will use `docker
 
 ### Run Compute
 When you run Compute, it will wait for you to press enter to start a REPL 
-where you can add or edit functions (see [Meet the Compute Editor]()).
+where you can add or edit functions (see [Meet the Compute Editor](get-started#meet-the-compute-editor)).
 
 ```
 ✅ DONE: ready to start installation
@@ -105,7 +105,7 @@ To create or edit a function, enter its name (or FQFN): new-fn
 This will allow you to create functions and use the Compute editor locally 
 while you work on integrating your application. Follow the instructions in the REPL to create your first function.
 
-## Meet the function editor
+## Meet the Compute editor
 
 Compute functions are built, tested, deployed, and run through the Compute API.
 
@@ -148,7 +148,7 @@ For more information, check out our [complete documentation for each of the URL 
 
 Once inside the editor, you can edit, build, test, and deploy your functions all in one place.
 
-![Editor displaying a "Hello" function](assets/editor-screen.png)
+![Editor displaying a "Hello" function](../assets/editor-screen.png)
 
 ### Executing functions
 []
@@ -175,5 +175,5 @@ If your application is written in JavaScript or TypeScript in Node.js, use our [
 
 If your application is written in Go, use our [Go Library](./client-libraries/golang.md). 
 
-### API Reference
+## API Reference
 We also provide [reference documentation for each of the Compute APIs](https://suborbital-compute.readme.io/reference/api-reference).
