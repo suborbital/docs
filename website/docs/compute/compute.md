@@ -6,8 +6,9 @@ pagination_prev: null
 ![Suborbital logo](/img/suborbital-logo-wide.svg)
 
 Suborbital Compute is a platform that allows your users to write and deploy 
-functions for your app, so they can develop custom integrations and 
-workflows. Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure you're protected from malicious code.
+functions and workflows that integrate into your app. Our WebAssembly-based 
+compute 
+core lets you run user code within your infrastructure while being sure you're protected from malicious code.
 
 Compute is now in public beta! We are excited for you to [give it a try](/get-started)
 and send us your feedback. 

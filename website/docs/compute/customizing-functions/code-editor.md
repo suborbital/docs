@@ -1,12 +1,13 @@
 # Function editor
 
-The Compute code editor is available for you to embed in your application, so your customers can build their functions quickly and easily:
+The Compute code editor is available for you to embed in your application, 
+so your users can build their functions quickly and easily:
 
-![](../../assets/editor-screen.png)
+![Compute editor containing a 'Hello' function](../../assets/editor-screen.png)
 
 The editor is hosted at `https://editor.suborbital.network`, and uses URL parameters to configure its connection to your builder service.
 
-[You will host the Compute builder service](../concepts/data-plane-vs-control-plane.md) in your cloud infrastructure with a configured DNS name. In order to use the editor, an HTTPS connection to the builder is required.
+You will host the Compute builder service in your cloud infrastructure with a configured DNS name. In order to use the editor, an HTTPS connection to the builder is required.
 
 To launch the editor, you can either [embed the editor in a frame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within your own webpage, or launch it in a new tab.
 
@@ -38,7 +39,7 @@ Let's break it down:
 
 **Ident**: `&ident=com.suborbital.customer`
 
-* The identifier used when addressing your specific user, see [Fully-qualified function names](../concepts/fully-qualified-function-names.md) for more details
+* The identifier used when addressing your specific user, see [Fully-qualified function names](docs/compute/customizing-functions/fully-qualified-function-names.md) for more details
 
 **Fn**: `&fn=add-record`
 
@@ -46,11 +47,12 @@ Let's break it down:
 
 **Namespace** (optional): `&namespace=default`
 
-* The function namespace (if not included, the `default` namespace is used, see [Namespaces](../concepts/namespaces.md) for more details)
+* The function namespace (if not included, the `default` namespace is used, see [Namespaces](docs/compute/customizing-functions/namespaces.md) for more details)
 
 **Template** (optional): `&template=assemblyscript`
 
-* The language template used for new functions. Currently `javascript`, `typescript`, `assemblyscript`, and `rust` are available (default `assemblyscript`), with more coming in future versions of Compute.
+* The language template used for new functions. Check out our [supported 
+  languages](docs/reactr/language-support.md)!
 
 If the `fn` in question does not exist, the editor will automatically create a new function.
 

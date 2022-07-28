@@ -42,8 +42,8 @@ webhooks:
        headers: *commonHeaders
 ```
 
-## Hook points
-### `builder.function.promoted`
+## Hook point
+ `builder.function.promoted`
 **Description**: Runs when an end user successfully deploys a function.
 
 **Sample response** (JSON):

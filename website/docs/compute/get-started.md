@@ -3,11 +3,13 @@
 ## Installation
 
 To use Compute, you need an environment token and the Subo command line 
-tool. This token allows the control plane to authenticate with the Suborbital Compute Network, our hosted service that manages billing, metadata storage, telemetry, and more.
+tool. The environment token allows the control plane to authenticate with 
+our hosted service that manages billing, metadata storage, telemetry, and more.
 
 ### Install Subo: the Compute CLI
 
-If you use macOS, you can use [Homebrew](https://brew.sh) to install the `subo` command line tool:
+If you use macOS, you can use [Homebrew](https://brew.sh) to install the 
+`subo` command line tool:
 
 ```bash
 brew tap suborbital/subo
@@ -25,7 +27,7 @@ You can get a Compute Environment token either with our [environment token gener
 The domain of your email address should match the `environment` you 
 configure for Compute; i.e., if your email is `sally@awesomeco.com`, your 
 Compute environment would be called `com.awesomeco`. See [Fully-qualified 
-function names](/concepts/fully-qualified-function-names.md) for more 
+function names](docs/compute/customizing-functions/fully-qualified-function-names.md) for more 
 information.
 :::
 
@@ -109,12 +111,10 @@ while you work on integrating your application. Follow the instructions in the R
 
 Compute functions are built, tested, deployed, and run through the Compute API.
 
-The Suborbital Compute function editor uses the API to provide a low-friction environment for your users to write, build, test, and deploy functions to your Compute an instance in a single place.
-
-Alternatively, the Builder API can be used programmatically, if that better 
+The Suborbital Compute function editor uses the API to provide a 
+low-friction environment for your users to write, build, test, and deploy functions to your Compute an instance in a single place.  Alternatively, the Builder API can be used programmatically, if that better 
 suits your use case. (see [Connect your application](/get-started#connect-your-application)).
 
-### Compute function editor
 A quick way to try the editor is to use the REPL built into the Subo CLI 
 introduced in [Run Compute Locally](get-started#run-compute-locally). The 
 Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
@@ -142,16 +142,16 @@ https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as
 
 The important differences to note between these URLs are the local and public hostnames and HTTP and HTTPS schemes for the editor itself and the `&builder=` parameter.
 
-For more information, check out our [complete documentation for each of the URL parameters](./integrate-the-function-editor/code-editor.md#configuration).
+For more information, check out our [complete documentation for each of the URL parameters](docs/compute/customizing-functions/code-editor.md#configuration).
 
-## Build, test and deploy functions
+## Your first function
 
 Once inside the editor, you can edit, build, test, and deploy your functions all in one place.
 
 ![Editor displaying a "Hello" function](../assets/editor-screen.png)
 
 ### Executing functions
-[]
+
 Once your first function has been built and deployed, it can be run with a request to the Execution API. 
 
 ```bash
@@ -163,9 +163,9 @@ curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1
 
 hello, my friend
 ```
-**Please note**: If you are invoking the Test API, you will need to import the [Editor Token](https://docs.suborbital.dev/integrate-the-function-editor/code-editor#editor-token) provided by the [Control Plane service](https://docs.suborbital.dev/concepts/data-plane-vs-control-plane#control-plane) [API](https://suborbital-compute.readme.io/reference/api-reference) instead of the Environment token in the code snippet above.
-
-### Your first function
+**Please note**: If you are invoking the Test API, you will need to import 
+the [Editor Token](https://docs.suborbital.
+dev/integrate-the-function-editor/code-editor#editor-token) provided by the [Control Plane service](https://docs.suborbital.dev/concepts/data-plane-vs-control-plane#control-plane) [API](api-reference) instead of the Environment token in the code snippet above.
 
 ## Connect your application
 

@@ -12,7 +12,7 @@ Here's a breakdown:
 
 * **Environment**: your company's reverse domain; `com.awesomeco`
 * **User ID**: The unique value that your application uses to identify your users within your system; `nawronuq98hqwekj198fkljbeco`
-* **Namespace**: The namespace this function belongs to; allows for separated groups of functions based on product needs \(see [Namespaces](namespaces.md) \); `default`
+* **Namespace**: The namespace this function belongs to; allows for separated groups of functions based on product needs \(see [Namespaces](docs/compute/customizing-functions/namespaces.md) \); `default`
 * **Function**:  The name of the function as chosen by the user; `record-event`
 * **Version**: The version of this function \(incremented each time a user updates this function\); `v1.0.0`
 

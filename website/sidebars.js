@@ -37,21 +37,16 @@ module.exports = {
            'compute/get-started',
           'compute/api-reference',
         {
-          'Concepts': [
-            'compute/concepts/data-plane-vs-control-plane',
-            'compute/concepts/fully-qualified-function-names',
-            'compute/concepts/namespaces'
-          ]
         },
         {
-          'Integrating the Function Editor': [
-            'compute/integrate-the-function-editor/code-editor'
-          ]
         },
         {
           'Customizing functions': [
+            'compute/customizing-functions/code-editor',
             'compute/customizing-functions/custom-function-templates',
-            'compute/customizing-functions/custom-libraries'
+            'compute/customizing-functions/custom-libraries',
+            'compute/customizing-functions/namespaces',
+             'compute/customizing-functions/fully-qualified-function-names'
           ]
         },
         {
