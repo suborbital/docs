@@ -36,10 +36,7 @@ module.exports = {
       items: [
            'compute/get-started',
           'compute/api-reference',
-        {
-        },
-        {
-        },
+          'compute/using-api',
         {
           'Customizing functions': [
             'compute/customizing-functions/code-editor',
