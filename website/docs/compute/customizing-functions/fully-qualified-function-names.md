@@ -3,14 +3,14 @@
 Each function uploaded by your users has a unique name called a fully-qualified function name, or FQFN. The string representation of an FQFN is as follows:
 
 ```bash
-com.awesomeco.nawronuq98hqwekj198fkljbeco#default::record-event@v1.0.0
-|____________|___________________________|________|____________|______|
+dev.suborbital.nawronuq98hqwekj198fkljbeco#default::record-event@v1.0.0
+|_____________|___________________________|________|____________|______|
  Environment          User ID             Namespace  Function   Version
 ```
 
 Here's a breakdown:
 
-* **Environment**: your company's reverse domain; `com.awesomeco`
+* **Environment**: your company's reverse domain; `dev.suborbital`
 * **User ID**: The unique value that your application uses to identify your users within your system; `nawronuq98hqwekj198fkljbeco`
 * **Namespace**: The namespace this function belongs to; allows for separated groups of functions based on product needs \(see [Namespaces](docs/compute/customizing-functions/namespaces.md) \); `default`
 * **Function**:  The name of the function as chosen by the user; `record-event`
@@ -18,7 +18,9 @@ Here's a breakdown:
 
 ## Environment name
 
-The domain of your email address should match the `environment` you configure for Compute, i.e. if your email is `sally@awesomeco.com`, your Compute environment would be called `com.awesomeco`.
+The domain of your email address should match the `environment` you 
+configure for Compute, i.e. if your email is `laika@suborbital.dev`, your 
+Compute environment would be called `dev.suborbital`.
 
 ## FQFN URLs
 
@@ -28,7 +30,7 @@ To execute a function in Compute you will use a URL representation of FQFN. To r
 /{environment}.{userid}/{namespace}/{function}/{version}
 
 Example:
-/com.awesomeco.nawronuq98hqwekj198fkljbeco/default/record-event/v1.0.0
+/dev.suborbital.nawronuq98hqwekj198fkljbeco/default/record-event/v1.0.0
 ```
 
 
