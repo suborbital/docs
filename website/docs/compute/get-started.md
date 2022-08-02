@@ -24,11 +24,11 @@ To install on Linux (or macOS without Homebrew), you can [download Subo directly
 ## Generate your token
 You can get a Compute Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
 
-:::note
+:::caution  
 The domain of your email address should match the `environment` you 
-configure for Compute; i.e., if your email is `sally@awesomeco.com`, your 
-Compute environment would be called `com.awesomeco`. See [Fully-qualified 
-function names](./customizing-functions/fully-qualified-function -names.md) 
+configure for Compute; i.e., if your email is `laika@suborbital.dev`, your 
+Compute environment would be called `dev.suborbital`. See [Fully-qualified 
+function names](./customizing-functions/fully-qualified-function-names.md) 
 for more 
 information.
 :::
@@ -113,10 +113,8 @@ while you work on integrating your application. Follow the instructions in the R
 
 ## Meet the Compute editor
 
-Compute functions are built, tested, deployed, and run through [Compute's 
-APIs](./using-api.md).
-
-The Suborbital Compute function editor uses the API to provide a 
+The Suborbital Compute function editor uses [Compute's 
+APIs](./using-api.md) to provide a 
 low-friction environment for your users to write, build, test, and deploy 
 functions to your Compute an instance in a single place.  Alternatively, 
 the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better 
@@ -154,7 +152,19 @@ URL parameters](./customizing-functions/code-editor.md#configuration).
 
 ## Your first function
 
-Once inside the editor, you can edit, build, test, and deploy your functions all in one place.
+Once inside the editor, you can edit, build, test, and deploy your 
+functions all in one place. Give it a try with the function below!
+
+```javascript
+import { log } from ''@suborbital/runnable";
+
+export const run = (input) => {
+    let message = "Hello, " + input;
+    
+    log.info(message);
+    return message;
+};
+```
 
 ![Editor displaying a "Hello" function](../assets/editor-screen.png)
 
@@ -171,7 +181,7 @@ curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1
 
 hello, my friend
 ```
-:::note
+:::tip
 If you're invoking the Test API, you'll need to import 
 the [Editor Token](../get-started#generate-your-token.md) instead of the 
 Environment token in the code snippet above.
@@ -179,6 +189,6 @@ Environment token in the code snippet above.
 
 ## Connect your application
 
-Now that you've set up Compute and created your first function,  you can use 
+Now that you've set up Compute and created your first function, you can use 
 [Compute's APIs](./using-api.md) to start integrating functions into your 
 application.
