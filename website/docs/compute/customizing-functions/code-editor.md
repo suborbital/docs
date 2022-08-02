@@ -13,13 +13,10 @@ To launch the editor, you can either [embed the editor in a frame](https://devel
 
 ## Editor token
 
-To authenticate the editor for a specific user to edit their own functions, the `control-plane` service provides an API to create an `editor token` for a given function:
-
-`http://local.suborbital.network:8081/api/v1/token/com.acmeco.gr9fas97234b/default/httpget`
-
-When giving your users access to the editor, you must use an authenticated endpoint provided by your application server to fetch a token that is used to authenticate their editing session.
-
-Full details for the token API are described in the [API Reference](docs/compute/api-reference.md) section.
+To authenticate the editor for a specific user to edit their own functions, 
+[Compute's Administrative API provides an API to create an `editor token` ](https://suborbital-compute.readme.io/reference/gettoken)
+for a 
+given function.
 
 ## Configuration
 
@@ -39,7 +36,8 @@ Let's break it down:
 
 **Ident**: `&ident=com.suborbital.customer`
 
-* The identifier used when addressing your specific user, see [Fully-qualified function names](docs/compute/customizing-functions/fully-qualified-function-names.md) for more details
+* The identifier used when addressing your specific user, see 
+  [Fully-qualified function names](./customizing-functions/fully-qualified-function-names.md) for more details
 
 **Fn**: `&fn=add-record`
 
@@ -52,7 +50,7 @@ Let's break it down:
 **Template** (optional): `&template=assemblyscript`
 
 * The language template used for new functions. Check out our [supported 
-  languages](docs/reactr/language-support.md)!
+  languages](../../reactr/language-support.md)!
 
 If the `fn` in question does not exist, the editor will automatically create a new function.
 
@@ -62,4 +60,4 @@ Once the customer has edited their function, the `build` button in the top right
 
 Assuming the build succeeds, the customer can choose to deploy the latest version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the customer deploys the function, it will remain at the previous version. The [API Reference](docs/compute/api-reference.md) gives you details about the draft and active versions of any function.
+Until the customer deploys the function, it will remain at the previous version. The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any function.

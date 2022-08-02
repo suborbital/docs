@@ -1,7 +1,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Using the Compute API
+# Using Compute's APIs
+
+You can find a detailed specification of Compute's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
 
 <Tabs groupId='language-selection'>
 
@@ -150,10 +152,13 @@ builderUri: "https://acme.co/builder",
 
 const suborbital = new Suborbital(configuration);
 ```
+</TabItem>
+
+</Tabs>
 
 ## Getting started
 
-Using the [Compute APIs](docs/compute/api-reference.md), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
+Using the [Compute APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
 
 The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
 
@@ -329,6 +334,4 @@ let out = "Hello there, " + inStr
 return String.UTF8.encode(out)
 }
 ```
-</TabItem>
 
-</Tabs>
