@@ -1,3 +1,7 @@
+---
+pagination_prev: null
+---
+
 # Introduction to the Runnable API
 
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'

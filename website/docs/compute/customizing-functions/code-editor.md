@@ -1,3 +1,7 @@
+---
+pagination_prev: null
+---
+
 # Function editor
 
 The Compute code editor is available for you to embed in your application, 
@@ -37,7 +41,8 @@ Let's break it down:
 **Ident**: `&ident=com.suborbital.customer`
 
 * The identifier used when addressing your specific user, see 
-  [Fully-qualified function names](./customizing-functions/fully-qualified-function-names.md) for more details
+  [Fully-qualified function names](./fully-qualified-function-names.md) for 
+  more details
 
 **Fn**: `&fn=add-record`
 
@@ -56,8 +61,11 @@ If the `fn` in question does not exist, the editor will automatically create a n
 
 ## Building and deploying
 
-Once the customer has edited their function, the `build` button in the top right will allow them to check to ensure the function builds. The builder service will build the function and then return the results to the console area.
+Once the user has edited their function, the `build` button in the top right 
+will allow them to check to ensure the function builds. The builder service will build the function and then return the results to the console area.
 
-Assuming the build succeeds, the customer can choose to deploy the latest version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
+Assuming the build succeeds, the user can choose to deploy the latest 
+version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the customer deploys the function, it will remain at the previous version. The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any function.
+Until the usÏer deploys the function, it will remain at the previous version. 
+The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any function.

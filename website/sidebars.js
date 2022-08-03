@@ -156,7 +156,7 @@ module.exports = {
               {
                 type: 'doc',
                 label: 'Testing Vektor',
-                id: 'vektor/vektor'
+                id: 'vektor/testing-vk-servers'
               },
             ]
           },
@@ -199,6 +199,23 @@ module.exports = {
           }
         ]
       },
+    {
+      type: 'category',
+      label: 'Reference',
+      collapsible: true,
+      items: [
+        {
+          type: 'link',
+          label: 'API reference',
+          href: 'https://suborbital-compute.readme.io/reference/api-reference',
+        },
+        {
+          type: 'link',
+          label: 'compute-go library reference',
+          href: 'https://github.com/suborbital/compute-go',
+        },
+      ]
+    },
       {
       type: 'category',
       label: 'The Suborbital Ecosystem',
