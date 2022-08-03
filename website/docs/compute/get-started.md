@@ -2,9 +2,9 @@
 
 ## Installation
 
-To use Compute, you need an environment token and the Subo command line 
-tool. The environment token allows the control plane to authenticate with 
-our hosted service that manages billing, metadata storage, telemetry, and more.
+To use Compute, you'll need an environment token and the Subo command line 
+tool. The environment token allows Compute to authenticate with 
+our service that manages metadata storage, telemetry, and more.
 
 ### Install Subo: the Compute CLI
 
@@ -121,7 +121,8 @@ the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) 
 suits your use case. 
 
 A quick way to try the editor is to use the REPL built into the Subo CLI 
-introduced in [Run Compute Locally](get-started#run-compute-locally). The 
+introduced above in [Run Compute Locally](get-started#run-compute-locally). 
+The 
 Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
 
 By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option. 
@@ -153,7 +154,9 @@ URL parameters](./customizing-functions/code-editor.md#configuration).
 ## Your first function
 
 Once inside the editor, you can edit, build, test, and deploy your 
-functions all in one place. Give it a try with the function below!
+functions all in one place. By default, the editor will load pre-populated 
+with the greeting function below. We can use it to run the editor for the 
+first time.
 
 ```javascript
 import { log } from ''@suborbital/runnable";
@@ -166,7 +169,14 @@ export const run = (input) => {
 };
 ```
 
-![Editor displaying a "Hello" function](../assets/editor-screen.png)
+  - The function provided is complete, so we can just click "Build"
+  - In the "TEST" field, add some text. Here, we've added "new 
+    Suborbital user!"
+  - Click "Run test"
+  - Toward the bottom of the editor, click "TEST RESULTS". There's our 
+    greeting!
+
+![Editor displaying the greeting function above with the test output 'Hello, new Suborbital user!'](../assets/editor-screen.png)
 
 ### Executing functions
 
@@ -183,7 +193,8 @@ hello, my friend
 ```
 :::tip
 If you're invoking the Test API, you'll need to import 
-the [Editor Token](../get-started#generate-your-token.md) instead of the 
+the [Editor Token](./customizing-functions/code-editor#editor-token.md) 
+instead of the 
 Environment token in the code snippet above.
 :::
 
