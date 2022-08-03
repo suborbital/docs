@@ -31,7 +31,7 @@ kubectl get svc -n suborbital
 
 ## Set up DNS
 
-When you deploy, a `LoadBalancer` is created for the builder called `scc-builder-service`. You should wait until an external IP address is provisioned for the service (use the `get svc` command above to check), and then create a DNS `A` record that matches the domain name you entered during setup. This will allow the builder to automatically provision a TLS certificate and connect with the [code editor](../integrate-the-function-editor/code-editor.md) securely.
+When you deploy, a `LoadBalancer` is created for the builder called `scn-builder-service`. You should wait until an external IP address is provisioned for the service (use the `get svc` command above to check), and then create a DNS `A` record that matches the domain name you entered during setup. This will allow the builder to automatically provision a TLS certificate and connect with the [code editor](../integrate-the-function-editor/code-editor.md) securely.
 
 ## What's next
 

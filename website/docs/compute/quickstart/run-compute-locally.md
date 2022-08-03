@@ -28,16 +28,16 @@ When you run Compute, it will wait for you to press enter to start a REPL where 
 ✅ DONE: ready to start installation
 ⏩ START: installing...
 ▶️ docker-compose up -d
-Container suborbital-scc-control-plane-1  Recreate
-Container suborbital-scc-control-plane-1  Recreated
-Container suborbital-scc-atmo-1  Recreate
-Container suborbital-scc-atmo-1  Recreated
-Container suborbital-scc-control-plane-1  Starting
-Container suborbital-scc-builder-1  Starting
-Container suborbital-scc-control-plane-1  Started
-Container suborbital-scc-builder-1  Started
-Container suborbital-scc-atmo-1  Starting
-Container suborbital-scc-atmo-1  Started
+Container suborbital-scn-controlplane-1  Recreate
+Container suborbital-scn-controlplane-1  Recreated
+Container suborbital-scn-atmo-1  Recreate
+Container suborbital-scn-atmo-1  Recreated
+Container suborbital-scn-controlplane-1  Starting
+Container suborbital-scn-builder-1  Starting
+Container suborbital-scn-controlplane-1  Started
+Container suborbital-scn-builder-1  Started
+Container suborbital-scn-atmo-1  Starting
+Container suborbital-scn-atmo-1  Started
 ℹ️  use `docker ps` and `docker-compose logs` to check deployment status
 
 PROXY: local tunnel to function editor started

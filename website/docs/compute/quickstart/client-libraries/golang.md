@@ -24,7 +24,7 @@ import (
 )
 
 func client() *compute.Client {
-	token, _ := os.LookupEnv("SCC_ENV_TOKEN")
+	token, _ := os.LookupEnv("SCN_ENV_TOKEN")
 	client, _ := compute.NewClient(compute.LocalConfig(), token)
 
 	return client

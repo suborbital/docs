@@ -24,13 +24,13 @@ Edit `templates/rust/src/lib.rs.tmpl` to change what your users will see when th
 
 ## Configuring Compute
 
-To use the custom templates in your Compute installation, the `SCC_TEMPLATES_REPO` environment variable must be set on the builder service.
+To use the custom templates in your Compute installation, the `SCN_TEMPLATES_REPO` environment variable must be set on the builder service.
 
-- For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
-- For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:
+- For a local deployment, edit `docker-compose.yml` to add `SCN_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
+- For a cloud deployment, edit `suborbital/scn-controlplane.yaml`, and add the following to the `builder` container's `environment`:
 
 ```yaml
-- name: SCC_TEMPLATES_REPO
+- name: SCN_TEMPLATES_REPO
   value: "{your fork}"
 ```
 

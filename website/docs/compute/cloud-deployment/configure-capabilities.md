@@ -11,7 +11,8 @@ Compute functions can access a number of capabilities:
 
 You can configure each capability. If you disable all capabilities, your users' functions will not be able to access the "outside world" in any way.
 
-To configure capabilities, edit the `scc-config.yaml` file that `subo` created for you in your `suborbital/config` directory:
+To configure capabilities, edit the `scn-config.yaml` file that `subo` created for you in your `suborbital/config` directory:
+
 ```yaml
 networkRules: &networkRules
   allowIPs: false
@@ -19,8 +20,8 @@ networkRules: &networkRules
   allowHTTP: true
   blockedDomains:
     - "*.cluster.local"
-    - "scc-controlplane-service"
-    - "scc-builder-service"
+    - "scn-controlplane-service"
+    - "scn-builder-service"
 
 capabilities:
   logger:
