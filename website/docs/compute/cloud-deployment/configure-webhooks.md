@@ -1,4 +1,4 @@
-# Configure Webhooks
+# Configure webhooks
 
 Certain actions in Compute can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request Compute receiver. By default, no webhooks are configured.
 
@@ -42,8 +42,8 @@ webhooks:
        headers: *commonHeaders
 ```
 
-## Hook points
-### `builder.function.promoted`
+## Hook point
+ `builder.function.promoted`
 **Description**: Runs when an end user successfully deploys a function.
 
 **Sample response** (JSON):

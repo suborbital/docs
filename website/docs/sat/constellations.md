@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Constellations
 
 Sat is designed to run in a constellation, i.e. a meshed cluster of instances. This enables very interesting network topologies which can run applications in massively distributed and 'edge' environments. The Sat project includes the [`constd`](https://github.com/suborbital/sat/tree/main/constd) tool, which is a companion constellation manager that can run [Atmo](https://github.com/suborbital/atmo) applications using a Sat constellation.

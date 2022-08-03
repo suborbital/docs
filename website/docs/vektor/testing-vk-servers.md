@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Testing Vektor Servers
 
 `vtest` is a powerful package for testing your Vektor servers without running an HTTP server bound to a port. `vtest` uses the standard Go `testing` package, which lets you integrate server route testing into your test suite. Let's explore a simple wordcount API server and add some tests to it.
