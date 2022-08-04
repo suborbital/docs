@@ -71,8 +71,9 @@ module.exports = {
           ]
         },
         {
-          type: 'doc',
-          id: 'compute/local-deployment/local-deployment'
+          'Local Deployment': [
+            'compute/local-deployment/minikube'
+          ]
         }
       ]
     },
