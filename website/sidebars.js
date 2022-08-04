@@ -1,35 +1,42 @@
 module.exports = {
   docs: [
-      {
-        type: 'category',
-        label: 'Suborbital Compute',
-        collapsible: true,
-        link: {
-          type: 'doc',
-          id: 'compute/compute',
-        },
-        items: [
-            'compute/get-started',
-            'compute/using-api',
-          {
-            'Customizing functions': [
-              'compute/customizing-functions/code-editor',
-              'compute/customizing-functions/custom-function-templates',
-              'compute/customizing-functions/custom-libraries',
-              'compute/customizing-functions/namespaces',
-               'compute/customizing-functions/fully-qualified-function-names'
-            ]
-          },
-          {
-            'Cloud Deployment': [
-              'compute/cloud-deployment/configure-capabilities',
-              'compute/cloud-deployment/configure-storage',
-              'compute/cloud-deployment/configure-webhooks',
-              'compute/cloud-deployment/install-compute-in-your-cloud-environment'
-            ]
-          }
-        ]
+    {
+      type: 'category',
+      label: 'Suborbital Compute',
+      collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'compute/compute',
       },
+      items: [
+        'compute/get-started',
+        'compute/using-api',
+        {
+          'Customizing functions': [
+            'compute/customizing-functions/code-editor',
+            'compute/customizing-functions/custom-function-templates',
+            'compute/customizing-functions/custom-libraries',
+            'compute/customizing-functions/namespaces',
+            'compute/customizing-functions/fully-qualified-function-names'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Deploying Compute',
+          collapsible: true,
+          items: [
+            {
+              'Cloud Deployment': [
+                'compute/deployment/cloud-deployment/configure-capabilities',
+                'compute/deployment/cloud-deployment/configure-storage',
+                'compute/deployment/cloud-deployment/configure-webhooks',
+                'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
+              ]
+            },
+          ]
+        },
+      ]
+    },
       {
         type: 'category',
         label: 'Atmo',
