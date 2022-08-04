@@ -26,8 +26,8 @@ You can get a Compute Environment token either with our [environment token gener
 
 :::caution  
 The domain of your email address should match the `environment` you 
-configure for Compute; i.e., if your email is `laika@suborbital.dev`, your 
-Compute environment would be called `dev.suborbital`. See [Fully-qualified 
+configure for Compute; i.e., if your email is `laika@example.com`, your 
+Compute environment would be called `com.example`. See [Fully-qualified 
 function names](./customizing-functions/fully-qualified-function-names.md) 
 for more 
 information.
