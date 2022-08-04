@@ -69,6 +69,10 @@ module.exports = {
             'compute/cloud-deployment/configure-webhooks',
             'compute/cloud-deployment/install-compute-in-your-cloud-environment'
           ]
+        },
+        {
+          type: 'doc',
+          id: 'compute/local-deployment/local-deployment'
         }
       ]
     },
