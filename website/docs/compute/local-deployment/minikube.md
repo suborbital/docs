@@ -16,7 +16,9 @@ It’s possible to deploy a Compute environment to a local environment using a l
 This is a temporary place where we’ll create and configure our Compute environment:
 
 ```bash
-mkdir my-compute; cd my-compute
+mkdir my-compute
+
+cd my-compute
 ```
 
 ### 2. Start up our Kubernetes cluster
@@ -51,9 +53,11 @@ These will now live in the `.suborbital/` folder.
 
 ### 5. Disable TLS checks in the Compute environment
 
-Open up `.suborbital/scc-controlplane-deployment.yaml` in your editor of choice, and make the following changes:
+Open up `.suborbital/scc-controlplane-deployment.yaml` in your editor of choice, and make the following changes.
 
-Under the Builder Container (Line 51):
+We are disabling the built in TLS certificate provisioning, as ngrok already takes care of this for us.
+
+Under the Builder Container:
 
 ```yaml
 - name: builder
@@ -107,7 +111,7 @@ name: SCC_HTTP_PORT
 value: "8080"
 ```
 
-Under the `scc-builder-service` in line 124:
+Under the `scc-builder-service`:
 
 ```yaml
 apiVersion: v1
@@ -130,6 +134,8 @@ spec:
   type: LoadBalancer
 ```
 
+Our builder service no longer needs to expose HTTPS ports as ngrok will forward both HTTP and HTTPS traffic to port 80.
+
 Remove the following lines:
 
 ```yaml
@@ -141,7 +147,7 @@ Remove the following lines:
 
 ### 6. Deploy to your cluster
 
-Run the following subo command to deploy Compute to your cluster:
+Run the following `subo` command to deploy Compute to your cluster:
 
 ```bash
 subo compute deploy core
