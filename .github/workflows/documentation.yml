@@ -14,7 +14,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '>=16.14'
-      - name: Upgrade NPM
         run: npm install -g npm
         # see https://github.com/bahmutov/npm-install/issues/103#issuecomment-931226602
       - name: Test Build
