@@ -67,5 +67,6 @@ will allow them to check to ensure the function builds. The builder service will
 Assuming the build succeeds, the user can choose to deploy the latest 
 version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the usÏer deploys the function, it will remain at the previous version. 
+Until the user deploys the function, it will remain at the previous 
+version. 
 The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any function.
