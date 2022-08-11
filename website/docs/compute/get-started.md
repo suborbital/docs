@@ -144,7 +144,7 @@ To edit a function via the editor, you—or more likely your application—must 
 In a **development environment**, the URL should have these components:
 
 ```
-http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=ogbWUbzCZaYLga3GggP0cxht&ident=com.suborbital.acmeco&namespace=default&fn=foobar
+http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=ogbWUbzCZaYLga3GggP0cxht&ident=com.suborbital.acmeco&namespace=default&fn=hello
 ```
 
 In a **production environment**, the URL may look something like this:
