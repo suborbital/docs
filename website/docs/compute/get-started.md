@@ -58,7 +58,9 @@ To run Compute locally, you'll use the Subo CLI and [Docker](https://docs.docker
 
 ### Prepare your local environment
 
-The Subo CLI will create some files on disk to set up your local deployment, so get started by creating a `suborbital` directory somewhere on your filesystem:
+The Subo CLI will create some files on disk to set up your local deployment,
+so get started by creating a directory somewhere on your filesystem. In the 
+example below, we'll name our directory `suborbital`:
 
 ```bash
 mkdir suborbital
@@ -67,7 +69,10 @@ cd suborbital
 
 ### Start Compute
 
-Next, use Subo to start your local Compute Core instance:
+Next, use Subo to start your local Compute Core instance. Make sure to do 
+this within the same directory you created above! You can verify that 
+you're in the correct directory by verifying that it contains the 
+`docker-compose.yaml` file.
 
 ```bash
 subo compute deploy core --local
@@ -77,7 +82,9 @@ You may be asked to enter your Environment Token, and then Subo will use `docker
 
 ### Run Compute
 When you run Compute, it will wait for you to press enter to start a REPL 
-where you can add or edit functions (see [Meet the Compute Editor](get-started#meet-the-compute-editor)).
+where you can add or edit functions (see [Meet the Compute Editor]
+(get-started#meet-the-compute-editor)). In the example below, we'll create 
+a function named `hello`:
 
 ```
 ✅ DONE: ready to start installation
@@ -105,7 +112,7 @@ Press enter to launch the local Compute REPL...
 
 Choose an option: 1
 
-To create or edit a function, enter its name (or FQFN): new-fn
+To create or edit a function, enter its name (or FQFN): hello
 ```
 
 This will allow you to create functions and use the Compute editor locally 
