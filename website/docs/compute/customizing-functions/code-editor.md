@@ -32,7 +32,7 @@ Let's break it down:
 
 **Builder**: `?builder=https://builder.acmeco.com`
 
-* This is the URL of your builder service
+* This is the URL of your public builder service
 
 **Token**: `&token=K78as0aslwi30l8h5lbF4lS7`
 
