@@ -81,10 +81,7 @@ subo compute deploy core --local
 You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your Compute Core instance automatically. Compute runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
 ### Run Compute
-When you run Compute, it will wait for you to press enter to start a REPL 
-where you can add or edit functions (see [Meet the Compute Editor]
-(get-started#meet-the-compute-editor)). In the example below, we'll create 
-a function named `hello`:
+When you run Compute, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the Compute Editor](get-started#meet-the-compute-editor)). In the example below, we'll create a function named `hello`:
 
 ```
 ✅ DONE: ready to start installation

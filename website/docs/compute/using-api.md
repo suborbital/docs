@@ -326,8 +326,7 @@ These are all of the available methods.
 **Args:** An object containing `fnName`, `language`.  
 **Result:**
 
-```rust
-//Example template for rust language 
+```ts
 import { logInfo } from "@suborbital/suborbital"
 
 export function run(input: ArrayBuffer): ArrayBuffer {

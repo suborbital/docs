@@ -7,8 +7,25 @@ You can set your own webhooks in the `scc-config.yaml` file that `subo` created 
 ## Configuration options
 The `webhooks` stanza in `scc-config.yaml` consists of a top level `webhooks` object with a list of entries.
 
-Each entry has an `id` referencing one of the predefined [hook points](#hook-points) and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
+Each entry has an `id` referencing the `builder.function.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
 
+ `builder.function.promoted` runs when an end user successfully deploys a function. Here's a sample response(JSON):
+
+```json
+{
+    "webhook_id": "builder.function.promoted",
+    "compute_context": {
+        "request_id": "ac1f5e84-5327-46a5-9d71-8ad766f39979",
+        "request_url": "/api/v1/draft/com.suborbital.demo/default/webhook/promote"
+    },
+    "response_body": {
+        "ident": "com.suborbital.demo",
+        "namespace": "default",
+        "fn": "webhook",
+        "version": "v1.0.0"
+    }
+}
+```
 ## Examples
 
 A simple inline example:
@@ -40,25 +57,4 @@ webhooks:
      - url: https://postman-echo.com/post
        method: POST
        headers: *commonHeaders
-```
-
-## Hook point
- `builder.function.promoted`
-**Description**: Runs when an end user successfully deploys a function.
-
-**Sample response** (JSON):
-```json
-{
-    "webhook_id": "builder.function.promoted",
-    "compute_context": {
-        "request_id": "ac1f5e84-5327-46a5-9d71-8ad766f39979",
-        "request_url": "/api/v1/draft/com.suborbital.demo/default/webhook/promote"
-    },
-    "response_body": {
-        "ident": "com.suborbital.demo",
-        "namespace": "default",
-        "fn": "webhook",
-        "version": "v1.0.0"
-    }
-}
 ```
