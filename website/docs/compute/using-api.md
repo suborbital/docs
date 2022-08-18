@@ -330,11 +330,11 @@ These are all of the available methods.
 import { logInfo } from "@suborbital/suborbital"
 
 export function run(input: ArrayBuffer): ArrayBuffer {
-let inStr = String.UTF8.decode(input)
+    let inStr = String.UTF8.decode(input)
 
-let out = "Hello there, " + inStr
+    let out = "Hello there, " + inStr
 
-return String.UTF8.encode(out)
+    return String.UTF8.encode(out)
 }
 ```
 
