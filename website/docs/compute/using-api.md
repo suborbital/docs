@@ -149,9 +149,9 @@ const suborbital = new Suborbital(localConfig);
 import { Suborbital } from "@suborbital/compute";
 
 const configuration = {
-adminUri: "https://acme.co:8081",
-execUri: "https://acme.co:8080",
-builderUri: "https://acme.co/builder",
+    adminUri: "https://acme.co:8081",
+    execUri: "https://acme.co:8080",
+    builderUri: "https://acme.co/builder",
 };
 
 const suborbital = new Suborbital(configuration);
