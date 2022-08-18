@@ -168,12 +168,12 @@ The Administrative APIs `getFunctions` method takes an object with a `userId` an
 
 ```typescript
 async function listAvailableFunctions() {
-const functionList = await suborbital.admin.getFunctions({
-userId: "1234",
-namespace: "default",
-});
+    const functionList = await suborbital.admin.getFunctions({
+        userId: "1234",
+        namespace: "default",
+    });
 
-console.log("Functions:", functions);
+    console.log("Functions:", functions);
 }
 ```
 
@@ -181,18 +181,18 @@ console.log("Functions:", functions);
 
 ```json
 {
-"functions": [
-    {
-        "name": "foo",
-        "namespace": "...",
-        "lang": "...",
-        "version": "...",
-        "draftVersion": "...",
-        "apiVersion": "...",
-        "fqfn": "...",
-        "fqfnURI": "...",
-    }
-]
+    "functions": [
+        {
+            "name": "foo",
+            "namespace": "...",
+            "lang": "...",
+            "version": "...",
+            "draftVersion": "...",
+            "apiVersion": "...",
+            "fqfn": "...",
+            "fqfnURI": "...",
+        }
+    ]
 }
 ```
 
@@ -202,15 +202,15 @@ The `run` method takes an object with the `environment`, `userId`, `namespace`, 
 
 ```typescript
 async function runFunction() {
-const result = await suborbital.exec.run({
-environment: "com.acmeco",
-userId: "1234",
-namespace: "default",
-fnName: "foo",
-version: "v1.0.0",
-});
+    const result = await suborbital.exec.run({
+        environment: "com.acmeco",
+        userId: "1234",
+        namespace: "default",
+        fnName: "foo",
+        version: "v1.0.0",
+    });
 
-console.log("Function output:", result);
+    console.log("Function output:", result);
 }
 ```
 
@@ -234,18 +234,18 @@ These are all of the available methods.
 
 ```json
 {
-"functions": [
-    {
-        "name": "foo",
-        "namespace": "...",
-        "lang": "...",
-        "version": "...",
-        "draftVersion": "...",
-        "apiVersion": "...",
-        "fqfn": "...",
-        "fqfnURI": "...",
-    }
-]
+    "functions": [
+        {
+            "name": "foo",
+            "namespace": "...",
+            "lang": "...",
+            "version": "...",
+            "draftVersion": "...",
+            "apiVersion": "...",
+            "fqfn": "...",
+            "fqfnURI": "...",
+        }
+    ]
 }
 ```
 
@@ -257,13 +257,13 @@ These are all of the available methods.
 
 ```json
 {
-"results": [
-    {
-        "uuid": "...",
-        "timestamp": "...",
-        "response": "..."
-    }
-]
+    "results": [
+        {
+            "uuid": "...",
+            "timestamp": "...",
+            "response": "..."
+        }
+    ]
 }
 ```
 
@@ -275,14 +275,14 @@ These are all of the available methods.
 
 ```json
 {
-"errors": [
-    {
-        "uuid": "...",
-        "timestamp": "...",
-        "code": 400,
-        "message": "..."
-    }
-]
+    "errors": [
+        {
+            "uuid": "...",
+            "timestamp": "...",
+            "code": 400,
+            "message": "..."
+        }
+    ]
 }
 ```
 
