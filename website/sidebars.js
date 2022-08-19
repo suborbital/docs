@@ -27,10 +27,10 @@ module.exports = {
           items: [
             {
               'Cloud Deployment': [
-                'compute/deployment/cloud-deployment/configure-capabilities',
-                'compute/deployment/cloud-deployment/configure-storage',
-                'compute/deployment/cloud-deployment/configure-webhooks',
-                'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
+                   'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
+                    'compute/deployment/cloud-deployment/configure-capabilities',
+                    'compute/deployment/cloud-deployment/configure-storage',
+                    'compute/deployment/cloud-deployment/configure-webhooks',
               ]
             },
           ]

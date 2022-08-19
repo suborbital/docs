@@ -2,11 +2,9 @@
 pagination_next: null
 ---
 
-# Deploy Compute to your cloud environment
+# Install Compute in your cloud environment
 
-To install Compute in the cloud, you'll use the `subo` tool to 
-automatically install Suborbital Compute into a Kubernetes cluster. 
-You need to ensure you have some **pre-requisites** ready:
+To install Compute in the cloud, you'll use the `subo` tool to automatically install Suborbital Compute into a Kubernetes cluster. You need to ensure you have some **pre-requisites** ready:
 
 1. Deploy a Kubernetes cluster into your cloud provider of choice (if you have a pre-existing one, that works too!).
    * [Ensure there is a storage class available in Kubernetes](https://kubernetes.io/docs/concepts/storage/storage-classes/). Some cloud providers such as AWS do not have a default storage class. See this great [GitLab guide on how to set up a storage class](https://docs.gitlab.com/charts/installation/storage.html#configuring-cluster-storage).
@@ -19,8 +17,7 @@ You need to ensure you have some **pre-requisites** ready:
 `subo` creates a `suborbital` Kubernetes namespace and installs the `KEDA` autoscaler. Don't worry about existing applications installed in the cluster; this won't affect them!
 :::
 
-Once you have the pre-requisites in place, navigate to the `suborbital` 
-directory you created when you [generated your token](../get-started#generate-your-token.md) and use `subo` to install:
+Once you have the pre-requisites in place, navigate to the `suborbital` directory you created when you [generated your token](../get-started#generate-your-token.md) and use `subo` to install:
 
 ```bash
 subo compute deploy core
