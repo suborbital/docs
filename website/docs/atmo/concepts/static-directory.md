@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Static Directory
 
 An Atmo project can optionally contain a `static` directory. When present,

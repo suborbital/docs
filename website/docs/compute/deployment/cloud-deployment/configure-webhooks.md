@@ -1,4 +1,4 @@
-# Configure Webhooks
+# Configure webhooks
 
 Certain actions in Compute can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request Compute receiver. By default, no webhooks are configured.
 
@@ -7,7 +7,7 @@ You can set your own webhooks in the `scc-config.yaml` file that `subo` created 
 ## Configuration options
 The `webhooks` stanza in `scc-config.yaml` consists of a top level `webhooks` object with a list of entries.
 
-Each entry has an `id` referencing one of the predefined [hook points](#hook-points) and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
+Each entry has an `id` referencing the `builder.function.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
 
 ## Examples
 
@@ -41,12 +41,19 @@ webhooks:
        method: POST
        headers: *commonHeaders
 ```
-
 ## Hook points
-### `builder.function.promoted`
-**Description**: Runs when an end user successfully deploys a function.
 
-**Sample response** (JSON):
+:::info Devs at work
+Stay tuned for more hook points!
+:::
+
+
+ `builder.function.promoted`
+ 
+**Description** Runs when an end user successfully deploys a function. 
+
+**Sample response(JSON):**
+
 ```json
 {
     "webhook_id": "builder.function.promoted",

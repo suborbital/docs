@@ -1,8 +1,12 @@
+---
+pagination_prev: null
+---
+
 # Configure capabilities
 
 Compute functions can access a number of capabilities:
 
-* Logger
+* Logging
 * HTTP requests
 * GraphQL requests
 * Key/value store (cache)

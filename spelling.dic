@@ -86,6 +86,8 @@ deployable
 deployDraft
 desiredmessage
 dev
+devs
+Devs
 devgenius
 dir
 Distroless
@@ -146,6 +148,7 @@ GetStaticFile
 getTemplate
 gettingStarted
 getToken
+gettoken
 getUsers
 GggP
 ghstars
