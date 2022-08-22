@@ -149,7 +149,7 @@ Remove the following lines:
 
 ### 6. Deploy to your cluster
 
-Run the following `subo` command to deploy Compute to your cluster:
+Run the following Subo command to deploy Compute to your cluster:
 
 ```bash
 subo compute deploy core
