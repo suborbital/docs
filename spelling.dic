@@ -110,6 +110,7 @@ ErrMsgNotWanted
 ErrorResponse
 ErrorString
 ErrWaitTimeout
+eu
 ExecString
 execUri
 expensiveRunnable
@@ -119,6 +120,7 @@ facto
 fas
 fdd
 Fermyon
+ffae
 FFI
 filesystem
 filesystems
@@ -261,6 +263,7 @@ MethodPost
 microsoft
 middleware
 Middleware
+minikube
 mkdir
 mlc
 mozilla
@@ -292,6 +295,8 @@ NewRunnable
 NewRunner
 NewWCResponse
 NeXT
+Ngrok
+ngrok
 nodejs
 NodeUUID
 no-op
@@ -320,6 +325,8 @@ PoolSize
 postgresql
 pre
 Pre
+prefilled
+Prefilled
 prev
 PreWarm
 Println
