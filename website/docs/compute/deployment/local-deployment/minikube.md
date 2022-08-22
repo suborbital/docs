@@ -51,7 +51,11 @@ subo compute deploy core --dryrun
 
 You will be asked for a domain. Please make sure to enter your domain from ngrok.
 
-These will now live in the `.suborbital/` folder.
+This will generate some Kubernetes manifest files, which will now live in the `.suborbital/` folder:
+
+- `scc-atmo-deployment.yaml`
+- `scc-autoscale.yaml`
+- `scc-controlplane-deployment.yaml`
 
 ### 5. Disable TLS checks in the Compute environment
 

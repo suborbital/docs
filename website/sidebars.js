@@ -31,6 +31,8 @@ module.exports = {
                 'compute/deployment/cloud-deployment/configure-storage',
                 'compute/deployment/cloud-deployment/configure-webhooks',
                 'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment',
+              ],
+              'Local Deployment': [
                 'compute/deployment/local-deployment/minikube'
               ]
             },
