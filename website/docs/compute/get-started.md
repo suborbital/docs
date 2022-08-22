@@ -175,7 +175,7 @@ export const run = (input) => {
 
   - The function provided is complete, so we can just click "Build"
   - In the "TEST" field, add some text. Here, we've added "new 
-    Suborbital user!"
+    Suborbital user"
   - Click "Run test"
   - Toward the bottom of the editor, click "TEST RESULTS". There's our 
     greeting!
