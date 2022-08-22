@@ -1,11 +1,11 @@
-# Deploy with Minikube
+# Deploy with minikube
 
 It’s possible to deploy a Compute environment to a local environment using a local Kubernetes cluster.
 
 ## Requirements
 
 - [Docker](https://www.docker.com/)
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+- [minikube](https://minikube.sigs.k8s.io/docs/start/)
 - [ngrok](https://ngrok.com/download)
 - [Subo](https://github.com/suborbital/subo#installing)
 
