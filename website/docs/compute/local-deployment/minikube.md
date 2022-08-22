@@ -167,7 +167,7 @@ minikube tunnel
 
 In order to test our editor, we’re going to come up with a function name, and create a token so we can access it!
 
-This can only be done as [an API call to the control plane service](https://docs.suborbital.dev/compute/integrate-the-function-editor/code-editor) from within your cluster. Since we’re currently not running an app in our cluster, we’ll just make the call from within!
+This can only be done as an [API call](https://docs.suborbital.dev/compute/integrate-the-function-editor/code-editor) from within your cluster. Since we’re currently not running an app in our cluster, we’ll just make the call from within!
 
 First, we’ll need the name of our control plane pod:
 
