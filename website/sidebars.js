@@ -26,13 +26,13 @@ module.exports = {
           collapsible: true,
           items: [
             {
-              'Cloud Deployment': [
+              'Cloud deployment': [
                 'compute/deployment/cloud-deployment/configure-capabilities',
                 'compute/deployment/cloud-deployment/configure-storage',
                 'compute/deployment/cloud-deployment/configure-webhooks',
                 'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
               ],
-              'Other Deployments': [
+              'Other deployments': [
                 'compute/deployment/other-deployments/minikube'
               ]
             },
