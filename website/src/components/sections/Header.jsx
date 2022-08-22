@@ -19,7 +19,7 @@ const Header = () => {
         </Paragraph>
         <Row>
           <Link to={useBaseUrl('compute')}>
-            <DocButton>Get Started with Suborbital Compute</DocButton>
+            <DocButton>Suborbital Compute</DocButton>
           </Link>
         </Row>
       </div>

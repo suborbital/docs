@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Connections
 
 In order to build a useful application, Atmo needs to be able to connect to external resources. Currently, Atmo can connect to [NATS](https://nats.io/), [Redis](https://redis.io/), [Kafka](https://kafka.apache.org/), [MySQL](https://www.mysql.com/), and [PostgreSQL](https://www.postgresql.org/). Upcoming releases will include additional data sources as well.

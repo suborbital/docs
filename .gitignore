@@ -8,5 +8,6 @@ website/yarn.lock
 **/.DS_Store
 
 .vscode
+.idea
 build
 dictionary.dic

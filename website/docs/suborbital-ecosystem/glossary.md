@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Glossary
 
 | Term                                     | Definition                                                                                                                                                                                                                                                                                      | Other form(s)              |

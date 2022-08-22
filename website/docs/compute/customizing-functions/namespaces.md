@@ -1,3 +1,7 @@
+---
+pagination_next: null
+---
+
 # Namespaces
 
 Within Compute, your users' functions can be organized into `namespaces` at your discretion \(you control them, not your users\). Namespaces can be used to organize groups of functions designed for different use-cases within your product.

@@ -12,7 +12,7 @@ To create a custom function template, create a fork of the `runnable-templates` 
 
 Once the repo has been forked into your company or personal account, you can begin editing the `templates` directory to fit your needs.
 
-For now, you are limited to one template per language, but in the future you will be able to create a set of templates for your users to choose from.
+For now, you are limited to one template per language, but in the future you'll be able to create a set of templates for your users to choose from.
 
 ### AssemblyScript
 

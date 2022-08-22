@@ -1,3 +1,9 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
+
 # Contributing to Suborbital
 
 ## Your very first contribution
