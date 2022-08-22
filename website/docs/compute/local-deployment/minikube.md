@@ -57,7 +57,7 @@ These will now live in the `.suborbital/` folder.
 
 Open up `.suborbital/scc-controlplane-deployment.yaml` in your editor of choice, and make the following changes.
 
-We are disabling the built in TLS certificate provisioning, as ngrok already takes care of this for us.
+We are disabling the built-in TLS certificate provisioning, as ngrok already takes care of this for us.
 
 Under the Builder Container:
 
