@@ -1,4 +1,4 @@
-# Local Deployment with Minikube
+# Deploy with Minikube
 
 It’s possible to deploy a Compute environment to a local environment using a local Kubernetes cluster.
 
