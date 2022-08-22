@@ -7,7 +7,7 @@ It’s possible to deploy a Compute environment to a local environment using a l
 - [Docker](https://www.docker.com/)
 - [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 - [ngrok](https://ngrok.com/download)
-- [subo](https://github.com/suborbital/subo#installing)
+- [Subo](https://github.com/suborbital/subo#installing)
 
 ## Steps
 
