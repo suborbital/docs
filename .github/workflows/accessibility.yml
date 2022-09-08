@@ -16,6 +16,7 @@ jobs:
           WEBSITE_URL: https://docs.suborbital.dev
           FAIL_ERRORS_COUNT: 3
           UPGRADE: true
+          SLIM: true
           # 3 is the number of warnings we get from Docusaurus-level code we can't fix, so this will
           # be the error floor for now
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
