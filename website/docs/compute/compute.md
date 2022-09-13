@@ -7,8 +7,7 @@ pagination_prev: null
 
 The Suborbital Function Platform  allows your users to write and deploy 
 functions and workflows that integrate into your app. Our WebAssembly-based 
-compute 
-core lets you run user code within your infrastructure while being sure you're protected from malicious code.
+platform lets you run user code within your infrastructure while being sure you're protected from malicious code.
 
 Suborbital's Function Platform is now in public beta! We are excited for you to [give it a try](/get-started)
 and send us your feedback. 
