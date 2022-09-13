@@ -2,8 +2,16 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Suborbital Compute',
-      collapsible: true,
+      label: 'Getting Started with Suborbital',
+      collapsible: false,
+      items: [
+        'subo/subo',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Function Platform',
+      collapsible: false,
       link: {
         type: 'doc',
         id: 'compute/compute',
@@ -12,7 +20,10 @@ module.exports = {
         'compute/get-started',
         'compute/using-api',
         {
-          'Customizing functions': [
+          type: 'category',
+          label: 'Customizing functions',
+          collapsible: false,
+          items: [
             'compute/customizing-functions/code-editor',
             'compute/customizing-functions/custom-function-templates',
             'compute/customizing-functions/custom-libraries',
@@ -22,8 +33,8 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Deploying Compute',
-          collapsible: true,
+          label: 'Deploying your platform',
+          collapsible: false,
           items: [
             {
               'Cloud deployment': [
@@ -38,156 +49,103 @@ module.exports = {
             },
           ]
         },
-      ]
+      ],
     },
-      {
-        type: 'category',
-        label: 'Atmo',
-        collapsible: true,
-        link: {
-          type: 'doc',
-          id: 'atmo/atmo'
-        },
-        items: [
-          {
+        {
+          type: 'category',
+          label: 'Atmo',
+          collapsible: true,
+          link: {
             type: 'doc',
-            id: 'atmo/get-started'
+            id: 'atmo/atmo'
           },
-          {
-            collapsed: false,
-            type: 'category',
-            label: 'Concepts',
-            items: [
-              'atmo/concepts/runnables',
-              'atmo/concepts/the-directive',
-              'atmo/concepts/state',
-              'atmo/concepts/static-directory'
-            ]
-          },
-          {
-            type: 'category',
-            label: 'Usage',
-            items: [
-              'atmo/usage/creating-runnables',
-              'atmo/usage/creating-handlers',
-              'atmo/usage/build-your-application',
-              'atmo/usage/deploying-atmo',
-              'atmo/usage/authentication',
-              'atmo/usage/error-handling',
-              'atmo/usage/headless',
-              'atmo/usage/managing-state',
-              'atmo/usage/schedules',
-              'atmo/usage/streams',
-              'atmo/usage/connections',
-            ]
-          },
-          {
-            type: 'category',
-            label: 'Runnable API',
-            link: {
+          items: [
+            {
               type: 'doc',
-              id: 'atmo/runnable-api/introduction'
+              id: 'atmo/get-started'
             },
-            items: [
-              'atmo/runnable-api/request',
-              'atmo/runnable-api/response',
-              'atmo/runnable-api/logging',
-              'atmo/runnable-api/http-client',
-              'atmo/runnable-api/graphql-client',
-              'atmo/runnable-api/sql-databases',
-              'atmo/runnable-api/cache',
-              'atmo/runnable-api/file',
-            ]
-          },
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Sat',
-        link: {
-          type: 'doc',
-          id: 'sat/sat'
-        },
-        items: [
-          'sat/using-sat',
-          'sat/building-sat',
-          'sat/constellations',
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Subo',
-        link: {
-          type: 'doc',
-          id: 'subo/subo'
-        },
-        items: [
-          'subo/usage',
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Building Blocks',
-        collapsible: true,
-        items: [
-          {
-            type: 'category',
-            label: 'Reactr',
-            items: [
-              {
+            {
+              collapsed: false,
+              type: 'category',
+              label: 'Concepts',
+              items: [
+                'atmo/concepts/runnables',
+                'atmo/concepts/the-directive',
+                'atmo/concepts/state',
+                'atmo/concepts/static-directory'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Usage',
+              items: [
+                'atmo/usage/creating-runnables',
+                'atmo/usage/creating-handlers',
+                'atmo/usage/build-your-application',
+                'atmo/usage/deploying-atmo',
+                'atmo/usage/authentication',
+                'atmo/usage/error-handling',
+                'atmo/usage/headless',
+                'atmo/usage/managing-state',
+                'atmo/usage/schedules',
+                'atmo/usage/streams',
+                'atmo/usage/connections',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Runnable API',
+              link: {
                 type: 'doc',
-                label: 'Reactr and WASM',
-                id: 'reactr/wasm'
+                id: 'atmo/runnable-api/introduction'
               },
-              {
-                type: 'doc',
-                label: 'Language support',
-                id: 'reactr/language-support'
-              }
-            ]
+              items: [
+                'atmo/runnable-api/request',
+                'atmo/runnable-api/response',
+                'atmo/runnable-api/logging',
+                'atmo/runnable-api/http-client',
+                'atmo/runnable-api/graphql-client',
+                'atmo/runnable-api/sql-databases',
+                'atmo/runnable-api/cache',
+                'atmo/runnable-api/file',
+              ]
+            },
+          ]
+        },
+        {
+          type: 'category',
+          collapsible: false,
+          label: 'Sat',
+          link: {
+            type: 'doc',
+            id: 'sat/sat'
           },
-        ]
-      },
-    {
-      type: 'category',
-      label: 'Reference',
-      collapsible: true,
-      items: [
-        {
-          type: 'link',
-          label: 'API reference',
-          href: 'https://suborbital-compute.readme.io/reference/api-reference',
+          items: [
+            'sat/using-sat',
+            'sat/building-sat',
+            'sat/constellations',
+          ]
         },
         {
-          type: 'link',
-          label: 'compute-go library reference',
-          href: 'https://github.com/suborbital/compute-go',
+          type: 'category',
+          label: 'Reference',
+          collapsible: false,
+          items: [
+            {
+              type: 'link',
+              label: 'API reference',
+              href: 'https://suborbital-compute.readme.io/reference/api-reference',
+            },
+            {
+              type: 'link',
+              label: 'compute-go library reference',
+              href: 'https://github.com/suborbital/compute-go',
+            },
+          ]
         },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Intro to WebAssembly',
-      collapsible: true,
-      link: {
-        type: 'doc',
-        id: 'intro-to-webassembly/intro-to-wasm',
-      },
-      items: [
-        'intro-to-webassembly/why-webassembly',
-        'intro-to-webassembly/history'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Contributing to Suborbital',
-      link: {
-        type: 'doc',
-        id: 'contributing/contributing-to-suborbital'
-      },
-      items: [
-        'contributing/contributing-to-suborbital',
-      ]
-    },
-  ]
+        {
+          type: 'doc',
+          id: 'contributing/contributing-to-suborbital'
+        },
+  ],
 }

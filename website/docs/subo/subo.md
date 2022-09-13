@@ -2,11 +2,9 @@
 pagination_prev: null
 ---
 
-# Subo
+# Suborbital CLI
 
-### The Suborbital CLI
-
-Subo is the command-line tool for working with the Suborbital Development Platform. Subo is used to build Wasm Runnables, generate new projects and config files, and more over time.
+Subo is the command-line tool for working with the Suborbital Dev Platform. Subo is used to build Wasm Runnables, generate new projects and config files, and more over time.
 
 **You do not need to install language-specific tools to get started with WebAssembly and Subo!** A Docker toolchain is supported (see below) that can build your Runnables without needing to install language toolchains.
 

@@ -5,7 +5,7 @@ pagination_next: null
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Using Compute's APIs
+# Using Suborbital's APIs
 
 You can find a detailed specification of Compute's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
 
