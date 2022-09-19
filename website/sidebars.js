@@ -2,8 +2,16 @@ module.exports = {
   docs: [
     {
       type: 'category',
+      label: 'Getting Started with Suborbital',
+      collapsible: false,
+      items: [
+        'subo',
+      ]
+    },
+    {
+      type: 'category',
       label: 'Suborbital Compute',
-      collapsible: true,
+      collapsible: false,
       link: {
         type: 'doc',
         id: 'compute/compute',
@@ -51,7 +59,11 @@ module.exports = {
         items: [
           {
             type: 'doc',
-            id: 'atmo/get-started'
+            id: 'atmo/get-started',
+          },
+          {
+            type: "doc",
+            id: 'atmo/glossary'
           },
           {
             collapsed: false,
@@ -89,6 +101,7 @@ module.exports = {
               id: 'atmo/runnable-api/introduction'
             },
             items: [
+                'atmo/runnable-api/language-support',
               'atmo/runnable-api/request',
               'atmo/runnable-api/response',
               'atmo/runnable-api/logging',
@@ -112,40 +125,6 @@ module.exports = {
           'sat/using-sat',
           'sat/building-sat',
           'sat/constellations',
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Subo',
-        link: {
-          type: 'doc',
-          id: 'subo/subo'
-        },
-        items: [
-          'subo/usage',
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Building Blocks',
-        collapsible: true,
-        items: [
-          {
-            type: 'category',
-            label: 'Reactr',
-            items: [
-              {
-                type: 'doc',
-                label: 'Reactr and WASM',
-                id: 'reactr/wasm'
-              },
-              {
-                type: 'doc',
-                label: 'Language support',
-                id: 'reactr/language-support'
-              }
-            ]
-          },
         ]
       },
     {
