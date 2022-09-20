@@ -2,8 +2,16 @@ module.exports = {
   docs: [
     {
       type: 'category',
+      label: 'Getting Started with Suborbital',
+      collapsible: false,
+      items: [
+        'subo',
+      ]
+    },
+    {
+      type: 'category',
       label: 'Suborbital Compute',
-      collapsible: true,
+      collapsible: false,
       link: {
         type: 'doc',
         id: 'compute/compute',
@@ -51,7 +59,11 @@ module.exports = {
         items: [
           {
             type: 'doc',
-            id: 'atmo/get-started'
+            id: 'atmo/get-started',
+          },
+          {
+            type: "doc",
+            id: 'atmo/glossary'
           },
           {
             collapsed: false,
@@ -89,6 +101,7 @@ module.exports = {
               id: 'atmo/runnable-api/introduction'
             },
             items: [
+                'atmo/runnable-api/language-support',
               'atmo/runnable-api/request',
               'atmo/runnable-api/response',
               'atmo/runnable-api/logging',
@@ -114,101 +127,6 @@ module.exports = {
           'sat/constellations',
         ]
       },
-      {
-        type: 'category',
-        label: 'Subo',
-        link: {
-          type: 'doc',
-          id: 'subo/subo'
-        },
-        items: [
-          'subo/usage',
-        ]
-      },
-      {
-        type: 'category',
-        label: 'Building Blocks',
-        collapsible: true,
-        items: [
-          {
-            type: 'category',
-            label: 'Reactr',
-            link: {
-              type: 'doc',
-              id: 'reactr/reactr'
-            },
-            items: [
-              {
-                type: 'doc',
-                label: 'Reactr and WASM',
-                id: 'reactr/wasm'
-              },
-              {
-                type: 'doc',
-                label: 'Reactr and GRAV',
-                id: 'reactr/grav'
-              },
-              {
-                type: 'doc',
-                label: 'Language support',
-                id: 'reactr/language-support'
-              }
-            ]
-          },
-          {
-            type: 'category',
-            label: 'Vektor',
-            link: {
-              type: 'doc',
-              id: 'vektor/vektor'
-            },
-            items: [
-              {
-                type: 'doc',
-                label: 'Testing Vektor',
-                id: 'vektor/testing-vk-servers'
-              },
-            ]
-          },
-          {
-            type: 'category',
-            label: 'Grav',
-            link: {
-              type: 'doc',
-              id: 'grav/grav'
-            },
-            items: [
-              {
-                'Concepts': [
-                  'grav/introduction/concepts/the-grav-instance',
-                  'grav/introduction/concepts/pods',
-                  'grav/introduction/concepts/receipts'
-                ]
-              },
-              {
-                'Usage': [
-                  'grav/usage/getting-started/start-here',
-                  'grav/usage/getting-started/using-the-grav-instance',
-                  'grav/usage/getting-started/sending-messages',
-                  'grav/usage/getting-started/receiving-messages',
-                  'grav/usage/getting-started/request-reply',
-                  'grav/usage/getting-started/grav-instance-options'
-                ]
-              },
-              {
-                'Networked Usage': [
-                  'grav/networking/transports/getting-started-transports',
-                  'grav/networking/transports/http-transport',
-                  'grav/networking/transports/websocket-transport',
-                  'grav/networking/transports/nats-transport',
-                  'grav/networking/discovery/getting-started-discovery',
-                  'grav/networking/discovery/local-network-discovery'
-                ]
-              }
-            ]
-          }
-        ]
-      },
     {
       type: 'category',
       label: 'Reference',
@@ -224,18 +142,6 @@ module.exports = {
           label: 'compute-go library reference',
           href: 'https://github.com/suborbital/compute-go',
         },
-      ]
-    },
-      {
-      type: 'category',
-      label: 'The Suborbital Ecosystem',
-      collapsible: true,
-      link: {
-        type: 'doc',
-        id: 'suborbital-ecosystem/the-suborbital-ecosystem',
-      },
-      items: [
-        'suborbital-ecosystem/glossary',
       ]
     },
     {

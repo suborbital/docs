@@ -1,10 +1,9 @@
 ---
 pagination_prev: null
+pagination_next: null
 ---
 
-# Subo
-
-### The Suborbital CLI
+# Install the Suborbital CLI
 
 Subo is the command-line tool for working with the Suborbital Development Platform. Subo is used to build Wasm Runnables, generate new projects and config files, and more over time.
 
@@ -32,9 +31,6 @@ Verify subo was installed:
 ```
 subo --help
 ```
-
-
-## Getting started
 **To get started with Subo, visit the [Get started guide](./atmo/get-started.md).**
 
 ## Builders
