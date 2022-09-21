@@ -27,7 +27,7 @@ cache::get(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `cache` import:
 
@@ -39,7 +39,7 @@ cache.get(…)
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `cache`:
 
@@ -48,17 +48,6 @@ In AssemblyScript all methods are prefixed with `cache`:
 import { cacheGet } from '@suborbital/suborbital'
 
 cacheGet(…)
-```
-
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
-
-In Swift these methods are prefixed with `Cache`:
-
-```swift
-// Invoke the "Get" method
-Suborbital.CacheGet(…)
 ```
 
 </TabItem>
@@ -86,10 +75,6 @@ cache.set(key: string, value: string | Uint8Array, ttl: number): void
 function cacheSet(key: string, value: ArrayBuffer, ttl: i32): void;
 ```
 
-```swift
-public func CacheSet(key: String, value: String, ttl: Int)
-```
-
 </MultiLanguageCodeBlock>
 
 
@@ -113,10 +98,6 @@ cache.getBytes(key: string): Uint8Array
 
 ```assemblyscript
 function cacheGet(key: string): ArrayBuffer;
-```
-
-```swift
-public func CacheGet(key: String) -> String
 ```
 
 </MultiLanguageCodeBlock>

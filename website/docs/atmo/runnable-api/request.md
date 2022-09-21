@@ -52,17 +52,11 @@ reqState(…)
 
 In Swift these methods are prefixed with `Req`:
 
-```swift
-// Invoke the "State" method
-Suborbital.ReqState(…)
-```
-
 </TabItem>
 
 </Tabs>
 
 The following namespace methods are available:
-
 
 ## Method
 
@@ -82,12 +76,7 @@ request.method(): string
 function reqMethod(): string
 ```
 
-```swift
-public func ReqMethod() -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## URL
 
@@ -107,17 +96,11 @@ request.url(): string
 function reqURL(): string
 ```
 
-```swift
-public func ReqURL() -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## ID
 
 Returns the unique ID assigned to the request by Atmo:
-
 
 <MultiLanguageCodeBlock>
 
@@ -133,11 +116,7 @@ request.id(): string
 function reqID(): string
 ```
 
-```swift
-public func ReqID() -> String
-
 </MultiLanguageCodeBlock>
-
 
 ## Body
 
@@ -161,12 +140,7 @@ request.bodyBytes(): Uint8Array
 function reqBody(): ArrayBuffer
 ```
 
-```swift
-public func ReqBodyRaw() -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## Body Field
 
@@ -187,12 +161,7 @@ request.bodyField(key: string): string
 function reqBodyField(key: string): string
 ```
 
-```swift
-public func ReqBodyField(key: String) -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## Header
 
@@ -212,12 +181,7 @@ request.header(key: string): string
 function reqHeader(key: string): string
 ```
 
-```swift
-public func ReqHeader(key: String) -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## URL Parameter
 
@@ -237,12 +201,7 @@ request.urlParam(key: string): string
 function reqURLParam(key: string): string
 ```
 
-```swift
-public func ReqParam(key: String) -> String
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## State
 
@@ -264,10 +223,6 @@ request.stateBytes(key: string): Uint8Array
 
 ```assemblyscript
 function reqState(key: string): string
-```
-
-```swift
-public func State(key: String) -> String
 ```
 
 </MultiLanguageCodeBlock>

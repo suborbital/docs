@@ -16,8 +16,7 @@ to the module while it's being run. The Runnable API allows your code to
 access everything about the request, and also gives you the ability to
 access the "outside world" by giving functions for HTTP requests,
 accessing static files, logging, and more. This section describes all of
-the capabilities available via the Runnable API and how to use them in
-Rust and Swift Runnable code.
+the capabilities available via the Runnable API and how to use them.
 
 The Runnable API is provided via a library for each of the supported languages,
 and simply needs to be imported to turn your module into a Runnable.
@@ -26,10 +25,7 @@ and simply needs to be imported to turn your module into a Runnable.
 
 ## The Runnable interface
 
-The first and most basic part of the Runnable API is the `Runnable` interface
-(also known as a Rust trait or Swift protocol). Every Runnable you write will
-provide an instance of an object that conforms to this interface.
-It is very simple, and only requires one method, `run`.
+The first and most basic part of the Runnable API is the `Runnable` interface. Every Runnable you write will provide an instance of an object that conforms to this interface. It requires only one method: `run`.
 
 
 <MultiLanguageCodeBlock>
@@ -42,12 +38,6 @@ pub trait Runnable {
 
 ```assemblyscript
 export function run(input: ArrayBuffer): ArrayBuffer
-```
-
-```swift
-public protocol Runnable {
-    func run(input: String) -> String
-}
 ```
 
 ```go
