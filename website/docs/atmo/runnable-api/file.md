@@ -27,7 +27,7 @@ file::get_static(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScripts">
 
 In JavaScript and TypeScript the methods live on the `file` import:
 
@@ -36,10 +36,9 @@ import { file } from "@suborbital/runnable"
 
 file.getStatic(…)
 ```
-
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 :::caution NOT SUPPORTED
 [This API is currently not available for AssemblyScript.](https://github.com/suborbital/reactr/issues/223)
@@ -47,26 +46,13 @@ file.getStatic(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift 🧪">
-
-In Swift these methods are available individually:
-
-```swift
-// Invoke the "Get Static" method
-Suborbital.GetStaticFile(…)
-```
-
-</TabItem>
-
 </Tabs>
 
 The following namespace methods are available:
 
-
 ## Get Static
 
 Retrieves the contents of the static file with the given name:
-
 
 <MultiLanguageCodeBlock>
 
@@ -80,10 +66,6 @@ file.getStatic(key: string): string
 
 // Get raw byte contents
 file.getStaticBytes(name: string): Uint8Array
-```
-
-```swift
-public func GetStaticFile(name: String) -> String
 ```
 
 </MultiLanguageCodeBlock>

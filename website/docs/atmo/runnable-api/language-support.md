@@ -15,7 +15,6 @@ Our [`subo`](../subo) command line tool can help you create starter templates fo
 | --------------------------------- | ----------------------- | -------------- |
 | [JavaScript](#javascript)         | `--lang=javascript`     | Beta           |
 | [TypeScript](#typescript)         | `--lang=typescript`     | Beta           |
-| [Swift](#swift)                   | `--lang=swift`          | Preview        |
 | [AssemblyScript](#assemblyscript) | `--lang=assemblyscript` | Beta           |
 | [TinyGo](#go)                     | `--lang=tinygo`         | Beta           |
 | [Grain](#grain)                   |`--lang=grain`           | Beta           |

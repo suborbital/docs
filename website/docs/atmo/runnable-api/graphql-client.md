@@ -24,7 +24,7 @@ graphql::query(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `graphql` import:
 
@@ -36,7 +36,7 @@ graphql.query(…)
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `graphQL`:
 
@@ -46,15 +46,6 @@ import { graphQLQuery } from '@suborbital/suborbital'
 
 graphQLQuery(…)
 ```
-
-</TabItem>
-
-<TabItem value="swift" label="Swift 🧪">
-
-:::caution NOT SUPPORTED
-[This API is currently not available for Swift.](https://github.com/suborbital/reactr/issues/215)
-:::
-
 
 </TabItem>
 

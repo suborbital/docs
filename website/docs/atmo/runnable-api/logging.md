@@ -24,7 +24,7 @@ log::info(…)
 
 </TabItem>
 
-<TabItem value="js" label="JavaScript/TypeScript 🧪">
+<TabItem value="js" label="JavaScript/TypeScript">
 
 In JavaScript and TypeScript the methods live on the `log` import:
 
@@ -36,7 +36,7 @@ log.info(…)
 
 </TabItem>
 
-<TabItem value="assemblyscript" label="AssemblyScript 🧪">
+<TabItem value="assemblyscript" label="AssemblyScript">
 
 In AssemblyScript all methods are prefixed with `log`:
 
@@ -49,21 +49,9 @@ logInfo(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift 🧪">
-
-In Swift these methods are prefixed with `Log`:
-
-```swift
-// Invoke the "Info" method
-Suborbital.LogInfo(…)
-```
-
-</TabItem>
-
 </Tabs>
 
 The following namespace methods are available:
-
 
 ## Info
 
@@ -83,12 +71,7 @@ log.info(message: string): void
 function logInfo(msg: string): void
 ```
 
-```swift
-public func LogInfo(msg: String)
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## Warn
 
@@ -108,12 +91,7 @@ log.warn(message: string): void
 function logWarn(msg: string): void
 ```
 
-```swift
-public func LogWarn(msg: String)
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## Error
 
@@ -133,12 +111,7 @@ log.error(message: string): void
 function logErr(msg: string): void
 ```
 
-```swift
-public func LogErr(msg: String)
-```
-
 </MultiLanguageCodeBlock>
-
 
 ## Debug
 
@@ -156,10 +129,6 @@ log.debug(message: string): void
 
 ```assemblyscript
 function logDebug(msg: string): void
-```
-
-```swift
-public func LogDebug(msg: String)
 ```
 
 </MultiLanguageCodeBlock>

@@ -2,8 +2,7 @@
 
 When building an application with Atmo, you segment your application's 
 logic into individual functions known as **Runnables**. A Runnable can 
-be written in any of the supported languages (such as TypeScript, Rust 
-or Swift), and is compiled to WebAssembly when you build it.
+be written in any of the supported languages (such as Rust, Javascript/Typescript, or Go), and is compiled to WebAssembly when you build it.
 
 Runnables are completely independent from one another, and have no 
 knowledge of each other's execution. 

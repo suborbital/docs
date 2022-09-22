@@ -66,21 +66,6 @@ httpGet(…)
 
 </TabItem>
 
-<TabItem value="swift" label="Swift">
-
-In Swift these methods are prefixed with `Http`:
-
-```swift
-// Invoke the "Get" method
-Suborbital.HttpGet(…)
-```
-
-:::note
-Swift does not yet support passing headers to a request.
-:::
-
-</TabItem>
-
 </Tabs>
 
 The following namespace methods are available:
@@ -103,10 +88,6 @@ http.get(url: string, headers?: Headers): HttpResponse
 function httpGet(url: string, headers: Map<string, string> | null): Result
 ```
 
-```swift
-public func HttpGet(url: String) -> String
-```
-
 </MultiLanguageCodeBlock>
 
 ## HEAD
@@ -125,10 +106,6 @@ http.head(url: string, headers?: Headers): HttpResponse
 
 ```assemblyscript
 function httpHead(url: string, headers: Map<string, string> | null): Result
-```
-
-```swift
-public func HttpHead(url: String) -> String
 ```
 
 </MultiLanguageCodeBlock>
@@ -150,10 +127,6 @@ http.options(url: string, headers?: Headers): HttpResponse
 function httpOptions(url: string, headers: Map<string, string> | null): Result
 ```
 
-```swift
-public func HttpOptions(url: String) -> String
-```
-
 </MultiLanguageCodeBlock>
 
 ## POST
@@ -172,10 +145,6 @@ http.post(url: string, body: string | Uint8Array, headers?: Headers): HttpRespon
 
 ```assemblyscript
 function httpPost(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
-```
-
-```swift
-public func HttpPost(url: String, body: String) -> String
 ```
 
 </MultiLanguageCodeBlock>
