@@ -183,7 +183,7 @@ Your output will look something like this:
 
 ```bash
 NAME                                           READY   STATUS    RESTARTS   AGE
-scc-atmo-deployment-7bfb9d76c6-sv5dr           1/1     Running   0          27s
+scc-e2-core-deployment-7bfb9d76c6-sv5dr           1/1     Running   0          27s
 scc-controlplane-deployment-5699f779f7-xmkhr   2/2     Running   0          27s
 ```
 
