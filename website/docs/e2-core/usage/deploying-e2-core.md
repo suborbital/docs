@@ -7,7 +7,7 @@ pagination_next: null
 
 E2 Core is in beta, and is suitable production workloads. If you're using E2 Core in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
 
-E2 Core is distributed as a Docker image: `suborbital/E2 Core`
+E2 Core is distributed as a Docker image: `suborbital/Atmo`
 
 To run E2 Core, you can mount your SE2 module Bundle as a volume, build your own container image that embeds it, or set E2 Core to wait for a Bundle to be uploaded.
 
@@ -16,7 +16,7 @@ To run E2 Core, you can mount your SE2 module Bundle as a volume, build your own
 To mount as a volume:
 
 ```bash
-docker run -v $(pwd):/home/E2 atmo -e E2 ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
+docker run -v $(pwd):/home/atmo -e ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
 ```
 
 This will launch E2 Core, assign it to listen on port 8080, and run in HTTP mode.
@@ -37,7 +37,7 @@ Building this Dockerfile would result in an image that doesn't need a volume mou
 
 ## Bundle upload
 
-To upload a Bundle after launching E2 Core, use the `--wait` flag or set the `E2 Core_WAIT=true` env var. This will cause E2 Core to check the disk once per second until it finds a Bundle rather than exiting with an error if no Bundle is found. This method allows you to launch E2 Core and then upload a Bundle separately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
+To upload a Bundle after launching E2 Core, use the `--wait` flag or set the `ATMO_WAIT=true` env var. This will cause E2 Core to check the disk once per second until it finds a Bundle rather than exiting with an error if no Bundle is found. This method allows you to launch E2 Core and then upload a Bundle separately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 
 ### HTTPS
 
