@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # SE2 modules
 
 When building an application with E2 Core, you segment your application's logic into individual functions known as **SE2 modules**. An SE2 module can be written in any of the supported languages (such as Rust, Javascript/Typescript, or Go), and is compiled to WebAssembly when you build it.

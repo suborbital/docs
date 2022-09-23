@@ -1,4 +1,5 @@
 ---
+pagination_prev: null
 pagination_next: null
 ---
 
@@ -108,13 +109,13 @@ Use [our JavaScript SDK](https://github.com/suborbital/compute-node) to easily i
 Install it via `yarn` or `npm`:
 
 ```sh
-yarn add @suborbital/se2
+yarn add @suborbital/compute
 ```
 
 or:
 
 ```sh
-npm install @suborbital/se2
+npm install @suborbital/compute
 ```
 
 ### Setup
@@ -128,7 +129,7 @@ A configuration for local development is also provided.
 By default, the client will point to the control plane and data plane within your Kubernetes cluster.
 
 ```typescript
-import { Suborbital } from "@suborbital/se2";
+import { Suborbital } from "@suborbital/compute";
 
 const suborbital = new Suborbital();
 ```
@@ -138,7 +139,7 @@ const suborbital = new Suborbital();
 For local development with SE2 running in docker-compose, the local configuration will point to the services running on your local machine.
 
 ```typescript
-import { Suborbital, localConfig } from "@suborbital/se2";
+import { Suborbital, localConfig } from "@suborbital/compute";
 
 const suborbital = new Suborbital(localConfig);
 ```
@@ -146,7 +147,7 @@ const suborbital = new Suborbital(localConfig);
 ### Custom API URLs or ports
 
 ```typescript
-import { Suborbital } from "@suborbital/se2";
+import { Suborbital } from "@suborbital/compute";
 
 const configuration = {
     adminUri: "https://acme.co:8081",

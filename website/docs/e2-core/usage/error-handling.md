@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Error handling
 
 When building your SE2 app, handling errors returned from SE2 modules is pretty essential. When a SE2 module returns an error, it contains a `code` and a `message`. The `code` must be a valid [HTTP response status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). Using the Directive, you can manage how your application behaves when an error is returned:

@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Deploying E2 Core
 
 E2 Core is in beta, and is suitable production workloads. If you're using E2 Core in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!

@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Configure webhooks
 
 Certain actions in SE2 can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request SE2 receiver. By default, no webhooks are configured.

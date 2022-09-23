@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # State
 
 Since SE2 modules are completely unaware of one another when being executed, there needs to be a way to pass data between them. E2 Core uses a shared object called the **request state** to accomplish this. Request state is a key/value map that is updated automatically after each step in a handler.

@@ -1,5 +1,6 @@
 ---
 pagination_prev: null
+pagination_next: null
 ---
 
 # Creating SE2 modules
@@ -31,6 +32,6 @@ By default, Rust will be used. To use one of the other [supported languages](../
 subo create runnable myjavascriptfunction --lang=javascript
 ```
 
-Each runnable has a `.runnable.yaml` that describes it. The name you provide to the `create runnable` command is the name that will be used to call the SE2 module in [Directive](../concepts/the-directive) handlers, which are discussed next.
+Each SE2 module has a `.runnable.yaml` that describes it. The name you provide to the `create runnable` command is the name that will be used to call the SE2 module in [Directive](../concepts/the-directive) handlers, which are discussed next.
 
 Your SE2 modules will use the [SE2 module API](../e2-core-api/introduction.md) to access resources such as the network, files, and more.

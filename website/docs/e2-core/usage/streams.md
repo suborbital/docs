@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Streams
 
 E2 Core can handle several different types of input. The default is an HTTP request, which is defined with `type: request`in a Directive handler. There is another type of input called `stream`which allows E2 Core to listen to streaming data sources and handle messages it receives from them.

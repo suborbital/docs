@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Getting started with Suborbital Extensibility Engine (SE2) 
 
 ## Installation
@@ -36,7 +41,7 @@ information.
 To create your token, run:
 
 ```bash
-subo se2 create token <email>
+subo compute create token <email>
 ```
 
 A verification code will be sent to your email address, and the token will be 
@@ -75,13 +80,13 @@ you're in the correct directory by verifying that it contains the
 `docker-compose.yaml` file.
 
 ```bash
-subo se2 deploy core --local
+subo compute deploy core --local
 ```
 
 You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your SE2 Core instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
 ### Run SE2
-When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the SE2 Editor](get-started#meet-the-compute-editor)). In the example below, we'll create a function named `hello`:
+When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the SE2 Editor](get-started#meet-the-se2-editor)). In the example below, we'll create a function named `hello`:
 
 ```
 ✅ DONE: ready to start installation

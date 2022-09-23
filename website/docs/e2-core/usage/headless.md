@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Headless Mode
 
 E2 Core can be run 'headless' mode, which causes it to ignore the

@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Authentication
 
 E2 Core helps with authenticating these requests by injecting the `Authorization` header to your SE2 module's requests based on the configuration in your Directive. 

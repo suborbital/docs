@@ -16,7 +16,7 @@ The SE2 module API is provided via a library for each of the supported languages
 
 ## The SE2 module interface
 
-The first and most basic part of the SE2 module API is the `Runnable` interface. Every SE2 module you write will provide an instance of an object that conforms to this interface. It requires only one method: `run`.
+The first and most basic part of the SE2 module API is the `SE2 module` interface. Every SE2 module you write will provide an instance of an object that conforms to this interface. It requires only one method: `run`.
 
 <MultiLanguageCodeBlock>
 

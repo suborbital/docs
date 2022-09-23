@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Managing state
 
 Let's take another look at the example Directive:

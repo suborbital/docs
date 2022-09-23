@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Creating handlers
 
 If you haven't created a project yet, see [Creating a Project](../get-started) first.

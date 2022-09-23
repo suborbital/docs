@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Getting started
 
 The following guide will help you install the tooling and spin up an E2 Core instance on your computer for local development.
@@ -58,9 +63,9 @@ handlers:
       - fn: helloworld
 ```
 
-## Create a SE2 module
+## Create an SE2 module
 
-To create a new SE2 module, use the create runnable command:
+To create a new SE2 module, use the `create runnable` command:
 
 ```console
 > subo create runnable <name>

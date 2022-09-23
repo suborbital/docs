@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Custom function templates
 
 When your users interact with SE2, you want them to have an experience that is tailored to your product. To ensure they get the most out of SE2, you can create custom function templates to control what your users see when they create a new function. You can also create custom libraries with utilities specific to your application for users to import from, which we'll explore in the next section.

@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 # Build your Application
 
 To run your E2 Core application, we need to create a SE2 module Bundle. A Bundle is a `.wasm.zip` file that includes your Directive, along with all of your SE2 modules compiled to WebAssembly modules. Bundles are built using `subo`.

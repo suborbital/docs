@@ -1,5 +1,6 @@
 ---
 pagination_prev: null
+pagination_next: null
 ---
 
 # Configure capabilities

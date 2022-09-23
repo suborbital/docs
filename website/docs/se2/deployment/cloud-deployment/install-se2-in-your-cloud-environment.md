@@ -1,10 +1,11 @@
 ---
 pagination_next: null
+pagination_prev: null
 ---
 
-# Install Compute in your cloud environment
+# Install SE2 in your cloud environment
 
-To install Compute in the cloud, you'll use the `subo` tool to automatically install Suborbital Compute into a Kubernetes cluster. You need to ensure you have some **pre-requisites** ready:
+To install SE2 in the cloud, you'll use the `subo` tool to automatically install Suborbital SE2 into a Kubernetes cluster. You need to ensure you have some **pre-requisites** ready:
 
 1. Deploy a Kubernetes cluster into your cloud provider of choice (if you have a pre-existing one, that works too!).
    * [Ensure there is a storage class available in Kubernetes](https://kubernetes.io/docs/concepts/storage/storage-classes/). Some cloud providers such as AWS do not have a default storage class. See this great [GitLab guide on how to set up a storage class](https://docs.gitlab.com/charts/installation/storage.html#configuring-cluster-storage).
@@ -44,4 +45,4 @@ The manifest files that were installed can be found in the `.suborbital` directo
 kubectl apply -f .suborbital/
 ```
 
-*As always, don't hesitate to reach out if you have any issues with this or any other aspect of Compute!*
+*As always, don't hesitate to reach out if you have any issues with this or any other aspect of SE2!*
