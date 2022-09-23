@@ -4,9 +4,7 @@ pagination_next: null
 
 # Language support
 
-This page explains the various levels of support for the growing number of source languages supported for writing [SE2 modules](../e2-core/concepts/se2-modules.md) in Reactr. Projects in the Suborbital ecosystem such as [E2 Core](../atmo/) or [Sat](../sat/) use the Reactr runtime to execute these WebAssembly, allowing them to interface with the runtime through the [SE2 module interface](../atmo/runnable-api/introduction#the-runnable-interface). The languages supported may vary across Reactr releases, and Runtime API support offered for some of these languages may be limited depending on the state of the current implementation.
-
-Our [`subo`](../subo) command line tool can help you create starter templates for SE2 modules in the various supported languages. See [Creating SE2 modules](docs/e2-core/usage/creating-se2-modules.md) for the `--lang` parameters for each.
+This page explains the various levels of support for the growing number of source languages supported for writing [SE2 modules](../concepts/se2-modules.md). Our [`subo`](../../subo.md) command line tool can help you create starter templates for SE2 modules in the various supported languages. See [Creating SE2 modules](../usage/creating-se2-modules.md) for the `--lang` parameters for each.
 
 ## Support status
 
