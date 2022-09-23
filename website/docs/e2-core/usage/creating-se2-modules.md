@@ -9,7 +9,7 @@ pagination_next: null
 Make sure you [have the prerequisites installed](../get-started#prerequisites) before proceeding.
 :::
 
-You can create a new SE2 module with subo:c
+You can create a new SE2 module with Subo:
 
 ```bash
 subo create runnable myfunction

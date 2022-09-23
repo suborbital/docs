@@ -21,7 +21,7 @@ E2 Core applications are comprised of several functions that coordinate to creat
 To get started, build `atmo-proxy`. In the E2 Core repo, run:
 
 ```bash
-make compute/proxy
+make atmo/proxy
 ```
 
 This installs `atmo-proxy` into your `GOBIN`.
@@ -35,7 +35,7 @@ make constd/install
 Now launch `constd` by providing the path to an [SE2 module](docs/e2-core/usage/build-your-application.md):
 
 ```bash
-CONSTD_EXEC_MODE=metal constd {absolute/path/to}/compute/example-project/runnables.wasm.zip
+CONSTD_EXEC_MODE=metal constd {absolute/path/to}/atmo/example-project/runnables.wasm.zip
 ```
 
 `constd` will launch `atmo-proxy` and a constellation of Sat instances. Make a request to test it:

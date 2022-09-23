@@ -16,7 +16,7 @@ To run E2 Core, you can mount your SE2 module Bundle as a volume, build your own
 To mount as a volume:
 
 ```bash
-docker run -v $(pwd):/home/E2 Core -e E2 Core_HTTP_PORT=8080 -p 8080:8080 suborbital/E2 Core:latest E2 Core
+docker run -v $(pwd):/home/E2 atmo -e E2 ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
 ```
 
 This will launch E2 Core, assign it to listen on port 8080, and run in HTTP mode.
@@ -26,24 +26,22 @@ This will launch E2 Core, assign it to listen on port 8080, and run in HTTP mode
 To create your own Docker image with your Bundle embedded, you can use the Dockerfile that was created for your project by Subo:
 
 ```yaml
-FROM suborbital/E2 Core:latest
+FROM suborbital/atmo:latest
 
 COPY ./runnables.wasm.zip .
 
-ENTRYPOINT E2 Core
+ENTRYPOINT atmo
 ```
 
 Building this Dockerfile would result in an image that doesn't need a volume mount.
 
 ## Bundle upload
 
-To upload a Bundle after launching E2 Core, use the `--wait` flag or set the `E2 Core_WAIT=true` env var. This will cause E2 Core to check the disk once per second until it finds a Bundle rather than exiting with an error if no Bundle is found. This method allows you to launch E2 Core and then upload a Bundle
-separately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
+To upload a Bundle after launching E2 Core, use the `--wait` flag or set the `E2 Core_WAIT=true` env var. This will cause E2 Core to check the disk once per second until it finds a Bundle rather than exiting with an error if no Bundle is found. This method allows you to launch E2 Core and then upload a Bundle separately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 
 ### HTTPS
 
-To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com` to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag
-for each.
+To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com` to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag for each.
 
 ### Logging
 

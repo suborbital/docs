@@ -19,7 +19,7 @@ Here is an example Directive:
 ```yaml
 identifier: com.suborbital.test
 appVersion: v0.0.1
-E2 CoreVersion: v0.4.2
+atmoVersion: v0.4.2
 
 handlers:
   - type: request
