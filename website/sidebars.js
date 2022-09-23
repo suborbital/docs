@@ -70,7 +70,7 @@ module.exports = {
             type: 'category',
             label: 'Concepts',
             items: [
-              'e2-core/concepts/runnables',
+              'e2-core/concepts/se2-modules',
               'e2-core/concepts/the-directive',
               'e2-core/concepts/state',
               'e2-core/concepts/static-directory'
@@ -80,7 +80,7 @@ module.exports = {
             type: 'category',
             label: 'Usage',
             items: [
-              'e2-core/usage/creating-runnables',
+              'e2-core/usage/creating-se2-modules',
               'e2-core/usage/creating-handlers',
               'e2-core/usage/build-your-application',
               'e2-core/usage/deploying-e2-core',

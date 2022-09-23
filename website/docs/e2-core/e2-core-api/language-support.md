@@ -4,9 +4,9 @@ pagination_next: null
 
 # Language support
 
-This page explains the various levels of support for the growing number of source languages supported for writing [Runnables](docs/e2-core/concepts/runnables.md) in Reactr. Projects in the Suborbital ecosystem such as [Atmo](../atmo/) or [Sat](../sat/) use the Reactr runtime to execute these WebAssembly, allowing them to interface with the runtime through the [Runnable interface](../atmo/runnable-api/introduction#the-runnable-interface). The languages supported may vary across Reactr releases, and Runtime API support offered for some of these languages may be limited depending on the state of the current implementation.
+This page explains the various levels of support for the growing number of source languages supported for writing [SE2 modules](../e2-core/concepts/se2-modules.md) in Reactr. Projects in the Suborbital ecosystem such as [E2 Core](../atmo/) or [Sat](../sat/) use the Reactr runtime to execute these WebAssembly, allowing them to interface with the runtime through the [SE2 module interface](../atmo/runnable-api/introduction#the-runnable-interface). The languages supported may vary across Reactr releases, and Runtime API support offered for some of these languages may be limited depending on the state of the current implementation.
 
-Our [`subo`](../subo) command line tool can help you create starter templates for Runnables in the various supported languages. See [Creating Runnables](docs/e2-core/usage/creating-runnables.md) for the `--lang` parameters for each.
+Our [`subo`](../subo) command line tool can help you create starter templates for SE2 modules in the various supported languages. See [Creating SE2 modules](docs/e2-core/usage/creating-se2-modules.md) for the `--lang` parameters for each.
 
 ## Support status
 
@@ -28,18 +28,18 @@ Our [`subo`](../subo) command line tool can help you create starter templates fo
 :::tip STATUS: STABLE
 :::
 
-Indicates complete support of language features and most, if not all Runnable APIs. The languages in this group are usually the first to receive updates when a new feature is added to the Runnable API.
+Indicates complete support of language features and most, if not all SE2 module APIs. The languages in this group are usually the first to receive updates when a new feature is added to the SE2 module API.
 
 ### Beta
 
 :::info STATUS: BETA
 :::
 
-Indicative of widespread support for language features and most Runnable APIs. Some newer or more complex APIs might be missing, and certain language features might be unimplemented, or may not be completely stable.
+Indicative of widespread support for language features and most SE2 module APIs. Some newer or more complex APIs might be missing, and certain language features might be unimplemented, or may not be completely stable.
 
 ### Preview
 
 :::caution STATUS: PREVIEW
 :::
 
-Support for the language has only recently landed, or is considered experimental. Some language features may not work, or will fail. Some Runnable APIs might not be implemented yet, or may not work as intended.
+Support for the language has only recently landed, or is considered experimental. Some language features may not work, or will fail. Some SE2 module APIs might not be implemented yet, or may not work as intended.

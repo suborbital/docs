@@ -39,6 +39,6 @@ handlers:
       - fn: cache-get
 ```
 
-This directive encapsulates all of the logic for your application. It describes three endpoints and the logic needed to handle them. Each handler describes a set of `steps` that composes a series of Runnables to handle the request.
+This directive encapsulates all of the logic for your application. It describes three endpoints and the logic needed to handle them. Each handler describes a set of `steps` that composes a series of SE2 modules to handle the request.
 
-Atmo uses the Directive to build your application and run it automatically, without any need to write boilerplate yourself.
+E2 Core uses the Directive to build your application and run it automatically, without any need to write boilerplate yourself.

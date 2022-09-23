@@ -1,6 +1,6 @@
 # State
 
-Since Runnables are completely unaware of one another when being executed, there needs to be a way to pass data between them. Atmo uses a shared object called the **request state** to accomplish this. Request state is a key/value map that is updated automatically after each step in a handler.
+Since SE2 modules are completely unaware of one another when being executed, there needs to be a way to pass data between them. E2 Core uses a shared object called the **request state** to accomplish this. Request state is a key/value map that is updated automatically after each step in a handler.
 
 Let's take a look at a handler from the Directive:
 
@@ -39,13 +39,13 @@ And then after the **second step**:
 }
 ```
 
-When each step executes, the current request state is made available to the Runnable using **Runnable API** functions.
+When each step executes, the current request state is made available to the SE2 module using **SE2 module API** functions.
 
 :::info
 Request state is updated after each **step**, so it is important to note that multiple functions in a **group** will all receive the same state from the beginning of the step, and all of their outputs will be added to state after they've all completed executing.
 :::
 
-You can access request state like the following Runnable example written in Rust.
+You can access request state like the following SE2 module example written in Rust.
 
 ```rust
 use suborbital::req;

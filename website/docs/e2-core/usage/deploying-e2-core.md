@@ -1,66 +1,61 @@
-# Deploying E2Core
+# Deploying E2 Core
 
-E2Core is in beta, and is suitable production workloads. If you're using E2Core in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
+E2 Core is in beta, and is suitable production workloads. If you're using E2 Core in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
 
-E2Core is distributed as a Docker image: `suborbital/E2Core`
+E2 Core is distributed as a Docker image: `suborbital/E2 Core`
 
-To run E2Core, you can mount your Runnable Bundle as a volume, build your own container image that embeds it, or set E2Core to wait for a Bundle to be uploaded.
+To run E2 Core, you can mount your SE2 module Bundle as a volume, build your own container image that embeds it, or set E2 Core to wait for a Bundle to be uploaded.
 
 ## Volume mount
 
 To mount as a volume:
 
 ```bash
-docker run -v $(pwd):/home/E2Core -e E2Core_HTTP_PORT=8080 -p 8080:8080 suborbital/E2Core:latest E2Core
+docker run -v $(pwd):/home/E2 Core -e E2 Core_HTTP_PORT=8080 -p 8080:8080 suborbital/E2 Core:latest E2 Core
 ```
 
-This will launch E2Core, assign it to listen on port 8080, and run in HTTP mode.
+This will launch E2 Core, assign it to listen on port 8080, and run in HTTP mode.
 
 ## Embed Bundle
 
 To create your own Docker image with your Bundle embedded, you can use the Dockerfile that was created for your project by Subo:
 
 ```yaml
-FROM suborbital/E2Core:latest
+FROM suborbital/E2 Core:latest
 
 COPY ./runnables.wasm.zip .
 
-ENTRYPOINT E2Core
+ENTRYPOINT E2 Core
 ```
 
 Building this Dockerfile would result in an image that doesn't need a volume mount.
 
 ## Bundle upload
 
-To upload a Bundle after launching E2Core, use the `--wait` flag or set the
-`E2Core_WAIT=true` env var. This will cause E2Core to check the disk once per
-second until it finds a Bundle rather than exiting with an error if no Bundle
-is found. This method allows you to launch E2Core and then upload a Bundle
-separately by copying it into the running container, as with the
-[experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
+To upload a Bundle after launching E2 Core, use the `--wait` flag or set the `E2 Core_WAIT=true` env var. This will cause E2 Core to check the disk once per second until it finds a Bundle rather than exiting with an error if no Bundle is found. This method allows you to launch E2 Core and then upload a Bundle
+separately by copying it into the running container, as with the [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 
 ### HTTPS
 
-To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com`
-to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag
+To run with HTTPS, replace `ATMO_HTTP_PORT=8080` with `ATMO_DOMAIN=example.com` to enable LetsEncrypt on ports 443 and 80. You will need to pass the `-p` Docker flag
 for each.
 
 ### Logging
 
-To control logging in Atmo, you can use its environment variables:
+To control logging in E2 Core, you can use its environment variables:
 
 - `ATMO_LOG_LEVEL` can be set to any of `trace, debug, info, warn, error`
 - `ATMO_LOG_FILE` can be set to a file to log to \(stdout will become plaintext logs, structured logs will be written to the file\)
 
 ### Tracing
 
-When Atmo is running in proxy mode, you can configure one of three tracers:
+When E2 Core is running in proxy mode, you can configure one of three tracers:
 
 1. Direct export to honeycomb.io if you have an account with them
 2. Local export to an OpenTelemetry collector running on the same machine / within the same pod
 3. No tracing
 
-Atmo is going to use a no-op tracer that does nothing by default if it doesn't see any of the following configuration values.
+E2 Core is going to use a no-op tracer that does nothing by default if it doesn't see any of the following configuration values.
 
 Options are set via environment variables. The full list is:
 
@@ -74,4 +69,4 @@ Options are set via environment variables. The full list is:
 
 ### Schedules
 
-To prevent an Atmo instance from executing the [Schedules](schedules.md) defined in your Directive, you can set the `ATMO_RUN_SCHEDULES=false` env var. This can be useful for running non-idempotent jobs on a specific worker instance.
+To prevent an E2 Core instance from executing the [Schedules](schedules.md) defined in your Directive, you can set the `ATMO_RUN_SCHEDULES=false` env var. This can be useful for running non-idempotent jobs on a specific worker instance.

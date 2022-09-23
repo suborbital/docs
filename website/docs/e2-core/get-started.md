@@ -34,7 +34,7 @@ Flags:
       --update-templates   update with the newest templates
 ```
 
-The project contains two important things: a `Directive.yaml` file, and an example SE2 module called `helloworld` written in Rust. The [Directive](./concepts/the-directive.md) file defines route handlers and connects [SE2 modules](./concepts/runnables.md) to them.
+The project contains two important things: a `Directive.yaml` file, and an example SE2 module called `helloworld` written in Rust. The [Directive](./concepts/the-directive.md) file defines route //handlers and connects [SE2 modules](./concepts/se2-modules.md) to them.
 
 ### Overview
 
@@ -66,7 +66,7 @@ To create a new SE2 module, use the create runnable command:
 > subo create runnable <name>
 ```
 
-Rust is chosen by default, but if you prefer Swift, just pass `--lang=swift`! You can now use the SE2 module API to build your function. A directory is created for each SE2 module, and each contains a `.runnable.yaml` file that includes some metadata.
+ You can now use the SE2 module API to build your function. A directory is created for each SE2 module, and each contains a `.runnable.yaml` file that includes some metadata.
 
 The full options for `create runnable` are:
 

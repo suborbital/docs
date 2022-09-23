@@ -4,7 +4,7 @@ pagination_next: null
 
 # Static Directory
 
-An Atmo project can optionally contain a `static` directory. When present,
+An E2 Core project can optionally contain a `static` directory. When present,
 the `subo` CLI will package the static directory into your application Bundle.
 
 Example:
@@ -22,11 +22,11 @@ important-api
 
 Do not use the static directory for sensitive data such as secrets.
 
-Atmo will be gaining a secrets management system in 2022.
+E2 Core will be gaining a secrets management system in 2022.
 
-Since the directory is included in your Bundle, your Runnables can access the
-files! Atmo will mount the directory as a read-only filesystem that can be
-accessed using the `file` namespace of the [Runnable API](docs/e2-core/e2-core-api/introduction.md).
+Since the directory is included in your Bundle, your SE2 modules can access the
+files! E2 Core will mount the directory as a read-only filesystem that can be
+accessed using the `file` namespace of the [SE2 module API](../e2-core-api/introduction.md).
 
 For example:
 
@@ -36,4 +36,4 @@ use suborbital::file;
 let indexHtml = file::get_static("index.html");
 ```
 
-This allows Atmo to serve static sites, access template files, and more!
+This allows E2 Core to serve static sites, access template files, and more!
