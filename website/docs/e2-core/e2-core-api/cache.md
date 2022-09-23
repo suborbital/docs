@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,10 +10,10 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # Accessing cache
 
-Runnables can access an attached cache (such as Redis) using the `cache` namespace of the Runnable API. Atmo will configure the cache, and will bind it to the Runnable at runtime.
+SE2 modules can access an attached cache (such as Redis) using the `cache` namespace of the SE2 module API. E2 Core will configure the cache, and will bind it to the SE2 module at runtime.
 
 :::note
-Atmo provides a default in-memory cache when there is no external cache is configured. Refer to the [Connections docs](../usage/connections.md) to learn how to connect an external cache to Atmo.
+E2 Core provides a default in-memory cache when there is no external cache is configured. Refer to the [Connections docs](../usage/connections.md) to learn how to connect an external cache to E2 Core.
 :::
 
 <Tabs groupId="reactr-language">

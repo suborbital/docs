@@ -1,3 +1,8 @@
+---
+pagination_next: null
+pagination_prev: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # Handling requests
 
-When a Runnable is used to handle an HTTP request, Atmo will bind that request to the Runnable. The `req` or `request` namespace of the Runnable API can then be used to access all of the information about the request. Note if the Runnable is not being used to handle a request, then all methods in the `req` namespace will return empty or an error.
+When a SE2 module is used to handle an HTTP request, E2 Core will bind that request to the SE2 module. The `req` or `request` namespace of the SE2 module API can then be used to access all of the information about the request. Note if the SE2 module is not being used to handle a request, then all methods in the `req` namespace will return empty or an error.
 
 <Tabs groupId="reactr-language">
 
@@ -100,7 +105,7 @@ function reqURL(): string
 
 ## ID
 
-Returns the unique ID assigned to the request by Atmo:
+Returns the unique ID assigned to the request by E2 Core:
 
 <MultiLanguageCodeBlock>
 

@@ -1,4 +1,5 @@
 ---
+pagination_prev: null
 pagination_next: null
 ---
 
@@ -9,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # Static files
 
-Files in the `static` directory of an Atmo project will be copied into the Runnable Bundle by `subo`. Those files can then be accessed by Runnables. The directory is mounted as a sandboxed read-only filesystem.
+Files in the `static` directory of an E2 Core project will be copied into the SE2 module Bundle by `subo`. Those files can then be accessed by SE2 modules. The directory is mounted as a sandboxed read-only filesystem.
 
 <Tabs groupId="reactr-language">
 

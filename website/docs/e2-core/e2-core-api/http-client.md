@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # HTTP client
 
-You can use the `http` namespace of the Runnable API to make HTTP requests from your Runnable code. These methods are currently the only way to access the network from Runnable code.
+You can use the `http` namespace of the SE2 module API to make HTTP requests from your SE2 module code. These methods are currently the only way to access the network from SE2 module code.
 
 Arbitrary socket and network access is not currently possible.
 
@@ -166,10 +171,6 @@ http.put(url: string, body: string | Uint8Array, headers?: Headers): HttpRespons
 function httpPut(url: string, body: ArrayBuffer, headers: Map<string, string> | null): Result
 ```
 
-```swift
-public func HttpPut(url: String, body: String) -> String
-```
-
 </MultiLanguageCodeBlock>
 
 ## PATCH
@@ -188,10 +189,6 @@ http.patch(url: string, body: string | Uint8Array, headers?: Headers): HttpRespo
 
 ```assemblyscript
 function httpPatch(url: string, body: ArrayBuffer, headers: Map<string, string> | null): ArrayBuffer
-```
-
-```swift
-public func HttpPatch(url: String, body: String) -> String
 ```
 
 </MultiLanguageCodeBlock>
@@ -213,10 +210,6 @@ http.delete(url: string, headers?: Headers): HttpResponse
 
 ```assemblyscript
 function httpDelete(url: string, headers: Map<string, string> | null): ArrayBuffer
-```
-
-```swift
-public func HttpDelete(url: String) -> String
 ```
 
 </MultiLanguageCodeBlock>

@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next:  null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # GraphQL client
 
-You can use the `graphql` namespace of the Runnable API to make GraphQL queries from your Runnable code. GraphQL is a common way of exposing external APIs, and makes connecting to external services very straightforward.
+You can use the `graphql` namespace of the SE2 module API to make GraphQL queries from your SE2 module code. GraphQL is a common way of exposing external APIs, and makes connecting to external services very straightforward.
 
 
 <Tabs groupId="reactr-language">

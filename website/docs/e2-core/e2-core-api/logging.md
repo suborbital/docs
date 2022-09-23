@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # Structured logging
 
-Your Runnable code can log to Atmo's structured output using the logging methods.
+Your SE2 module code can log to E2 Core's structured output using the logging methods.
 
 
 <Tabs groupId="reactr-language">

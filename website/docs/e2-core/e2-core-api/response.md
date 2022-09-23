@@ -1,3 +1,8 @@
+---
+pagination_next: null
+pagination_prev: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
@@ -5,7 +10,7 @@ import { MultiLanguageCodeBlock } from '@site/extensions/mlc.jsx'
 
 # Modifying responses
 
-When a Runnable is used to handle an HTTP request, Atmo will bind that request to the Runnable. The `resp` namespace of the Runnable API can then be used to modify the response that Atmo will send to the caller.
+When a SE2 module is used to handle an HTTP request, E2 Core will bind that request to the SE2 module. The `resp` namespace of the SE2 module API can then be used to modify the response that E2 Core will send to the caller.
 
 :::info NOTE
 Currently the Response API has limited language support, [additional implementations are tracked in this issue](https://github.com/suborbital/reactr/issues/215).
