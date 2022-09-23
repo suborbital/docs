@@ -27,7 +27,7 @@ E2 Core will be gaining a secrets management system in 2022.
 
 Since the directory is included in your Bundle, your SE2 modules can access the
 files! E2 Core will mount the directory as a read-only filesystem that can be
-accessed using the `file` namespace of the [SE2 module API](../e2-core-api/introduction.md).
+accessed using the `file` namespace of the [SE2 module API](docs/e2core/e2core-api/introduction.md).
 
 For example:
 

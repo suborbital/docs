@@ -54,43 +54,43 @@ module.exports = {
         collapsible: true,
         link: {
           type: 'doc',
-          id: 'e2-core/e2-core'
+          id: 'e2core/e2core'
         },
         items: [
           {
             type: 'doc',
-            id: 'e2-core/get-started',
+            id: 'e2core/get-started',
           },
           {
             type: "doc",
-            id: 'e2-core/glossary'
+            id: 'e2core/glossary'
           },
           {
             collapsed: false,
             type: 'category',
             label: 'Concepts',
             items: [
-              'e2-core/concepts/se2-modules',
-              'e2-core/concepts/the-directive',
-              'e2-core/concepts/state',
-              'e2-core/concepts/static-directory'
+              'e2core/concepts/se2-modules',
+              'e2core/concepts/the-directive',
+              'e2core/concepts/state',
+              'e2core/concepts/static-directory'
             ]
           },
           {
             type: 'category',
             label: 'Usage',
             items: [
-              'e2-core/usage/creating-se2-modules',
-              'e2-core/usage/creating-handlers',
-              'e2-core/usage/build-your-application',
-              'e2-core/usage/deploying-e2-core',
-              'e2-core/usage/authentication',
-              'e2-core/usage/error-handling',
-              'e2-core/usage/headless',
-              'e2-core/usage/managing-state',
-              'e2-core/usage/schedules',
-              'e2-core/usage/streams',
-              'e2-core/usage/connections',
+              'e2core/usage/creating-se2-modules',
+              'e2core/usage/creating-handlers',
+              'e2core/usage/build-your-application',
+              'e2core/usage/deploying-e2core',
+              'e2core/usage/authentication',
+              'e2core/usage/error-handling',
+              'e2core/usage/headless',
+              'e2core/usage/managing-state',
+              'e2core/usage/schedules',
+              'e2core/usage/streams',
+              'e2core/usage/connections',
             ]
           },
           {
@@ -98,18 +98,18 @@ module.exports = {
             label: 'E2 Core API',
             link: {
               type: 'doc',
-              id: 'e2-core/e2-core-api/introduction'
+              id: 'e2core/e2core-api/introduction'
             },
             items: [
-                'e2-core/e2-core-api/language-support',
-              'e2-core/e2-core-api/request',
-              'e2-core/e2-core-api/response',
-              'e2-core/e2-core-api/logging',
-              'e2-core/e2-core-api/http-client',
-              'e2-core/e2-core-api/graphql-client',
-              'e2-core/e2-core-api/sql-databases',
-              'e2-core/e2-core-api/cache',
-              'e2-core/e2-core-api/file',
+                'e2core/e2core-api/language-support',
+              'e2core/e2core-api/request',
+              'e2core/e2core-api/response',
+              'e2core/e2core-api/logging',
+              'e2core/e2core-api/http-client',
+              'e2core/e2core-api/graphql-client',
+              'e2core/e2core-api/sql-databases',
+              'e2core/e2core-api/cache',
+              'e2core/e2core-api/file',
             ]
           },
         ]

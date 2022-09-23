@@ -48,7 +48,7 @@ Let's break it down:
 
 **Template** (optional): `&template=assemblyscript`
 
-* The language template used for new functions. Check out our [supported  languages](docs/e2-core/e2-core-api/language-support.md)!
+* The language template used for new functions. Check out our [supported  languages](docs/e2core/e2core-api/language-support.md)!
 
 If the `fn` in question does not exist, the editor will automatically create a new function.
 

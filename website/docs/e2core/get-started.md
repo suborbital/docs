@@ -162,7 +162,7 @@ E2 Core runs and responds successfuly if you get a 200 OK response with the requ
 
 ## Suborbital SE2 module API
 
-E2 Core provides an [API](./e2-core-api/introduction) which gives Wasm SE2 modules the ability to access resources and communicate with the host application. This API currently has capabilities such as:
+E2 Core provides an [API](docs/e2core/e2core-api/introduction) which gives Wasm SE2 modules the ability to access resources and communicate with the host application. This API currently has capabilities such as:
 
 - The ability to make HTTP requests
 - Structured logging

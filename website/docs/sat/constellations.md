@@ -5,7 +5,7 @@ pagination_next: null
 
 # Constellations
 
-Sat is designed to run in a constellation, i.e. a meshed cluster of instances. This enables very interesting network topologies which can run applications in massively distributed and 'edge' environments. The Sat project includes the [`constd`](https://github.com/suborbital/sat/tree/main/constd) tool, which is a companion constellation manager that can run [E2 Core](../e2-core/e2-core.md) applications using a Sat constellation.
+Sat is designed to run in a constellation, i.e. a meshed cluster of instances. This enables very interesting network topologies which can run applications in massively distributed and 'edge' environments. The Sat project includes the [`constd`](https://github.com/suborbital/sat/tree/main/constd) tool, which is a companion constellation manager that can run [E2 Core](docs/e2core/e2core.md) applications using a Sat constellation.
 
 E2 Core applications are comprised of several functions that coordinate to create a backend system. Since these projects are [declarative](https://atmo.suborbital.dev/concepts/the-directive), it is possible to distribute the app's compute and let the constellation figure out how to efficiently execute your application. That's the goal of `constd`.
 
@@ -32,7 +32,7 @@ Next, in the Sat repo, build `constd`:
 make constd/install
 ```
 
-Now launch `constd` by providing the path to an [SE2 module](docs/e2-core/usage/build-your-application.md):
+Now launch `constd` by providing the path to an [SE2 module](docs/e2core/usage/build-your-application.md):
 
 ```bash
 CONSTD_EXEC_MODE=metal constd {absolute/path/to}/atmo/example-project/runnables.wasm.zip

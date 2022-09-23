@@ -17,7 +17,7 @@ Sat will start up, download the `hello-echo` module from the `examples` director
 curl localhost:8080 -d 'my friend'
 ```
 
-Sat executes modules with the [SE2 module API](../e2-core/e2-core-api/introduction) enabled, so you can create modules using our [Subo CLI](../subo) and all of the capabilities are available for use.
+Sat executes modules with the [SE2 module API](docs/e2core/e2core-api/introduction) enabled, so you can create modules using our [Subo CLI](../subo) and all of the capabilities are available for use.
 
 ## Stdin mode
 

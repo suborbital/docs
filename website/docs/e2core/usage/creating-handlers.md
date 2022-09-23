@@ -45,7 +45,7 @@ There are two types of `steps`. The first step you see above is a `group`.
 This allows for all of the functions in that group to be executed **concurrently**.
 
 The second step shown above is a single `fn` , which calls a SE2 module
-that uses the [SE2 module API](docs/e2-core/e2-core-api/introduction.md) to make
+that uses the [SE2 module API](docs/e2core/e2core-api/introduction.md) to make
 an HTTP request. The API is continually evolving to include more capabilities.
 In addition to making HTTP requests, it includes logging, database
 connections, caching, and more.

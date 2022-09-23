@@ -52,7 +52,7 @@ connections:
   redis:
     serverAddress: localhost:6379
 ```
-SQL database connections of type `mysql` and `postgresql` are also available, and they are discussed in detail in the [Using SQL Databases](../e2-core-api/sql-databases.md) section.
+SQL database connections of type `mysql` and `postgresql` are also available, and they are discussed in detail in the [Using SQL Databases](docs/e2core/e2core-api/sql-databases.md) section.
 
 Redis connections are made available to SE2 modules utilizing the `cache` capability:
 ```rust
