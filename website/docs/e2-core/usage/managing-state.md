@@ -5,7 +5,7 @@ Let's take another look at the example Directive:
 ```yaml
 identifier: com.suborbital.test
 appVersion: v0.0.1
-atmoVersion: v0.0.6
+E2CoreVersion: v0.0.6
 
 handlers:
   - type: request

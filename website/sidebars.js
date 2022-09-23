@@ -10,38 +10,38 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Suborbital Compute',
+      label: 'Suborbital Extensibility Engine (SE2)',
       collapsible: false,
       link: {
         type: 'doc',
-        id: 'compute/compute',
+        id: 'se2/se2',
       },
       items: [
-        'compute/get-started',
-        'compute/using-api',
+        'se2/get-started',
+        'se2/using-api',
         {
           'Customizing functions': [
-            'compute/customizing-functions/code-editor',
-            'compute/customizing-functions/custom-function-templates',
-            'compute/customizing-functions/custom-libraries',
-            'compute/customizing-functions/namespaces',
-            'compute/customizing-functions/fully-qualified-function-names'
+            'se2/customizing-functions/code-editor',
+            'se2/customizing-functions/custom-function-templates',
+            'se2/customizing-functions/custom-libraries',
+            'se2/customizing-functions/namespaces',
+            'se2/customizing-functions/fully-qualified-function-names'
           ]
         },
         {
           type: 'category',
-          label: 'Deploying Compute',
+          label: 'Deploying SE2',
           collapsible: true,
           items: [
             {
               'Cloud deployment': [
-                'compute/deployment/cloud-deployment/configure-capabilities',
-                'compute/deployment/cloud-deployment/configure-storage',
-                'compute/deployment/cloud-deployment/configure-webhooks',
-                'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
+                'se2/deployment/cloud-deployment/configure-capabilities',
+                'se2/deployment/cloud-deployment/configure-storage',
+                'se2/deployment/cloud-deployment/configure-webhooks',
+                'se2/deployment/cloud-deployment/install-se2-in-your-cloud-environment'
               ],
               'Other deployments': [
-                'compute/deployment/other-deployments/minikube'
+                'se2/deployment/other-deployments/minikube'
               ]
             },
           ]
@@ -50,66 +50,66 @@ module.exports = {
     },
       {
         type: 'category',
-        label: 'Atmo',
+        label: 'E2 Core',
         collapsible: true,
         link: {
           type: 'doc',
-          id: 'atmo/atmo'
+          id: 'e2-core/e2-core'
         },
         items: [
           {
             type: 'doc',
-            id: 'atmo/get-started',
+            id: 'e2-core/get-started',
           },
           {
             type: "doc",
-            id: 'atmo/glossary'
+            id: 'e2-core/glossary'
           },
           {
             collapsed: false,
             type: 'category',
             label: 'Concepts',
             items: [
-              'atmo/concepts/runnables',
-              'atmo/concepts/the-directive',
-              'atmo/concepts/state',
-              'atmo/concepts/static-directory'
+              'e2-core/concepts/runnables',
+              'e2-core/concepts/the-directive',
+              'e2-core/concepts/state',
+              'e2-core/concepts/static-directory'
             ]
           },
           {
             type: 'category',
             label: 'Usage',
             items: [
-              'atmo/usage/creating-runnables',
-              'atmo/usage/creating-handlers',
-              'atmo/usage/build-your-application',
-              'atmo/usage/deploying-atmo',
-              'atmo/usage/authentication',
-              'atmo/usage/error-handling',
-              'atmo/usage/headless',
-              'atmo/usage/managing-state',
-              'atmo/usage/schedules',
-              'atmo/usage/streams',
-              'atmo/usage/connections',
+              'e2-core/usage/creating-runnables',
+              'e2-core/usage/creating-handlers',
+              'e2-core/usage/build-your-application',
+              'e2-core/usage/deploying-e2-core',
+              'e2-core/usage/authentication',
+              'e2-core/usage/error-handling',
+              'e2-core/usage/headless',
+              'e2-core/usage/managing-state',
+              'e2-core/usage/schedules',
+              'e2-core/usage/streams',
+              'e2-core/usage/connections',
             ]
           },
           {
             type: 'category',
-            label: 'Runnable API',
+            label: 'E2 Core API',
             link: {
               type: 'doc',
-              id: 'atmo/runnable-api/introduction'
+              id: 'e2-core/e2-core-api/introduction'
             },
             items: [
-                'atmo/runnable-api/language-support',
-              'atmo/runnable-api/request',
-              'atmo/runnable-api/response',
-              'atmo/runnable-api/logging',
-              'atmo/runnable-api/http-client',
-              'atmo/runnable-api/graphql-client',
-              'atmo/runnable-api/sql-databases',
-              'atmo/runnable-api/cache',
-              'atmo/runnable-api/file',
+                'e2-core/e2-core-api/language-support',
+              'e2-core/e2-core-api/request',
+              'e2-core/e2-core-api/response',
+              'e2-core/e2-core-api/logging',
+              'e2-core/e2-core-api/http-client',
+              'e2-core/e2-core-api/graphql-client',
+              'e2-core/e2-core-api/sql-databases',
+              'e2-core/e2-core-api/cache',
+              'e2-core/e2-core-api/file',
             ]
           },
         ]
@@ -139,7 +139,7 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'compute-go library reference',
+          label: 'SE2 Go library reference',
           href: 'https://github.com/suborbital/compute-go',
         },
       ]

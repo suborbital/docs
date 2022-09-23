@@ -1,6 +1,6 @@
 # Configure webhooks
 
-Certain actions in Compute can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request Compute receiver. By default, no webhooks are configured.
+Certain actions in SE2 can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request SE2 receiver. By default, no webhooks are configured.
 
 You can set your own webhooks in the `scc-config.yaml` file that `subo` created for you in your `suborbital/config` directory.
 

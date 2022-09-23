@@ -20,7 +20,7 @@ Atmo applications are comprised of several functions that coordinate to create a
 To get started, build `atmo-proxy`. In the Atmo repo, run:
 
 ```bash
-make atmo/proxy
+make e2-core/proxy
 ```
 
 This installs `atmo-proxy` into your `GOBIN`.
@@ -31,10 +31,10 @@ Next, in the Sat repo, build `constd`:
 make constd/install
 ```
 
-Now launch `constd` by providing the path to a [Runnable Bundle](../atmo/usage/build-your-application.md):
+Now launch `constd` by providing the path to a [Runnable Bundle](docs/e2-core/usage/build-your-application.md):
 
 ```bash
-CONSTD_EXEC_MODE=metal constd {absolute/path/to}/atmo/example-project/runnables.wasm.zip
+CONSTD_EXEC_MODE=metal constd {absolute/path/to}/e2-core/example-project/runnables.wasm.zip
 ```
 
 `constd` will launch `atmo-proxy` and a constellation of Sat instances. Make a request to test it:

@@ -19,7 +19,7 @@ Runnables are executed using a job scheduler, meaning that Atmo will
 rather than needing to imperatively call functions and structure a 
 large code project like you might be used to with other frameworks.
 
-The [**Runnable API**](../runnable-api/introduction) is a library that you include with your application
+The [**Runnable API**](docs/e2-core/e2-core-api/introduction) is a library that you include with your application
 code to gain access to resources such as logging, caching, and access to 
 the network. Atmo dynamically binds resources to your Runnables at 
 runtime. This means that you can swap out various components such as the 

@@ -37,5 +37,5 @@ The name you provide to the `create runnable` command is the
 name that will be used to call the Runnable in [Directive](../concepts/the-directive)
 handlers, which are discussed next.
 
-Your Runnables will use the [Runnable API](../runnable-api/introduction.md) to access
+Your Runnables will use the [Runnable API](docs/e2-core/e2-core-api/introduction.md) to access
 resources such as the network, files, and more.

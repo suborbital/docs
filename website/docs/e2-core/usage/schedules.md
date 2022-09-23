@@ -7,11 +7,11 @@ that Atmo will run on a schedule. Schedules run a set of steps,
 
 ```yaml
 schedules:
-  - name: atmo-report
+  - name: e2-core-report
     every:
       hours: 1
     state:
-      repo: suborbital/atmo
+      repo: suborbital/e2-core
     steps:
       - fn: ghstars
 

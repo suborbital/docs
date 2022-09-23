@@ -12,14 +12,14 @@ const Header = () => {
       <div>
         <img className="projectLogoMain" src={useBaseUrl('/img/suborbital-logo-wide-trim.svg')} alt="Suborbital" />
 
-        {/* <Heading>Suborbital Compute Network</Heading> */}
+        {/* <Heading>Suborbital Extensibility Engine</Heading> */}
         <Paragraph className="spacing">
-          Suborbital Compute is a platform that allows your users to write and deploy serverless extensions for your app.
-          Our WebAssembly-based compute core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
+          Suborbital Extensibility Engine (SE2) is a platform that allows your users to write and deploy serverless extensions for your app.
+          Our WebAssembly-based  E2 Core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
-          <Link to={useBaseUrl('compute')}>
-            <DocButton>Suborbital Compute</DocButton>
+          <Link to={useBaseUrl('se2')}>
+            <DocButton>SE2</DocButton>
           </Link>
         </Row>
       </div>
