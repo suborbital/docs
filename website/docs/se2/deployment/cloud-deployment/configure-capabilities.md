@@ -4,7 +4,7 @@ pagination_prev: null
 
 # Configure capabilities
 
-Compute functions can access a number of capabilities:
+SE2 functions can access a number of capabilities:
 
 * Logging
 * HTTP requests

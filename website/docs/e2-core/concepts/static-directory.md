@@ -26,7 +26,7 @@ Atmo will be gaining a secrets management system in 2022.
 
 Since the directory is included in your Bundle, your Runnables can access the
 files! Atmo will mount the directory as a read-only filesystem that can be
-accessed using the `file` namespace of the [Runnable API](../runnable-api/introduction.md).
+accessed using the `file` namespace of the [Runnable API](docs/e2-core/e2-core-api/introduction.md).
 
 For example:
 

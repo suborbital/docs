@@ -4,13 +4,13 @@ If you haven't created a project yet, see [Creating a Project](../getstarted/cre
 
 Your project contains a `Directive.yaml` file that controls your
 entire application. [The Directive](../concepts/the-directive) is included in
-the Runnable Bundle used by Atmo to run your application.
+the Runnable Bundle used by E2Core to run your application.
 
 The Directive has some metadata such as a unique application
 identifier and a version number, as well as some handlers.
 
-Each handler tells Atmo how to handle a **resource.**
-A resource is an input that Atmo makes available via HTTP endpoints,
+Each handler tells E2Core how to handle a **resource.**
+A resource is an input that E2Core makes available via HTTP endpoints,
 event handlers, and more.
 
 Here is an example Directive:
@@ -18,7 +18,7 @@ Here is an example Directive:
 ```yaml
 identifier: com.suborbital.test
 appVersion: v0.0.1
-atmoVersion: v0.4.2
+E2CoreVersion: v0.4.2
 
 handlers:
   - type: request
@@ -44,7 +44,7 @@ There are two types of `steps`. The first step you see above is a `group`.
 This allows for all of the functions in that group to be executed **concurrently**.
 
 The second step shown above is a single `fn` , which calls a Runnable
-that uses the [Runnable API](../runnable-api/introduction.md) to make
+that uses the [Runnable API](docs/e2-core/e2-core-api/introduction.md) to make
 an HTTP request. The API is continually evolving to include more capabilities.
 In addition to making HTTP requests, it includes logging, database
 connections, caching, and more.

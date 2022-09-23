@@ -1,6 +1,6 @@
 # Authentication
 
-Atmo helps with authenticating these requests by injecting the `Authorization` 
+E2Core helps with authenticating these requests by injecting the `Authorization` 
 header to your Runnable's requests based on the configuration in your Directive. 
 
 For example:
@@ -19,8 +19,8 @@ the `api.github.com` domain with an `Authorization` header containing the value
 The `value` can be a static string if needed, but the `env` keyword is more common 
 as it allows your application to be configured in different environments.
 
-This strategy of authentication injection allows Atmo to handle sensitive values 
+This strategy of authentication injection allows E2Core to handle sensitive values 
 without ever giving the code inside the Runnable sandbox access to them. 
-This is an important aspect of Atmo's security model, and helps maintain healthy 
+This is an important aspect of E2Core's security model, and helps maintain healthy 
 security practices.
 

@@ -4,9 +4,9 @@ pagination_next: null
 
 # Connections
 
-In order to build a useful application, Atmo needs to be able to connect to external resources. Currently, Atmo can connect to [NATS](https://nats.io/), [Redis](https://redis.io/), [Kafka](https://kafka.apache.org/), [MySQL](https://www.mysql.com/), and [PostgreSQL](https://www.postgresql.org/). Upcoming releases will include additional data sources as well.
+In order to build a useful application, E2Core needs to be able to connect to external resources. Currently, E2Core can connect to [NATS](https://nats.io/), [Redis](https://redis.io/), [Kafka](https://kafka.apache.org/), [MySQL](https://www.mysql.com/), and [PostgreSQL](https://www.postgresql.org/). Upcoming releases will include additional data sources as well.
 
-To create connections, add a `connections` section to your Directive. When Atmo starts up, it will establish the connections you've configured, and make them available to your application in a few different ways.
+To create connections, add a `connections` section to your Directive. When E2Core starts up, it will establish the connections you've configured, and make them available to your application in a few different ways.
 
 ## Stream sources
 There are two available stream sources (NATS and Kafka) that can be used as sources for your handlers:
@@ -28,7 +28,7 @@ The NATS or Kafka connection is made available as a stream source:
       - fn: record-signup
 ```
 
-By setting the `source` field of the handler, we tell Atmo to listen to that particular connection and handle messages it sends us. The `resource` field dictates which topic or subject the handler is listening to, which is useful for messaging systems such as NATS and Kafka.
+By setting the `source` field of the handler, we tell E2Core to listen to that particular connection and handle messages it sends us. The `resource` field dictates which topic or subject the handler is listening to, which is useful for messaging systems such as NATS and Kafka.
 
 Streams that use an external source can also use the `respondTo` field to set which topic or subject the response message is sent to:
 
@@ -42,7 +42,7 @@ Streams that use an external source can also use the `respondTo` field to set wh
 ```
 
 ## Data sources
-SQL databases and caches can be connected to Atmo to be made available to your Runnables using the Runnable API:
+SQL databases and caches can be connected to E2Core to be made available to your Runnables using the Runnable API:
 ```yaml
 connections:
   database:

@@ -4,7 +4,7 @@ pagination_next: null
 
 # Namespaces
 
-Within Compute, your users' functions can be organized into `namespaces` at your discretion \(you control them, not your users\). Namespaces can be used to organize groups of functions designed for different use-cases within your product.
+Within SE2, your users' functions can be organized into `namespaces` at your discretion \(you control them, not your users\). Namespaces can be used to organize groups of functions designed for different use-cases within your product.
 
 Namespaces are the main organizational unit for your users' functions.
 
@@ -12,4 +12,4 @@ For example, if you have two different event types that can be handled, `alert` 
 
 ## Default
 
-The `default` namespace is always available if you don't wish to define multiple namespaces, and is especially useful when experimenting with or testing Compute.
+The `default` namespace is always available if you don't wish to define multiple namespaces, and is especially useful when experimenting with or testing SE2.

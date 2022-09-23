@@ -1,41 +1,41 @@
-# Deploying Atmo
+# Deploying E2Core
 
-Atmo is in beta, and is suitable production workloads. If you're using Atmo in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
+E2Core is in beta, and is suitable production workloads. If you're using E2Core in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
 
-Atmo is distributed as a Docker image: `suborbital/atmo`
+E2Core is distributed as a Docker image: `suborbital/E2Core`
 
-To run Atmo, you can mount your Runnable Bundle as a volume, build your own container image that embeds it, or set Atmo to wait for a Bundle to be uploaded.
+To run E2Core, you can mount your Runnable Bundle as a volume, build your own container image that embeds it, or set E2Core to wait for a Bundle to be uploaded.
 
 ## Volume mount
 
 To mount as a volume:
 
 ```bash
-docker run -v $(pwd):/home/atmo -e ATMO_HTTP_PORT=8080 -p 8080:8080 suborbital/atmo:latest atmo
+docker run -v $(pwd):/home/E2Core -e E2Core_HTTP_PORT=8080 -p 8080:8080 suborbital/E2Core:latest E2Core
 ```
 
-This will launch Atmo, assign it to listen on port 8080, and run in HTTP mode.
+This will launch E2Core, assign it to listen on port 8080, and run in HTTP mode.
 
 ## Embed Bundle
 
 To create your own Docker image with your Bundle embedded, you can use the Dockerfile that was created for your project by Subo:
 
 ```yaml
-FROM suborbital/atmo:latest
+FROM suborbital/E2Core:latest
 
 COPY ./runnables.wasm.zip .
 
-ENTRYPOINT atmo
+ENTRYPOINT E2Core
 ```
 
 Building this Dockerfile would result in an image that doesn't need a volume mount.
 
 ## Bundle upload
 
-To upload a Bundle after launching Atmo, use the `--wait` flag or set the
-`ATMO_WAIT=true` env var. This will cause Atmo to check the disk once per
+To upload a Bundle after launching E2Core, use the `--wait` flag or set the
+`E2Core_WAIT=true` env var. This will cause E2Core to check the disk once per
 second until it finds a Bundle rather than exiting with an error if no Bundle
-is found. This method allows you to launch Atmo and then upload a Bundle
+is found. This method allows you to launch E2Core and then upload a Bundle
 separately by copying it into the running container, as with the
 [experimental Kubernetes deployment](https://github.com/suborbital/atmo-k8s-helm).
 

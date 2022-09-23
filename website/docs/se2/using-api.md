@@ -5,16 +5,16 @@ pagination_next: null
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Using Compute's APIs
+# Using SE2's APIs
 
-You can find a detailed specification of Compute's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
+You can find a detailed specification of SE2's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
 
 <Tabs groupId='language-selection'>
 
 <TabItem value="go" label="Go">
 
-## Using Compute from Go
-The [`compute-go` library](https://github.com/suborbital/compute-go) helps you easily interact with the Compute API from your Go application. Suborbital Compute is designed to run alongside your application in a Kubernetes or Docker Compose environment.
+## Using SE2 from Go
+The [`compute-go` library](https://github.com/suborbital/compute-go) helps you easily interact with SE2's APIs from your Go application. Suborbital SE2 is designed to run alongside your application in a Kubernetes or Docker Compose environment.
 
 ### Documentation
 Like most Go packages, you can find [complete and up to date technical documentation for `compute-go` on `pkg.go.dev`](https://pkg.go.dev/github.com/suborbital/compute-go#section-readme). Those docs are generated from inline comments in the [`compute-go` source code](https://github.com/suborbital/compute-go).
@@ -28,7 +28,7 @@ go get github.com/suborbital/compute-go@latest
 ### Basic Usage
 
 #### Configuration
-This example sets up a basic client with the [token generated in "Setup"](https://docs.suborbital.dev/compute/quickstart/create-an-environment-token-with-subo#generate-your-token) or with the web app. The `compute.Client` object created here assumes that Compute is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
+This example sets up a basic client with the [token generated in Subo](../subo.md) or with the web app. The `compute.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
 
 ```go title="client.go"
 package main
@@ -48,9 +48,9 @@ func client() *compute.Client {
 ```
 
 #### Build and run a function
-We can now integrate Compute into an application. `compute-go` has access to all of Compute's APIs. It can run builds, list existing functions, run tests, and execute functions.
+We can now integrate SE2 into an application. `compute-go` has access to all of SE2's APIs. It can run builds, list existing functions, run tests, and execute functions.
 
-Behind the scenes, `compute-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the Compute API.
+Behind the scenes, `compute-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the SE2 API.
 
 ```go title="app.go"
 package main
@@ -64,16 +64,16 @@ import (
 func main() {
     client := client()
 
-    // This is a local reference to some Runnable. Nothing has run in Compute at this point.
+    // This is a local reference to some SE2 module. Nothing has run in SE2 at this point.
     runnable := compute.NewRunnable("com.suborbital", "acmeco", "default", "rs-hello-world", "rust")
 
-    // Request template source code for the above Runnable.
+    // Request template source code for the above SE2 module.
     template, _ := client.BuilderTemplate(runnable)
 
     // Log the default 'hello world' Rust template to stdout
     log.Println(template.Contents)
 
-    // Run a remote build for the provided Runnable and the unmodified 'hello world'
+    // Run a remote build for the provided SE2 module and the unmodified 'hello world'
     // template source code.
     build, _ := client.BuildFunctionString(runnable, template.Contents)
 
@@ -93,33 +93,33 @@ func main() {
 }
 ```
 
-Now that the Runnable has been built, it can be executed as much as you like without rebuilding using [`client.Exec`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.Exec) or [`client.ExecString`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.ExecString).
+Now that the SE2 module has been built, it can be executed as much as you like without rebuilding using [`client.Exec`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.Exec) or [`client.ExecString`](https://pkg.go.dev/github.com/suborbital/compute-go#Client.ExecString).
 
 </TabItem>
 
 <TabItem value="node" label="JavaScript/TypeScript">
 
-## Using Compute from JavaScript or TypeScript
+## Using SE2 from JavaScript or TypeScript
 
-Use [our JavaScript SDK](https://github.com/suborbital/compute-node) to easily interact with Compute's APIs using JavaScript or Typescript.
+Use [our JavaScript SDK](https://github.com/suborbital/compute-node) to easily interact with SE2's APIs using JavaScript or Typescript.
 
 ### Installation
 
 Install it via `yarn` or `npm`:
 
 ```sh
-yarn add @suborbital/compute
+yarn add @suborbital/se2
 ```
 
 or:
 
 ```sh
-npm install @suborbital/compute
+npm install @suborbital/se2
 ```
 
 ### Setup
 
-Import the library and configure the client. The default configuration will point the client at Compute's default production URLs in your cluster.
+Import the library and configure the client. The default configuration will point the client at SE2's default production URLs in your cluster.
 
 A configuration for local development is also provided.
 
@@ -128,17 +128,17 @@ A configuration for local development is also provided.
 By default, the client will point to the control plane and data plane within your Kubernetes cluster.
 
 ```typescript
-import { Suborbital } from "@suborbital/compute";
+import { Suborbital } from "@suborbital/se2";
 
 const suborbital = new Suborbital();
 ```
 
 ### Local config
 
-For local development with Compute running in docker-compose, the local configuration will point to the services running on your local machine.
+For local development with SE2 running in docker-compose, the local configuration will point to the services running on your local machine.
 
 ```typescript
-import { Suborbital, localConfig } from "@suborbital/compute";
+import { Suborbital, localConfig } from "@suborbital/se2";
 
 const suborbital = new Suborbital(localConfig);
 ```
@@ -146,7 +146,7 @@ const suborbital = new Suborbital(localConfig);
 ### Custom API URLs or ports
 
 ```typescript
-import { Suborbital } from "@suborbital/compute";
+import { Suborbital } from "@suborbital/se2";
 
 const configuration = {
     adminUri: "https://acme.co:8081",
@@ -162,7 +162,7 @@ const suborbital = new Suborbital(configuration);
 
 ## Getting started
 
-Using the [Compute APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
+Using the [SE2 APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
 
 The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
 
