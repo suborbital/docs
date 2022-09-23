@@ -1,6 +1,6 @@
 # Getting started
 
-The following guide will help you install the tooling and spin up an Atmo instance on your computer for local development.
+The following guide will help you install the tooling and spin up an E2 Core instance on your computer for local development.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ As of the time of writing, `subo` does not officially support the Windows operat
 
 First, you will need to have the subo CLI and Docker installed.
 
-- [Docker](https://www.docker.com/get-started) will be used to build Runnables and run the Atmo development server.
+- [Docker](https://www.docker.com/get-started) will be used to build SE2 modules and run the E2 Core development server.
 - To install subo, [visit its GitHub repository](https://github.com/suborbital/subo) and follow the instructions in the README.
 
 ## Create a Project
@@ -23,7 +23,7 @@ subo create project <your-project-name>
 The full options for `create project` are:
 
 ```no-copy
-create a new project for Atmo or Reactr
+create a new project for E2 Core 
 
 Usage:
   subo create project <name> [flags]
@@ -34,20 +34,17 @@ Flags:
       --update-templates   update with the newest templates
 ```
 
-The project contains two important things: a `Directive.yaml` file,
-and an example Runnable called `helloworld` written in Rust.
-The [Directive](./concepts/the-directive.md) file defines route
-handlers and connects [Runnables](./concepts/runnables.md) to them.
+The project contains two important things: a `Directive.yaml` file, and an example SE2 module called `helloworld` written in Rust. The [Directive](./concepts/the-directive.md) file defines route handlers and connects [SE2 modules](./concepts/runnables.md) to them.
 
 ### Overview
 
 In the Directive file, you'll see a handler set up for you that
-serves the `POST /hello` route using the `helloworld` Runnable:
+serves the `POST /hello` route using the `helloworld` SE2 module:
 
 ```yaml
 # the Directive is a complete description of your application, including all of its business logic.
 # appVersion should be updated for each new deployment of your app.
-# atmoVersion declares which version of Atmo is used for the `subo dev` command.
+# atmoVersion declares which version of E2 Core is used for the `subo dev` command.
 
 identifier: com.suborbital.your-project-name
 appVersion: v0.1.0
@@ -61,15 +58,15 @@ handlers:
       - fn: helloworld
 ```
 
-## Create a Runnable
+## Create a SE2 module
 
-To create a new Runnable, use the create runnable command:
+To create a new SE2 module, use the create runnable command:
 
 ```console
 > subo create runnable <name>
 ```
 
-Rust is chosen by default, but if you prefer Swift, just pass `--lang=swift`! You can now use the Runnable API to build your function. A directory is created for each Runnable, and each contains a `.runnable.yaml` file that includes some metadata.
+Rust is chosen by default, but if you prefer Swift, just pass `--lang=swift`! You can now use the SE2 module API to build your function. A directory is created for each SE2 module, and each contains a `.runnable.yaml` file that includes some metadata.
 
 The full options for `create runnable` are:
 
@@ -86,21 +83,21 @@ Flags:
       --update-templates   update with the newest runnable templates
 ```
 
-## Build a Runnable
+## Build an SE2 module
 
-**It is recommended that Docker be installed to build Wasm Runnables. See below if you do not have Docker installed.**
+**It is recommended that Docker be installed to build Wasm SE2 modules. See below if you do not have Docker installed.**
 
-To build your Runnable into a Wasm module for Reactr or Atmo, use the build command:
+To build your SE2 module into a Wasm module for E2 Core, use the build command:
 
 ```console
 > subo build .
 ```
 
-If the current working directory is a Runnable, subo will build it. If the current directory contains many runnables, subo will build them all. Any directory with a `.runnable.yaml` file is considered a Runnable and will be built. Building Runnables is not fully tested on Windows.
+If the current working directory is a SE2 module, subo will build it. If the current directory contains many runnables, subo will build them all. Any directory with a `.runnable.yaml` file is considered a SE2 module and will be built. Building SE2 modules is not fully tested on Windows.
 
 ### Bundles
 
-By default, subo will write all of the Runnables in the current directory into a Bundle. Atmo uses Runnable Bundles to help you build powerful web services by composing Runnables declaratively. If you want to skip bundling, you can pass `--no-bundle` to `subo build`
+By default, subo will write all of the SE2 modules in the current directory into a Bundle. E2 Core uses SE2 module Bundles to help you build powerful web services by composing SE2 modules declaratively. If you want to skip bundling, you can pass `--no-bundle` to `subo build`
 
 The full options for `build` are:
 
@@ -122,12 +119,9 @@ Flags:
 
 ### Building without Docker
 
-If you prefer not to use Docker, you can use the `--native` flag. This will cause subo to use your local machine's toolchain to build Runnables instead of Docker containers. You will need to install the toolchains yourself:
+If you prefer not to use Docker, you can use the `--native` flag. This will cause subo to use your local machine's toolchain to build SE2 modules instead of Docker containers. You will need to install the toolchains yourself:
 
 - Rust: Install the latest Rust toolchain and [the additional `wasm32-wasi` target](https://bytecodealliance.github.io/cargo-wasi/steps.html#managing-the-wasm32-wasi-target).
-- Swift: Install the [SwiftWasm](https://book.swiftwasm.org/getting-started/setup.html) toolchain. If using macOS, ensure XCode developer tools are installed (xcrun is required).
-
-`subo` is continually evolving alongside [Reactr](https://github.com/suborbital/reactr) and [Atmo](https://github.com/suborbital/atmo).
 
 ```no-copy
 ⏩ START: building Runnables in .
@@ -149,8 +143,8 @@ In the `your-project-name` directory, run:
 subo dev
 ```
 
-This creates a Docker container running Atmo, copies your `runnables.wasm.zip` into
-the container, and starts an Atmo server listening on `http://localhost:8080`.
+This creates a Docker container running E2 Core, copies your `runnables.wasm.zip` into
+the container, and starts an E2 Core server listening on `http://localhost:8080`.
 
 You can test the `/hello` route in a second terminal by sending a POST request
 with a body to it:
@@ -159,11 +153,11 @@ with a body to it:
 curl localhost:8080/hello -d 'from the Kármán line!'
 ```
 
-Atmo runs and responds successfuly if you get a 200 OK response with the request body replayed to you in the response,
+E2 Core runs and responds successfuly if you get a 200 OK response with the request body replayed to you in the response,
 
-## Suborbital Runnable API
+## Suborbital SE2 module API
 
-Reactr and Atmo provide an [API](https://atmo.suborbital.dev/runnable-api/introduction) which gives Wasm Runnables the ability to access resources and communicate with the host application. This API currently has capabilities such as:
+E2 Core provides an [API](./e2-core-api/introduction) which gives Wasm SE2 modules the ability to access resources and communicate with the host application. This API currently has capabilities such as:
 
 - The ability to make HTTP requests
 - Structured logging
