@@ -1,8 +1,3 @@
----
-pagination_prev: null
-pagination_next: null
----
-
 # Building Sat
 
 ## Build the Sat Docker image

@@ -7,7 +7,7 @@ pagination_prev: null
 
 Suborbital Extensibility Engine (SE2) is a platform that allows your users to write and deploy 
 functions and workflows that integrate into your app. Our WebAssembly-based 
-E2 Core lets you run user code within your infrastructure while being sure you're protected from malicious code.
+compute core lets you run user code within your infrastructure while being sure you're protected from malicious code.
 
 SE2 is now in public beta! We are excited for you to [give it a try](get-started)
 and send us your feedback. 

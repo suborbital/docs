@@ -74,7 +74,7 @@ cd suborbital
 
 ### Start SE2
 
-Next, use Subo to start your local SE2 Core instance. Make sure to do 
+Next, use Subo to start your local SE2 instance. Make sure to do 
 this within the same directory you created above! You can verify that 
 you're in the correct directory by verifying that it contains the 
 `docker-compose.yaml` file.

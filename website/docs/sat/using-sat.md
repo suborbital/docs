@@ -1,8 +1,3 @@
----
-pagination_prev: null
-pagination_next: null
----
-
 # Using Sat
 
 To run Sat, Docker is easiest:
@@ -17,7 +12,7 @@ Sat will start up, download the `hello-echo` module from the `examples` director
 curl localhost:8080 -d 'my friend'
 ```
 
-Sat executes modules with the [SE2 module API](docs/e2core/e2core-api/introduction) enabled, so you can create modules using our [Subo CLI](../subo) and all of the capabilities are available for use.
+Sat executes modules with the [Runnable API](https://atmo.suborbital.dev/runnable-api/introduction) enabled, so you can create modules using our [Subo CLI](https://github.com/suborbital/subo) and all of the capabilities are available for use.
 
 ## Stdin mode
 

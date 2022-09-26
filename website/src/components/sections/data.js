@@ -1,10 +1,10 @@
 export const FlagshipProjects = [
   {
-    key: 'e2core',
+    key: 'atmo',
     icon: 'img/logo-atmo-wide.svg',
-    heading: 'E2 Core',
+    heading: 'Atmo',
     description: 'Application framework for cloud native WebAssembly.',
-    url: 'e2-core'
+    url: 'atmo'
   },
   {
     key: 'sat',

@@ -50,66 +50,66 @@ module.exports = {
     },
       {
         type: 'category',
-        label: 'E2 Core',
+        label: 'Atmo',
         collapsible: true,
         link: {
           type: 'doc',
-          id: 'e2core/e2core'
+          id: 'atmo/atmo'
         },
         items: [
           {
             type: 'doc',
-            id: 'e2core/get-started',
+            id: 'atmo/get-started',
           },
           {
             type: "doc",
-            id: 'e2core/glossary'
+            id: 'atmo/glossary'
           },
           {
             collapsed: false,
             type: 'category',
             label: 'Concepts',
             items: [
-              'e2core/concepts/se2-modules',
-              'e2core/concepts/the-directive',
-              'e2core/concepts/state',
-              'e2core/concepts/static-directory'
+              'atmo/concepts/runnables',
+              'atmo/concepts/the-directive',
+              'atmo/concepts/state',
+              'atmo/concepts/static-directory'
             ]
           },
           {
             type: 'category',
             label: 'Usage',
             items: [
-              'e2core/usage/creating-se2-modules',
-              'e2core/usage/creating-handlers',
-              'e2core/usage/build-your-application',
-              'e2core/usage/deploying-e2core',
-              'e2core/usage/authentication',
-              'e2core/usage/error-handling',
-              'e2core/usage/headless',
-              'e2core/usage/managing-state',
-              'e2core/usage/schedules',
-              'e2core/usage/streams',
-              'e2core/usage/connections',
+              'atmo/usage/creating-runnables',
+              'atmo/usage/creating-handlers',
+              'atmo/usage/build-your-application',
+              'atmo/usage/deploying-atmo',
+              'atmo/usage/authentication',
+              'atmo/usage/error-handling',
+              'atmo/usage/headless',
+              'atmo/usage/managing-state',
+              'atmo/usage/schedules',
+              'atmo/usage/streams',
+              'atmo/usage/connections',
             ]
           },
           {
             type: 'category',
-            label: 'E2 Core API',
+            label: 'Runnable API',
             link: {
               type: 'doc',
-              id: 'e2core/e2core-api/introduction'
+              id: 'atmo/runnable-api/introduction'
             },
             items: [
-                'e2core/e2core-api/language-support',
-              'e2core/e2core-api/request',
-              'e2core/e2core-api/response',
-              'e2core/e2core-api/logging',
-              'e2core/e2core-api/http-client',
-              'e2core/e2core-api/graphql-client',
-              'e2core/e2core-api/sql-databases',
-              'e2core/e2core-api/cache',
-              'e2core/e2core-api/file',
+                'atmo/runnable-api/language-support',
+              'atmo/runnable-api/request',
+              'atmo/runnable-api/response',
+              'atmo/runnable-api/logging',
+              'atmo/runnable-api/http-client',
+              'atmo/runnable-api/graphql-client',
+              'atmo/runnable-api/sql-databases',
+              'atmo/runnable-api/cache',
+              'atmo/runnable-api/file',
             ]
           },
         ]

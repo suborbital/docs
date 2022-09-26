@@ -35,7 +35,7 @@ The AssemblyScript library is located in `library/assemblyscript`. As your custo
 }
 ```
 
-You can modify `library/assemblyscript/assembly/index.ts` to expose new utility functions and/or remove existing ones. To learn more about the available APIs, check out the [E2 Core API docs](docs/e2core/e2core-api/introduction.md).
+You can modify `library/assemblyscript/assembly/index.ts` to expose new utility functions and/or remove existing ones. To learn more about the available APIs, check out the [Runnable API docs](docs/atmo/runnable-api/introduction.md).
 
 Once this is done, publish your library to npm:
 
