@@ -61,7 +61,7 @@ module.exports = {
   // When deploying, use /docs as the directory root
   // NOTE: don't forget to remove this once deploying into a root domain (CNAME)
   baseUrl,
-  favicon: 'img/SOS_SubOrb-Icon-FullColour.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'suborbital',
   projectName: 'docs',
   onBrokenLinks: 'ignore',
