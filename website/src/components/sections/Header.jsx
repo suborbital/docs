@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <ResponsiveRow>
       <div>
-        <img className="projectLogoMain" src={useBaseUrl('/img/suborbital-logo-wide-trim.svg')} alt="Suborbital" />
+        <img className="projectLogoMain" src={useBaseUrl('/img/hero.svg')} alt="Suborbital" />
 
         {/* <Heading>Suborbital Extensibility Engine</Heading> */}
         <Paragraph className="spacing">

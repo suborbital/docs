@@ -3,7 +3,7 @@ pagination_prev: null
 ---
 # Suborbital Extensibility Engine (SE2)
 
-![Suborbital logo](/img/suborbital-logo-wide.svg)
+![Suborbital logo](/img/hero.svg)
 
 Suborbital Extensibility Engine (SE2) is a platform that allows your users to write and deploy 
 functions and workflows that integrate into your app. Our WebAssembly-based 
