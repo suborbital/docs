@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Suborbital Extensibility Engine (SE2)',
+      label: 'Suborbital Extension Engine (SE2)',
       collapsible: false,
       link: {
         type: 'doc',

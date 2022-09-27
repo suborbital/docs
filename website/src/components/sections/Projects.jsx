@@ -11,9 +11,7 @@ const Projects = ({ type }) => {
       {type === 'flagship' ? (
         <div style={{ marginTop: '4rem' }}>
           <SubHeading>
-            <Link to={useBaseUrl('suborbital-ecosystem/the-suborbital-ecosystem')}>
-              The Suborbital Ecosystem
-            </Link>
+            Open Source Projects
           </SubHeading>
           <div className="grid">
             {FlagshipProjects.map(project => (

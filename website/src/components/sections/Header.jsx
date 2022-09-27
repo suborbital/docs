@@ -10,16 +10,16 @@ const Header = () => {
   return (
     <ResponsiveRow>
       <div>
-        <img className="projectLogoMain" src={useBaseUrl('/img/hero.svg')} alt="Suborbital" />
+        <img className="projectLogoMain" src={useBaseUrl('/img/Banner-Light.svg')} alt="Suborbital" />
 
-        {/* <Heading>Suborbital Extensibility Engine</Heading> */}
+        {/* <Heading>Suborbital Extension Engine</Heading> */}
         <Paragraph className="spacing">
-          Suborbital Extensibility Engine (SE2) is a platform that allows your users to write and deploy serverless extensions for your app.
-          Our WebAssembly-based  E2 Core lets you run user code within your infrastructure while being sure that you're protected from malicious code.
+          Suborbital Extension Engine (SE2) is a platform that allows your users to write and deploy serverless extensions for your app.
+          Our WebAssembly-based runtime lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
           <Link to={useBaseUrl('se2')}>
-            <DocButton>SE2</DocButton>
+            <DocButton>Extension Engine Docs</DocButton>
           </Link>
         </Row>
       </div>

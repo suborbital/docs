@@ -3,7 +3,7 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Getting started with Suborbital Extensibility Engine (SE2) 
+# Getting started with Suborbital Extension Engine (SE2) 
 
 ## Installation
 

@@ -5,7 +5,7 @@ pagination_next: null
 
 # Install the Suborbital CLI
 
-Subo is the command-line tool for working with the Suborbital Extensibility Engine (SE2). Subo is used to build SE2 modules, generate new projects and config files, and more over time.
+Subo is the command-line tool for working with the Suborbital Extension Engine (SE2). Subo is used to build SE2 modules, generate new projects and config files, and more over time.
 
 **You do not need to install language-specific tools to get started with SE2 and Subo!** A Docker toolchain is supported (see below) that can build your SE2 modules without needing to install language toolchains.
 
