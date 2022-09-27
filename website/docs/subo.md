@@ -5,9 +5,9 @@ pagination_next: null
 
 # Install the Suborbital CLI
 
-Subo is the command-line tool for working with the Suborbital Development Platform. Subo is used to build Wasm Runnables, generate new projects and config files, and more over time.
+Subo is the command-line tool for working with the Suborbital Extension Engine (SE2). Subo is used to build SE2 modules, generate new projects and config files, and more over time.
 
-**You do not need to install language-specific tools to get started with WebAssembly and Subo!** A Docker toolchain is supported (see below) that can build your Runnables without needing to install language toolchains.
+**You do not need to install language-specific tools to get started with SE2 and Subo!** A Docker toolchain is supported (see below) that can build your SE2 modules without needing to install language toolchains.
 
 ## Installing
 ### macOS (Homebrew)
@@ -31,10 +31,8 @@ Verify subo was installed:
 ```
 subo --help
 ```
-**To get started with Subo, visit the [Get started guide](./atmo/get-started.md).**
-
 ## Builders
-This repo contains builders for the various languages supported by Wasm Runnables. A builder is a Docker image that can build Runnables into Wasm modules, and is used internally by `subo` to build your code! See the [builders](./builder/docker) directory for more.
+This repo contains builders for the various languages supported by SE2 modules. A builder is a Docker image that can build SE2 modules into Wasm modules, and is used internally by `subo` to build your code.
 
 ## Platforms
 The `subo` tool supports the following platforms and operating systems:
@@ -47,11 +45,10 @@ The `subo` tool supports the following platforms and operating systems:
  
 The language toolchains used by `subo` support the following platforms:
 
-| | x86_64 | arm64 | Docker |
-| --- | --- | --- | --- |
-| Rust | ✅ | ✅ | ✅ |
+|                | x86_64 | arm64 | Docker |
+|----------------| --- | --- | --- |
+| Rust           | ✅ | ✅ | ✅ |
 | AssemblyScript | ✅ | ✅ | ✅ |
-| Swift | ✅ | 🚫 | 🟡 (no arm64) |
 
 ## Contributing
 

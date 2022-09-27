@@ -1,3 +1,8 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -5,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 To continue to tailor your users' experience to your product, you can create a custom library with functions and utilities designed specifically for your product. For example, your users will import library functions from `@acmeco/acmeco` instead of `@suborbital/suborbital`, and you'll be able to export library functions such as `acmeco.getUsers` versus the plain `suborbital.httpGet`.
 
-We want to help! Creating custom templates and libraries are an important aspect of Compute, so [send us an email](mailto:team@suborbital.dev) and we'll help you make the most out of these abilities.
+We want to help! Creating custom templates and libraries are an important aspect of SE2, so [send us an email](mailto:team@suborbital.dev) and we'll help you make the most out of these abilities.
 
 ## Setup
 
@@ -30,7 +35,7 @@ The AssemblyScript library is located in `library/assemblyscript`. As your custo
 }
 ```
 
-You can modify `library/assemblyscript/assembly/index.ts` to expose new utility functions and/or remove existing ones. To learn more about the available APIs, check out [Atmo's Runnable API docs](https://atmo.suborbital.dev/runnable-api/introduction).
+You can modify `library/assemblyscript/assembly/index.ts` to expose new utility functions and/or remove existing ones. To learn more about the available APIs, check out the [Runnable API docs](docs/atmo/runnable-api/introduction.md).
 
 Once this is done, publish your library to npm:
 
@@ -44,11 +49,11 @@ npm publish --access public
 </Tabs>
 
 
-## Configuring Compute
+## Configuring SE2
 
 Since your custom library is listed as a dependency of the template project, it will be installed when your users' functions are built for the first time.
 
-In your Compute installation, you will need to configure the `SCC_TEMPLATES_REPO` environment variable.
+In your SE2 installation, you will need to configure the `SCC_TEMPLATES_REPO` environment variable.
 
 - For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
 - For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:

@@ -1,24 +1,22 @@
 ---
 pagination_prev: null
+pagination_next: null
 ---
 
 # Function editor
 
-The Compute code editor is available for you to embed in your application, so your users can build their functions quickly and easily:
+The SE2 code editor is available for you to embed in your application, so your users can build their functions quickly and easily:
 
-![Compute editor containing a 'Hello' function](../../assets/editor-screen.png)
+![SE2 editor containing a 'Hello' function](../../assets/editor-screen.png)
 
 The editor is hosted at `https://editor.suborbital.network`, and uses URL parameters to configure its connection to your builder service.
 
-You will host the Compute builder service in your cloud infrastructure with a configured DNS name. An HTTPS connection to the builder is required to use the editor.
-
-To launch the editor, you can either [embed the editor in a frame]
-(https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within your own webpage, or launch it in a new tab.
+You will host the SE2 builder service in your cloud infrastructure with a configured DNS name. An HTTPS connection to the builder is required to use the editor.
+To launch the editor, you can either [embed the editor in a frame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within your own webpage, or launch it in a new tab.
 
 ## Editor token
 
-To authenticate the editor for a specific user to edit their own functions,[Compute's Administrative API provides an API to create an `editor token` ]
-(https://suborbital-compute.readme.io/reference/gettoken) for a given function.
+To authenticate the editor for a specific user to edit their own functions,[SE2's Administrative API provides an API to create an `editor token` ](https://suborbital-compute.readme.io/reference/gettoken) for a given function.
 
 ## Configuration
 
@@ -46,7 +44,7 @@ Let's break it down:
 
 **Namespace** (optional): `&namespace=default`
 
-* The function namespace (if not included, the `default` namespace is used, see [Namespaces](docs/compute/customizing-functions/namespaces.md) for more details)
+* The function namespace (if not included, the `default` namespace is used, see [Namespaces](docs/se2/customizing-functions/namespaces.md) for more details)
 
 **Template** (optional): `&template=assemblyscript`
 

@@ -4,7 +4,7 @@ pagination_prev: null
 
 # Atmo
 
-## The application framework for cloud native WebAssembly
+### Atmo has been deprecated. Our new open source plugin server, [E2 Core](https://github.com/suborbital/e2core), is replacing it. Documentation is coming soon.
 
 ![Atmo logo](/img/logo-atmo-wide.svg)
 

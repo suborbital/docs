@@ -1,12 +1,17 @@
-# Getting started with Compute
+---
+pagination_prev: null
+pagination_next: null
+---
+
+# Getting started with Suborbital Extension Engine (SE2) 
 
 ## Installation
 
-To use Compute, you'll need an environment token and the Subo command line 
-tool. The environment token allows Compute to authenticate with 
+To use SE2, you'll need an environment token and the Subo command line 
+tool. The environment token allows SE2 to authenticate with 
 our service that manages metadata storage, telemetry, and more.
 
-### Install Subo: the Compute CLI
+### Install Subo: the SE2 CLI
 
 If you use macOS, you can use [Homebrew](https://brew.sh) to install the 
 `subo` command line tool:
@@ -22,12 +27,12 @@ installation was successful.
 To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
 
 ## Generate your token
-You can get a Compute Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
+You can get an SE2 Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
 
 :::caution  
 The domain of your email address should match the `environment` you 
-configure for Compute; i.e., if your email is `laika@example.com`, your 
-Compute environment would be called `com.example`. See [Fully-qualified 
+configure for SE2; i.e., if your email is `laika@example.com`, your 
+SE2 environment would be called `com.example`. See [Fully-qualified 
 function names](./customizing-functions/fully-qualified-function-names.md) 
 for more 
 information.
@@ -40,7 +45,7 @@ subo compute create token <email>
 ```
 
 A verification code will be sent to your email address, and the token will be 
-used to authenticate you and link your Compute installation to you.
+used to authenticate you and link your SE2 installation to you.
 
 :::tip
 Subo will print out your token in your terminal, and cache it for use in 
@@ -48,13 +53,13 @@ subsequent steps.
 :::
 
 Keep your environment token safe (store it in your password manager), and 
-only use it when running or installing Compute. If you lose it, just repeat 
+only use it when running or installing SE2. If you lose it, just repeat 
 this token generation process.
 
 
-## Run Compute locally
+## Run SE2 locally
 
-To run Compute locally, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
+To run SE2 locally, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
 
 ### Prepare your local environment
 
@@ -67,9 +72,9 @@ mkdir suborbital
 cd suborbital
 ```
 
-### Start Compute
+### Start SE2
 
-Next, use Subo to start your local Compute Core instance. Make sure to do 
+Next, use Subo to start your local SE2 instance. Make sure to do 
 this within the same directory you created above! You can verify that 
 you're in the correct directory by verifying that it contains the 
 `docker-compose.yaml` file.
@@ -78,10 +83,10 @@ you're in the correct directory by verifying that it contains the
 subo compute deploy core --local
 ```
 
-You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your Compute Core instance automatically. Compute runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
+You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your SE2 Core instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
-### Run Compute
-When you run Compute, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the Compute Editor](get-started#meet-the-compute-editor)). In the example below, we'll create a function named `hello`:
+### Run SE2
+When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the SE2 Editor](get-started#meet-the-se2-editor)). In the example below, we'll create a function named `hello`:
 
 ```
 ✅ DONE: ready to start installation
@@ -102,7 +107,7 @@ Container suborbital-scc-atmo-1  Started
 PROXY: local tunnel to function editor started
 
 
-Press enter to launch the local Compute REPL...
+Press enter to launch the local SE2 REPL...
 
 
 1. Create or edit a function
@@ -112,22 +117,22 @@ Choose an option: 1
 To create or edit a function, enter its name (or FQFN): hello
 ```
 
-This will allow you to create functions and use the Compute editor locally 
+This will allow you to create functions and use the SE2 editor locally 
 while you work on integrating your application. Follow the instructions in the REPL to create your first function.
 
-## Meet the Compute editor
+## Meet the SE2 editor
 
-The Suborbital Compute function editor uses [Compute's 
+The Suborbital SE2 function editor uses [SE2's 
 APIs](./using-api.md) to provide a 
 low-friction environment for your users to write, build, test, and deploy 
-functions to your Compute an instance in a single place.  Alternatively, 
+functions to your SE2 an instance in a single place.  Alternatively, 
 the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better 
 suits your use case. 
 
 A quick way to try the editor is to use the REPL built into the Subo CLI 
-introduced above in [Run Compute Locally](get-started#run-compute-locally). 
+introduced above in [Run SE2 Locally](get-started#run-compute-locally). 
 The 
-Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local Compute installation.
+Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation.
 
 By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option. 
 
@@ -204,6 +209,6 @@ Environment token in the code snippet above.
 
 ## Connect your application
 
-Now that you've set up Compute and created your first function, you can use 
-[Compute's APIs](./using-api.md) to start integrating functions into your 
+Now that you've set up SE2 and created your first function, you can use 
+[SE2's APIs](./using-api.md) to start integrating functions into your 
 application.

@@ -10,38 +10,38 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Suborbital Compute',
+      label: 'Suborbital Extension Engine (SE2)',
       collapsible: false,
       link: {
         type: 'doc',
-        id: 'compute/compute',
+        id: 'se2/se2',
       },
       items: [
-        'compute/get-started',
-        'compute/using-api',
+        'se2/get-started',
+        'se2/using-api',
         {
           'Customizing functions': [
-            'compute/customizing-functions/code-editor',
-            'compute/customizing-functions/custom-function-templates',
-            'compute/customizing-functions/custom-libraries',
-            'compute/customizing-functions/namespaces',
-            'compute/customizing-functions/fully-qualified-function-names'
+            'se2/customizing-functions/code-editor',
+            'se2/customizing-functions/custom-function-templates',
+            'se2/customizing-functions/custom-libraries',
+            'se2/customizing-functions/namespaces',
+            'se2/customizing-functions/fully-qualified-function-names'
           ]
         },
         {
           type: 'category',
-          label: 'Deploying Compute',
+          label: 'Deploying SE2',
           collapsible: true,
           items: [
             {
               'Cloud deployment': [
-                'compute/deployment/cloud-deployment/configure-capabilities',
-                'compute/deployment/cloud-deployment/configure-storage',
-                'compute/deployment/cloud-deployment/configure-webhooks',
-                'compute/deployment/cloud-deployment/install-compute-in-your-cloud-environment'
+                'se2/deployment/cloud-deployment/configure-capabilities',
+                'se2/deployment/cloud-deployment/configure-storage',
+                'se2/deployment/cloud-deployment/configure-webhooks',
+                'se2/deployment/cloud-deployment/install-se2-in-your-cloud-environment'
               ],
               'Other deployments': [
-                'compute/deployment/other-deployments/minikube'
+                'se2/deployment/other-deployments/minikube'
               ]
             },
           ]
@@ -139,7 +139,7 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'compute-go library reference',
+          label: 'SE2 Go library reference',
           href: 'https://github.com/suborbital/compute-go',
         },
       ]

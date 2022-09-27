@@ -1,9 +1,14 @@
+---
+pagination_prev: null
+pagination_next: null
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Configure storage
 
-By default, Compute will store compiled functions and function source code on the local storage in your Kubernetes cluster. For greater scalability, Compute can be configured to store artifacts in cloud-based object storage like Amazon S3 or Google Cloud Storage.
+By default, SE2 will store compiled functions and function source code on the local storage in your Kubernetes cluster. For greater scalability, SE2 can be configured to store artifacts in cloud-based object storage like Amazon S3 or Google Cloud Storage.
 
 ## Authentication
 
