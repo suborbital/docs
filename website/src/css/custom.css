@@ -18,6 +18,10 @@
   display: none;
 }
 
+.DocSearch-Button-Placeholder {
+  color: var(--ifm-font-color-base);
+}
+
 :root {
   --ifm-color-primary: #0e4e87;
   --ifm-color-secondary: #57c5af;
