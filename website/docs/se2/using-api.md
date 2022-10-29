@@ -1,6 +1,7 @@
 ---
 pagination_prev: null
 pagination_next: null
+hide_table_of_contents: true
 ---
 
 import Tabs from '@theme/Tabs';
