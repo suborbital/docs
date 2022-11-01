@@ -7,13 +7,13 @@ pagination_next: null
 The World Wide Web originally started out as a document exchange network to
 meet the demand for automated information-sharing between academics across the world.
 
-![First proposal for World Wide Web, Credit: CERN](../assets/FirstProposalMarch1989.jpg)
+![First proposal for World Wide Web, Credit: CERN](../../assets/FirstProposalMarch1989.jpg)
 
 Running on a NeXT computer at CERN, the [first ever Web page](http://info.cern.ch/hypertext/WWW/TheProject.html) was a simple HTML document containing links to the project itself and a few other technical details. 
 The first ever web browser had many features of current Web browsers and also 
 included the ability to modify pages from directly inside the browser.
 
-![](../assets/web-page-editing.jpg)
+![](../../assets/web-page-editing.jpg)
 
 With its ubiquity and maturation, the complexity of this network and its 
 associated technologies grew. Not only was it required for it to be available
