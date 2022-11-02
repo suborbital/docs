@@ -7,7 +7,7 @@ hide_table_of_contents: true
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Integrating SE2 into your app
+# Integrate SE2 into your app
 
 <Tabs groupId='host-type'>
 

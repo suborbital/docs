@@ -3,7 +3,7 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Function editor
+# The function editor
 
 The SE2 code editor is available for you to embed in your application, so your users can build their functions quickly and easily:
 
@@ -16,7 +16,7 @@ To launch the editor, you can either [embed the editor in a frame](https://devel
 
 ## Editor token
 
-To authenticate the editor for a specific user to edit their own functions,[SE2's Administrative API provides an API to create an `editor token` ](https://suborbital-compute.readme.io/reference/gettoken) for a given function.
+To authenticate the editor for a specific user to edit their own functions, [SE2's Administrative API provides an API to create an `editor token`](https://suborbital-compute.readme.io/reference/gettoken) for a given function.
 
 ## Configuration
 
