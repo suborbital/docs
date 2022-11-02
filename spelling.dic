@@ -425,6 +425,7 @@ StatusForbidden
 StatusOK
 stdin
 stdout
+stg
 str
 struct
 subo
