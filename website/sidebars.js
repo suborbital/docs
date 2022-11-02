@@ -17,28 +17,28 @@ module.exports = {
         'se2/how-to/integrate-your-app',
         'se2/how-to/using-api',
         {
-        'Customizing functions': [
-          'se2/how-to/customizing-functions/code-editor',
-          'se2/how-to/customizing-functions/custom-function-templates',
-          'se2/how-to/customizing-functions/custom-libraries',
-          'se2/how-to/customizing-functions/namespaces',
-          'se2/how-to/customizing-functions/fully-qualified-function-names'
+        'Customize functions': [
+          'se2/how-to/customize-functions/code-editor',
+          'se2/how-to/customize-functions/custom-function-templates',
+          'se2/how-to/customize-functions/custom-libraries',
+          'se2/how-to/customize-functions/namespaces',
+          'se2/how-to/customize-functions/fully-qualified-function-names'
         ]
         },
         {
           type: 'category',
-          label: 'Deploying SE2',
+          label: 'Deploy',
           collapsible: true,
           items: [
             {
               'Cloud deployment': [
-                'se2/how-to/deployment/cloud-deployment/configure-capabilities',
-                'se2/how-to/deployment/cloud-deployment/configure-storage',
-                'se2/how-to/deployment/cloud-deployment/configure-webhooks',
-                'se2/how-to/deployment/cloud-deployment/install-se2-in-your-cloud-environment'
+                'se2/how-to/deploy/cloud-deployment/configure-capabilities',
+                'se2/how-to/deploy/cloud-deployment/configure-storage',
+                'se2/how-to/deploy/cloud-deployment/configure-webhooks',
+                'se2/how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
               ],
               'Other deployments': [
-                'se2/how-to/deployment/other-deployments/minikube'
+                'se2/how-to/deploy/other-deployments/minikube'
               ]
             },
           ]

@@ -7,7 +7,7 @@ hide_table_of_contents: true
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Using SE2's APIs
+# Use SE2's APIs
 
 You can find a detailed specification of SE2's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
 
