@@ -18,26 +18,11 @@ const Header = () => {
           Our WebAssembly-based runtime lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
-          <Link to={useBaseUrl('se2')}>
+          <Link to={useBaseUrl('introduction')}>
             <DocButton>Extension Engine Docs</DocButton>
           </Link>
         </Row>
       </div>
-
-      <div>
-        <img className="projectLogo" src={useBaseUrl('/img/webassembly-logo-wide.svg')} alt="WebAssembly" />
-
-        {/* <Heading>Powered by WebAssembly</Heading> */}
-        <Paragraph className="spacing">
-          Many Suborbital projects are built on <Link to="https://webassembly.org">WebAssembly</Link>, a technology which enables the creation of fast, secure, platform-independent applications.
-        </Paragraph>
-        <Row>
-          <Link to={useBaseUrl('intro-to-webassembly/why-webassembly')}>
-            <DocButton>Learn more about WebAssembly</DocButton>
-          </Link>
-        </Row>
-      </div>
-
     </ResponsiveRow>
   )
 }
