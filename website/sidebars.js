@@ -83,6 +83,7 @@ module.exports = {
       type: 'category',
       label: 'Open Source @ Suborbital',
       items: [
+        'open-source/contributing-to-suborbital',
         'open-source/subo',
         {
           type: 'category',
@@ -159,17 +160,6 @@ module.exports = {
             'open-source/sat/constellations',
           ]
         },
-      ]
-    }, 
-    {
-      type: 'category',
-      label: 'Contributing to Suborbital',
-      link: {
-        type: 'doc',
-        id: 'contributing/contributing-to-suborbital'
-      },
-      items: [
-        'contributing/contributing-to-suborbital',
       ]
     },
   ]
