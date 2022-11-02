@@ -5,7 +5,7 @@ module.exports = {
       label: 'Getting Started with Suborbital',
       collapsible: false,
       items: [
-        'se2/se2',
+        'introduction',
         'se2/quickstart'
       ]
     },
@@ -48,7 +48,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Reference',
-      collapsible: true,
+      collapsible: false,
       items: [
         {
           type: 'link',
@@ -78,6 +78,10 @@ module.exports = {
           ]
         },
       ]
+    },
+    {
+      type: 'doc',
+      id: 'support'
     },
     {
       type: 'category',
