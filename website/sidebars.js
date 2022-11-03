@@ -6,7 +6,7 @@ module.exports = {
       collapsible: false,
       items: [
         'introduction',
-        'se2/quickstart'
+        'quickstart'
       ]
     },
     {
@@ -14,15 +14,15 @@ module.exports = {
       label: 'How-To',
       collapsible: false,
       items: [
-        'se2/how-to/integrate-your-app',
-        'se2/how-to/using-api',
+        'how-to/integrate-your-app',
+        'how-to/using-api',
         {
         'Customize functions': [
-          'se2/how-to/customize-functions/code-editor',
-          'se2/how-to/customize-functions/custom-function-templates',
-          'se2/how-to/customize-functions/custom-libraries',
-          'se2/how-to/customize-functions/namespaces',
-          'se2/how-to/customize-functions/fully-qualified-function-names'
+          'how-to/customize-functions/code-editor',
+          'how-to/customize-functions/custom-function-templates',
+          'how-to/customize-functions/custom-libraries',
+          'how-to/customize-functions/namespaces',
+          'how-to/customize-functions/fully-qualified-function-names'
         ]
         },
         {
@@ -32,13 +32,13 @@ module.exports = {
           items: [
             {
               'Cloud deployment': [
-                'se2/how-to/deploy/cloud-deployment/configure-capabilities',
-                'se2/how-to/deploy/cloud-deployment/configure-storage',
-                'se2/how-to/deploy/cloud-deployment/configure-webhooks',
-                'se2/how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
+                'how-to/deploy/cloud-deployment/configure-capabilities',
+                'how-to/deploy/cloud-deployment/configure-storage',
+                'how-to/deploy/cloud-deployment/configure-webhooks',
+                'how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
               ],
               'Other deployments': [
-                'se2/how-to/deploy/other-deployments/minikube'
+                'how-to/deploy/other-deployments/minikube'
               ]
             },
           ]
