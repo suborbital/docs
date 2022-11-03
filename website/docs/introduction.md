@@ -3,7 +3,7 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Suborbital Extension Engine (SE2)
+# Introduction
 
 <img src="/img/hero.svg" width="300" height="300" alt="Suborbital logo"/>
 
