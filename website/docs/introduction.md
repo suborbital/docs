@@ -11,10 +11,14 @@ Suborbital Extension Engine (SE2) is a platform that gives you everything you ne
 
 ## Prerequisites
 
+<!-- TODO:
+
 MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any app drop SE2 in?
+
+-->
 
 ## Getting Support
 
 If you have any questions you can't find answers for on this site, please hit us up on [Discord](https://chat.suborbital.dev)!
 
-SE2 is now in public beta! We are excited for you to [give it a try](./get-started.md) and send us your feedback. Use of SE2 is governed by our [Terms of Service](https://suborbital.network/terms-of-service.pdf).
+SE2 is now in public beta! We are excited for you to [give it a try](./quickstart.md) and send us your feedback. Use of SE2 is governed by our [Terms of Service](https://suborbital.network/terms-of-service.pdf).
