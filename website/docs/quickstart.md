@@ -3,71 +3,53 @@ pagination_prev: null
 pagination_next: null
 ---
 
-<!-- TODO: add "click this, then that" sort of scaffolding -->
-
 # Quickstart
+
+<!-- TODO: add "click this, then that" sort of scaffolding -->
 
 <!-- TODO: intro bits, including explicit learning objectives like https://docs.netlify.com/get-started/-->
 
 ## Preliminary steps
 
-- Create an account on our [admin dashboard](https://stg.suborbital.network)
+- Create an account on our [admin dashboard](https://suborbital.network)
 - Clone the repo for this demo <!-- TODO: add link -->
 
-Let's go!
+Let's go! 🚀
 
 ## Create an organization
 
-This is a new account, so we'll need to create our first organization. <!-- TODO: define this? --> For this demo, we'll give our organization the name "Demo Company" and the description "Always ready to demo".
+This is a new account, so we'll need to create our first organization. <!-- TODO: define this? --> For this demo, we'll give our organization:
+
+- The name `Demo Company`
+- The description `Always ready to demo`
 
 <!-- TODO: add image -->
 
-## Create environment
+## Create an environment
 
-Here we have the environments set up for the organization.
+We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments,
+or to create different applications for distinct use cases.
 
-We can set up multiple separate environments for every organization
-These could be used for separating production/development/staging environments,
-or can also be used to create different applications for distinct use cases
+Let's set up our first environment for development! We'll give it:
 
-Let's set up our first environment for development
+- The name `demo.dev`
+- The description `development environment`
 
-=> Create new environment
+Once we've created our environment, we'll be shown our environment's dashboard.
+The dashboard contains information about various usage metrics related to the Extension Engine.
 
-[Enter name: demo.dev]
-[Enter description: development environment]
+Here we can see a counter for function builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
 
-=> Create
+## Create an access key
 
-=> demo.dev
+Next, we'll need to create an access key. We'll click on:
 
-### Environment dashboard
+- Manage access keys
+- Create new access key
 
-This opens up the environment's dashboard
-The dashboard contains information about various usage metrics 
-related to the Extension Engine
+Our integration will use this access key to provision resources and execute plugins in SE2.
 
-Here we can see a counter for function builds and build minutes
-Both of these are currently 0 because we are yet to set up our first integration
-
-### Create new access key
-
-To do that, we are going to need an access key in "Manage access keys"
-
-=> Manage access keys
-
-...we can create our first one
-
-=> Create new access key
-
-Our integration will use this access key
-to provision resources and execute plugins in SE2
-
-Access keys may be created liberally, for many use cases
-Right now, I need an access key for local development,
-to present this demo
-I'm also the only one who will be using this key
-so I can simply just name it flaki
+<!--
 
 [Enter name: flaki]
 [Enter description: Flaki local development]
@@ -161,7 +143,7 @@ with wrapper SDK-s available for JavaScript and Go.
 The API allows for provisioning accounts, plugin editors,
 as well as building, deploying and executing WebAssembly plugins
 
----> [later?]
+<!-- [later?] 
 SE2 can be implemented as a hosted service integration
 using Suborbital's high-performance edge cloud,
 deployed on-prem into one's own infrastructure,
@@ -389,3 +371,5 @@ and its mitigation strategies tuned.
 [Wait for a kinda-sus to pop up]
 
 There we go, we got our first internet troublemaker exposed!
+
+-->
