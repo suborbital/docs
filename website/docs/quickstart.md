@@ -38,7 +38,7 @@ Let's set up our first environment for development! We'll give it:
 Once we've created our environment, we'll be shown our environment's dashboard.
 The dashboard contains information about various usage metrics related to the Extension Engine.
 
-Here we can see a counter for function builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
+Here we can see a counter for function builds and build minutes. Both of these  currently 0 because we still need to set up our first integration.
 
 ## Create an access key
 
@@ -47,44 +47,19 @@ Next, we'll need to create an access key. We'll click on:
 - Manage access keys
 - Create new access key
 
-Our integration will use this access key to provision resources and execute plugins in SE2.
+Our integration will use this access key to provision resources and execute plugins in SE2. We'll give our access key:
+
+- The name `DemoKey`
+- The description: `demo access key`
+
+We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
+
+## Introducing PRO.xyz
 
 <!--
-
-[Enter name: flaki]
-[Enter description: Flaki local development]
-
-[Access key: eyJLZX...]
-
-=> Create
-
-Et voilá, here we are presented with our very first access key
-
-I can copy it using this clipboard button
-and make sure to save it for later
-as there is no way to show the key after this window is closed
-
-=> Close
-
-In case the access key was lost,
-or involved in a security incident,
-
-=> "..."
-
-...there is a context menu here
-that can be used to regenerate
-or revoke the access key entirely
-
----
-
-That was the SE2 administration interface,
-keep in mind, it's really only the people who are responsible for the SE2 integration
-who need access to this interface
-
 Now that we got our access key,
 we can move on to integrating SE2 with our application
 
-## Introducing PRO.xyz
 
 For this, we have built a simple demo application
 
