@@ -54,83 +54,30 @@ Our integration will use this access key to provision resources and execute plug
 
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
 
-## Introducing PRO.xyz
+## Introducing PRO.xyz, our demo app
 
-<!--
-Now that we got our access key,
-we can move on to integrating SE2 with our application
+Now that we have our access key, we can move on to integrating SE2 with our application! For this, we've built a simple demo application.
 
+PRO.xyz (prock-seez) is an imaginary company that operates networking services.
+Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
 
-For this, we have built a simple demo application
+Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests
+that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard
 
-[Show demo app /home page]
+Most providers have their own logic and algorithms that detect abuse,
+send out alerts or initiate protective measures. They may allow for some customizability, but it's *usually* very limited.
 
-PRO.xyz (prock-seez)
+PRO.xyz, on the other hand, has decided to make it possible *for its users* to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
 
-PRO.xyz is an imaginary company that operates networking services
-Its services can be used to load-balance & cache requests,
-as well as protect its customers' servers
-from network attacks
+For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
 
-Of course this is just a demonstration, so what happens behind the scenes
-is that our service generates a
-made-up "request log" of inbound HTTP requests
-that are being forwarded to upstream hosts.
-PRO.xyz' clients are able to view these requests in their dashboard
+## The part where the integration happens
 
-Most providers have their own logic and algorithms
-that detect abuse,
-send out alerts
-or initiate protective measures.
-They may allow for some customizability,
-but it's *usually* very limited.
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Demo Time ⏰ <a href="https://t.co/7IXmf20AJc">pic.twitter.com/7IXmf20AJc</a></p>&mdash; Aleksandr Morozov (@morozov_dev) <a href="https://twitter.com/morozov_dev/status/1555121266230804483?ref_src=twsrc%5Etfw">August 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-PRO.xyz, on the other hand,
-has decided to make it possible *for its users*
-to fine-tune protections and alerts
-using the Suborbital Extension Engine
-
-Suborbital's plugin system is used here
-to give users additional control and flexibility
-around deciding how requests are handled.
-
-PRO.xyz lets its users write
-potentially quite complex event handling code,
-that will be executed on every single request
-and may use the request metadata
-to aid PRO.xyz' systems in fine-tuning their response
-
-For simplicity's sake
-in this demo
-we will focus on tagging suspicious requests,
-helping the provider improve its protections.
-
-## Implementation
-
-[Show .env file in VSCode]
-
-As the engineers at PRO.xyz
-we have already received an environment configuration 
-and obtained an access key for this environment
-
-Suborbital provides a full REST API to interact with its Extension Engine,
-with wrapper SDK-s available for JavaScript and Go.
-The API allows for provisioning accounts, plugin editors,
-as well as building, deploying and executing WebAssembly plugins
-
-<!-- [later?] 
-SE2 can be implemented as a hosted service integration
-using Suborbital's high-performance edge cloud,
-deployed on-prem into one's own infrastructure,
-or integrated even more tightly into the host application
-for those who will not take a compromise on performance or latency.
+<!-- Would be great if we could use this!
 
 ## API Admin interface
-
-[Open API admin]
-
-This is a small administrative tool I put together using the API,
-it showcases the features of integrating SE2 with an application.
 
 First we change the default environment to the one we set up:
 
@@ -149,14 +96,8 @@ so we can proceed to the next step
 
 ## Tenants
 
-Suborbital lets an application's users create
-their own secure, sandboxed plugins,
-carefully isolated from the core of the system and one another
-
-For this reason we will create a new tenant,
-that is a user account with its own plugins inside Suborbital 
-Our application will then connect the tenant with
-one of its own internally maintained users
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with
+one of its own internally maintained users.
 
 [Type "ada" into the Tenant field]
 
@@ -196,19 +137,10 @@ integrated into your users' dashboard.
 So let's not linger,
 and see how such a workflow looks like
 
-[Switch to VSCode]
+-->
+## Application user journey
 
-## Demo app architecture
-
-The application architecture itself is nothing out of ordinary,
-it's a Node.js app communicating with a simple HTML frontend using Vue.js
-
-[Show running backend]
-
-Our backend, as mentioned,
-generates fake "ingest logs" of network requests,
-our WebAssembly plugins will receive this request metadata,
-and attempt to spot abuse.
+The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
 
 We provide many prebuilt components
 to make all of this a little easier:
@@ -217,7 +149,6 @@ while the backend uses the JS SDK
 to interface with the SE2 REST API
 and our hosted Edge Dataplane
 
-## Application user journey
 
 [Open login page]
 
