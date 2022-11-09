@@ -142,140 +142,107 @@ and see how such a workflow looks like
 
 The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
 
-We provide many prebuilt components
-to make all of this a little easier:
-The frontend integrates with the Suborbital Module Editor,
-while the backend uses the JS SDK
-to interface with the SE2 REST API
-and our hosted Edge Dataplane
+We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane
 
+So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital extensions on PRO.xys' platform.
 
-[Open login page]
+- We'll give our customer the name `Ada`
+- And we can type whatever we like for this pretend password
+- Click "Sign in"
 
-So time to put ourselves in the shoes of Ada,
-a PRO.xyz customer who just received access
-to Suborbital extensions on PRO.xys' platform
+After logging in, we see the network requests as they are received by PRO.xyz' servers, and eventually forwarded to our upstream servers. When we pause the logs by clicking the "pause" button, though, we notice something peculiar...
 
-[Type ada as username, any password, hit Enter or click SIGN IN]
+There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet,and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
 
-After logging in, we see the network requests
-as they are received by PRO.xyz' servers,
-and eventually forwarded to our upstream servers.
+Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
 
-We notice something peculiar, though...
+## Build a module
 
-[Look for a request to "/wp-login.php"]
-[Use the "pause" button in top-left to pause updating of the logs]
+Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
-Let me pause the logs here for a moment.
+Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
 
-Ada noticed that
-there has been some requests to `wp-login.php`
+PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
 
-Well, little wonder these were always met with a 404 Not Found response!
+The editor already comes preloaded with a generic JavaScript template, but we have Ada's module to use instead.
 
-Ada's servers run PHP indeed, but none of them are Wordpress sites!
-Clearly, someone is trying to find Wordpress vulnerabilities
-or exploit weak passwords for Wordpress sites on the internet,
-and they also ended up probing Ada's sites.
-To say this was "suspicious" would be a gross understatement.
+At the very baseline of it a plugin receives some input, processes that input,and may produce some output. Suborbital allows extra API's (sort of superpowers) to be exposed to these modules at the operator's discretion.
 
-Normally there wouldn't be much Ada could do about this,
-but thanks to the custom plugins we may actually turn this ship around.
+Here we are including the "log" API to have our application log any unexpected issues with the input data
 
-## The Suborbital Module editor
+We'll replace the default code in the editor with Ada's code below:
 
-[Click on JS button]
+```js
+import { log } from "@suborbital/runnable";
 
-Suborbital allows users to write custom plugins in their preferred language,
-unfortunately PHP is not on the list of supported languages -- yet...
--- so Ada chooses JavaScript, another language she's quite comfortable with.
+export const run = (input) => {
+  const tags = [];
+  try {
+    let data = JSON.parse(input);
 
-[Click on JavaScript]
+    // We don't operate Wordpress sites so this is immediately sus
+    if (data?.uri?.includes("wp-login.php")) {
+      tags.push("kinda-sus");
+    }
 
-With a click of a button,
-Ada opens up the Suborbital Module Editor
+    return JSON.stringify(tags);
+  } catch (e) {
+    log.error("Failed parsin incoming log data as JSON");
+  }
+};
+```
 
-[Click server-plus button next to JavaScript icon]
+Then I'm going to hit build and have our JavaScript source code compiled to a deployable WebAssembly module.
 
-that presents her with an interface
-for writing, compiling and deploying plugins
+## Test
 
-PRO.xyz' integration only supports deploying one plugin per user,
-this is all up to the application,
-who may choose to allow their users build, deploy and use
-any number of plugins in any language,
-the sky is the limit.
+Great, that's done, we get to test it to see if it does what we expect!
 
-The editor already comes preloaded with a generic JavaScript template,
-but we will use a module I have already prepared to speed things up a bit:
+We have a text field for specifying the "input" of this test run, I have a sample input prepared here that requests the Wordpress login page, and so it should trigger our module's spidey-senses.
 
-[Switch to wp-login.js in VSCode]
+We'll paste the text below into the "Test" field:
 
-As you can see, the plugin itself
-is only a couple lines of code
+```text
+{
+   "id": "l9rkryfrn7",
+   "request_start": "2022-10-27T20:21:36.538Z",
+   "request_time": 0.1659020390745758,
+   "remote_addr": "206.80.131.46",
+   "remote_asn": "AS54113 FASTLY",
+   "remote_cc": "FI",
+   "request_length": 2252,
+   "host": "noisy-cheeto.xyz",
+   "method": "DELETE",
+   "status": 200,
+   "uri": "/wp-login.php",
+   "upstream_host": "www0",
+   "user_agent": "GoobleBot 1.0 (crawler)",
+   "content_type": "text/html",
+   "tags": []
+}
+```
 
-At the very baseline of it
-a plugin receives some input,
-processes that input,
-and may produce some output
+And click "Run test". Sure enough, the output shown in the "output" field is: `kinda sus`! Our module returns an array of string "tags", which PRO.xyz will use to annotate the requests. Perhaps in this case, PRO.xyz (TODO: should this be Ada?) could use them to fine-tune its algorithms or abuse-mitigation strategies.
 
-Suborbital allows extra API's (sort of superpowers)
-to be exposed to these modules at the operator's discretion.
+## Deploy
 
-Here we are including the "log" API
-to have our application log any unexpected issues with the input data
+Alright, let's get this deployed by clicking:
 
-[Show the HTTP Client API on the Suborbital Docs page]
+- "Deploy"
+- "Done"
 
-There are many more of these APIs,
-including things like making HTTP requests,
-or connecting to a database.
+And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
 
-[Copy code over to the editor]
+*kinda-sus pops up in one of the rows in the log* (TODO: how can we make this joke accessible?)
 
-I'm going to move this code over to the editor,
-Then I'm going to hit build
-and have our JavaScript source code compiled to 
-a deployable WebAssembly module
+There we go, we got our first internet troublemaker exposed! 
 
-=> Build
+Now we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security, and without the app owners needing to lift a finger!
 
-Great, that's done, we get to test it
-to see if it does what we expect
+## What else can I do?
 
-We have a text field for specifying the "input" of this test run,
-I have a sample input prepared here
-that requests the Wordpress login page,
-and so it should trigger our module's spidey-senses:
+Now that you've know how to get SE2 extensibility powers into your app, you might want to:
 
-[Copy test input into test data textbox]
-
-=> Run test
-
-And indeed!
-Our module returns an array of string "tags",
-this is application-specific,
-but PRO.xyz will annotate the requests with these tags,
-and, like in this case, could use them to fine-tune its algorithms
-or abuse-mitigation strategies.
-
-Alright, let's get this deployed
-
-[Deploy]
-
-And now we can head back to our dashboard
-
-[Done]
-
-When I deployed our plugin,
-PRO.xyz was notified of this new custom integration for Ada,
-and will execute the WebAssembly module for all requests
-to make sure requests are properly tagged
-and its mitigation strategies tuned.
-
-[Wait for a kinda-sus to pop up]
-
-There we go, we got our first internet troublemaker exposed!
-
--->
+- [Learn more about SE2's API's](./how-to/using-api.md)
+- Make custom [module templates](./how-to/customize-functions/custom-function-templates.md) and [libraries](./how-to/customize-functions/custom-libraries.md) to help your users get started building their own plugins for your app
+- Organize your users' plugins into [namespaces](./how-to/customize-functions/namespaces.md) for different use cases
