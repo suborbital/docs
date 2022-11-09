@@ -9,7 +9,9 @@ import TabItem from '@theme/TabItem';
 
 # Use SE2's APIs
 
+:::info
 You can find a detailed specification of SE2's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
+:::
 
 <Tabs groupId='language-selection'>
 
