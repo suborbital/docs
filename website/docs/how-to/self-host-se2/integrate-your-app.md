@@ -4,91 +4,7 @@ pagination_next: null
 hide_table_of_contents: true
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Integrate SE2 into your app
-
-<Tabs groupId='host-type'>
-
-<TabItem value="hosted" label="We host it">
-
-## We host it
-
-### Create an organization
-
-(organization description)
-
-1. Visit the staging admin at [https://stg.suborbital.network](https://stg.suborbital.network)
-2. Sign up / log in.
-3. Create an organization
-4. If you are not automatically redirected, select the organization you just created.
-
-### Set up an environment
-
-1. Create a new environment. The environment name **MUST** be of the form `[foo.bar](http://foo.bar)`; consider using a reverse domain like `dev.suborbital`. *Note: This constraint will either be removed or enforced.*
-2. If not automatically redirected, select the environment you just created.
-
-### Generate an access key
-
-1. Click the “Manage access keys” button on the right.
-2. Create a new access key. It will be scoped to your environment. _Note: All access keys for your entire organization will appear in the list, as well as any editor tokens you create. This is a bug and will be fixed.
-3. Copy your access key. *NOTE: Your token may end with an equals sign. This will not be captured if you double click on the token to select it. Ensure that you have copied the entire token. This will be made more apparent and a “copy to clipboard” button will be introduced.*)
-
-### Create a tenant
-
-Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
-
-```bash
-curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
-```
-
-### Obtain an editor token
-
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, we’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our function (e.g. `foo`). Copy the `token` field in the response.
-
-```bash
-curl --location --request GET "https://builder.stg.suborbital.network/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${FN}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
-```
-
-### Meet the editor
-
-Go to the function editor. Configure the URL like so:
-
-Domain: [https://editor.suborbital.network](https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=stg2.suborbital.myapp&fn=foo)
-
-Query params:
-
-`token`: The token you received in step 11
-
-`builder`: https://builder.stg.suborbital.network
-
-`ident`: your tenant identifier
-
-`fn`: the name of your function `namespace`: the name of your namespace if different than “default”
-
-`template`: the name of the language you wish to use
-
-Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`](https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=stg2.suborbital.myapp&fn=foo)
-
-Edit the function if desired, then build and deploy it. Optionally, check the admin panel for metrics.
-
-Execute the function.
-
-```bash
-curl --location --request POST "https://edge.stg.suborbital.network/name/${IDENTIFIER}/${NAMESPACE}/${FN}" \
---header "Authorization: Bearer ${ACCESS_KEY}" \
---header 'Content-Type: text/plain' \
---data-raw 'se2 demo'
-```
-
-</TabItem>
-
-<TabItem value="self-hosted" label="You host it">
-
-## You host it
 
 ## Installation
 
@@ -270,7 +186,7 @@ export const run = (input) => {
   - Toward the bottom of the editor, click "TEST RESULTS". There's our 
     greeting!
 
-![Editor displaying the greeting function above with the test output 'Hello, new Suborbital user!'](../assets/editor-screen.png)
+![Editor displaying the greeting function above with the test output 'Hello, new Suborbital user!'](../../assets/editor-screen.png)
 
 ### Executing functions
 
@@ -291,10 +207,6 @@ the [Editor Token](./customizing-functions/code-editor#editor-token.md)
 instead of the 
 Environment token in the code snippet above.
 :::
-
-</TabItem>
-
-</Tabs>
 
 ## Connect your application
 
