@@ -72,19 +72,6 @@ module.exports = {
           type: 'doc',
           id: 'reference/glossary',
         },
-        {
-          type: 'category',
-          label: 'Intro to WebAssembly',
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'reference/intro-to-webassembly/intro-to-wasm',
-          },
-          items: [
-            'reference/intro-to-webassembly/why-webassembly',
-            'reference/intro-to-webassembly/history'
-          ]
-        },
       ]
     },
     {
@@ -170,6 +157,20 @@ module.exports = {
             'open-source/sat/using-sat',
             'open-source/sat/building-sat',
             'open-source/sat/constellations',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Intro to WebAssembly',
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'open-source/intro-to-webassembly/intro-to-wasm'
+          },
+          items: [
+            'open-source/intro-to-webassembly/history',
+            'open-source/intro-to-webassembly/why-webassembly',
+            'open-source/intro-to-webassembly/history'
           ]
         },
       ]
