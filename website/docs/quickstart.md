@@ -14,6 +14,26 @@ import TabItem from '@theme/TabItem';
 
 <!-- TODO: intro bits, including explicit learning objectives like https://docs.netlify.com/get-started/-->
 
+<!-- TODO:
+
+## Prerequisites
+
+MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any app drop SE2 in?
+
+-->
+
+## Meet PRO.xyz: our demo app
+
+PRO.xyz (read: "proxies") is an imaginary company that operates networking services.Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
+
+Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard
+
+Most providers have their own logic and algorithms that detect abuse,send out alerts or initiate protective measures. They may allow for some customizability, but it's _usually_ very limited.
+
+PRO.xyz, on the other hand, has decided to make it possible _for its users_ to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
+
+For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
+
 ## Preliminary steps
 
 - Create an account on our [admin dashboard](https://suborbital.network)
@@ -32,18 +52,16 @@ This is a new account, so we'll need to create our first organization. <!-- TODO
 
 ## Create an environment
 
-We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments,
-or to create different applications for distinct use cases.
+We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments,or to create different applications for distinct use cases.
 
 Let's set up our first environment for development! We'll give it:
 
 - The name `demo.dev`
 - The description `development environment`
 
-Once we've created our environment, we'll be shown our environment's dashboard.
-The dashboard contains information about various usage metrics related to the Extension Engine.
+Once we've created our environment, we'll be shown our environment's dashboard.The dashboard contains information about various usage metrics related to the Extension Engine.
 
-Here we can see a counter for function builds and build minutes. Both of these  currently 0 because we still need to set up our first integration.
+Here we can see a counter for function builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
 
 ## Create an access key
 
@@ -58,23 +76,6 @@ Our integration will use this access key to provision resources and execute plug
 - The description: `demo access key`
 
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
-
-## Meet PRO.xyz: our demo app
-
-Now that we have our access key, we can move on to integrating SE2 with our application! For this, we've built a simple demo application.
-
-PRO.xyz (prock-seez) is an imaginary company that operates networking services.
-Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
-
-Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests
-that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard
-
-Most providers have their own logic and algorithms that detect abuse,
-send out alerts or initiate protective measures. They may allow for some customizability, but it's *usually* very limited.
-
-PRO.xyz, on the other hand, has decided to make it possible *for its users* to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
-
-For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
 
 ## The part where the integration happens
 
@@ -103,15 +104,13 @@ so we can proceed to the next step
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with
-one of its own internally maintained users.
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant withone of its own internally maintained users.
 
 It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
 
 <Tabs groupId='create-tenant'>
 
 <TabItem value="web-app" label="Web app">
-
 
 [Type "ada" into the Tenant field]
 
@@ -142,9 +141,9 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
 
-We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane
+We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
 
-So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital extensions on PRO.xys' platform.
+So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital extensions on PRO.xyz' platform.
 
 - We'll give our customer the name `Ada`
 - And we can type whatever we like for this pretend password
@@ -164,7 +163,6 @@ Suborbital allows users to write custom plugins in their preferred language by c
 
 <TabItem value="web-app" label="Web app">
 
-
 Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
 
 </TabItem>
@@ -173,13 +171,13 @@ Clicking on the button that looks like three planes stacked vertically with a "+
 
 Go to the function editor. Configure the URL like so:
 
-Domain: https://editor.suborbital.network
+Domain: `https://editor.suborbital.network`
 
 Query params:
 
 `token`: The token you received in step 11
 
-`builder`: https://builder.stg.suborbital.network
+`builder`: `https://builder.stg.suborbital.network`
 
 `ident`: your tenant identifier
 
@@ -207,19 +205,19 @@ We'll replace the default code in the editor with Ada's code below:
 import { log } from "@suborbital/runnable";
 
 export const run = (input) => {
-  const tags = [];
-  try {
-    let data = JSON.parse(input);
+    const tags = [];
+    try {
+        let data = JSON.parse(input);
 
-    // We don't operate Wordpress sites so this is immediately sus
-    if (data?.uri?.includes("wp-login.php")) {
-      tags.push("kinda-sus");
+        // We don't operate Wordpress sites so this is immediately sus
+        if (data?.uri?.includes("wp-login.php")) {
+            tags.push("kinda-sus");
+        }
+
+        return JSON.stringify(tags);
+    } catch (e) {
+        log.error("Failed parsin incoming log data as JSON");
     }
-
-    return JSON.stringify(tags);
-  } catch (e) {
-    log.error("Failed parsin incoming log data as JSON");
-  }
 };
 ```
 
@@ -264,7 +262,7 @@ Alright, let's get this deployed by clicking:
 
 And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
 
-*kinda-sus pops up in one of the rows in the log* (TODO: how can we make this joke accessible?)
+_kinda-sus pops up in one of the rows in the log_ (TODO: how can we make this joke accessible?)
 
 There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security!
 
@@ -279,3 +277,5 @@ Now that you've know how to get SE2 extensibility powers into your app, you migh
 ## Questions?
 
 If you have any questions you can't find answers to in these docs (or just like chatting with nice humans in the extensibility space 🤗), please hit us up on [Discord](https://chat.suborbital.dev)!
+
+<!-- TODO: add feedback section-->
