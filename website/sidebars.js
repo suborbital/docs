@@ -14,7 +14,6 @@ module.exports = {
       label: 'How-To',
       collapsible: false,
       items: [
-        'how-to/integrate-your-app',
         'how-to/using-api',
         {
         'Customize functions': [
@@ -27,20 +26,29 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Deploy',
+          label: 'Self-host SE2',
           collapsible: true,
           items: [
+            'how-to/self-host-se2/integrate-your-app',
             {
-              'Cloud deployment': [
-                'how-to/deploy/cloud-deployment/configure-capabilities',
-                'how-to/deploy/cloud-deployment/configure-storage',
-                'how-to/deploy/cloud-deployment/configure-webhooks',
-                'how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
-              ],
-              'Other deployments': [
-                'how-to/deploy/other-deployments/minikube'
+              type: 'category',
+              label: 'Deploy self-hosted SE2',
+              collapsible: true,
+              items: [
+                {
+                  'Cloud deployment': [
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-capabilities',
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-storage',
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-webhooks',
+                    'how-to/self-host-se2/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
+                  ],
+                  'Other deployments': [
+                    'how-to/self-host-se2/deploy/other-deployments/minikube'
+                  ]
+                },
               ]
             },
+
           ]
         },
       ]

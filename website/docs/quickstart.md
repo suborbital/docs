@@ -5,6 +5,11 @@ pagination_next: null
 
 # Quickstart
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<!-- Yes, the lines below feel like they come before the heading, but if they do, the heading won't be capitalized. This is goofy, but true. 🙃 -->
+
 <!-- TODO: add "click this, then that" sort of scaffolding -->
 
 <!-- TODO: intro bits, including explicit learning objectives like https://docs.netlify.com/get-started/-->
@@ -54,7 +59,7 @@ Our integration will use this access key to provision resources and execute plug
 
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
 
-## Introducing PRO.xyz, our demo app
+## Meet PRO.xyz: our demo app
 
 Now that we have our access key, we can move on to integrating SE2 with our application! For this, we've built a simple demo application.
 
@@ -94,51 +99,46 @@ to provision resources
 The demo interface confirms the validity of these credentials,
 so we can proceed to the next step
 
-## Tenants
+-->
+
+## Create a tenant (user)
 
 Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with
 one of its own internally maintained users.
 
+It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
+
+<Tabs groupId='create-tenant'>
+
+<TabItem value="web-app" label="Web app">
+
+
 [Type "ada" into the Tenant field]
 
-Our environment name ("demo.dev")
-and tenant name ("ada") together will form the Identifier,
-think of this as a bucket
-to hold all of a user's plugins separate from the others
+Our environment name ("demo.dev") and tenant name ("ada") together will form the Identifier. Think of this as a bucket to hold all of a user's plugins separate from the others.
 
-=> Create tenant: demo.dev.ada
+(TODO: access key)
 
-Should there be need of further namespacing a tenant's modules,
-Suborbital provides a "namespace" feature
-For now, we will just leave this on "default"
+Should there be need of further namespacing a tenant's modules, Suborbital provides a "namespace" feature. For now, we will just leave this on "default".
 
-## Modules
+</TabItem>
 
-Now that we have access to a tenant, we can use the API to manage modules,
-that is, plugins (or extensions) written in a variety of languages,
-and compiled to WebAssembly to be safely executed in your
--- or our -- infrastructure
+<TabItem value="CLI" label="Command line">
 
-The backend service can be configured to offer
-any or all of the supported languages,
-shown here
+(TODO: assimilate this wording)
 
-We can also list the existing modules here
+Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
 
-=> List modules
+```bash
+curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
+--header "Authorization: Bearer ${ACCESS_KEY}"
+```
 
-...which is going to yield an empty list, as we *just* created this user.
+</TabItem>
 
-For most Suborbital users,
-this functionality will live in your application's administrative interface,
-while the module management will most likely be
-integrated into your users' dashboard.
+</Tabs>
 
-So let's not linger,
-and see how such a workflow looks like
-
--->
-## Application user journey
+## A PRO.xyz user journey
 
 The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
 
@@ -160,7 +160,38 @@ Normally there wouldn't be much Ada could do about this, but thanks to the custo
 
 Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
+<Tabs groupId='editor-token'>
+
+<TabItem value="web-app" label="Web app">
+
+
 Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
+
+</TabItem>
+
+<TabItem value="CLI" label="Command line">
+
+Go to the function editor. Configure the URL like so:
+
+Domain: https://editor.suborbital.network
+
+Query params:
+
+`token`: The token you received in step 11
+
+`builder`: https://builder.stg.suborbital.network
+
+`ident`: your tenant identifier
+
+`fn`: the name of your function `namespace`: the name of your namespace if different than “default”
+
+`template`: the name of the language you wish to use
+
+Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
+
+</TabItem>
+
+</Tabs>
 
 PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
 
@@ -192,7 +223,7 @@ export const run = (input) => {
 };
 ```
 
-Then I'm going to hit build and have our JavaScript source code compiled to a deployable WebAssembly module.
+We're to click "Build" and have our JavaScript source code compiled to a deployable WebAssembly module!
 
 ## Test
 
@@ -235,9 +266,7 @@ And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz w
 
 *kinda-sus pops up in one of the rows in the log* (TODO: how can we make this joke accessible?)
 
-There we go, we got our first internet troublemaker exposed! 
-
-Now we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security, and without the app owners needing to lift a finger!
+There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security!
 
 ## What else can I do?
 
@@ -246,3 +275,7 @@ Now that you've know how to get SE2 extensibility powers into your app, you migh
 - [Learn more about SE2's API's](./how-to/using-api.md)
 - Make custom [module templates](./how-to/customize-functions/custom-function-templates.md) and [libraries](./how-to/customize-functions/custom-libraries.md) to help your users get started building their own plugins for your app
 - Organize your users' plugins into [namespaces](./how-to/customize-functions/namespaces.md) for different use cases
+
+## Questions?
+
+If you have any questions you can't find answers to in these docs (or just like chatting with nice humans in the extensibility space 🤗), please hit us up on [Discord](https://chat.suborbital.dev)!
