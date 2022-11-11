@@ -5,277 +5,210 @@ pagination_next: null
 
 # Quickstart
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+## Installation
 
-<!-- Yes, the lines below feel like they come before the heading, but if they do, the heading won't be capitalized. This is goofy, but true. 🙃 -->
+To use SE2, you'll need an environment token and the Subo command line 
+tool. The environment token allows SE2 to authenticate with 
+our service that manages metadata storage, telemetry, and more.
 
-<!-- TODO: add "click this, then that" sort of scaffolding -->
+### Install Subo: the SE2 CLI
 
-<!-- TODO: intro bits, including explicit learning objectives like https://docs.netlify.com/get-started/-->
-
-<!-- TODO:
-
-## Prerequisites
-
-MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any app drop SE2 in?
-
--->
-
-## Meet PRO.xyz: our demo app
-
-PRO.xyz (read: "proxies") is an imaginary company that operates networking services.Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
-
-Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard
-
-Most providers have their own logic and algorithms that detect abuse,send out alerts or initiate protective measures. They may allow for some customizability, but it's _usually_ very limited.
-
-PRO.xyz, on the other hand, has decided to make it possible _for its users_ to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
-
-For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
-
-## Preliminary steps
-
-- Create an account on our [admin dashboard](https://suborbital.network)
-- Clone the repo for this demo <!-- TODO: add link -->
-
-Let's go! 🚀
-
-## Create an organization
-
-This is a new account, so we'll need to create our first organization. <!-- TODO: define this? --> For this demo, we'll give our organization:
-
-- The name `Demo Company`
-- The description `Always ready to demo`
-
-<!-- TODO: add image -->
-
-## Create an environment
-
-We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments,or to create different applications for distinct use cases.
-
-Let's set up our first environment for development! We'll give it:
-
-- The name `demo.dev`
-- The description `development environment`
-
-Once we've created our environment, we'll be shown our environment's dashboard.The dashboard contains information about various usage metrics related to the Extension Engine.
-
-Here we can see a counter for function builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
-
-## Create an access key
-
-Next, we'll need to create an access key. We'll click on:
-
-- Manage access keys
-- Create new access key
-
-Our integration will use this access key to provision resources and execute plugins in SE2. We'll give our access key:
-
-- The name `DemoKey`
-- The description: `demo access key`
-
-We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
-
-## The part where the integration happens
-
-<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Demo Time ⏰ <a href="https://t.co/7IXmf20AJc">pic.twitter.com/7IXmf20AJc</a></p>&mdash; Aleksandr Morozov (@morozov_dev) <a href="https://twitter.com/morozov_dev/status/1555121266230804483?ref_src=twsrc%5Etfw">August 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<!-- Would be great if we could use this!
-
-## API Admin interface
-
-First we change the default environment to the one we set up:
-
-[Change text field "Environment" to "demo.dev"]
-
-We will also need the access token configured for this environment
-
-[Copy access key from VSCode to "Environment Access Token" text field]
-
-This access key will be embedded into the application,
-it will allow the application to use the Suborbital API
-to provision resources
-
-The demo interface confirms the validity of these credentials,
-so we can proceed to the next step
-
--->
-
-## Create a tenant (user)
-
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant withone of its own internally maintained users.
-
-It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
-
-<Tabs groupId='create-tenant'>
-
-<TabItem value="web-app" label="Web app">
-
-[Type "ada" into the Tenant field]
-
-Our environment name ("demo.dev") and tenant name ("ada") together will form the Identifier. Think of this as a bucket to hold all of a user's plugins separate from the others.
-
-(TODO: access key)
-
-Should there be need of further namespacing a tenant's modules, Suborbital provides a "namespace" feature. For now, we will just leave this on "default".
-
-</TabItem>
-
-<TabItem value="CLI" label="Command line">
-
-(TODO: assimilate this wording)
-
-Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
+If you use macOS, you can use [Homebrew](https://brew.sh) to install the 
+`subo` command line tool:
 
 ```bash
-curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
+brew tap suborbital/subo
+brew install subo
 ```
 
-</TabItem>
+Note: this may take a few minutes! Next, run `subo --version` to ensure the 
+installation was successful. 
 
-</Tabs>
+To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
 
-## A PRO.xyz user journey
+## Generate your token
+You can get an SE2 Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
 
-The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
+:::caution  
+The domain of your email address should match the `environment` you 
+configure for SE2; i.e., if your email is `laika@example.com`, your 
+SE2 environment would be called `com.example`. See [Fully-qualified 
+function names](./customizing-functions/fully-qualified-function-names.md) 
+for more 
+information.
+:::
 
-We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
+To create your token, run:
 
-So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital extensions on PRO.xyz' platform.
+```bash
+subo compute create token <email>
+```
 
-- We'll give our customer the name `Ada`
-- And we can type whatever we like for this pretend password
-- Click "Sign in"
+A verification code will be sent to your email address, and the token will be 
+used to authenticate you and link your SE2 installation to you.
 
-After logging in, we see the network requests as they are received by PRO.xyz' servers, and eventually forwarded to our upstream servers. When we pause the logs by clicking the "pause" button, though, we notice something peculiar...
+:::tip
+Subo will print out your token in your terminal, and cache it for use in 
+subsequent steps.
+:::
 
-There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet,and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
+Keep your environment token safe (store it in your password manager), and 
+only use it when running or installing SE2. If you lose it, just repeat 
+this token generation process.
 
-Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
 
-## Build a module
+## Run SE2 locally
 
-Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
+To run SE2 locally, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
 
-<Tabs groupId='editor-token'>
+### Prepare your local environment
 
-<TabItem value="web-app" label="Web app">
+The Subo CLI will create some files on disk to set up your local deployment,
+so get started by creating a directory somewhere on your filesystem. In the 
+example below, we'll name our directory `suborbital`:
 
-Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
+```bash
+mkdir suborbital
+cd suborbital
+```
 
-</TabItem>
+### Start SE2
 
-<TabItem value="CLI" label="Command line">
+Next, use Subo to start your local SE2 instance. Make sure to do 
+this within the same directory you created above! You can verify that 
+you're in the correct directory by verifying that it contains the 
+`docker-compose.yaml` file.
 
-Go to the function editor. Configure the URL like so:
+```bash
+subo compute deploy core --local
+```
 
-Domain: `https://editor.suborbital.network`
+You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your SE2 Core instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
-Query params:
+### Run SE2
+When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the SE2 Editor](get-started#meet-the-se2-editor)). In the example below, we'll create a function named `hello`:
 
-`token`: The token you received in step 11
+```
+✅ DONE: ready to start installation
+⏩ START: installing...
+▶️ docker-compose up -d
+Container suborbital-scc-control-plane-1  Recreate
+Container suborbital-scc-control-plane-1  Recreated
+Container suborbital-scc-atmo-1  Recreate
+Container suborbital-scc-atmo-1  Recreated
+Container suborbital-scc-control-plane-1  Starting
+Container suborbital-scc-builder-1  Starting
+Container suborbital-scc-control-plane-1  Started
+Container suborbital-scc-builder-1  Started
+Container suborbital-scc-atmo-1  Starting
+Container suborbital-scc-atmo-1  Started
+ℹ️  use `docker ps` and `docker-compose logs` to check deployment status
 
-`builder`: `https://builder.stg.suborbital.network`
+PROXY: local tunnel to function editor started
 
-`ident`: your tenant identifier
 
-`fn`: the name of your function `namespace`: the name of your namespace if different than “default”
+Press enter to launch the local SE2 REPL...
 
-`template`: the name of the language you wish to use
 
-Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
+1. Create or edit a function
 
-</TabItem>
+Choose an option: 1
 
-</Tabs>
+To create or edit a function, enter its name (or FQFN): hello
+```
 
-PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
+This will allow you to create functions and use the SE2 editor locally 
+while you work on integrating your application. Follow the instructions in the REPL to create your first function.
 
-The editor already comes preloaded with a generic JavaScript template, but we have Ada's module to use instead.
+## Meet the SE2 editor
 
-At the very baseline of it a plugin receives some input, processes that input,and may produce some output. Suborbital allows extra API's (sort of superpowers) to be exposed to these modules at the operator's discretion.
+The Suborbital SE2 function editor uses [SE2's 
+APIs](./using-api.md) to provide a 
+low-friction environment for your users to write, build, test, and deploy 
+functions to your SE2 an instance in a single place.  Alternatively, 
+the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better 
+suits your use case. 
 
-Here we are including the "log" API to have our application log any unexpected issues with the input data
+A quick way to try the editor is to use the REPL built into the Subo CLI 
+introduced above in [Run SE2 Locally](get-started#run-compute-locally). 
+The 
+Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation.
 
-We'll replace the default code in the editor with Ada's code below:
+By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option. 
 
-```js
-import { log } from "@suborbital/runnable";
+The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
+
+
+#### Editor URLs
+
+To edit a function via the editor, you—or more likely your application—must build a valid URL to pass to the editor. When working locally, the Subo REPL can generate editor URLs for you automatically.
+
+In a **development environment**, the URL should have these components:
+
+```
+http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=ogbWUbzCZaYLga3GggP0cxht&ident=com.suborbital.acmeco&namespace=default&fn=hello
+```
+
+In a **production environment**, the URL may look something like this:
+
+```
+https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as0aslwi30l8h5lbF4lS7&ident=com.suborbital.customer&fn=add-record&template=rust   
+```
+
+The important differences to note between these URLs are the local and public hostnames and HTTP and HTTPS schemes for the editor itself and the `&builder=` parameter.
+
+For more information, check out our [complete documentation for each of the 
+URL parameters](./customizing-functions/code-editor.md#configuration).
+
+## Your first function
+
+Once inside the editor, you can edit, build, test, and deploy your 
+functions all in one place. By default, the editor will load pre-populated 
+with the greeting function below. We can use it to run the editor for the 
+first time.
+
+```javascript
+import { log } from ''@suborbital/runnable";
 
 export const run = (input) => {
-    const tags = [];
-    try {
-        let data = JSON.parse(input);
-
-        // We don't operate Wordpress sites so this is immediately sus
-        if (data?.uri?.includes("wp-login.php")) {
-            tags.push("kinda-sus");
-        }
-
-        return JSON.stringify(tags);
-    } catch (e) {
-        log.error("Failed parsin incoming log data as JSON");
-    }
+    let message = "Hello, " + input;
+    
+    log.info(message);
+    return message;
 };
 ```
 
-We're to click "Build" and have our JavaScript source code compiled to a deployable WebAssembly module!
+  - The function provided is complete, so we can just click "Build"
+  - In the "TEST" field, add some text. Here, we've added "new 
+    Suborbital user"
+  - Click "Run test"
+  - Toward the bottom of the editor, click "TEST RESULTS". There's our 
+    greeting!
 
-## Test
+![Editor displaying the greeting function above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
 
-Great, that's done, we get to test it to see if it does what we expect!
+### Executing functions
 
-We have a text field for specifying the "input" of this test run, I have a sample input prepared here that requests the Wordpress login page, and so it should trigger our module's spidey-senses.
+Once your first function has been built and deployed, it can be run with a request to the Execution API. 
 
-We'll paste the text below into the "Test" field:
+```bash
+export ENV_TOKEN=<your previously generated token>
 
-```text
-{
-   "id": "l9rkryfrn7",
-   "request_start": "2022-10-27T20:21:36.538Z",
-   "request_time": 0.1659020390745758,
-   "remote_addr": "206.80.131.46",
-   "remote_asn": "AS54113 FASTLY",
-   "remote_cc": "FI",
-   "request_length": 2252,
-   "host": "noisy-cheeto.xyz",
-   "method": "DELETE",
-   "status": 200,
-   "uri": "/wp-login.php",
-   "upstream_host": "www0",
-   "user_agent": "GoobleBot 1.0 (crawler)",
-   "content_type": "text/html",
-   "tags": []
-}
+curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
+     --header "Authorization: Bearer $ENV_TOKEN" \
+     -d 'my friend'
+
+hello, my friend
 ```
+:::tip
+If you're invoking the Test API, you'll need to import 
+the [Editor Token](./customizing-functions/code-editor#editor-token.md) 
+instead of the 
+Environment token in the code snippet above.
+:::
 
-And click "Run test". Sure enough, the output shown in the "output" field is: `kinda sus`! Our module returns an array of string "tags", which PRO.xyz will use to annotate the requests. Perhaps in this case, PRO.xyz (TODO: should this be Ada?) could use them to fine-tune its algorithms or abuse-mitigation strategies.
+## Connect your application
 
-## Deploy
-
-Alright, let's get this deployed by clicking:
-
-- "Deploy"
-- "Done"
-
-And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
-
-_kinda-sus pops up in one of the rows in the log_ (TODO: how can we make this joke accessible?)
-
-There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security!
-
-## What else can I do?
-
-Now that you've know how to get SE2 extensibility powers into your app, you might want to:
-
-- [Learn more about SE2's API's](./how-to/using-api.md)
-- Make custom [module templates](./how-to/customize-functions/custom-function-templates.md) and [libraries](./how-to/customize-functions/custom-libraries.md) to help your users get started building their own plugins for your app
-- Organize your users' plugins into [namespaces](./how-to/customize-functions/namespaces.md) for different use cases
-
-## Questions?
-
-If you have any questions you can't find answers to in these docs (or just like chatting with nice humans in the extensibility space 🤗), please hit us up on [Discord](https://chat.suborbital.dev)!
-
-<!-- TODO: add feedback section-->
+Now that you've set up SE2 and created your first function, you can use 
+[SE2's APIs](./using-api.md) to start integrating functions into your 
+application.
