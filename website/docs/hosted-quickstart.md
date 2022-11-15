@@ -5,9 +5,6 @@ pagination_next: null
 
 # Quickstart
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <!--
 This page is a placeholder for when SE2 becomes the default
 -->
@@ -15,6 +12,9 @@ This page is a placeholder for when SE2 becomes the default
 <!-- 
 Yes, the lines below feel like they come before the heading, but if they do, the heading won't be capitalized. This is goofy, but true. 🙃 
 -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <!-- 
 TODO: add "click this, then that" sort of scaffolding 
@@ -64,7 +64,7 @@ This is a new account, so we'll need to create our first organization. <!-- TODO
 
 ## Create an environment
 
-We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments,or to create different applications for distinct use cases.
+We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments or to create different applications for distinct use cases.
 
 Let's set up our first environment for development! We'll give it:
 
