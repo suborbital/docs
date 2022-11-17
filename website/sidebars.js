@@ -16,12 +16,11 @@ module.exports = {
       items: [
         'how-to/using-api',
         {
-        'Customize functions': [
-          'how-to/customize-functions/code-editor',
-          'how-to/customize-functions/custom-function-templates',
-          'how-to/customize-functions/custom-libraries',
-          'how-to/customize-functions/namespaces',
-          'how-to/customize-functions/fully-qualified-function-names'
+        'Customize plugins': [
+          'how-to/customize-plugins/code-editor',
+          'how-to/customize-plugins/custom-plugin-templates',
+          'how-to/customize-plugins/custom-libraries',
+          'how-to/customize-plugins/namespaces',
         ]
         },
         {
