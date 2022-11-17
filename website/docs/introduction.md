@@ -13,12 +13,12 @@ Suborbital Extension Engine (SE2) is a platform that gives you everything you ne
 
 In these docs you can learn how to:
 
+- [Quickly get up and running with SE2](./quickstart.md)
 - Use SE2 to provide a bespoke experience to your users with custom [plugin templates](./how-to/customize-functions/custom-function-templates.md) and [libraries](./how-to/customize-functions/custom-libraries.md)—without you having to become a feature factory!
 - [Use SE2's APIs](./how-to/using-api.md)
-- [Integrate SE2 into your app](./how-to/self-host-se2/integrate-your-app.md)
-- Configure [capabilities](./how-to/self-host-se2/deploy/cloud-deployment/configure-capabilities.md), [storage](./how-to/self-host-se2/deploy/cloud-deployment/configure-storage.md), and [webhooks](./how-to/self-host-se2/deploy/cloud-deployment/configure-webhooks.md) for SE2
-- [Install SE2 in your cloud environment](./how-to/self-host-se2/deploy/cloud-deployment/install-se2-in-your-cloud-environment.md)
-- Or [deploy SE2 with minikube](./how-to/self-host-se2/deploy/other-deployments/minikube.md)
+- Configure [capabilities](./how-to/deploy/cloud-deployment/configure-capabilities.md), [storage](./how-to/deploy/cloud-deployment/configure-storage.md), and [webhooks](./how-to/deploy/cloud-deployment/configure-webhooks.md) for SE2
+- [Install SE2 in your cloud environment](./how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment.md)
+- Or [deploy SE2 with minikube](./how-to/deploy/other-deployments/minikube.md)
 
 ## Getting Support
 

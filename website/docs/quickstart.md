@@ -53,7 +53,7 @@ Click "New environment", then in the text fields enter:
 - Environment name: a name for your development environment (this name must include a '.')
 - Environment description: a few words describing what this environment will do (just for your own reference!)
 
-Once you've created your environment, you'll be shown your environment's dashboard. The dashboard contains information about various usage metrics related to the Extension Engine, like counters for function builds and build minutes. Both of these are currently 0 because we still need to set up your first plugin!
+Once you've created your environment, you'll be shown your environment's dashboard. The dashboard contains information about various usage metrics related to the Extension Engine, like counters for plugin builds and build minutes. Both of these are currently 0 because we still need to set up your first plugin!
 
 ## Create an access key
 
@@ -88,14 +88,14 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 ## Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our function (e.g. `foo`). Copy the `token` field in the response.
-    
+In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `foo`). Copy the `token` field in the response.
+
 ```bash
 curl --location --request GET "https://builder.stg.suborbital.network/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${FN}" \
 --header "Authorization: Bearer ${ACCESS_KEY}"
 ```
 
-## Meet the SE2 editor
+## Meet the editor
 
 The Suborbital SE2 plugin editor uses [SE2's APIs](./using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better suits your use case.
 
@@ -108,17 +108,17 @@ Configure the URL like so:
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
   - `token`: The token you created in the previous step
-  - `builder`: https://builder.stg.suborbital.network
+  - `builder`: `https://builder.stg.suborbital.network`
   - `ident`: your tenant's identifier
   - `fn`: the name of your plugin
   - `namespace`: the name of your namespace if different than “default”
   - `template`: the name of the language you wish to use (Go or JavaScript)
-    
-    Altogether, it should look something like `https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`
-    
-## Your first function
 
-Once inside the editor, you can edit, build, test, and deploy your functions all in one place. By default, the editor will load pre-populated with the greeting function below. You can use it to run the editor for the first time.
+Altogether, it should look something like `https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=my-plugin`
+
+## Your first plugin
+
+Paste the URL you created above into you browser to load the plugin editor. Once inside the editor, you can edit, build, test, and deploy your plugins all in one place! By default, the editor will load pre-populated with the greeting plugin below. You can use it to run the editor for the first time.
 
 ```javascript
 import { log } from ''@suborbital/runnable";
@@ -131,16 +131,16 @@ export const run = (input) => {
 };
 ```
 
-- The function provided is complete, so we can just click "Build"
+- The plugin provided is complete, so we can just click "Build"
 - In the "TEST" field, add some text. Here, we've added "new Suborbital user"
 - Click "Run test"
 - Toward the bottom of the editor, click "TEST RESULTS". There's our greeting!
 
-![Editor displaying the greeting function above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
+![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
 
-### Executing functions
+### Executing plugins
 
-Once your first function has been built and deployed, it can be run with a request to the Execution API.
+Once your first plugin has been built and deployed, it can be run with a request to the Execution API.
 
 ```bash
 export ENV_TOKEN=<your previously generated token>
@@ -151,13 +151,11 @@ curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1
 
 hello, my friend
 ```
+
 :::tip
-If you're invoking the Test API, you'll need to import 
-the [Editor Token](./customizing-functions/code-editor#editor-token.md) 
-instead of the 
-Environment token in the code snippet above.
+If you're invoking the Test API, you'll need to import the [Editor Token](./customizing-plugins/code-editor#editor-token.md) instead of the Environment token in the code snippet above.
 :::
 
 ## Connect your application
 
-Now that you've set up SE2 and created your first function, you can use [SE2's APIs](./using-api.md) to start integrating functions into your application.
+Now that you've set up SE2 and created your first plugin, you can use [SE2's APIs](./using-api.md) to start integrating functions into your application.
