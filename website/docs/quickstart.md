@@ -30,17 +30,80 @@ MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any 
 
 -->
 
-## Preliminary steps
+To self-host SE2, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
 
-To get started, you'll need to complete these steps:
+## Prepare your local environment
 
-- Create an account on our [admin dashboard](https://suborbital.network)
+The Subo CLI will create some files on disk to set up your local deployment, so get started by creating a directory somewhere on your filesystem. In the example below, we'll name our directory `suborbital`:
 
-- Click "Create new organization", then in the text fields enter:
-  - Organization name: the name of your company or organization
-  - Organization description: a few words describing what your organization does (just for your own reference!)
+```bash
+mkdir suborbital
+cd suborbital
+```
 
-If you are not automatically redirected, then select the organization you just created.
+## Install Subo: the SE2 CLI
+
+If you use macOS, you can use [Homebrew](https://brew.sh) to install the `subo` command line tool:
+
+```bash
+brew tap suborbital/subo
+brew install subo
+```
+
+Note: this may take a few minutes! Next, run `subo --version` to ensure the installation was successful.
+
+To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
+
+## Start SE2
+
+Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
+
+```bash
+subo compute deploy core --local
+```
+
+You may be asked to enter your Environment Token, and then Subo will use `docker-compose` to launch your SE2 Core instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
+
+## Run SE2
+
+When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit functions (see [Meet the SE2 Editor](get-started#meet-the-se2-editor)). In the example below, we'll create a function named `hello`:
+
+```bash
+✅ DONE: ready to start installation
+⏩ START: installing...
+▶️ docker-compose up -d
+Container suborbital-scc-control-plane-1  Recreate
+Container suborbital-scc-control-plane-1  Recreated
+Container suborbital-scc-atmo-1  Recreate
+Container suborbital-scc-atmo-1  Recreated
+Container suborbital-scc-control-plane-1  Starting
+Container suborbital-scc-builder-1  Starting
+Container suborbital-scc-control-plane-1  Started
+Container suborbital-scc-builder-1  Started
+Container suborbital-scc-atmo-1  Starting
+Container suborbital-scc-atmo-1  Started
+ℹ️  use `docker ps` and `docker-compose logs` to check deployment status
+
+PROXY: local tunnel to function editor started
+
+
+Press enter to launch the local SE2 REPL...
+
+
+1. Create or edit a function
+
+Choose an option: 1
+
+To create or edit a function, enter its name (or FQFN): hello
+```
+
+This will allow you to create functions and use the SE2 editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first function.
+
+A quick way to try the editor is to use the REPL built into the Subo CLI introduced above in [Run SE2 Locally](get-started#run-compute-locally). The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation.
+
+By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option.
+
+The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
 
 ## Create an environment
 
