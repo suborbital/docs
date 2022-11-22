@@ -17,7 +17,7 @@ module.exports = {
         'how-to/using-api',
         {
         'Customize plugins': [
-          'how-to/customize-plugins/code-editor',
+          'how-to/customize-plugins/plugin-editor',
           'how-to/customize-plugins/custom-plugin-templates',
           'how-to/customize-plugins/custom-libraries',
           'how-to/customize-plugins/namespaces',
