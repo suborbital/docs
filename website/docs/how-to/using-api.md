@@ -18,13 +18,17 @@ You can find a detailed specification of SE2's APIs [here](https://suborbital-co
 <TabItem value="go" label="Go">
 
 ## Using SE2 from Go
-The [`compute-go` library](https://github.com/suborbital/compute-go) helps you easily interact with SE2's APIs from your Go application. Suborbital SE2 is designed to run alongside your application in a Kubernetes or Docker Compose environment.
+
+The [`compute-go` library](https://github.com/suborbital/compute-go) helps you easily interact with SE2's APIs from your Go application. SE2 is designed to run alongside your application in a Kubernetes or Docker Compose environment.
 
 ### Documentation
+
 Like most Go packages, you can find [complete and up to date technical documentation for `compute-go` on `pkg.go.dev`](https://pkg.go.dev/github.com/suborbital/compute-go#section-readme). Those docs are generated from inline comments in the [`compute-go` source code](https://github.com/suborbital/compute-go).
 
-### Installation
+### Install SE2 for Go
+
 In a directory with a `go.mod` file, run:
+
 ```bash
 go get github.com/suborbital/compute-go@latest
 ```
@@ -32,6 +36,7 @@ go get github.com/suborbital/compute-go@latest
 ### Basic Usage
 
 #### Configuration
+
 This example sets up a basic client with the [token generated in Subo](../subo.md) or with the web app. The `compute.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
 
 ```go title="client.go"
@@ -52,6 +57,7 @@ func client() *compute.Client {
 ```
 
 #### Build and run a function
+
 We can now integrate SE2 into an application. `compute-go` has access to all of SE2's APIs. It can run builds, list existing functions, run tests, and execute functions.
 
 Behind the scenes, `compute-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the SE2 API.
@@ -107,7 +113,7 @@ Now that the SE2 module has been built, it can be executed as much as you like w
 
 Use [our JavaScript SDK](https://github.com/suborbital/compute-node) to easily interact with SE2's APIs using JavaScript or Typescript.
 
-### Installation
+### Install SE2 for JS/TS
 
 Install it via `yarn` or `npm`:
 
@@ -160,6 +166,7 @@ const configuration = {
 
 const suborbital = new Suborbital(configuration);
 ```
+
 </TabItem>
 
 </Tabs>
@@ -341,4 +348,3 @@ export function run(input: ArrayBuffer): ArrayBuffer {
     return String.UTF8.encode(out)
 }
 ```
-
