@@ -12,13 +12,13 @@ To install SE2 in the cloud, you'll use the `subo` tool to automatically install
    * If you would like assistance with storage, [send us an email](mailto:team@suborbital.dev) or hit us up on [Discord](https://chat.suborbital.dev)!
 2. [Install the `kubectl` tool](https://kubernetes.io/docs/tasks/tools/#kubectl) and authenticate it with the cluster you want to use.
 3. Ensure you have access to modify your company's DNS records, as you need to create a domain name for the builder service (it must run on HTTPS, which requires a domain)
-4. Ensure you've run the [`subo compute create token <email>` command](../../get-started#generate-your-token.md) before attempting the install
+4. Ensure you've run the [`subo compute create token <email>` command](../../../quickstart#generate-your-env-token) before attempting the install
 
 :::info
 `subo` creates a `suborbital` Kubernetes namespace and installs the `KEDA` autoscaler. Don't worry about existing applications installed in the cluster; this won't affect them!
 :::
 
-Once you have the pre-requisites in place, navigate to the `suborbital` directory you created when you [generated your token](../../get-started#generate-your-token.md) and use `subo` to install:
+Once you have the pre-requisites in place, navigate to the `suborbital` directory you created when you [generated your token](../../../quickstart#generate-your-env-token) and use `subo` to install:
 
 ```bash
 subo compute deploy core
@@ -35,7 +35,7 @@ kubectl get svc -n suborbital
 
 ## Set up DNS
 
-When you deploy, a `LoadBalancer` is created for the builder called `scc-builder-service`. You should wait until an external IP address is provisioned for the service (use the `get svc` command above to check), and then create a DNS `A` record that matches the domain name you entered during setup. This will allow the builder to automatically provision a TLS certificate and connect with the [code editor](docs/se2/customizing-functions/code-editor.md) securely.
+When you deploy, a `LoadBalancer` is created for the builder called `scc-builder-service`. You should wait until an external IP address is provisioned for the service (use the `get svc` command above to check), and then create a DNS `A` record that matches the domain name you entered during setup. This will allow the builder to automatically provision a TLS certificate and connect with the [plugin editor](../../customize-plugins/plugin-editor) securely.
 
 ## What's next
 
