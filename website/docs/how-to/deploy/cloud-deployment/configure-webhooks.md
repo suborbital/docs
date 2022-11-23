@@ -62,7 +62,7 @@ Stay tuned for more hook points!
 ```json
 {
     "webhook_id": "builder.function.promoted",
-    "compute_context": {
+    "se2_context": {
         "request_id": "ac1f5e84-5327-46a5-9d71-8ad766f39979",
         "request_url": "/api/v1/draft/com.suborbital.demo/default/webhook/promote"
     },
