@@ -5,7 +5,7 @@ pagination_next: null
 
 # Configure capabilities
 
-SE2 functions can access a number of capabilities:
+SE2 extensions can access a number of capabilities:
 
 * Logging
 * HTTP requests
@@ -14,7 +14,7 @@ SE2 functions can access a number of capabilities:
 * SQL databases
 * Static files
 
-You can configure each capability. If you disable all capabilities, your users' functions will not be able to access the "outside world" in any way.
+You can configure each capability. If you disable all capabilities, your users' extensions will not be able to access the "outside world" in any way.
 
 To configure capabilities, edit the `scc-config.yaml` file that `subo` created for you in your `suborbital/config` directory:
 ```yaml

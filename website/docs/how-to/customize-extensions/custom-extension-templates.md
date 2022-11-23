@@ -3,15 +3,15 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Custom function templates
+# Custom extension templates
 
-When your users interact with SE2, you want them to have an experience that is tailored to your product. To ensure they get the most out of SE2, you can create custom function templates to control what your users see when they create a new function. You can also create custom libraries with utilities specific to your application for users to import from, which we'll explore in the next section.
+When your users interact with SE2, you want them to have an experience that is tailored to your product. To ensure they get the most out of SE2, you can create custom extension templates to control what your users see when they create a new extension. You can also create custom libraries with utilities specific to your application for users to import from, which we'll explore in the next section.
 
 We want to help! Creating custom templates and libraries are an important aspect of SE2, so [send us an email](mailto:team@suborbital.dev) and we'll help you make the most out of these abilities.
 
 ## Setup
 
-To create a custom function template, create a fork of the `runnable-templates` git repository:
+To create a custom extension template, create a fork of the `runnable-templates` git repository:
 
 [GitHub - suborbital/runnable-templates: Custom templates for SE2](https://github.com/suborbital/runnable-templates)
 
@@ -21,11 +21,11 @@ For now, you are limited to one template per language, but in the future you'll 
 
 ### AssemblyScript
 
-Edit `templates/assemblyscript/src/lib.ts` to change what your users will see when they create a new AssemblyScript function. If you'd like to transform the data that the user's `run` function will receive before it is called, edit both `templates/assemblyscript/src/custom.ts` and `templates/assemblyscript/src/lib.ts` and ensure that the type signatures match.
+Edit `templates/assemblyscript/src/lib.ts` to change what your users will see when they create a new AssemblyScript extension. If you'd like to transform the data that the user's `run` extension will receive before it is called, edit both `templates/assemblyscript/src/custom.ts` and `templates/assemblyscript/src/lib.ts` and ensure that the type signatures match.
 
 ### Rust
 
-Edit `templates/rust/src/lib.rs.tmpl` to change what your users will see when they create a new Rust function. In the future, you'll be able to transform the data passed to the user's `run` function.
+Edit `templates/rust/src/lib.rs.tmpl` to change what your users will see when they create a new Rust extension. In the future, you'll be able to transform the data passed to the user's `run` extension.
 
 ## Configuring SE2
 
