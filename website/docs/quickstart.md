@@ -74,20 +74,6 @@ Subo will print out your env token in your terminal, and cache it for use in sub
 
 Keep your environment token safe (store it in your password manager), and only use it when running or installing SE2. If you lose it, just repeat this token generation process.
 
-## Create an access key
-
-Next, you'll need to create an access key. Click on:
-
-- Manage access keys
-- Create new access key
-
-Your integration will use this access key to provision resources and execute plugins in SE2. You'll need to give your access key:
-
-- Key name: a name for this access key
-- Key description: a few words describing what this access key will be used for (just for your own reference!)
-
-You'll only be shown this access key once, so make sure to store it somewhere safe and secure!
-
 ## Start SE2
 
 Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
@@ -154,7 +140,7 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 ## Meet the editor
 
-The SE2 plugin editor uses [SE2's APIs](./how-to/using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better suits your use case.
+The SE2 extension editor uses [SE2's APIs](./how-to/using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
@@ -219,9 +205,9 @@ hello, my friend
 ```
 
 :::tip
-If you're invoking the Test API, you'll need to import the [Editor Token](./how-to/customize-plugins/plugin-editor.md) instead of the Environment token in the code snippet above.
+If you're invoking the Test API, you'll need to import the [Editor Token](./how-to/customize-extensions/extension-editor.md) instead of the Environment token in the code snippet above.
 :::
 
 ## Connect your application
 
-Now that you've set up SE2 and created your first plugin, you can use [SE2's APIs](./using-api.md) to start integrating plugins into your application!
+Now that you've set up SE2 and created your first extension, you can use [SE2's APIs](./using-api.md) to start integrating extensions into your application!
