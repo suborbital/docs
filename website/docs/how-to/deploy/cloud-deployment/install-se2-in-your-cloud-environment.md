@@ -21,7 +21,7 @@ To install SE2 in the cloud, you'll use the `subo` tool to automatically install
 Once you have the pre-requisites in place, navigate to the `suborbital` directory you created when you [generated your token](../../../quickstart#generate-your-env-token) and use `subo` to install:
 
 ```bash
-subo se2 deploy core
+subo se2 deploy
 ```
 
 The tool will ask for your environment token and chosen domain name, and then automatically install everything into your cluster. The tool will attempt to auto-detect your cluster's storage class, but if it is unable, you will need to enter it manually.

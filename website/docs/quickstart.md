@@ -79,7 +79,7 @@ Keep your environment token safe (store it in your password manager), and only u
 Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
 
 ```bash
-subo se2 deploy core --local
+subo se2 deploy --local
 ```
 
 You may be asked to enter your environment token, and then Subo will use `docker-compose` to launch your SE2 instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
@@ -117,7 +117,7 @@ To create or edit a function, enter its name (or FQFN): hello
 
 This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
 
-The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation. By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo se2 deploy core --local --proxy-port <some port>` option.
+The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation. By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo se2 deploy --local --proxy-port <some port>` option.
 
 The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
 
