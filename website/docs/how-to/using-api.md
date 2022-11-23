@@ -56,9 +56,9 @@ func client() *compute.Client {
 }
 ```
 
-#### Build and run a function
+#### Build and run a extension
 
-We can now integrate SE2 into an application. `compute-go` has access to all of SE2's APIs. It can run builds, list existing functions, run tests, and execute functions.
+We can now integrate SE2 into an application. `compute-go` has access to all of SE2's APIs. It can run builds, list existing extensions, run tests, and execute extensions.
 
 Behind the scenes, `compute-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the SE2 API.
 
@@ -92,10 +92,10 @@ func main() {
         log.Fatal(build.OutputLog)
     }
 
-    // Deploy the function (the runnable's .Version field is adjusted here)
+    // Deploy the extension (the runnable's .Version field is adjusted here)
     client.PromoteDraft(runnable)
 
-    // Execute the function
+    // Execute the extension
     result, _ := client.ExecString(runnable, "world!")
 
     // Log the execution output
@@ -173,9 +173,9 @@ const suborbital = new Suborbital(configuration);
 
 ## Getting started
 
-Using the [SE2 APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available functions and execute one.
+Using the [SE2 APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available extensions and execute one.
 
-The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available functions for that user in the provided namespace.
+The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available extensions for that user in the provided namespace.
 
 ```typescript
 async function listAvailableFunctions() {
@@ -207,9 +207,9 @@ async function listAvailableFunctions() {
 }
 ```
 
-The result includes a function named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
+The result includes a extension named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
 
-The `run` method takes an object with the `environment`, `userId`, `namespace`, `fnName`, and `version`, and returns the result of the executed function.
+The `run` method takes an object with the `environment`, `userId`, `namespace`, `fnName`, and `version`, and returns the result of the executed extension.
 
 ```typescript
 async function runFunction() {
@@ -233,13 +233,13 @@ These are all of the available methods.
 
 #### `suborbital.admin.getToken`
 
-**Description**: Retrieves an authentication token for the given function, typically used to authenticate calls to the Builder API.  
+**Description**: Retrieves an authentication token for the given extension, typically used to authenticate calls to the Builder API.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
 **Result:** A string containing the token used for authorization.
 
 #### `suborbital.admin.getFunctions`
 
-**Description:** Returns a list of available functions for the given user in the given namespace.  
+**Description:** Returns a list of available extensions for the given user in the given namespace.  
 **Args:** An object containing `userId`, `namespace`.  
 **Result:**
 
@@ -262,7 +262,7 @@ These are all of the available methods.
 
 #### `suborbital.admin.getFunctionResults`
 
-**Description:** Returns the most recent results (up to 5) produced by the execution of the given function.  
+**Description:** Returns the most recent results (up to 5) produced by the execution of the given extension.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
 **Result:**
 
@@ -280,7 +280,7 @@ These are all of the available methods.
 
 #### `suborbital.admin.getFunctionErrors`
 
-**Description:** Returns the most recent errors (up to 5) produced by the execution of the given function.  
+**Description:** Returns the most recent errors (up to 5) produced by the execution of the given extension.  
 **Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
 **Result:**
 
@@ -301,9 +301,9 @@ These are all of the available methods.
 
 #### `suborbital.exec.run`
 
-**Description:** Executes the given function, with the provided body, params and state loaded into the function at runtime.  
+**Description:** Executes the given extension, with the provided body, params and state loaded into the extension at runtime.  
 **Args:** An object containing `environment`,`userId`,`namespace`, `fnName`,`version`.  
-**Result:** The result of the executed function.
+**Result:** The result of the executed extension.
 
 ### Builder
 
@@ -333,7 +333,7 @@ These are all of the available methods.
 
 #### `suborbital.builder.getTemplate`
 
-**Description:** Gets the template (which controls what your users see when they create a new function) for a new function of the given language.  
+**Description:** Gets the template (which controls what your users see when they create a new extension) for a new extension of the given language.  
 **Args:** An object containing `fnName`, `language`.  
 **Result:**
 

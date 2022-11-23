@@ -42,7 +42,7 @@ Of course this is just a demonstration, so what happens behind the scenes is tha
 
 Most providers have their own logic and algorithms that detect abuse,send out alerts or initiate protective measures. They may allow for some customizability, but it's _usually_ very limited.
 
-PRO.xyz, on the other hand, has decided to make it possible _for its users_ to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
+PRO.xyz, on the other hand, has decided to make it possible _for its users_ to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's extension system is used here to give users additional control and flexibility around deciding how requests are handled.
 
 For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
 
@@ -73,7 +73,7 @@ Let's set up our first environment for development! We'll give it:
 
 Once we've created our environment, we'll be shown our environment's dashboard.The dashboard contains information about various usage metrics related to the Extension Engine.
 
-Here we can see a counter for function builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
+Here we can see a counter for extension builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
 
 ## Create an access key
 
@@ -82,7 +82,7 @@ Next, we'll need to create an access key. We'll click on:
 - Manage access keys
 - Create new access key
 
-Our integration will use this access key to provision resources and execute plugins in SE2. We'll give our access key:
+Our integration will use this access key to provision resources and execute extensions in SE2. We'll give our access key:
 
 - The name `DemoKey`
 - The description: `demo access key`
@@ -116,7 +116,7 @@ so we can proceed to the next step
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant withone of its own internally maintained users.
+Suborbital lets an application's users create their own secure, sandboxed extensions, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own extensions inside Suborbital. Our application will then connect the tenant withone of its own internally maintained users.
 
 It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
 
@@ -126,7 +126,7 @@ It's choose your own adventure time! Click one of the tabs below to continue in 
 
 [Type "ada" into the Tenant field]
 
-Our environment name ("demo.dev") and tenant name ("ada") together will form the Identifier. Think of this as a bucket to hold all of a user's plugins separate from the others.
+Our environment name ("demo.dev") and tenant name ("ada") together will form the Identifier. Think of this as a bucket to hold all of a user's extensions separate from the others.
 
 (TODO: access key)
 
@@ -151,7 +151,7 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 ## A PRO.xyz user journey
 
-The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
+The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly extensions will receive this request metadata, and attempt to spot abuse.
 
 We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
 
@@ -165,23 +165,23 @@ After logging in, we see the network requests as they are received by PRO.xyz' s
 
 There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet,and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
 
-Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
+Normally there wouldn't be much Ada could do about this, but thanks to the custom extensions we may actually turn this ship around.
 
 ## Build a module
 
-Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
+Suborbital allows users to write custom extensions in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
 <Tabs groupId='editor-token'>
 
 <TabItem value="web-app" label="Web app">
 
-Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
+Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying extensions.
 
 </TabItem>
 
 <TabItem value="CLI" label="Command line">
 
-Go to the function editor. Configure the URL like so:
+Go to the extension editor. Configure the URL like so:
 
 Domain: `https://editor.suborbital.network`
 
@@ -193,7 +193,7 @@ Query params:
 
 `ident`: your tenant identifier
 
-`fn`: the name of your function `namespace`: the name of your namespace if different than “default”
+`fn`: the name of your extension `namespace`: the name of your namespace if different than “default”
 
 `template`: the name of the language you wish to use
 
@@ -203,11 +203,11 @@ Altogether, it should look something like [`https://editor.suborbital.network/?t
 
 </Tabs>
 
-PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
+PRO.xyz' integration only supports deploying one extension per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of extensions in any language, the sky is the limit.
 
 The editor already comes preloaded with a generic JavaScript template, but we have Ada's module to use instead.
 
-At the very baseline of it a plugin receives some input, processes that input,and may produce some output. Suborbital allows extra API's (sort of superpowers) to be exposed to these modules at the operator's discretion.
+At the very baseline of it a extension receives some input, processes that input,and may produce some output. Suborbital allows extra API's (sort of superpowers) to be exposed to these modules at the operator's discretion.
 
 Here we are including the "log" API to have our application log any unexpected issues with the input data
 
@@ -272,19 +272,19 @@ Alright, let's get this deployed by clicking:
 - "Deploy"
 - "Done"
 
-And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
+And now we can head back to our dashboard. When I deployed our extension, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
 
 _kinda-sus pops up in one of the rows in the log_ (TODO: how can we make this joke accessible?)
 
-There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security!
+There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own extensions without compromising speed or security!
 
 ## What else can I do?
 
 Now that you've know how to get SE2 extensibility powers into your app, you might want to:
 
 - [Learn more about SE2's API's](./how-to/using-api.md)
-- Make custom [module templates](./how-to/customize-functions/custom-function-templates.md) and [libraries](./how-to/customize-functions/custom-libraries.md) to help your users get started building their own plugins for your app
-- Organize your users' plugins into [namespaces](./how-to/customize-functions/namespaces.md) for different use cases
+- Make custom [module templates](./how-to/customize-extensions/custom-extension-templates.md) and [libraries](./how-to/customize-extensions/custom-libraries.md) to help your users get started building their own extensions for your app
+- Organize your users' extensions into [namespaces](./how-to/customize-extensions/namespaces.md) for different use cases
 
 ## Questions?
 

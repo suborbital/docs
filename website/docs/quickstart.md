@@ -84,7 +84,7 @@ subo compute deploy core --local
 
 You may be asked to enter your environment token, and then Subo will use `docker-compose` to launch your SE2 instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
-When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit plugins (see [Meet the Editor](quickstart.md#meet-the-editor)). In the example below, we'll create a plugin named `hello`:
+When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit extensions (see [Meet the Editor](quickstart.md#meet-the-editor)). In the example below, we'll create a extension named `hello`:
 
 ```bash
 ✅ DONE: ready to start installation
@@ -115,7 +115,7 @@ Choose an option: 1
 To create or edit a function, enter its name (or FQFN): hello
 ```
 
-This will allow you to create plugins and use the plugin editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first plugin.
+This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
 
 The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation. By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo compute deploy core --local --proxy-port <some port>` option.
 
@@ -123,7 +123,7 @@ The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users—or "tenants"—create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. Each tenant account has its own plugins inside Suborbital.
+Suborbital lets an application's users—or "tenants"—create their own secure, sandboxed extensions, carefully isolated from the core of the system and one another. Each tenant account has its own extensions inside Suborbital.
 
 To create a tenant, copy the code below and paste it into your terminal:
 
@@ -144,7 +144,7 @@ The SE2 extension editor uses [SE2's APIs](./how-to/using-api.md) to provide a l
 
 ### Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `foo`). Copy the `token` field in the response.
+In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our extension (e.g. `foo`). Copy the `token` field in the response.
 
 ```bash
 curl --location --request GET "https://builder.stg.suborbital.network/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${FN}" \
@@ -153,7 +153,7 @@ curl --location --request GET "https://builder.stg.suborbital.network/auth/v2/ac
 
 ### Editor URLs
 
-To edit a plugin via the editor, you—or more likely your application—must build a valid URL to pass to the editor.
+To edit a extension via the editor, you—or more likely your application—must build a valid URL to pass to the editor.
 
 Configure the URL like so:
 
@@ -162,15 +162,15 @@ Configure the URL like so:
   - `token`: The token you created in the previous step
   - `builder`: `https://builder.stg.suborbital.network`
   - `ident`: your tenant's identifier
-  - `fn`: the name of your plugin
+  - `fn`: the name of your extension
   - `namespace`: the name of your namespace if different than “default”
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=my-plugin`
+Altogether, it should look something like `https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=my-extension`
 
-## Your first plugin
+## Your first extension
 
-Paste the URL you created above into your browser to load the plugin editor. Once inside the editor, you can edit, build, test, and deploy your plugins all in one place! By default, the editor will load pre-populated with the greeting plugin below. You can use it to run the editor for the first time.
+Paste the URL you created above into your browser to load the extension editor. Once inside the editor, you can edit, build, test, and deploy your extensions all in one place! By default, the editor will load pre-populated with the greeting extension below. You can use it to run the editor for the first time.
 
 ```javascript
 import { log } from ''@suborbital/runnable";
@@ -183,16 +183,16 @@ export const run = (input) => {
 };
 ```
 
-- The plugin provided is complete, so we can just click "Build"
+- The extension provided is complete, so we can just click "Build"
 - In the "TEST" field, add some text. Here, we've added "new Suborbital user"
 - Click "Run test"
 - Toward the bottom of the editor, click "TEST RESULTS". There's our greeting!
 
-![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
+![Editor displaying the greeting extension above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
 
-### Executing plugins
+### Executing extensions
 
-Once your first plugin has been built and deployed, it can be run with a request to the Execution API.
+Once your first extension has been built and deployed, it can be run with a request to the Execution API.
 
 ```bash
 export ENV_TOKEN=<your previously generated token>
