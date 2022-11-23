@@ -44,6 +44,6 @@ capabilities:
     enabled: false
 ```
 
-When you run `subo compute deploy core`, your installation will use the configuration file. If you do not create a config file, then the above default is used. The defaults are designed to be a sane configuration for the average use-case.
+When you run `subo se2 deploy core`, your installation will use the configuration file. If you do not create a config file, then the above default is used. The defaults are designed to be a sane configuration for the average use-case.
 
 More capability types are being developed and will be available in upcoming versions.
