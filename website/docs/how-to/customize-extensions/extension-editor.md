@@ -58,4 +58,4 @@ Once the user has edited their extension, the `build` button in the top right wi
 
 Assuming the build succeeds, the user can choose to deploy the latest version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the user deploys the extension, it will remain at the previous version. The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any extension.
+Until the user deploys the extension, it will remain at the previous version. The [API Reference](https://reference.suborbital.dev/) gives you details about the draft and active versions of any extension.
