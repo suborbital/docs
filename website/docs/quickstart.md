@@ -3,9 +3,6 @@ pagination_prev: null
 pagination_next: null
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Quickstart
 
 <!-- 
@@ -53,10 +50,6 @@ You can set up multiple separate environments within an organization. These coul
 ### Generate your env token
 
 You can get an SE2 Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
-
-:::caution  
-The domain of your email address should match the `environment` you configure for SE2; i.e., if your email is `laika@example.com`, your SE2 environment would be called `com.example`. See [Fully-qualified function names](./customizing-extensions/fully-qualified-function-names.md) for more information.
-:::
 
 To create your env token, run:
 
@@ -113,9 +106,9 @@ Press enter to launch the local SE2 REPL...
 
 Choose an option: 1
 
-To create or edit a extension, enter its name (or FQFN): hello
+To create or edit a extension, enter its name (or FQMN): hello
 
-✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&fn=hello to access the editor
+✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&ext=hello to access the editor
 ```
 
 This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
@@ -162,14 +155,14 @@ Configure the URL like so:
 
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
-  - `token`: The token you created in the previous step
   - `builder`: `https://builder.stg.suborbital.network`
+  - `token`: The token you created in the previous step
   - `ident`: your tenant's identifier
-  - `fn`: the name of your extension
   - `namespace`: the name of your namespace if different than “default”
+  - `ext`: the name of your extension
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=my-extension`
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://builder.stg.suborbital.network&token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&ident=dev.suborbital.user1&ext=my-extension&template=javascript`
 
 ## Your first extension
 
@@ -206,10 +199,6 @@ curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1
 
 hello, my friend
 ```
-
-:::tip
-If you're invoking the Test API, you'll need to import the [Editor Token](./how-to/customize-extensions/extension-editor.md) instead of the Environment token in the code snippet above.
-:::
 
 ## Connect your application
 

@@ -16,7 +16,7 @@ We want to help! Creating custom templates and libraries are an important aspect
 
 We provide a base library for you to modify and publish to the language-specific package manager, which can then be included as a project dependency in a custom extension template.
 
-If you haven't already, create a fork of the [`runnable-templates`](https://github.com/suborbital/runnable-templates) git repository. Once the repo has been forked into your company or personal account, you can begin editing the libraries in the `library` directory.
+If you haven't already, create a fork of the [`templates`](https://github.com/suborbital/templates) git repository. Once the repo has been forked into your company or personal account, you can begin editing the libraries in the `library` directory.
 
 :::info
 Custom libraries are currently only officially supported for AssemblyScript, with more coming soon.
@@ -48,7 +48,6 @@ npm publish --access public
 
 </Tabs>
 
-
 ## Configuring SE2
 
 Since your custom library is listed as a dependency of the template project, it will be installed when your users' extensions are built for the first time.
@@ -57,6 +56,7 @@ In your SE2 installation, you will need to configure the `SCC_TEMPLATES_REPO` en
 
 - For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
 - For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:
+
   ```yaml
   - name: SCC_TEMPLATES_REPO
     value: "{your fork}"
