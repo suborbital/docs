@@ -26,15 +26,22 @@ MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any 
 
 -->
 
-To self-host SE2, you'll use the Subo CLI and [Docker](https://docs.docker.com), both of which must be installed before continuing.
+To self-host SE2, you'll use the [Subo CLI](https://github.com/suborbital/subo) and [Docker](https://docs.docker.com), both of which must be installed before continuing.
+
+:::warning
+
+If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
+
+An SE2 migration tool for production deployments of Compute will be available soon. 
+
+:::
 
 ## Create a development environment
 
-The Subo CLI will create some files on disk to set up your local deployment, so get started by creating a directory somewhere on your filesystem. In the example below, we'll name our directory `suborbital`:
+The Subo CLI will create some files on disk to set up your local deployment. Get started by creating a directory somewhere on your filesystem. In the example below, we'll name our directory `suborbital`:
 
 ```bash
-mkdir suborbital
-cd suborbital
+mkdir suborbital && cd suborbital
 ```
 
 ### Install Subo: the SE2 CLI
@@ -69,12 +76,12 @@ subo se2 create token <your email address>
 A verification code will be sent to your email address, and the env token will be used to authenticate you and link your SE2 installation to you.
 
 :::tip
-Subo will print out your env token in your terminal, and cache it for use in subsequent steps.
+Subo will print out your environment token in your terminal, and also cache it on disk for transparent use in later steps.
 :::
 
-Keep your environment token safe (store it in your password manager), and only use it when running or installing SE2. If you lose it, just repeat this token generation process.
+If you lose your environment token, just repeat this process to generate a new one.
 
-## Start SE2
+## Start SE2 locally
 
 Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
 
@@ -87,32 +94,37 @@ You may be asked to enter your environment token, and then Subo will use `docker
 When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit extensions (see [Meet the Editor](quickstart.md#meet-the-editor)). In the example below, we'll create a extension named `hello`:
 
 ```bash
+⏩ START: preparing deployment
+ℹ️  using cached environment token
 ✅ DONE: ready to start installation
 ⏩ START: installing...
-▶️ docker-compose up -d
-Container suborbital-scc-control-plane-1  Recreate
-Container suborbital-scc-control-plane-1  Recreated
-Container suborbital-scc-atmo-1  Recreate
-Container suborbital-scc-atmo-1  Recreated
-Container suborbital-scc-control-plane-1  Starting
-Container suborbital-scc-builder-1  Starting
-Container suborbital-scc-control-plane-1  Started
-Container suborbital-scc-builder-1  Started
-Container suborbital-scc-atmo-1  Starting
-Container suborbital-scc-atmo-1  Started
-ℹ️  use `docker ps` and `docker-compose logs` to check deployment status
+Network suborbital_se2  Creating
+Network suborbital_se2  Created
+Container suborbital-se2-builder-1  Creating
+Container suborbital-se2-controlplane-1  Creating
+Container suborbital-se2-controlplane-1  Created
+Container suborbital-e2core-1  Creating
+Container suborbital-se2-builder-1  Created
+Container suborbital-e2core-1  Created
+Container suborbital-se2-builder-1  Starting
+Container suborbital-se2-controlplane-1  Starting
+Container suborbital-se2-controlplane-1  Started
+Container suborbital-e2core-1  Starting
+Container suborbital-se2-builder-1  Started
+Container suborbital-e2core-1  Started
+ℹ️  use `docker ps` and `docker compose logs` to check deployment status
 
 PROXY: local tunnel to extension editor started
 
 
 Press enter to launch the local SE2 REPL...
-
-
 1. Create or edit a extension
 
 Choose an option: 1
 
 To create or edit a extension, enter its name (or FQFN): hello
+
+✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&fn=hello to access the editor
 ```
 
 This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
