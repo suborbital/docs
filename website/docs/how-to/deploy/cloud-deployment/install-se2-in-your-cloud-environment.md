@@ -12,7 +12,7 @@ To install SE2 in the cloud, you'll use the `subo` tool to automatically install
    * If you would like assistance with storage, [send us an email](mailto:team@suborbital.dev) or hit us up on [Discord](https://chat.suborbital.dev)!
 2. [Install the `kubectl` tool](https://kubernetes.io/docs/tasks/tools/#kubectl) and authenticate it with the cluster you want to use.
 3. Ensure you have access to modify your company's DNS records, as you need to create a domain name for the builder service (it must run on HTTPS, which requires a domain)
-4. Ensure you've run the [`subo compute create token <email>` command](../../../quickstart#generate-your-env-token) before attempting the install
+4. Ensure you've run the [`subo se2 create token <email>` command](../../../quickstart#generate-your-env-token) before attempting the install
 
 :::info
 `subo` creates a `suborbital` Kubernetes namespace and installs the `KEDA` autoscaler. Don't worry about existing applications installed in the cluster; this won't affect them!
@@ -21,7 +21,7 @@ To install SE2 in the cloud, you'll use the `subo` tool to automatically install
 Once you have the pre-requisites in place, navigate to the `suborbital` directory you created when you [generated your token](../../../quickstart#generate-your-env-token) and use `subo` to install:
 
 ```bash
-subo compute deploy core
+subo se2 deploy
 ```
 
 The tool will ask for your environment token and chosen domain name, and then automatically install everything into your cluster. The tool will attempt to auto-detect your cluster's storage class, but if it is unable, you will need to enter it manually.

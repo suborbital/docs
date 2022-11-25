@@ -22,7 +22,7 @@ To authenticate the editor for a specific user to edit their own extensions, [SE
 
 The editor is configured with URL parameters. Here's an example:
 
-`https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as0aslwi30l8h5lbF4lS7&ident=com.suborbital.customer&fn=add-record`
+`https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as0aslwi30l8h5lbF4lS7&ident=com.suborbital.customer&ext=add-record`
 
 Let's break it down:
 
@@ -36,9 +36,9 @@ Let's break it down:
 
 **Ident**: `&ident=com.suborbital.customer`
 
-* The identifier used when addressing your specific user, see  [Fully-qualified extension names](./fully-qualified-function-names.md) for more details
+* The identifier used when addressing your specific user
 
-**Fn**: `&fn=add-record`
+**Ext**: `&ext=add-record`
 
 * The specific extension name that the editor should load
 
@@ -50,7 +50,7 @@ Let's break it down:
 
 * The language template used for new extensions. Check out our [supported  languages](docs/atmo/runnable-api/language-support.md)!
 
-If the `fn` in question does not exist, the editor will automatically create a new extension.
+If the `ext` in question does not exist, the editor will automatically create a new extension.
 
 ## Building and deploying
 
@@ -58,4 +58,4 @@ Once the user has edited their extension, the `build` button in the top right wi
 
 Assuming the build succeeds, the user can choose to deploy the latest version with the `deploy` button. If they choose not to deploy, the draft will be available to them later.
 
-Until the user deploys the extension, it will remain at the previous version. The [API Reference](https://suborbital-compute.readme.io/reference/api-reference) gives you details about the draft and active versions of any extension.
+Until the user deploys the extension, it will remain at the previous version. The [API Reference](https://reference.suborbital.dev/) gives you details about the draft and active versions of any extension.
