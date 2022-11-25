@@ -51,7 +51,7 @@ module.exports = {
         {
           type: 'link',
           label: 'API reference',
-          href: 'https://suborbital-compute.readme.io/reference/api-reference',
+          href: 'https://reference.suborbital.dev/',
         },
         {
           type: 'link',

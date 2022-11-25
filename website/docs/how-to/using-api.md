@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 # Use SE2's APIs
 
 :::info
-You can find a detailed specification of SE2's APIs [here](https://suborbital-compute.readme.io/reference/api-reference).
+You can find a detailed specification of SE2's APIs [here](https://reference.suborbital.dev/).
 :::
 
 <Tabs groupId='language-selection'>
@@ -173,7 +173,7 @@ const suborbital = new Suborbital(configuration);
 
 ## Getting started
 
-Using the [SE2 APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available extensions and execute one.
+Using the [SE2 APIs](https://reference.suborbital.dev/), this guide will use the Administrative and Execution APIs to get a list of available extensions and execute one.
 
 The Administrative APIs `getExtensions` method takes an object with a `userId` and a `namespace` and returns a list of available extensions for that user in the provided namespace.
 

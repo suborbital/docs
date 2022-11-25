@@ -140,7 +140,7 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 ## Meet the editor
 
-The SE2 extension editor uses [SE2's APIs](./how-to/using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://suborbital-compute.readme.io/reference/api-reference) can be used programmatically, if that better suits your use case.
+The SE2 extension editor uses [SE2's APIs](./how-to/using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
