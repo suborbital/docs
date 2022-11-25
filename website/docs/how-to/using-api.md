@@ -85,7 +85,7 @@ func main() {
 
     // Run a remote build for the provided SE2 module and the unmodified 'hello world'
     // template source code.
-    build, _ := client.BuildFunctionString(runnable, template.Contents)
+    build, _ := client.BuildExtensionString(runnable, template.Contents)
 
     if !build.Succeeded {
         // Log the compiler output to see why the build failed
@@ -175,16 +175,16 @@ const suborbital = new Suborbital(configuration);
 
 Using the [SE2 APIs](https://suborbital-compute.readme.io/reference/api-reference), this guide will use the Administrative and Execution APIs to get a list of available extensions and execute one.
 
-The Administrative APIs `getFunctions` method takes an object with a `userId` and a `namespace` and returns a list of available extensions for that user in the provided namespace.
+The Administrative APIs `getExtensions` method takes an object with a `userId` and a `namespace` and returns a list of available extensions for that user in the provided namespace.
 
 ```typescript
-async function listAvailableFunctions() {
-    const functionList = await suborbital.admin.getFunctions({
+async extension listAvailableExtensions() {
+    const extensionList = await suborbital.admin.getExtensions({
         userId: "1234",
         namespace: "default",
     });
 
-    console.log("Functions:", functions);
+    console.log("Extensions:", extensions);
 }
 ```
 
@@ -192,7 +192,7 @@ async function listAvailableFunctions() {
 
 ```json
 {
-    "functions": [
+    "extensions": [
         {
             "name": "foo",
             "namespace": "...",
@@ -200,8 +200,8 @@ async function listAvailableFunctions() {
             "version": "...",
             "draftVersion": "...",
             "apiVersion": "...",
-            "fqfn": "...",
-            "fqfnURI": "...",
+            "fqext": "...",
+            "fqextURI": "...",
         }
     ]
 }
@@ -209,19 +209,19 @@ async function listAvailableFunctions() {
 
 The result includes a extension named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
 
-The `run` method takes an object with the `environment`, `userId`, `namespace`, `fnName`, and `version`, and returns the result of the executed extension.
+The `run` method takes an object with the `environment`, `userId`, `namespace`, `extName`, and `version`, and returns the result of the executed extension.
 
 ```typescript
-async function runFunction() {
+async extension runExtension() {
     const result = await suborbital.exec.run({
         environment: "com.acmeco",
         userId: "1234",
         namespace: "default",
-        fnName: "foo",
+        extName: "foo",
         version: "v1.0.0",
     });
 
-    console.log("Function output:", result);
+    console.log("Extension output:", result);
 }
 ```
 
@@ -234,10 +234,10 @@ These are all of the available methods.
 #### `suborbital.admin.getToken`
 
 **Description**: Retrieves an authentication token for the given extension, typically used to authenticate calls to the Builder API.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`.  
 **Result:** A string containing the token used for authorization.
 
-#### `suborbital.admin.getFunctions`
+#### `suborbital.admin.getExtensions`
 
 **Description:** Returns a list of available extensions for the given user in the given namespace.  
 **Args:** An object containing `userId`, `namespace`.  
@@ -245,7 +245,7 @@ These are all of the available methods.
 
 ```json
 {
-    "functions": [
+    "extensions": [
         {
             "name": "foo",
             "namespace": "...",
@@ -260,10 +260,10 @@ These are all of the available methods.
 }
 ```
 
-#### `suborbital.admin.getFunctionResults`
+#### `suborbital.admin.getExtensionResults`
 
 **Description:** Returns the most recent results (up to 5) produced by the execution of the given extension.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `version`.  
 **Result:**
 
 ```json
@@ -278,10 +278,10 @@ These are all of the available methods.
 }
 ```
 
-#### `suborbital.admin.getFunctionErrors`
+#### `suborbital.admin.getExtensionErrors`
 
 **Description:** Returns the most recent errors (up to 5) produced by the execution of the given extension.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `version`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `version`.  
 **Result:**
 
 ```json
@@ -302,7 +302,7 @@ These are all of the available methods.
 #### `suborbital.exec.run`
 
 **Description:** Executes the given extension, with the provided body, params and state loaded into the extension at runtime.  
-**Args:** An object containing `environment`,`userId`,`namespace`, `fnName`,`version`.  
+**Args:** An object containing `environment`,`userId`,`namespace`, `extName`,`version`.  
 **Result:** The result of the executed extension.
 
 ### Builder
@@ -310,37 +310,37 @@ These are all of the available methods.
 #### `suborbital.builder.build`
 
 **Description:** Builds the provided code using the specified language toolchain.  
-**Args:** An object containing `language`, `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Args:** An object containing `language`, `environment`, `userId`, `namespace`, `extName`, `token`.  
 **Result:** A string containing the logs for the build.  
 
 #### `suborbital.builder.getDraft`
 
 **Description:** Gets the draft for the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `token`.  
 **Result:** A specified runnable.  
 
 #### `suborbital.builder.deployDraft`
 
 **Description:** Deploys the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`, `token`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `token`.  
 **Result:** A string containing the version.  
 
 #### `suborbital.builder.testDraft`
 
 **Description:** Tests the draft for the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `fnName`.  
+**Args:** An object containing `environment`, `userId`, `namespace`, `extName`.  
 **Result:** A string containing the result.  
 
 #### `suborbital.builder.getTemplate`
 
 **Description:** Gets the template (which controls what your users see when they create a new extension) for a new extension of the given language.  
-**Args:** An object containing `fnName`, `language`.  
+**Args:** An object containing `extName`, `language`.  
 **Result:**
 
 ```ts
 import { logInfo } from "@suborbital/suborbital"
 
-export function run(input: ArrayBuffer): ArrayBuffer {
+export extension run(input: ArrayBuffer): ArrayBuffer {
     let inStr = String.UTF8.decode(input)
 
     let out = "Hello there, " + inStr

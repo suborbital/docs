@@ -57,7 +57,7 @@ You can set up multiple separate environments within an organization. These coul
 You can get an SE2 Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
 
 :::caution  
-The domain of your email address should match the `environment` you configure for SE2; i.e., if your email is `laika@example.com`, your SE2 environment would be called `com.example`. See [Fully-qualified function names](./customizing-functions/fully-qualified-function-names.md) for more information.
+The domain of your email address should match the `environment` you configure for SE2; i.e., if your email is `laika@example.com`, your SE2 environment would be called `com.example`. See [Fully-qualified function names](./customizing-extensions/fully-qualified-function-names.md) for more information.
 :::
 
 To create your env token, run:
@@ -102,17 +102,17 @@ Container suborbital-scc-atmo-1  Starting
 Container suborbital-scc-atmo-1  Started
 ℹ️  use `docker ps` and `docker-compose logs` to check deployment status
 
-PROXY: local tunnel to function editor started
+PROXY: local tunnel to extension editor started
 
 
 Press enter to launch the local SE2 REPL...
 
 
-1. Create or edit a function
+1. Create or edit a extension
 
 Choose an option: 1
 
-To create or edit a function, enter its name (or FQFN): hello
+To create or edit a extension, enter its name (or FQFN): hello
 ```
 
 This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
@@ -129,14 +129,14 @@ To create a tenant, copy the code below and paste it into your terminal:
 
 ```bash
 curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
+--header "Authorization: Bearer ${ENVIRONMENT_TOKEN}"
 ```
 
 - Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. If you had:
   - A dev environment named `dev.suborbital`
   - A tenant named `user1`
   - Your `IDENTIFIER` would be `dev.suborbital.user1`
-- Replace `ACCESS_KEY` with the access key you created in the previous step
+- Replace `ACCESS_KEY` with the environment token you created in the previous step
 
 ## Meet the editor
 
@@ -210,4 +210,4 @@ If you're invoking the Test API, you'll need to import the [Editor Token](./how-
 
 ## Connect your application
 
-Now that you've set up SE2 and created your first extension, you can use [SE2's APIs](./using-api.md) to start integrating extensions into your application!
+Now that you've set up SE2 and created your first extension, you can use [SE2's APIs](./how-to/using-api.md) to start integrating extensions into your application!
