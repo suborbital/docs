@@ -9,30 +9,21 @@ import TabItem from '@theme/TabItem';
 # Quickstart
 
 <!-- 
-TODO: add "click this, then that" sort of scaffolding 
+TODO: add live demo link for "What success looks like" purposes, like https://docs.netlify.com/get-started/
 -->
-
-<!-- 
-TODO: intro bits, including explicit learning objectives like https://docs.netlify.com/get-started/
--->
-
-<!-- 
-
-TODO: write this section
+This quickstart will help you learn how to create an app extension using SE2. It will also introduce some of SE2's key features to manage development environments and user access, and the extension editor.
 
 ## Prerequisites
 
-MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any app drop SE2 in?
-
--->
-
-To self-host SE2, you'll use the [Subo CLI](https://github.com/suborbital/subo) and [Docker](https://docs.docker.com), both of which must be installed before continuing.
+- The Subo CLI (installation instructions below) is supported only on MacOS and Linux
+- Check out our language support page to see a list of languages and their respective support statuses for SE2
+- Install [Docker](https://docs.docker.com)
 
 :::warning
 
 If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
 
-An SE2 migration tool for production deployments of Compute will be available soon. 
+An SE2 migration tool for production deployments of Compute will be available soon.
 
 :::
 
