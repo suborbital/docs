@@ -12,7 +12,7 @@ You can set your own webhooks in the `scc-config.yaml` file that `subo` created 
 ## Configuration options
 The `webhooks` stanza in `scc-config.yaml` consists of a top level `webhooks` object with a list of entries.
 
-Each entry has an `id` referencing the `builder.function.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
+Each entry has an `id` referencing the `builder.extension.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
 
 ## Examples
 
@@ -22,7 +22,7 @@ capabilities:
   # ...
 
 webhooks:
-  - id: builder.function.promoted
+  - id: builder.extension.promoted
     targets:
      - url: http://example.com/promoted
        method: POST
@@ -36,7 +36,7 @@ commonHeaders: &commonHeaders
   'Authorization': 'Bearer d2UncmUgaGlyaW5nCg=='
 
 webhooks:
-  - id: builder.function.promoted
+  - id: builder.extension.promoted
     targets:
      - url: http://echo-server:1234/promoted
        method: POST
@@ -53,7 +53,7 @@ Stay tuned for more hook points!
 :::
 
 
- `builder.function.promoted`
+ `builder.extension.promoted`
  
 **Description** Runs when an end user successfully deploys a extension. 
 
@@ -61,7 +61,7 @@ Stay tuned for more hook points!
 
 ```json
 {
-    "webhook_id": "builder.function.promoted",
+    "webhook_id": "builder.extension.promoted",
     "se2_context": {
         "request_id": "ac1f5e84-5327-46a5-9d71-8ad766f39979",
         "request_url": "/api/v1/draft/com.suborbital.demo/default/webhook/promote"
