@@ -11,9 +11,7 @@ We want to help! Creating custom templates and libraries are an important aspect
 
 ## Setup
 
-To create a custom extension template, create a fork of the `runnable-templates` git repository:
-
-[GitHub - suborbital/runnable-templates: Custom templates for SE2](https://github.com/suborbital/runnable-templates)
+To create a custom extension template, create a fork of the [`templates`](https://github.com/suborbital/templates) git repository.
 
 Once the repo has been forked into your company or personal account, you can begin editing the `templates` directory to fit your needs.
 
@@ -29,13 +27,13 @@ Edit `templates/rust/src/lib.rs.tmpl` to change what your users will see when th
 
 ## Configuring SE2
 
-To use the custom templates in your SE2 installation, the `SCC_TEMPLATES_REPO` environment variable must be set on the builder service.
+To use the custom templates in your SE2 installation, the `SE2_TEMPLATES_REPO` environment variable must be set on the builder service.
 
-- For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
-- For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:
+- For a local deployment, edit `docker-compose.yml` to add `SE2_TEMPLATES_REPO:` to the builder with the value set to your fork (e.g. `example-co/extension-templates`)
+- For a cloud deployment, edit `suborbital/se2-controlplane.yaml`, and add the following to the `builder` container's `environment`:
 
 ```yaml
-- name: SCC_TEMPLATES_REPO
+- name: SE2_TEMPLATES_REPO
   value: "{your fork}"
 ```
 
