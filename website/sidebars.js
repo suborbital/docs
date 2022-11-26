@@ -60,6 +60,10 @@ module.exports = {
         },
         {
           type: 'doc',
+          id: 'reference/language-support',
+        },
+        {
+          type: 'doc',
           id: 'reference/glossary',
         },
       ]
@@ -74,81 +78,7 @@ module.exports = {
       items: [
         'open-source/contributing-to-suborbital',
         'open-source/subo',
-        {
-          type: 'category',
-          label: 'Atmo',
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'open-source/atmo/atmo'
-          },
-          items: [
-            {
-              type: 'doc',
-              id: 'open-source/atmo/get-started',
-            },
-            {
-              collapsed: false,
-              type: 'category',
-              label: 'Concepts',
-              items: [
-                'open-source/atmo/concepts/runnables',
-                'open-source/atmo/concepts/the-directive',
-                'open-source/atmo/concepts/state',
-                'open-source/atmo/concepts/static-directory'
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Usage',
-              items: [
-                'open-source/atmo/usage/creating-runnables',
-                'open-source/atmo/usage/creating-handlers',
-                'open-source/atmo/usage/build-your-application',
-                'open-source/atmo/usage/deploying-atmo',
-                'open-source/atmo/usage/authentication',
-                'open-source/atmo/usage/error-handling',
-                'open-source/atmo/usage/headless',
-                'open-source/atmo/usage/managing-state',
-                'open-source/atmo/usage/schedules',
-                'open-source/atmo/usage/streams',
-                'open-source/atmo/usage/connections',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Runnable API',
-              link: {
-                type: 'doc',
-                id: 'open-source/atmo/runnable-api/introduction'
-              },
-              items: [
-                'open-source/atmo/runnable-api/language-support',
-                'open-source/atmo/runnable-api/request',
-                'open-source/atmo/runnable-api/response',
-                'open-source/atmo/runnable-api/logging',
-                'open-source/atmo/runnable-api/http-client',
-                'open-source/atmo/runnable-api/graphql-client',
-                'open-source/atmo/runnable-api/sql-databases',
-                'open-source/atmo/runnable-api/cache',
-                'open-source/atmo/runnable-api/file',
-              ]
-            },
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Sat',
-          link: {
-            type: 'doc',
-            id: 'open-source/sat/sat'
-          },
-          items: [
-            'open-source/sat/using-sat',
-            'open-source/sat/building-sat',
-            'open-source/sat/constellations',
-          ]
-        },
+        'open-source/e2-core/e2-core',
         {
           type: 'category',
           label: 'Intro to WebAssembly',

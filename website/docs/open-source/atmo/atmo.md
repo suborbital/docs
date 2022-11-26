@@ -4,8 +4,6 @@ pagination_prev: null
 
 # Atmo
 
-### Atmo has been deprecated. Our new open source extension server, [E2 Core](https://github.com/suborbital/e2core), is replacing it. Documentation is coming soon.
-
 ![Atmo logo](/img/logo-atmo-wide.svg)
 
 Atmo was born out of a desire to simplify server-side development by making it easy to bootstrap new projects, automatically scale to handle large amounts of traffic, and ensure their security with new technology and best practices, embodying the [SUFA design pattern](https://blog.suborbital.dev/building-a-better-monolith).
