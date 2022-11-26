@@ -55,8 +55,13 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'SE2 Go library reference',
+          label: 'Go library reference',
           href: 'https://github.com/suborbital/se2-go',
+        },
+        {
+          type: 'link',
+          label: 'JS/TS library reference',
+          href: 'https://github.com/suborbital/se2-node',
         },
         {
           type: 'doc',

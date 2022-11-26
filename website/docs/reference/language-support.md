@@ -29,7 +29,7 @@ This page explains the various levels of support for the growing number of sourc
 :::tip STATUS: STABLE
 :::
 
-Indicates complete support of language features and most, if not all SE2 APIs. The languages in this group are usually the first to receive updates when a new feature is added to the SE2 API.
+Indicates complete support of language features and most, if not all SE2 APIs. The languages in this group are usually the first to receive updates when a new feature is added to the SE2 APIs.
 
 #### Beta
 
