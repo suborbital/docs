@@ -91,8 +91,6 @@ We'll only be shown this access key once, so we'll need to store it somewhere sa
 
 ## The part where the integration happens
 
-<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Demo Time ⏰ <a href="https://t.co/7IXmf20AJc">pic.twitter.com/7IXmf20AJc</a></p>&mdash; Aleksandr Morozov (@morozov_dev) <a href="https://twitter.com/morozov_dev/status/1555121266230804483?ref_src=twsrc%5Etfw">August 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <!-- Would be great if we could use this!
 
 ## API Admin interface
@@ -153,7 +151,7 @@ curl --location --request POST "https://controlplane.stg.suborbital.network/api/
 
 The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly extensions will receive this request metadata, and attempt to spot abuse.
 
-We provide many prebuilt components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
+We provide many pre-built components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
 
 So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital extensions on PRO.xyz' platform.
 
@@ -205,9 +203,9 @@ Altogether, it should look something like [`https://editor.suborbital.network/?t
 
 PRO.xyz' integration only supports deploying one extension per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of extensions in any language, the sky is the limit.
 
-The editor already comes preloaded with a generic JavaScript template, but we have Ada's module to use instead.
+The editor already comes pre-loaded with a generic JavaScript template, but we have Ada's module to use instead.
 
-At the very baseline of it a extension receives some input, processes that input,and may produce some output. Suborbital allows extra API's (sort of superpowers) to be exposed to these modules at the operator's discretion.
+At the very baseline of it a extension receives some input, processes that input,and may produce some output. Suborbital allows extra APIs (sort of superpowers) to be exposed to these modules at the operator's discretion.
 
 Here we are including the "log" API to have our application log any unexpected issues with the input data
 
@@ -282,7 +280,7 @@ There we go, we got our first internet troublemaker exposed, and we've seen how 
 
 Now that you've know how to get SE2 extensibility powers into your app, you might want to:
 
-- [Learn more about SE2's API's](./how-to/using-api.md)
+- [Learn more about SE2's APIs](./how-to/using-api.md)
 - Make custom [module templates](./how-to/customize-extensions/custom-extension-templates.md) and [libraries](./how-to/customize-extensions/custom-libraries.md) to help your users get started building their own extensions for your app
 - Organize your users' extensions into [namespaces](./how-to/customize-extensions/namespaces.md) for different use cases
 

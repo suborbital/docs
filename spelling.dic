@@ -1,6 +1,9 @@
 0s
 1s
 ActiveX
+AssertHeaders
+ada
+Ada
 AddGroup
 adminUri
 Afterware
@@ -74,8 +77,11 @@ css
 ctx
 Ctx
 ctype
+customizability
 customizable
 customizations
+dataplane
+Dataplane
 dataset
 de
 deallocated
@@ -112,6 +118,8 @@ ErrorString
 ErrWaitTimeout
 eu
 ExecString
+ext
+extName
 execUri
 expensiveRunnable
 extensibility
@@ -126,12 +134,9 @@ filesystem
 filesystems
 FirstProposalMarch
 fmt
-fn
-Fn
-fnName
-fqfn
-FQFN
-fqfnURI
+FQMN
+fqmnURI
+frontend
 FullColour
 func
 functionList
@@ -281,6 +286,7 @@ mysql
 namespace
 Namespace
 namespaces
+namespacing
 natively
 nats
 NATS
@@ -413,6 +419,7 @@ signup
 someStructInstance
 Sooooobo
 specialmessage
+spidey
 Sprintf
 sql
 src
@@ -430,6 +437,7 @@ str
 struct
 subo
 Subo
+Suborbital's
 subtest
 subtests
 successfuly
@@ -452,6 +460,7 @@ TinyGo
 tls
 TLS
 tmpl
+TODO
 toolchain
 toolchains
 topologies
@@ -501,6 +510,7 @@ vlog
 vt
 vtest
 VTest
+Vue
 WaitOn
 WaitUntil
 wasi
@@ -529,6 +539,7 @@ Webhooks
 wordcount
 Wordcount
 wordcountCtxKey
+Wordpress
 workerRunner
 Workspaces
 wsl
@@ -536,5 +547,6 @@ WSL
 www
 XCode
 xcrun
+xyz
 yaml
 yml
