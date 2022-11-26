@@ -5,7 +5,7 @@ pagination_prev: null
 
 # Fully-qualified function names
 
-Each function uploaded by your users has a unique name called a fully-qualified function name, or FQFN. The string representation of an FQFN is as follows:
+Each function uploaded by your users has a unique name called a fully-qualified function name, or FQMN. The string representation of an FQMN is as follows:
 
 ```bash
 com.example.nawronuq98hqwekj198fkljbeco#default::record-event@v1.0.0
@@ -27,9 +27,9 @@ The domain of your email address should match the `environment` you
 configure for SE2, i.e. if your email is `laika@example.com`, your 
 SE2 environment would be called `com.example`.
 
-## FQFN URLs
+## FQMN URLs
 
-To execute a function in SE2 you will use a URL representation of FQFN. To reference an FQFN by URL, use the following pattern:
+To execute a function in SE2 you will use a URL representation of FQMN. To reference an FQMN by URL, use the following pattern:
 
 ```bash
 /{environment}.{userid}/{namespace}/{function}/{version}

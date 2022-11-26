@@ -114,7 +114,7 @@ so we can proceed to the next step
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed extensions, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own extensions inside Suborbital. Our application will then connect the tenant withone of its own internally maintained users.
+Suborbital lets an application's users create their own secure, sandboxed extensions, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own extensions inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
 
 It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
 

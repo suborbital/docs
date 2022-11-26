@@ -442,6 +442,7 @@ subtest
 subtests
 successfuly
 SUFA
+sus
 svc
 svg
 SwiftWasm
@@ -460,6 +461,7 @@ TinyGo
 tls
 TLS
 tmpl
+tnt
 TODO
 toolchain
 toolchains

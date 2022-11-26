@@ -253,8 +253,8 @@ These are all of the available methods.
             "version": "...",
             "draftVersion": "...",
             "apiVersion": "...",
-            "fqfn": "...",
-            "fqfnURI": "...",
+            "fqmn": "...",
+            "fqmnURI": "...",
         }
     ]
 }
