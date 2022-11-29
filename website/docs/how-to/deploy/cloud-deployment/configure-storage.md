@@ -22,53 +22,50 @@ Bucket authentication varies between cloud providers.
 
 You will need to supply the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` and `AWS_REGION` environment variables to the API for both the control plane and the builder. See the [AWS authentication documentation](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/guide_credentials_environment.html) for details. It is also possible to store the configuration as a Kubernetes secret, similar to the Google Cloud Storage configuration.
 
-To configure a storage bucket, provide the `SCC_STORAGE_PATH` environment variable to both the control plane and builder, e.g. `s3://my-bucket` for Amazon S3 or `gs://my-bucket` for Google Cloud Storage. For Kubernetes deployments, this is done in `.suborbital/scc-controlplane-deployment.yaml` under the `controlplane` and `builder` containers sections, and for local docker-compose deployments, this is done in `docker-compose.yaml` under the `scc-control-plane` and `scc-builder` services.
+To configure a storage bucket, provide the `SE2_STORAGE_PATH` environment variable to both the control plane and builder, e.g. `s3://my-bucket` for Amazon S3 or `gs://my-bucket` for Google Cloud Storage. For Kubernetes deployments, this is done in `.suborbital/se2-controlplane-deployment.yaml` under the `controlplane` and `builder` containers sections, and for local docker-compose deployments, this is done in `docker-compose.yaml` under the `se2-controlplane` and `se2-builder` services.
 
 
 ```yaml
 containers:
   - name: controlplane
-    image: suborbital/scc-control-plane:v0.3.0
+    image: suborbital/se2-controlplane:v0.4.2
     command: ["controlplane"]
-    
-    ports: 
+
+    ports:
       - containerPort: 8081
-    
+
     env:
-      - name: SCC_HTTP_PORT        
+      - name: SE2_HTTP_PORT
         value: "8081"
-        
-      - name: SCC_LOG_LEVEL
-        value: 'info'
-        
-      - name: SCC_HEADLESS
-        value: "true"
-        
-      - name: SCC_ENV_TOKEN
-        value: <your environment token>
-      
-      - name: SCC_STORAGE_PATH
-        value: s3://your-s3-storage-bucket>
-        
-  
-  - name: builder
-    image: suborbital/scc-builder:v0.3.0
-    command: ["builder"]
-    
-    env:
-      - name: SCC_DOMAIN
-        value: "domain.example.com"
 
-      - name: SCC_TLS_PORT
-        value: "8443"
-
-      - name: SCC_LOG_LEVEL
+      - name: SE2_LOG_LEVEL
         value: "info"
 
-      - name:  SCC_CONTROL_PLANE
-        value: "scc-controlplane-service:8081"
+      - name: SE2_ENV_TOKEN
+        value: <your environment token>
 
-      - name: SCC_STORAGE_PATH
+      - name: SE2_STORAGE_PATH
+        value: s3://<your-s3-storage-bucket>
+
+
+  - name: builder
+    image: suborbital/se2-builder:v0.4.2
+    command: ["builder"]
+
+    env:
+      - name: SE2_DOMAIN
+        value: "domain.example.com"
+
+      - name: SE2_TLS_PORT
+        value: "8443"
+
+      - name: SE2_LOG_LEVEL
+        value: "info"
+
+      - name:  SE2_CONTROL_PLANE
+        value: "se2-controlplane-service:8081"
+
+      - name: SE2_STORAGE_PATH
         value: s3://your-s3-storage-bucket
 ```
 </TabItem>
@@ -81,7 +78,7 @@ GCS expects to read a service account credentials file, so those credentials mus
 
 #### Kubernetes deployment
 
-Create `.suborbital/scc-gcs-credentials.yaml`, providing the base64 encoded contents of your `service-account-file.json`:
+Create `.suborbital/se2-gcs-credentials.yaml`, providing the base64 encoded contents of your `service-account-file.json`:
 
 ```yaml
 apiVersion: v1
@@ -101,45 +98,45 @@ Mount the secret and provide the `GOOGLE_APPLICATION_CREDENTIALS` environment va
 ```yaml
 containers:
   - name: controlplane
-    image: suborbital/scc-control-plane:v0.3.0
+    image: suborbital/se2-controlplane:v0.4.2
     command: ["controlplane"]
 
     env:
-      - name: SCC_STORAGE_PATH
+      - name: SE2_STORAGE_PATH
         value: "gs://your-storage-bucket"
       - name: GOOGLE_APPLICATION_CREDENTIALS
         value: "/etc/gcp/sa_credentials.json"
 
     volumeMounts:
       - name: controlplane-config
-        mountPath: "/home/scn/config"
+        mountPath: "/home/se2/config"
         readOnly: true
       - name: gcs-service-account-credentials-volume
         mountPath: /etc/gcp
         readOnly: true
 
   - name: builder
-    image: suborbital/scc-builder:v0.3.0
+    image: suborbital/se2-builder:v0.4.2
     command: ["builder"]
 
     env:
-      - name: SCC_STORAGE_PATH
+      - name: SE2_STORAGE_PATH
         value: "gs://your-storage-bucket"
       - name: GOOGLE_APPLICATION_CREDENTIALS
         value: "/etc/gcp/sa_credentials.json"
 
     volumeMounts:
       - name: controlplane-config
-        mountPath: "/home/scn/config"
+        mountPath: "/home/se2/config"
         readOnly: true
       - name: gcs-service-account-credentials-volume
         mountPath: /etc/gcp
         readOnly: true
 
 volumes:
-  - name: scc-config
+  - name: se2-config
     configMap:
-      name: scc-config
+      name: se2-config
   - name: gcs-service-account-credentials-volume
     secret:
       secretName: gcs-service-account-credentials

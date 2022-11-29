@@ -49,16 +49,16 @@ import (
 )
 
 func client() *se2.Client {
-    token, _ := os.LookupEnv("SCC_ENV_TOKEN")
+    token, _ := os.LookupEnv("SE2_ENV_TOKEN")
     client, _ := se2.NewClient(se2.LocalConfig(), token)
 
     return client
 }
 ```
 
-#### Build and run a extension
+#### Build and run a plugin
 
-We can now integrate SE2 into an application. `se2-go` has access to all of SE2's APIs. It can run builds, list existing extensions, run tests, and execute extensions.
+We can now integrate SE2 into an application. `se2-go` has access to all of SE2's APIs. It can run builds, list existing plugins, run tests, and execute plugins.
 
 Behind the scenes, `se2-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the SE2 API.
 
@@ -74,29 +74,34 @@ import (
 func main() {
     client := client()
 
-    // This is a local reference to some SE2 module. Nothing has run in SE2 at this point.
-    runnable := se2.NewRunnable("com.suborbital", "acmeco", "default", "rs-hello-world", "rust")
+    // This is a local reference to some plugin. Nothing has run in SE2 at this point.
+    plugin := se2.NewPlugin("com.suborbital", "acmeco", "default", "tinygo-hey")
 
-    // Request template source code for the above SE2 module.
-    template, _ := client.BuilderTemplate(runnable)
+    // Request template source code for the above plugin.
+    template, _ := client.BuilderTemplate(plugin, "tinygo")
 
-    // Log the default 'hello world' Rust template to stdout
-    log.Println(template.Contents)
+    // Modify the default template
+    modified := strings.Replace(template.Contents, "Hello", "Hey there", 1)
+    log.Println(modified)
 
-    // Run a remote build for the provided SE2 module and the unmodified 'hello world'
-    // template source code.
-    build, _ := client.BuildExtensionString(runnable, template.Contents)
+    // Run a remote build for the provided plugin and the modified 'goodbye world'
+    // template.
+    build, err := client.BuildFunctionString(plugin, "tinygo", modified)
+
+    if err != nil {
+        log.Fatal(err)
+    }
 
     if !build.Succeeded {
-        // Log the compiler output to see why the build failed
+        // Log the builder output to see why the build failed
         log.Fatal(build.OutputLog)
     }
 
-    // Deploy the extension (the runnable's .Version field is adjusted here)
-    client.PromoteDraft(runnable)
+    // Deploy the function and get the new reference
+    ref, _ := client.PromoteDraft(plugin)
 
-    // Execute the extension
-    result, _ := client.ExecString(runnable, "world!")
+    // Execute the plugin
+    result, _ := client.ExecString(plugin, "world!")
 
     // Log the execution output
     log.Println(string(result))
@@ -173,18 +178,18 @@ const suborbital = new Suborbital(configuration);
 
 ## Getting started
 
-Using the [SE2 APIs](https://reference.suborbital.dev/), this guide will use the Administrative and Execution APIs to get a list of available extensions and execute one.
+Using the [SE2 APIs](https://reference.suborbital.dev/), this guide will use the Administrative and Execution APIs to get a list of available plugins and execute one.
 
-The Administrative APIs `getExtensions` method takes an object with a `userId` and a `namespace` and returns a list of available extensions for that user in the provided namespace.
+The Administrative APIs `getPlugins` method takes an object with a `userId` and a `namespace` and returns a list of available plugins for that user in the provided namespace.
 
 ```typescript
-async extension listAvailableExtensions() {
-    const extensionList = await suborbital.admin.getExtensions({
+async function listAvailablePlugins() {
+    const plugins = await suborbital.admin.getPlugins({
         userId: "1234",
         namespace: "default",
     });
 
-    console.log("Extensions:", extensions);
+    console.log("Plugins:", plugins);
 }
 ```
 
@@ -192,7 +197,7 @@ async extension listAvailableExtensions() {
 
 ```json
 {
-    "extensions": [
+    "plugins": [
         {
             "name": "foo",
             "namespace": "...",
@@ -207,21 +212,21 @@ async extension listAvailableExtensions() {
 }
 ```
 
-The result includes a extension named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
+The result includes a plugin named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
 
-The `run` method takes an object with the `environment`, `userId`, `namespace`, `extName`, and `version`, and returns the result of the executed extension.
+The `run` method takes an object with the `environment`, `userId`, `namespace`, `pluginName`, and `version`, and returns the result of the executed plugin.
 
 ```typescript
-async extension runExtension() {
+async function runPlugin() {
     const result = await suborbital.exec.run({
         environment: "com.acmeco",
         userId: "1234",
         namespace: "default",
-        extName: "foo",
+        pluginName: "foo",
         version: "v1.0.0",
     });
 
-    console.log("Extension output:", result);
+    console.log("Plugin output:", result);
 }
 ```
 
@@ -233,19 +238,19 @@ These are all of the available methods.
 
 #### `suborbital.admin.getToken`
 
-**Description**: Retrieves an authentication token for the given extension, typically used to authenticate calls to the Builder API.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`.  
+**Description**: Retrieves an authentication token for the given extension, typically used to authenticate calls to the Builder API.
+**Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`.
 **Result:** A string containing the token used for authorization.
 
-#### `suborbital.admin.getExtensions`
+#### `suborbital.admin.getPlugins`
 
-**Description:** Returns a list of available extensions for the given user in the given namespace.  
-**Args:** An object containing `userId`, `namespace`.  
+**Description:** Returns a list of available plugins for the given user in the given namespace.
+**Args:** An object containing `userId`, `namespace`.
 **Result:**
 
 ```json
 {
-    "extensions": [
+    "plugins": [
         {
             "name": "foo",
             "namespace": "...",
@@ -260,10 +265,10 @@ These are all of the available methods.
 }
 ```
 
-#### `suborbital.admin.getExtensionResults`
+#### `suborbital.admin.getExecutionResult`
 
-**Description:** Returns the most recent results (up to 5) produced by the execution of the given extension.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `version`.  
+**Description:** Returns the most recent results (up to 5) produced by the execution of the given extension.
+**Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`, `version`.
 **Result:**
 
 ```json
@@ -278,69 +283,50 @@ These are all of the available methods.
 }
 ```
 
-#### `suborbital.admin.getExtensionErrors`
-
-**Description:** Returns the most recent errors (up to 5) produced by the execution of the given extension.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `version`.  
-**Result:**
-
-```json
-{
-    "errors": [
-        {
-            "uuid": "...",
-            "timestamp": "...",
-            "code": 400,
-            "message": "..."
-        }
-    ]
-}
-```
-
 ### Exec
 
 #### `suborbital.exec.run`
 
-**Description:** Executes the given extension, with the provided body, params and state loaded into the extension at runtime.  
-**Args:** An object containing `environment`,`userId`,`namespace`, `extName`,`version`.  
+**Description:** Executes the given extension, with the provided body, params and state loaded into the extension at runtime.
+**Args:** An object containing `environment`,`userId`,`namespace`, `pluginName`,`version`.
 **Result:** The result of the executed extension.
 
 ### Builder
 
 #### `suborbital.builder.build`
 
-**Description:** Builds the provided code using the specified language toolchain.  
-**Args:** An object containing `language`, `environment`, `userId`, `namespace`, `extName`, `token`.  
-**Result:** A string containing the logs for the build.  
+**Description:** Builds the provided code using the specified language toolchain.
+**Args:** An object containing `language`, `environment`, `userId`, `namespace`, `pluginName`, `token`.
+**Result:** A string containing the logs for the build.
 
 #### `suborbital.builder.getDraft`
 
-**Description:** Gets the draft for the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `token`.  
-**Result:** A specified runnable.  
+**Description:** Gets the draft for the specified runnable.
+**Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`, `token`.
+**Result:** A specified runnable.
 
 #### `suborbital.builder.deployDraft`
 
-**Description:** Deploys the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`, `token`.  
-**Result:** A string containing the version.  
+**Description:** Deploys the specified runnable.
+**Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`, `token`.
+**Result:** A string containing the version.
 
 #### `suborbital.builder.testDraft`
 
-**Description:** Tests the draft for the specified runnable.  
-**Args:** An object containing `environment`, `userId`, `namespace`, `extName`.  
-**Result:** A string containing the result.  
+**Description:** Tests the draft for the specified runnable.
+**Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`.
+**Result:** A string containing the result.
 
 #### `suborbital.builder.getTemplate`
 
-**Description:** Gets the template (which controls what your users see when they create a new extension) for a new extension of the given language.  
-**Args:** An object containing `extName`, `language`.  
+**Description:** Gets the template (which controls what your users see when they create a new extension) for a new extension of the given language.
+**Args:** An object containing `pluginName`, `language`.
 **Result:**
 
 ```ts
 import { logInfo } from "@suborbital/suborbital"
 
-export extension run(input: ArrayBuffer): ArrayBuffer {
+export function run(input: ArrayBuffer): ArrayBuffer {
     let inStr = String.UTF8.decode(input)
 
     let out = "Hello there, " + inStr

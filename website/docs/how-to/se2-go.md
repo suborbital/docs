@@ -25,7 +25,7 @@ go get github.com/suborbital/se2-go@latest
 
 ## Configuration
 
-This example sets up a basic client with the [token generated in Subo](../subo.md) or with the web app. The `se2.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/compute-go/blob/main/examples/app)
+This example sets up a basic client with the [token generated in Subo](../subo.md) or with the web app. The `se2.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/se2-go/blob/main/examples/app)
 
 ```go title="client.go"
 package main
@@ -37,16 +37,16 @@ import (
 )
 
 func client() *se2.Client {
-    token, _ := os.LookupEnv("SCC_ENV_TOKEN")
+    token, _ := os.LookupEnv("SE2_ENV_TOKEN")
     client, _ := se2.NewClient(se2.LocalConfig(), token)
 
     return client
 }
 ```
 
-## Build and run a extension
+## Build and run a plugin
 
-We can now integrate SE2 into an application. `se2-go` has access to all of SE2's APIs. It can run builds, list existing extensions, run tests, and execute extensions.
+We can now integrate SE2 into an application. `se2-go` has access to all of SE2's APIs. It can run builds, list existing plugins, run tests, and execute plugins.
 
 Behind the scenes, `se2-go` manages authentication, so you don't have to worry about setting the right HTTP headers when interacting with the SE2 API.
 
@@ -62,29 +62,34 @@ import (
 func main() {
     client := client()
 
-    // This is a local reference to some SE2 module. Nothing has run in SE2 at this point.
-    runnable := se2.NewRunnable("com.suborbital", "acmeco", "default", "rs-hello-world", "rust")
+    // This is a local reference to some plugin. Nothing has run in SE2 at this point.
+    plugin := se2.NewPlugin("com.suborbital", "acmeco", "default", "tinygo-hey")
 
-    // Request template source code for the above SE2 module.
-    template, _ := client.BuilderTemplate(runnable)
+    // Request template source code for the above plugin.
+    template, _ := client.BuilderTemplate(plugin, "tinygo")
 
-    // Log the default 'hello world' Rust template to stdout
-    log.Println(template.Contents)
+    // Modify the default template
+    modified := strings.Replace(template.Contents, "Hello", "Hey there", 1)
+    log.Println(modified)
 
-    // Run a remote build for the provided SE2 module and the unmodified 'hello world'
-    // template source code.
-    build, _ := client.BuildExtensionString(runnable, template.Contents)
+    // Run a remote build for the provided plugin and the modified 'goodbye world'
+    // template.
+    build, err := client.BuildFunctionString(plugin, "tinygo", modified)
+
+    if err != nil {
+        log.Fatal(err)
+    }
 
     if !build.Succeeded {
-        // Log the compiler output to see why the build failed
+        // Log the builder output to see why the build failed
         log.Fatal(build.OutputLog)
     }
 
-    // Deploy the extension (the runnable's .Version field is adjusted here)
-    client.PromoteDraft(runnable)
+    // Deploy the function and get the new reference
+    ref, _ := client.PromoteDraft(plugin)
 
-    // Execute the extension
-    result, _ := client.ExecString(runnable, "world!")
+    // Execute the plugin
+    result, _ := client.ExecString(plugin, "world!")
 
     // Log the execution output
     log.Println(string(result))

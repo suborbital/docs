@@ -7,22 +7,24 @@ pagination_next: null
 
 Certain actions in SE2 can trigger webhooks to notify other services of the event. The receivers of webhooks get contextually relevant information about the request SE2 receiver. By default, no webhooks are configured.
 
-You can set your own webhooks in the `scc-config.yaml` file that `subo` created for you in your `suborbital/config` directory.
+You can set your own webhooks in the `se2-config.yaml` file that `subo` created for you in your `suborbital/config` directory.
 
 ## Configuration options
-The `webhooks` stanza in `scc-config.yaml` consists of a top level `webhooks` object with a list of entries.
 
-Each entry has an `id` referencing the `builder.extension.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
+The `webhooks` stanza in `se2-config.yaml` consists of a top level `webhooks` object with a list of entries.
+
+Each entry has an `id` referencing the `builder.function.promoted` hook point and a list of **one or more** HTTP `targets`, which consist of a `url`, `method`, and dictionary of `headers` (optional).
 
 ## Examples
 
 A simple inline example:
-```yaml title=scc-config.yaml
+
+```yaml title=se2-config.yaml
 capabilities:
   # ...
 
 webhooks:
-  - id: builder.extension.promoted
+  - id: builder.function.promoted
     targets:
      - url: http://example.com/promoted
        method: POST
@@ -31,12 +33,13 @@ webhooks:
 ```
 
 An example with shared headers and multiple targets for a single hook point:
-```yaml title=scc-config.yaml
+
+```yaml title=se2-config.yaml
 commonHeaders: &commonHeaders
   'Authorization': 'Bearer d2UncmUgaGlyaW5nCg=='
 
 webhooks:
-  - id: builder.extension.promoted
+  - id: builder.function.promoted
     targets:
      - url: http://echo-server:1234/promoted
        method: POST
@@ -46,22 +49,22 @@ webhooks:
        method: POST
        headers: *commonHeaders
 ```
+
 ## Hook points
 
 :::info Devs at work
 Stay tuned for more hook points!
 :::
 
+ `builder.function.promoted`
 
- `builder.extension.promoted`
- 
-**Description** Runs when an end user successfully deploys a extension. 
+**Description** Runs when an end user successfully deploys a extension.
 
 **Sample response(JSON):**
 
 ```json
 {
-    "webhook_id": "builder.extension.promoted",
+    "webhook_id": "builder.function.promoted",
     "se2_context": {
         "request_id": "ac1f5e84-5327-46a5-9d71-8ad766f39979",
         "request_url": "/api/v1/draft/com.suborbital.demo/default/webhook/promote"
