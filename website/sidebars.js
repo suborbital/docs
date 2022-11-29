@@ -14,12 +14,12 @@ module.exports = {
       label: 'How-To',
       collapsible: false,
       items: [
-        'how-to/using-api',
+        'how-to/se2-go',
+        'how-to/se2-js',
         {
         'Customize extensions': [
           'how-to/customize-extensions/extension-editor',
           'how-to/customize-extensions/custom-extension-templates',
-          'how-to/customize-extensions/custom-libraries',
           'how-to/customize-extensions/namespaces',
         ]
         },
@@ -55,12 +55,12 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'Go library reference',
+          label: 'Go client library reference',
           href: 'https://github.com/suborbital/se2-go',
         },
         {
           type: 'link',
-          label: 'JS/TS library reference',
+          label: 'JS/TS client library reference',
           href: 'https://github.com/suborbital/se2-node',
         },
         {
@@ -84,20 +84,6 @@ module.exports = {
         'open-source/contributing-to-suborbital',
         'open-source/subo',
         'open-source/e2-core/e2-core',
-        {
-          type: 'category',
-          label: 'Intro to WebAssembly',
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'open-source/intro-to-webassembly/intro-to-wasm'
-          },
-          items: [
-            'open-source/intro-to-webassembly/history',
-            'open-source/intro-to-webassembly/why-webassembly',
-            'open-source/intro-to-webassembly/history'
-          ]
-        },
       ]
     },
   ]

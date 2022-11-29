@@ -280,7 +280,7 @@ There we go, we got our first internet troublemaker exposed, and we've seen how 
 
 Now that you've know how to get SE2 extensibility powers into your app, you might want to:
 
-- [Learn more about SE2's APIs](./how-to/using-api.md)
+- Learn more about using SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md)
 - Make custom [module templates](./how-to/customize-extensions/custom-extension-templates.md) and [libraries](./how-to/customize-extensions/custom-libraries.md) to help your users get started building their own extensions for your app
 - Organize your users' extensions into [namespaces](./how-to/customize-extensions/namespaces.md) for different use cases
 

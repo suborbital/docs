@@ -16,7 +16,7 @@ This quickstart will help you learn how to create an app extension using SE2. It
 - Check out our language support page to see a list of languages and their respective support statuses for SE2
 - Install [Docker](https://docs.docker.com)
 
-:::warning
+:::warning Danger Will Robinson
 
 If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
 
@@ -117,52 +117,35 @@ The Subo REPL includes a proxy that makes it easy to connect the hosted editor t
 
 The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
 
-## Create a tenant (user)
-
-Suborbital lets an application's users—or "tenants"—create their own secure, sandboxed extensions, carefully isolated from the core of the system and one another. Each tenant account has its own extensions inside Suborbital.
-
-To create a tenant, copy the code below and paste it into your terminal:
-
-```bash
-curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ENVIRONMENT_TOKEN}"
-```
-
-- Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. If you had:
-  - A dev environment named `dev.suborbital`
-  - A tenant named `user1`
-  - Your `IDENTIFIER` would be `dev.suborbital.user1`
-- Replace `ACCESS_KEY` with the environment token you created in the previous step
-
 ## Meet the editor
 
-The SE2 extension editor uses [SE2's APIs](./how-to/using-api.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
+The SE2 extension editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `FN` to the name of our namespace (e.g. `default`) and the name of our extension (e.g. `foo`). Copy the `token` field in the response.
+In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `ext` to the name of our namespace (e.g. `default`) and the name of our extension (e.g. `foo`). Copy the `token` field in the response.
 
 ```bash
-curl --location --request GET "https://builder.stg.suborbital.network/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${FN}" \
+curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
 --header "Authorization: Bearer ${ACCESS_KEY}"
 ```
 
-### Editor URLs
+### Editor URLs in production
 
-To edit a extension via the editor, you—or more likely your application—must build a valid URL to pass to the editor.
+To edit a extension via the editor in a production environment, you—or more likely your application—must build a valid URL to pass to the editor.
 
 Configure the URL like so:
 
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
-  - `builder`: `https://builder.stg.suborbital.network`
+  - `builder`: `https://your-builder.example.com`
   - `token`: The token you created in the previous step
   - `ident`: your tenant's identifier
   - `namespace`: the name of your namespace if different than “default”
   - `ext`: the name of your extension
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://builder.stg.suborbital.network&token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&ident=dev.suborbital.user1&ext=my-extension&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&ext=my-extension&template=javascript`
 
 ## Your first extension
 
@@ -202,4 +185,4 @@ hello, my friend
 
 ## Connect your application
 
-Now that you've set up SE2 and created your first extension, you can use [SE2's APIs](./how-to/using-api.md) to start integrating extensions into your application!
+Now that you've set up SE2 and created your first extension, you can use SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to start integrating extensions into your application!

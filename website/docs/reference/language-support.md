@@ -9,36 +9,33 @@ This page explains the various levels of support for the growing number of sourc
 
 ## Support status
 
-| Language          | `--lang=`               | Support Status |
+| Language          | `&template`               | Support Status |
 | ----------------- | ----------------------- | -------------- |
-| JavaScript        | `--lang=javascript`     | Beta           |
-| TypeScript        | `--lang=typescript`     | Beta           |
-| AssemblyScript    | `--lang=assemblyscript` | Beta           |
-| TinyGo            | `--lang=tinygo`         | Beta           |
-| Grain             | `--lang=grain`          | Beta           |
-| Rust              | `--lang=rust`           | Stable         |
-| WebAssembly Text  | `--lang=wat`            | Stable         |
+| JavaScript        | `&template=javascript`       | Stable          |
+| TypeScript        | `&template=typescript`     | Stable           |
+| TinyGo            | `&template=tinygo`         | Stable           |
+| Rust              | `&template=rust`           | Stable         |
 
 - Rust support is implemented through the [native WebAssembly support](https://www.rust-lang.org/what/wasm) of the Rust compiler
 - Go support uses the [Tiny Go compiler](https://tinygo.org/) to target WebAssembly
 
-### Support status interpretation
+## Support status interpretation
 
-#### Stable
+### Stable
 
 :::tip STATUS: STABLE
 :::
 
 Indicates complete support of language features and most, if not all SE2 APIs. The languages in this group are usually the first to receive updates when a new feature is added to the SE2 APIs.
 
-#### Beta
+### Beta
 
 :::info STATUS: BETA
 :::
 
 Indicative of widespread support for language features and most SE2 APIs. Some newer or more complex APIs might be missing, and certain language features might be unimplemented, or may not be completely stable.
 
-#### Preview
+### Preview
 
 :::caution STATUS: PREVIEW
 :::
