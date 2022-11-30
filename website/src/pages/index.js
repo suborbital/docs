@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout title={`${siteConfig.title}`} description="Cloud Native development made secure, flexible, and fun">
       <main>
-       <div className="center">
+       <div className="homeMainContent">
           <SectionLight>
             <Header />
           </SectionLight>

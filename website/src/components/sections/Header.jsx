@@ -23,6 +23,17 @@ const Header = () => {
           </Link>
         </Row>
       </div>
+      <div>
+        <img className='projectLogo' src={('/img/E2core-logo.svg')} alt="E2 Core" />
+        <Paragraph className="spacing">
+        E2 Core is our new open source extension server, powering SE2. Documentation is coming soon!
+        </Paragraph>
+        <Row>
+          <Link to={'https://github.com/suborbital/e2core'}>
+            <DocButton>E2 Core on GitHub</DocButton>
+          </Link>
+        </Row>
+      </div>
     </ResponsiveRow>
   )
 }

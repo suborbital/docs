@@ -12,8 +12,12 @@
 }
 
 .projectLogo {
-  max-height: 4rem;
-  margin: .5rem 0;
+  max-height: 6rem;
+  margin: 1.5 rem 0;
+}
+
+.projectLogo img {
+  max-width: 150%;
 }
 
 @media (max-width: 767px) {
