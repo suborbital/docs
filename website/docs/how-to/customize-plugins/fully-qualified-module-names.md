@@ -3,9 +3,9 @@ pagination_next: null
 pagination_prev: null
 ---
 
-# Fully-qualified function names
+# Fully-qualified module names
 
-Each function uploaded by your users has a unique name called a fully-qualified function name, or FQMN. The string representation of an FQMN is as follows:
+Each function uploaded by your users has a unique name called a fully-qualified module name, or FQMN. The string representation of an FQMN is as follows:
 
 ```bash
 com.example.nawronuq98hqwekj198fkljbeco#default::record-event@v1.0.0
