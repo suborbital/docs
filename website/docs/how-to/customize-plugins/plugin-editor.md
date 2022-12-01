@@ -22,7 +22,7 @@ To authenticate the editor for a specific user to edit their own plugins, [SE2's
 
 The editor is configured with URL parameters. Here's an example:
 
-`https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as0aslwi30l8h5lbF4lS7&ident=com.suborbital.customer&ext=add-record`
+`https://editor.suborbital.network?builder=https://builder.acmeco.com&token=K78as0aslwi30l8h5lbF4lS7&ident=com.suborbital.customer&fn=add-record`
 
 Let's break it down:
 
@@ -38,7 +38,7 @@ Let's break it down:
 
 * The identifier used when addressing your specific user
 
-**Ext**: `&ext=add-record`
+**Fn**: `&fn=add-record`
 
 * The specific plugin name that the editor should load
 
@@ -48,9 +48,9 @@ Let's break it down:
 
 **Template** (optional): `&template=assemblyscript`
 
-* The language template used for new plugins. Check out our [supported  languages](docs/atmo/runnable-api/language-support.md)!
+* The language template used for new plugins. Check out our [supported  languages](../../reference/language-support.md))!
 
-If the `ext` in question does not exist, the editor will automatically create a new plugin.
+If the `fn` in question does not exist, the editor will automatically create a new extension.
 
 ## Building and deploying
 

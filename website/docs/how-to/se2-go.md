@@ -25,7 +25,7 @@ go get github.com/suborbital/se2-go@latest
 
 ## Configuration
 
-This example sets up a basic client with the [token generated in Subo](../subo.md) or with the web app. The `se2.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/se2-go/blob/main/examples/app)
+This example sets up a basic client with the [token generated in Subo](../open-source/subo.md) or with the web app. The `se2.Client` object created here assumes that SE2 is running on the same host on its default ports. Feel free to [check out the code for this example!](https://github.com/suborbital/se2-go/blob/main/examples/app)
 
 ```go title="client.go"
 package main
