@@ -58,7 +58,7 @@ Stay tuned for more hook points!
 
  `builder.function.promoted`
 
-**Description** Runs when an end user successfully deploys a extension.
+**Description** Runs when an end user successfully deploys a plugin.
 
 **Sample response(JSON):**
 

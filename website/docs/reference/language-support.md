@@ -5,7 +5,7 @@ pagination_prev: null
 
 # Language support
 
-This page explains the various levels of support for the growing number of source languages supported for writing extensions in SE2.
+This page explains the various levels of support for the growing number of source languages supported for writing plugins in SE2.
 
 ## Support status
 

@@ -101,9 +101,9 @@ async function listAvailablePlugins() {
 }
 ```
 
-The result includes a extension named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
+The result includes a plugin named `foo` (which for this tutorial already exists) and which we will execute using the Execution APIs `run` method.
 
-The `run` method takes an object with the `environment`, `userId`, `namespace`, `pluginName`, and `version`, and returns the result of the executed extension.
+The `run` method takes an object with the `environment`, `userId`, `namespace`, `extName`, and `version`, and returns the result of the executed plugin.
 
 ```typescript
 async function runExtension() {
@@ -127,7 +127,7 @@ These are all of the available methods.
 
 #### `suborbital.admin.getToken`
 
-**Description**: Retrieves an authentication token for the given extension, typically used to authenticate calls to the Builder API.
+**Description**: Retrieves an authentication token for the given plugin, typically used to authenticate calls to the Builder API.
 **Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`.
 **Result:** A string containing the token used for authorization.
 
@@ -156,7 +156,7 @@ These are all of the available methods.
 
 #### `suborbital.admin.getExecutionResult`
 
-**Description:** Returns the most recent results (up to 5) produced by the execution of the given extension.
+**Description:** Returns the most recent results (up to 5) produced by the execution of the given plugin.
 **Args:** An object containing `environment`, `userId`, `namespace`, `pluginName`, `version`.
 **Result:**
 
@@ -176,9 +176,9 @@ These are all of the available methods.
 
 #### `suborbital.exec.run`
 
-**Description:** Executes the given extension, with the provided body, params and state loaded into the extension at runtime.
+**Description:** Executes the given plugin, with the provided body, params and state loaded into the extension at runtime.
 **Args:** An object containing `environment`,`userId`,`namespace`, `pluginName`,`version`.
-**Result:** The result of the executed extension.
+**Result:** The result of the executed plugin.
 
 ### Builder
 
@@ -208,7 +208,7 @@ These are all of the available methods.
 
 #### `suborbital.builder.getTemplate`
 
-**Description:** Gets the template (which controls what your users see when they create a new extension) for a new extension of the given language.
+**Description:** Gets the template (which controls what your users see when they create a new plugin) for a new extension of the given language.
 **Args:** An object containing `pluginName`, `language`.
 **Result:**
 

@@ -5,7 +5,7 @@ pagination_next: null
 
 # Configure capabilities
 
-SE2 extensions can access a number of capabilities:
+SE2 plugins can access a number of capabilities:
 
 * Logging
 * HTTP requests
@@ -14,7 +14,7 @@ SE2 extensions can access a number of capabilities:
 * SQL databases
 * Static files
 
-You can configure each capability. If you disable all capabilities, your users' extensions will not be able to access the "outside world" in any way.
+You can configure each capability. If you disable all capabilities, your users' plugins will not be able to access the "outside world" in any way.
 
 To configure capabilities, edit the `se2-config.yaml` file that `subo` created for you in your `config` directory:
 

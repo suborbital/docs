@@ -3,9 +3,9 @@ pagination_next: null
 pagination_prev: null
 ---
 
-# Fully-qualified module names
+# Fully-qualified function names
 
-Each function uploaded by your users has a unique name called a fully-qualified module name, or FQMN. The string representation of an FQMN is as follows:
+Each function uploaded by your users has a unique name called a fully-qualified function name, or FQMN. The string representation of an FQMN is as follows:
 
 ```bash
 com.example.nawronuq98hqwekj198fkljbeco#default::record-event@v1.0.0
@@ -23,8 +23,8 @@ Here's a breakdown:
 
 ## Environment name
 
-The domain of your email address should match the `environment` you
-configure for SE2, i.e. if your email is `laika@example.com`, your
+The domain of your email address should match the `environment` you 
+configure for SE2, i.e. if your email is `laika@example.com`, your 
 SE2 environment would be called `com.example`.
 
 ## FQMN URLs

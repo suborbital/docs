@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Custom libraries
 
-To continue to tailor your users' experience to your product, you can create a custom library with extensions and utilities designed specifically for your product. For example, your users will import library extensions from `@acmeco/acmeco` instead of `@suborbital/suborbital`, and you'll be able to export library extensions such as `acmeco.getUsers` versus the plain `suborbital.httpGet`.
+To continue to tailor your users' experience to your product, you can create a custom library with plugins and utilities designed specifically for your product. For example, your users will import library plugins from `@acmeco/acmeco` instead of `@suborbital/suborbital`, and you'll be able to export library plugins such as `acmeco.getUsers` versus the plain `suborbital.httpGet`.
 
 We want to help! Creating custom templates and libraries are an important aspect of SE2, so [send us an email](mailto:team@suborbital.dev) and we'll help you make the most out of these abilities.
 
 ## Setup
 
-We provide a base library for you to modify and publish to the language-specific package manager, which can then be included as a project dependency in a custom extension template.
+We provide a base library for you to modify and publish to the language-specific package manager, which can then be included as a project dependency in a custom plugin template.
 
 If you haven't already, create a fork of the [`templates`](https://github.com/suborbital/templates) git repository. Once the repo has been forked into your company or personal account, you can begin editing the libraries in the `library` directory.
 
@@ -26,7 +26,7 @@ Custom libraries are currently only officially supported for AssemblyScript, wit
 
 <TabItem value="assemblyscript" label="AssemblyScript">
 
-The AssemblyScript library is located in `library/assemblyscript`. As your custom library will need to be published, you will need to give it a custom name. In `library/assemblyscript/package.json`, replace all instances of `acmeco` with your desired name. Add your custom library as a dependency in `templates/assemblyscript/package.json.tmpl` so your users' extensions can use it:
+The AssemblyScript library is located in `library/assemblyscript`. As your custom library will need to be published, you will need to give it a custom name. In `library/assemblyscript/package.json`, replace all instances of `acmeco` with your desired name. Add your custom library as a dependency in `templates/assemblyscript/package.json.tmpl` so your users' plugins can use it:
 
 ```js
 "dependencies": {
@@ -35,7 +35,7 @@ The AssemblyScript library is located in `library/assemblyscript`. As your custo
 }
 ```
 
-You can modify `library/assemblyscript/assembly/index.ts` to expose new utility extensions and/or remove existing ones. To learn more about the available APIs, check out the [Runnable API docs](docs/atmo/runnable-api/introduction.md).
+You can modify `library/assemblyscript/assembly/index.ts` to expose new utility plugins and/or remove existing ones. To learn more about the available APIs, check out the [Runnable API docs](docs/atmo/runnable-api/introduction.md).
 
 Once this is done, publish your library to npm:
 
@@ -50,7 +50,7 @@ npm publish --access public
 
 ## Configuring SE2
 
-Since your custom library is listed as a dependency of the template project, it will be installed when your users' extensions are built for the first time.
+Since your custom library is listed as a dependency of the template project, it will be installed when your users' plugins are built for the first time.
 
 In your SE2 installation, you will need to configure the `SE2_TEMPLATES_REPO` environment variable.
 

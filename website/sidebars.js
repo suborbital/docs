@@ -17,10 +17,10 @@ module.exports = {
         'how-to/se2-go',
         'how-to/se2-js',
         {
-        'Customize extensions': [
-          'how-to/customize-extensions/extension-editor',
-          'how-to/customize-extensions/custom-extension-templates',
-          'how-to/customize-extensions/namespaces',
+        'Customize plugins': [
+          'how-to/customize-plugins/plugin-editor',
+          'how-to/customize-plugins/custom-plugin-templates',
+          'how-to/customize-plugins/namespaces',
         ]
         },
         {
