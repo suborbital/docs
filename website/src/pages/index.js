@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { SectionDark, SectionLight } from '../components/layout'
-import { Projects, Header } from '../components/sections'
+import { SectionLight } from '../components/layout'
+import { Header } from '../components/sections'
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -12,8 +12,6 @@ export default function Home() {
        <div className="homeMainContent">
           <SectionLight>
             <Header />
-            <Projects type={'flagship'} />
-            <Projects type={'other'} />
           </SectionLight>
         </div>
       </main>
