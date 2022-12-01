@@ -14,7 +14,7 @@ const Header = () => {
 
         {/* <Heading>Suborbital Extension Engine</Heading> */}
         <Paragraph className="spacing">
-          Suborbital Extension Engine (SE2) is a platform that allows your users to write and deploy serverless extensions for your app.
+          Suborbital Extension Engine (SE2) is a platform that allows your users to write and deploy serverless plugins for your app.
           Our WebAssembly-based runtime lets you run user code within your infrastructure while being sure that you're protected from malicious code.
         </Paragraph>
         <Row>
@@ -26,7 +26,7 @@ const Header = () => {
       <div>
         <img className='projectLogo' src={('/img/E2core-logo.svg')} alt="E2 Core" />
         <Paragraph className="spacing">
-        E2 Core is our new open source extension server, powering SE2. Documentation is coming soon!
+        E2 Core is our new open source plugin server, powering SE2. Documentation is coming soon!
         </Paragraph>
         <Row>
           <Link to={'https://github.com/suborbital/e2core'}>
