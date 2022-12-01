@@ -16,7 +16,7 @@ To launch the editor, you can either [embed the editor in a frame](https://devel
 
 ## Editor token
 
-To authenticate the editor for a specific user to edit their own plugins, [SE2's Administrative API provides an API to create an `editor token`](https://suborbital-compute.readme.io/reference/gettoken) for a given plugin.
+To authenticate the editor you'll need an [editor token](../../quickstart#obtain-an-editor-token).
 
 ## Configuration
 
