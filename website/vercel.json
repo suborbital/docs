@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { 
+      "source": "/se2/get-started",
+      "destination": "/", 
+      "permanent": false
+    }
+  ]
+}
