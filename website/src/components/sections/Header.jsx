@@ -24,7 +24,7 @@ const Header = () => {
         </Row>
       </div>
       <div>
-        <img className='projectLogo' src={('/img/E2core-logo.svg')} alt="E2 Core" />
+        <img className='projectLogo' src={('/img/e2-core-logo.svg')} alt="E2 Core" />
         <Paragraph className="spacing">
         E2 Core is our new open source plugin server, powering SE2. Documentation is coming soon!
         </Paragraph>
