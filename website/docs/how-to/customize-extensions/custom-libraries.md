@@ -52,13 +52,13 @@ npm publish --access public
 
 Since your custom library is listed as a dependency of the template project, it will be installed when your users' extensions are built for the first time.
 
-In your SE2 installation, you will need to configure the `SCC_TEMPLATES_REPO` environment variable.
+In your SE2 installation, you will need to configure the `SE2_TEMPLATES_REPO` environment variable.
 
-- For a local deployment, edit `docker-compose.yml` to add `SCC_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/runnable-templates`\)
-- For a cloud deployment, edit `suborbital/scc-controlplane.yaml`, and add the following to the `builder` container's `environment`:
+- For a local deployment, edit `docker-compose.yml` to add `SE2_TEMPLATES_REPO:` to the builder with the value set to your fork \(e.g. `acmeco/templates`\)
+- For a cloud deployment, edit `suborbital/se2-controlplane.yaml`, and add the following to the `builder` container's `environment`:
 
   ```yaml
-  - name: SCC_TEMPLATES_REPO
+  - name: SE2_TEMPLATES_REPO
     value: "{your fork}"
   ```
 

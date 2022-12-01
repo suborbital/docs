@@ -58,13 +58,13 @@ You will be asked for a domain. Please make sure to enter your domain from ngrok
 
 This will generate some Kubernetes manifest files, which will now live in the `.suborbital/` folder:
 
-- `scc-atmo-deployment.yaml`
-- `scc-autoscale.yaml`
-- `scc-controlplane-deployment.yaml`
+- `se2-deployment.yaml`
+- `se2-autoscale.yaml`
+- `se2-controlplane-deployment.yaml`
 
 ### 5. Disable TLS checks in the SE2 environment
 
-Open up `.suborbital/scc-controlplane-deployment.yaml` in your editor of choice, and make the following changes.
+Open up `.suborbital/se2-controlplane-deployment.yaml` in your editor of choice, and make the following changes.
 
 We are disabling the built-in TLS certificate provisioning, as `ngrok` already takes care of this for us.
 
@@ -72,7 +72,7 @@ Under the Builder Container:
 
 ```yaml
 - name: builder
-          image: suborbital/scc-builder:v0.3.1
+          image: suborbital/se2-builder:v0.4.2
           command: ["builder"]
 
           ports:
@@ -80,20 +80,20 @@ Under the Builder Container:
             - containerPort: 8443
 
           env:
-            - name: SCC_DOMAIN
+            - name: SE2_DOMAIN
               value: "<YOUR_NGROK_DOMAIN>"
 
-            - name: SCC_TLS_PORT
+            - name: SE2_TLS_PORT
               value: "8443"
 
-            - name: SCC_LOG_LEVEL
+            - name: SE2_LOG_LEVEL
               value: "info"
 
-            - name: SCC_CONTROL_PLANE
-              value: "scc-controlplane-service:8081"
+            - name: SE2_CONTROL_PLANE
+              value: "se2-controlplane-service:8081"
 
           volumeMounts:
-            - mountPath: "/home/scn"
+            - mountPath: "/home/se2"
               name: controlplane-storage
 ```
 
@@ -104,35 +104,35 @@ Delete the following line:
 Delete the following key-value pair:
 
 ```yaml
-- name: SCC_DOMAIN
+- name: SE2_DOMAIN
   value: "<YOUR_NGROK_DOMAIN>"
 ```
 
 Replacing the following key-value pair:
 
 ```yaml
-- name: SCC_TLS_PORT
+- name: SE2_TLS_PORT
   value: "8443"
 ```
 
 With the following:
 
 ```yaml
-name: SCC_HTTP_PORT
+name: SE2_HTTP_PORT
 value: "8080"
 ```
 
-Under the `scc-builder-service`:
+Under the `se2-builder-service`:
 
 ```yaml
 apiVersion: v1
 kind: Service
 metadata:
   namespace: suborbital
-  name: scc-builder-service
+  name: se2-builder-service
 spec:
   selector:
-    app: scc-controlplane
+    app: se2-controlplane
   ports:
     - protocol: TCP
       name: challenge
@@ -188,14 +188,14 @@ Your output will look something like this:
 
 ```bash
 NAME                                           READY   STATUS    RESTARTS   AGE
-scc-atmo-deployment-7bfb9d76c6-sv5dr           1/1     Running   0          27s
-scc-controlplane-deployment-5699f779f7-xmkhr   2/2     Running   0          27s
+se2-deployment-7bfb9d76c6-sv5dr                1/1     Running   0          1s
+se2-controlplane-deployment-5699f779f7-xmkhr   2/2     Running   0          1s
 ```
 
-Let’s take that full name of our `scc-controlplane-deployment` pod and start a bash session inside it:
+Let’s take that full name of our `se2-controlplane-deployment` pod and start a bash session inside it:
 
 ```bash
-kubectl exec -n suborbital -it scc-controlplane-deployment-<REST OF POD CODENAME> -- bash
+kubectl exec -n suborbital -it se2-controlplane-deployment-<REST OF POD CODENAME> -- bash
 ```
 
 Would you look at that, we’re inside our cluster now!

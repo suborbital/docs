@@ -5,7 +5,7 @@ pagination_next: null
 
 # Quickstart
 
-<!-- 
+<!--
 TODO: add live demo link for "What success looks like" purposes, like https://docs.netlify.com/get-started/
 -->
 This quickstart will help you learn how to create an app extension using SE2. It will also introduce some of SE2's key features to manage development environments and user access, and the extension editor.
@@ -108,7 +108,7 @@ Choose an option: 1
 
 To create or edit a extension, enter its name (or FQMN): hello
 
-✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&ext=hello to access the editor
+✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&fn=hello to access the editor
 ```
 
 This will allow you to create extensions and use the extension editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first extension.
@@ -119,11 +119,11 @@ The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`
 
 ## Meet the editor
 
-The SE2 extension editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
+The SE2 extension editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy extensions to your SE2 an instance in a single place. Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `ext` to the name of our namespace (e.g. `default`) and the name of our extension (e.g. `foo`). Copy the `token` field in the response.
+In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` to the name of our namespace (e.g. `default`) and and `EXT` to the name of our extension (e.g. `foo`). Copy the `token` field in the response.
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
@@ -142,21 +142,21 @@ Configure the URL like so:
   - `token`: The token you created in the previous step
   - `ident`: your tenant's identifier
   - `namespace`: the name of your namespace if different than “default”
-  - `ext`: the name of your extension
+  - `fn`: the name of your extension
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&ext=my-extension&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=my-extension&template=javascript`
 
 ## Your first extension
 
 Paste the URL you created above into your browser to load the extension editor. Once inside the editor, you can edit, build, test, and deploy your extensions all in one place! By default, the editor will load pre-populated with the greeting extension below. You can use it to run the editor for the first time.
 
 ```javascript
-import { log } from ''@suborbital/runnable";
+import { log } from "@suborbital/runnable";
 
 export const run = (input) => {
     let message = "Hello, " + input;
-    
+
     log.info(message);
     return message;
 };

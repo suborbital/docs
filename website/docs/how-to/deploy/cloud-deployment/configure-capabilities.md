@@ -16,7 +16,8 @@ SE2 extensions can access a number of capabilities:
 
 You can configure each capability. If you disable all capabilities, your users' extensions will not be able to access the "outside world" in any way.
 
-To configure capabilities, edit the `scc-config.yaml` file that `subo` created for you in your `suborbital/config` directory:
+To configure capabilities, edit the `se2-config.yaml` file that `subo` created for you in your `config` directory:
+
 ```yaml
 networkRules: &networkRules
   allowIPs: false
@@ -24,8 +25,8 @@ networkRules: &networkRules
   allowHTTP: true
   blockedDomains:
     - "*.cluster.local"
-    - "scc-controlplane-service"
-    - "scc-builder-service"
+    - "se2-controlplane-service"
+    - "se2-builder-service"
 
 capabilities:
   logger:
