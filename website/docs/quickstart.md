@@ -16,14 +16,6 @@ This quickstart will help you learn how to create an app plugin using SE2. It wi
 - Check out our language support page to see a list of languages and their respective support statuses for SE2
 - Install [Docker](https://docs.docker.com)
 
-:::warning Danger Will Robinson
-
-If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
-
-An SE2 migration tool for production deployments of Compute will be available soon.
-
-:::
-
 ## Create a development environment
 
 The Subo CLI will create some files on disk to set up your local deployment. Get started by creating a directory somewhere on your filesystem. In the example below, we'll name our directory `suborbital`:
@@ -66,6 +58,14 @@ Subo will print out your environment token in your terminal, and also cache it o
 If you lose your environment token, just repeat this process to generate a new one.
 
 ## Start SE2 locally
+
+:::warning Danger, Will Robinson
+
+If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
+
+An SE2 migration tool for production deployments of Compute will be available soon.
+
+:::
 
 Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
 
