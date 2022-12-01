@@ -36,9 +36,9 @@ MacOS or Linux, Go or JS/TS for sure, but are there other requirements? Can any 
 
 ## Meet PRO.xyz: our demo app
 
-PRO.xyz (read: "proxies") is an imaginary company that operates networking services.Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
+PRO.xyz (read: "proxies") is an imaginary company that operates networking services. Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
 
-Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard
+Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard.
 
 Most providers have their own logic and algorithms that detect abuse,send out alerts or initiate protective measures. They may allow for some customizability, but it's _usually_ very limited.
 
@@ -64,14 +64,14 @@ This is a new account, so we'll need to create our first organization. <!-- TODO
 
 ## Create an environment
 
-We can set up multiple separate environments for each of our organizations. These could be used for separating production/development/staging environments or to create different applications for distinct use cases.
+We can set up multiple separate environments for each of our organizations. These could be used for separating development/staging/production environments or to create different applications for distinct use cases.
 
 Let's set up our first environment for development! We'll give it:
 
 - The name `demo.dev`
 - The description `development environment`
 
-Once we've created our environment, we'll be shown our environment's dashboard.The dashboard contains information about various usage metrics related to the Extension Engine.
+Once we've created our environment, we'll be shown our environment's dashboard. The dashboard contains information about various usage metrics related to the Extension Engine.
 
 Here we can see a counter for plugin builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
 
@@ -114,7 +114,7 @@ so we can proceed to the next step
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another.For this reason we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
 
 It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
 
@@ -161,7 +161,7 @@ So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just receiv
 
 After logging in, we see the network requests as they are received by PRO.xyz' servers, and eventually forwarded to our upstream servers. When we pause the logs by clicking the "pause" button, though, we notice something peculiar...
 
-There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet,and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
+There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet, and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
 
 Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
 
@@ -173,7 +173,7 @@ Suborbital allows users to write custom plugins in their preferred language by c
 
 <TabItem value="web-app" label="Web app">
 
-Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling and deploying plugins.
+Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling, and deploying plugins.
 
 </TabItem>
 
@@ -205,7 +205,7 @@ PRO.xyz' integration only supports deploying one plugin per user. This is all up
 
 The editor already comes pre-loaded with a generic JavaScript template, but we have Ada's module to use instead.
 
-At the very baseline of it a plugin receives some input, processes that input,and may produce some output. Suborbital allows extra APIs (sort of superpowers) to be exposed to these modules at the operator's discretion.
+At the very baseline of it a plugin receives some input, processes that input, and may produce some output. Suborbital allows extra APIs (sort of superpowers) to be exposed to these modules at the operator's discretion.
 
 Here we are including the "log" API to have our application log any unexpected issues with the input data
 
@@ -231,7 +231,7 @@ export const run = (input) => {
 };
 ```
 
-We're to click "Build" and have our JavaScript source code compiled to a deployable WebAssembly module!
+We're to click "Build" and have our JavaScript source code compiled to a deployable WebAssembly plugin!
 
 ## Test
 

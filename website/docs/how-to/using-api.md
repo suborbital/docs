@@ -116,7 +116,7 @@ Now that the SE2 module has been built, it can be executed as much as you like w
 
 ## Using SE2 from JavaScript or TypeScript
 
-Use [our JavaScript SDK](https://github.com/suborbital/se2-node) to easily interact with SE2's APIs using JavaScript or Typescript.
+Use [our JavaScript SDK](https://github.com/suborbital/se2-node) to easily interact with SE2's APIs using JavaScript or TypeScript.
 
 ### Install SE2 for JS/TS
 

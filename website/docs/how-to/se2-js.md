@@ -9,7 +9,7 @@ pagination_next: null
 You can find a detailed specification of SE2's APIs [here](https://reference.suborbital.dev/).
 :::
 
-Use [our JavaScript SDK](https://github.com/suborbital/se2-node) to easily interact with SE2's APIs using JavaScript or Typescript.
+Use [our JavaScript SDK](https://github.com/suborbital/se2-node) to easily interact with SE2's APIs using JavaScript or TypeScript.
 
 ## Install SE2 for JS/TS
 
