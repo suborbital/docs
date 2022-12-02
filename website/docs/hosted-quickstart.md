@@ -286,6 +286,6 @@ Now that you've know how to get SE2 extensibility powers into your app, you migh
 
 ## Questions?
 
-If you have any questions you can't find answers to in these docs (or just like chatting with nice humans in the extensibility space 🤗), please hit us up on [Discord](https://chat.suborbital.dev)!
+If you have any questions you can't find answers to in these docs, please email us at team@suborbital.dev!
 
 <!-- TODO: add feedback section-->

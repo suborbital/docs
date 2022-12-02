@@ -22,6 +22,6 @@ In these docs you can learn how to:
 
 ## Getting Support
 
-If you have any questions you can't find answers for on this site, please hit us up on [Discord](https://chat.suborbital.dev)!
+If you have any questions you can't find answers for on this site, please email us at team@suborbital.dev!
 
 SE2 is now in public beta! We're excited for you to [give it a try](./quickstart.md) and send us your feedback. Use of SE2 is governed by our [Terms of Service](https://suborbital.network/terms-of-service.pdf).
