@@ -10,8 +10,6 @@ If you haven't already, take a look at [Connections](../usage/connections.md) to
 Atmo's Database capability is in preview, and we would love your feedback on
 the approach as well as the Rust APIs. We are eager to improve it, and we hope
 you'll try it out!
-
-Please join our [Discord](http://chat.suborbital.dev) to give us feedback.
 :::
 
 ## Defining queries

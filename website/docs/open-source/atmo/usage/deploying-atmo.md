@@ -1,6 +1,6 @@
 # Deploying Atmo
 
-Atmo is in beta, and is suitable production workloads. If you're using Atmo in production, please reach out to us via [Discord](chat.suborbital.dev) or [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
+Atmo is in beta, and is suitable production workloads. If you're using Atmo in production, please reach out to us at [team@suborbital.dev](mailto:team@suborbital.dev) so we can learn how you're using it!
 
 Atmo is distributed as a Docker image: `suborbital/atmo`
 

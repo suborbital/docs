@@ -6,10 +6,6 @@
 
 const communities = [
   {
-    label: 'Discord',
-    href: 'https://chat.suborbital.dev',
-  },
-  {
     label: 'GitHub',
     href: 'https://github.com/suborbital'
   },
