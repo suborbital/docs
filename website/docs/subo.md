@@ -11,7 +11,7 @@ Subo is the command-line tool for working with the Suborbital Extension Engine (
 
 **You do not need to install language-specific tools to get started with SE2 and Subo!** A Docker toolchain is supported (see below) that can build your SE2 modules without needing to install language toolchains.
 
-## Installing
+## Install Subo
 
 The `subo` tool supports the following platforms and operating systems:
 
@@ -56,6 +56,16 @@ Verify subo was installed:
 ```bash
 subo --help
 ```
+
+## Upgrade Subo
+
+If you installed Subo through Homebrew, run the command below to upgrade:
+
+```bash
+brew upgrade subo
+```
+
+If you installed Subo from source, you can upgrade by building/installing the new binary on top of the old one.
 
 ## Builders
 

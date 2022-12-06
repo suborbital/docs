@@ -61,17 +61,22 @@ If you lose your environment token, just repeat this process to generate a new o
 
 :::warning Danger, Will Robinson
 
-If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
+If you're coming from Suborbital Compute `v0.3.3` or earlier and would like to locally develop on SE2 `v0.4.0` or greater, you must first [upgrade to Subo `v0.6.0`](./subo#upgrade-subo) and update the deployment templates with `subo se2 deploy --reset`.
 
 An SE2 migration tool for production deployments of Compute will be available soon.
 
 :::
 
-Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
+Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above!
 
-```bash
-subo se2 deploy --local
-```
+- Make sure Docker is running
+- Run:
+
+  ```bash
+    subo se2 deploy --local
+    ```
+
+- Grab a refreshing beverage while this runs (it'll take a few minutes!)
 
 You may be asked to enter your environment token, and then Subo will use `docker-compose` to launch your SE2 instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
@@ -117,17 +122,31 @@ The Subo REPL includes a proxy that makes it easy to connect the hosted editor t
 
 The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
 
+## Create a tenant (user)
+
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
+
+Run this command with changes listed below it:
+
+```bash
+curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
+--header "Authorization: Bearer ${ENV_TOKEN}"
+```
+
+- Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`
+- The `ENV_TOKEN` should be set to the [environment token you created above](#create-a-development-environment)
+
 ## Meet the editor
 
 The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `foo`). Copy the `token` field in the response.
+In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
+--header "Authorization: Bearer ${ENV_TOKEN}"
 ```
 
 ### Editor URLs in production
@@ -145,7 +164,7 @@ Configure the URL like so:
   - `fn`: the name of your plugin
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=my-plugin&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
 
 ## Your first plugin
 
