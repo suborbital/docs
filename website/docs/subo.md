@@ -7,26 +7,19 @@ pagination_next: null
 
 ![alt="panda in a spacesuit"](https://user-images.githubusercontent.com/5942370/129103528-8b013445-a8a2-44bb-8b39-65d912a66767.png)
 
-Subo is the command-line tool for working with the Suborbital Extension Engine (SE2). Subo is used to build SE2 modules, generate new projects and config files, and is also our mascot 🐼.
+Subo is the command-line tool for working with the Suborbital Extension Engine (SE2). Subo is used to build SE2 plugins, generate new projects and config files, and is also our mascot 🐼.
 
-**You do not need to install language-specific tools to get started with SE2 and Subo!** A Docker toolchain is supported (see below) that can build your SE2 modules without needing to install language toolchains.
+**You do not need to install language-specific tools to get started with SE2 and Subo!** A Docker toolchain is supported (see below) that can build your SE2 plugins without needing to install language toolchains.
 
 ## Install Subo
 
-The `subo` tool supports the following platforms and operating systems:
+The `subo` tool supports JavaScript/TypeScript, Rust, and Go on the following platforms and operating systems:
 
 |         | x86_64 | arm64 |
 | ------- | ------ | ----- |
 | Mac     | ✅     | ✅    |
 | Linux   | ✅     | ✅    |
 | Windows | 🚫     | 🚫    |
-
-The language toolchains used by `subo` support the following platforms:
-
-|                | x86_64 | arm64 | Docker |
-| -------------- | ------ | ----- | ------ |
-| Rust           | ✅     | ✅    | ✅     |
-| AssemblyScript | ✅     | ✅    | ✅     |
 
 ### macOS (Homebrew)
 
@@ -69,4 +62,4 @@ If you installed Subo from source, you can upgrade by building/installing the ne
 
 ## Builders
 
-This repo contains builders for the various languages supported by SE2 modules. A builder is a Docker image that can build SE2 modules into Wasm modules, and is used internally by `subo` to build your code.
+This repo contains builders for the various languages supported by SE2 plugins. A builder is a Docker image that can build SE2 plugins into Wasm plugins, and is used internally by `subo` to build your code.
