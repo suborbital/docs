@@ -61,7 +61,7 @@ If you lose your environment token, just repeat this process to generate a new o
 
 :::warning Danger, Will Robinson
 
-If you're coming from Suborbital Compute `v0.3.3` or earlier and would like to locally develop on SE2 `v0.4.0` or greater, you must first [upgrade to Subo `v0.6.0`](./subo#upgrade-subo) and update the deployment templates with `subo se2 deploy --reset`.
+If you're coming from Suborbital Compute `v0.3.3` or earlier and would like to develop locally on SE2 `v0.4.0` or greater, you must first [upgrade to Subo `v0.6.0`](./subo#upgrade-subo) and update the deployment templates with `subo se2 deploy --reset`.
 
 An SE2 migration tool for production deployments of Compute will be available soon.
 
@@ -73,8 +73,8 @@ Next, use Subo to start your local SE2 instance. Make sure to do this within the
 - Run:
 
   ```bash
-    subo se2 deploy --local
-    ```
+  subo se2 deploy --local
+  ```
 
 - Grab a refreshing beverage while this runs (it'll take a few minutes!)
 
@@ -122,20 +122,6 @@ The Subo REPL includes a proxy that makes it easy to connect the hosted editor t
 
 The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
 
-## Create a tenant (user)
-
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
-
-Run this command with changes listed below it:
-
-```bash
-curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ENV_TOKEN}"
-```
-
-- Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`
-- The `ENV_TOKEN` should be set to the [environment token you created above](#create-a-development-environment)
-
 ## Meet the editor
 
 The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
@@ -158,8 +144,8 @@ Configure the URL like so:
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
   - `builder`: `https://your-builder.example.com`
-  - `token`: The token you created in the previous step
-  - `ident`: your tenant's identifier
+  - `token`: The [env token you created above](#create-a-development-environment)
+  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
   - `namespace`: the name of your namespace if different than “default”
   - `fn`: the name of your plugin
   - `template`: the name of the language you wish to use (Go or JavaScript)
