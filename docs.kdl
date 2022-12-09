@@ -1,0 +1,23 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+    pane split_direction="vertical" {
+      pane command="vim"
+      pane split_direction="horizontal" {
+        pane command="make" {
+            args "spellcheck"
+            start_suspended true
+        }
+        pane command="yarn" {
+            cwd "./website"
+            args "start"
+            start_suspended true
+        }
+        pane command="make" {
+            args "links"
+            start_suspended true
+        }
+      }
+    }
+}
