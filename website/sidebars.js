@@ -6,7 +6,8 @@ module.exports = {
       collapsible: false,
       items: [
         'introduction',
-        'quickstart'
+        'quickstart',
+        'subo'
       ]
     },
     {
@@ -82,7 +83,6 @@ module.exports = {
       label: 'Open Source @ Suborbital',
       items: [
         'open-source/contributing-to-suborbital',
-        'open-source/subo',
         'open-source/e2-core/e2-core',
       ]
     },

@@ -61,17 +61,22 @@ If you lose your environment token, just repeat this process to generate a new o
 
 :::warning Danger, Will Robinson
 
-If are you coming from Suborbital Compute `v0.3.3` or earlier and would like locally develop on SE2 `v0.4.0` or greater, you must first upgrade to Subo `v0.6.0` and update the deployment templates with `subo se2 deploy --reset`.
+If you're coming from Suborbital Compute `v0.3.3` or earlier and would like to develop locally on SE2 `v0.4.0` or greater, you must first [upgrade to Subo `v0.6.0`](./subo#upgrade-subo) and update the deployment templates with `subo se2 deploy --reset`.
 
 An SE2 migration tool for production deployments of Compute will be available soon.
 
 :::
 
-Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above! You can verify that you're in the correct directory by verifying that it contains the `docker-compose.yaml` file.
+Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above!
 
-```bash
-subo se2 deploy --local
-```
+- Make sure Docker is running
+- Run:
+
+  ```bash
+  subo se2 deploy --local
+  ```
+
+- Grab a refreshing beverage while this runs (it'll take a few minutes!)
 
 You may be asked to enter your environment token, and then Subo will use `docker-compose` to launch your SE2 instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
 
@@ -123,11 +128,11 @@ The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [J
 
 ### Obtain an editor token
 
-In addition to the `IDENTIFIER` and `ACCESS_KEY`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `foo`). Copy the `token` field in the response.
+In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
+--header "Authorization: Bearer ${ENV_TOKEN}"
 ```
 
 ### Editor URLs in production
@@ -139,13 +144,13 @@ Configure the URL like so:
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
   - `builder`: `https://your-builder.example.com`
-  - `token`: The token you created in the previous step
-  - `ident`: your tenant's identifier
+  - `token`: The [env token you created above](#create-a-development-environment)
+  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
   - `namespace`: the name of your namespace if different than “default”
   - `fn`: the name of your plugin
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=my-plugin&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
 
 ## Your first plugin
 
