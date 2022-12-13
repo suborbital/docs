@@ -7,7 +7,6 @@ module.exports = {
       items: [
         'introduction',
         'quickstart',
-        'subo'
       ]
     },
     {
@@ -18,31 +17,39 @@ module.exports = {
         'how-to/se2-go',
         'how-to/se2-js',
         {
-        'Customize plugins': [
-          'how-to/customize-plugins/plugin-editor',
-          'how-to/customize-plugins/custom-plugin-templates',
-          'how-to/customize-plugins/namespaces',
-        ]
+          'Customize plugins': [
+            'how-to/customize-plugins/plugin-editor',
+            'how-to/customize-plugins/custom-plugin-templates',
+            'how-to/customize-plugins/namespaces',
+          ],
         },
         {
           type: 'category',
-          label: 'Deploy SE2',
+          label: 'Self-Host SE2',
           collapsible: true,
           items: [
+            'how-to/self-host-se2/self-hosted-quickstart',
             {
-              'Cloud deployment': [
-                'how-to/deploy/cloud-deployment/configure-capabilities',
-                'how-to/deploy/cloud-deployment/configure-storage',
-                'how-to/deploy/cloud-deployment/configure-webhooks',
-                'how-to/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
+              type: 'category',
+              label: 'Deploy SE2',
+              collapsible: true,
+              items: [
+                {
+                  'Cloud deployment': [
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-capabilities',
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-storage',
+                    'how-to/self-host-se2/deploy/cloud-deployment/configure-webhooks',
+                    'how-to/self-host-se2/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
+                  ],
+                  'Other deployments': [
+                    'how-to/self-host-se2/deploy/other-deployments/minikube'
+                  ]
+                }
               ],
-              'Other deployments': [
-                'how-to/deploy/other-deployments/minikube'
-              ]
             },
-          ]
+          ],
         },
-      ]
+      ],
     },
     {
       type: 'category',
