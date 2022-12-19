@@ -51,6 +51,7 @@ const baseUrl = baseUrlParts.join('/')+ '/'
 console.log('Using baseUrl: ', baseUrl)
 
 module.exports = {
+  plugins: [require.resolve('docusaurus-plugin-fathom')],
   title: 'Suborbital Documentation',
   tagline: 'Use the power of WebAssembly to build delightful software faster, without compromising security, performance, or developer experience.',
   url: 'https://docs.suborbital.dev',
@@ -63,11 +64,15 @@ module.exports = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
   themeConfig: {
+    fathomAnalytics: {
+      siteId: 'AGRBSGPK',
+      customDomain: 'https://alx.suborbital.dev/script.js',
+    },
     docs: {
       sidebar: {
         autoCollapseCategories: true,
       },
-    },  
+    },
     prism: {
       additionalLanguages: ['rust', 'swift'],
     },
