@@ -28,23 +28,14 @@ git clone https://github.com/suborbital/docs.git
 
 Navigate to the docs/website folder and start up the website.
 
-There are three ways of building and running the website:
+There are two ways of running the website in development:
 
 ### npm
 
 ```bash
 cd docs/website
 npm install
-npm run build
-npm run serve
-```
-
-### yarn
-
-```bash
-cd docs/website
-yarn
-yarn run start
+npm run start
 ```
 
 ### Docker
@@ -66,7 +57,7 @@ brew install aspell
 pip3 install pyspelling pymdown-extensions
 ```
 
-And then run 
+And then run
 ```
 make spellcheck
 ```
