@@ -16,7 +16,6 @@ before you start
 
 - [Git](https://git-scm.com/downloads)
 - [Nodejs version 14 or greater](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/en/) (*optional, but good to have*)
 
 Clone the git repository by using the below command
 
