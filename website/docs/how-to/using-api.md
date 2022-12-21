@@ -120,14 +120,6 @@ Use [our JavaScript SDK](https://github.com/suborbital/se2-node) to easily inter
 
 ### Install SE2 for JS/TS
 
-Install it via `yarn` or `npm`:
-
-```sh
-yarn add @suborbital/se2
-```
-
-or:
-
 ```sh
 npm install @suborbital/se2
 ```
