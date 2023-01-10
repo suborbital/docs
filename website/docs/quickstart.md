@@ -8,10 +8,6 @@ import TabItem from '@theme/TabItem';
 
 # Quickstart
 
-<!-- 
-TODO: add "click this, then that" sort of scaffolding 
--->
-
 This quickstart will help you learn how to create an app plugin using SE2. Along the way it'll also introduce some of SE2's key features:
 
 - Managing development environments
@@ -32,19 +28,19 @@ For this demo we'll just focus on tagging suspicious requests, helping the provi
 
 ## Preliminary steps
 
-- Create an account on our [admin dashboard](https://suborbital.network)
-- Clone the repo for this demo <!-- TODO: add link -->
+- [Create an account on our admin dashboard](https://suborbital.network)
+- [Clone the repo for this quickstart](https://github.com/suborbital/examples/tree/main/demo-proxyz)
 
 Let's go! 🚀
 
 ## Create an organization
 
-This is a new account, so we'll need to create our first organization. <!-- TODO: define this? --> For this demo, we'll give our organization:
+This is a new account, so we'll need to create our first organization: a (potentially shared) account in which one or more users manage(es) their Suborbital subscription .  For this demo, we'll give our organization:
 
-- The name `Demo Company`
+- The name `DemoCompany` (note: organization names can contain only letters, numbers, and underscores)
 - The description `Always ready to demo`
 
-<!-- TODO: add image -->
+![Organization creation screen with fields for name and description](./../static/img/create-org-screen.png)
 
 ## Create an environment
 
@@ -55,9 +51,13 @@ Let's set up our first environment for development! We'll give it:
 - The name `demo.dev`
 - The description `development environment`
 
+![Environment creation screen with fields for name and description](../../website/static/img/create-env-screen.png)
+
 Once we've created our environment, we'll be shown our environment's dashboard. The dashboard contains information about various usage metrics related to the Extension Engine.
 
 Here we can see a counter for plugin builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
+
+![Environment dashboard screen showing zero function builds and zero build minutes](../../website/static/img/env-dashboard-screen.png)
 
 ## Create an access key
 
@@ -71,7 +71,11 @@ Our integration will use this access key to provision resources and execute plug
 - The name `DemoKey`
 - The description: `demo access key`
 
+![Access key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
+
+:::tip
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
+:::
 
 ## The part where the integration happens
 
