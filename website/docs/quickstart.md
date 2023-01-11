@@ -29,7 +29,8 @@ For this demo we'll just focus on tagging suspicious requests, helping the provi
 ## Preliminary steps
 
 - [Create an account on our admin dashboard](https://suborbital.network)
-- [Clone the repo for this quickstart](https://github.com/suborbital/examples/tree/main/demo-proxyz)
+- [Clone the repo for this quickstart](https://github.com/suborbital/examples)
+- Make sure [Docker](https://www.docker.com/) is installed
 
 Let's go! 🚀
 
@@ -77,28 +78,42 @@ Our integration will use this access key to provision resources and execute plug
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
 :::
 
-## The part where the integration happens
+## Integrate SE2 with our app
 
-<!-- Would be great if we could use this!
+Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
 
-## API Admin interface
+- Open the `demo-proxyz` directory
+- Open `.env.example`
+- Supply our environment variables:
 
-First we change the default environment to the one we set up:
+  - `SUBORBITAL_TOKEN` is our environment's access key
+  - `SUBORBITAL_ENV` is the name we gave our environment
 
-[Change text field "Environment" to "demo.dev"]
+### Build the front and backends
 
-We will also need the access token configured for this environment
+- Set up the Astro/frontend development server:
 
-[Copy access key from VSCode to "Environment Access Token" text field]
+  ```bash
+  npm install && npm run dev
+  ```
 
-This access key will be embedded into the application,
-it will allow the application to use the Suborbital API
-to provision resources
+- Build the backend:
 
-The demo interface confirms the validity of these credentials,
-so we can proceed to the next step
+  ```bash
+  npm run build && npm run serve
+  ```
 
--->
+- Build the Docker container:
+
+  ```bash
+  docker build -t se2-demo .
+  ```
+
+- Supply the required environment variables:
+
+  ``` bash
+  docker run -it --env SUBORBITAL_TOKEN --env SUBORBITAL_ENV=demo.dev -p 8080:8080 se2-demo
+  ```
 
 ## Create a tenant (user)
 
