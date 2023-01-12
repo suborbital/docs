@@ -2,10 +2,6 @@
 pagination_prev: null
 pagination_next: null
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Quickstart
 
 This quickstart will help you learn how to create an app plugin using SE2. Along the way it'll also introduce some of SE2's key features:
@@ -119,36 +115,12 @@ Within the directory we created when we cloned the repo for this demo in the [pr
 
 Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
 
-It's choose your own adventure time! Click one of the tabs below to continue in either our web app or in your command line:
-
-<Tabs groupId='create-tenant'>
-
-<TabItem value="web-app" label="Web app">
-
-[Type "ada" into the Tenant field]
-
-Our environment name ("demo.dev") and tenant name ("ada") together will form the Identifier. Think of this as a bucket to hold all of a user's plugins separate from the others.
-
-(TODO: access key)
-
-Should there be need of further namespacing a tenant's modules, Suborbital provides a "namespace" feature. For now, we will just leave this on "default".
-
-</TabItem>
-
-<TabItem value="CLI" label="Command line">
-
-(TODO: assimilate this wording)
-
 Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
 
 ```bash
 curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
 --header "Authorization: Bearer ${ACCESS_KEY}"
 ```
-
-</TabItem>
-
-</Tabs>
 
 ## A PRO.xyz user journey
 
@@ -172,16 +144,6 @@ Normally there wouldn't be much Ada could do about this, but thanks to the custo
 
 Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
-<Tabs groupId='editor-token'>
-
-<TabItem value="web-app" label="Web app">
-
-Clicking on the button that looks like three planes stacked vertically with a "+" next to them <!-- TODO: give this button an ID!-->, Ada opens up the Suborbital Module Editor that presents her with an interface for writing, compiling, and deploying plugins.
-
-</TabItem>
-
-<TabItem value="CLI" label="Command line">
-
 Go to the plugin editor. Configure the URL like so:
 
 Domain: `https://editor.suborbital.network`
@@ -199,10 +161,6 @@ Query params:
 `template`: the name of the language you wish to use
 
 Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
-
-</TabItem>
-
-</Tabs>
 
 PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
 
