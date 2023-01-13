@@ -4,7 +4,7 @@ pagination_next: null
 ---
 # Quickstart
 
-This quickstart will help you learn how to create an app plugin using SE2. Along the way it'll also introduce some of SE2's key features:
+This quickstart will help you learn how to create an app plugin using SE2 and a demo app we've created so you can get started right away!. Along the way it'll also introduce some of SE2's key features:
 
 - Managing development environments
 - Managing user access
@@ -12,13 +12,13 @@ This quickstart will help you learn how to create an app plugin using SE2. Along
 
 ## Meet PRO.xyz: our demo app
 
-PRO.xyz (read: "proxies") is an imaginary company that operates networking services. Its services can be used to load-balance & cache requests,as well as protect its customers' servers from network attacks.
+PRO.xyz (read: "proxies") is an imaginary company that operates networking services. Its services can be used to load-balance & cache requests, as well as protect its customers' servers from network attacks.
 
-Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts.PRO.xyz' clients are able to view these requests in their dashboard.
+Of course this is just a demonstration, so what happens behind the scenes is that our service generates a made-up "request log" of inbound HTTP requests that are being forwarded to upstream hosts. PRO.xyz' clients are able to view these requests in their dashboard.
 
-Most providers have their own logic and algorithms that detect abuse,send out alerts or initiate protective measures. They may allow for some customizability, but it's _usually_ very limited.
+Most providers have their own logic and algorithms that detect abuse, send out alerts or initiate protective measures. They may allow for some customizability, but it's usually **very** limited.
 
-PRO.xyz, on the other hand, has decided to make it possible _for its users_ to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
+PRO.xyz, on the other hand, has decided to make it possible for its users to fine-tune protections and alerts using the Suborbital Extension Engine. Suborbital's plugin system is used here to give users additional control and flexibility around deciding how requests are handled.
 
 For this demo we'll just focus on tagging suspicious requests, helping the provider improve its protections.
 
@@ -26,7 +26,6 @@ For this demo we'll just focus on tagging suspicious requests, helping the provi
 
 - [Create an account on our admin dashboard](https://suborbital.network)
 - [Clone the repo for this quickstart](https://github.com/suborbital/examples)
-- Make sure [Docker](https://www.docker.com/) is installed
 
 Let's go! 🚀
 
@@ -76,16 +75,30 @@ We'll only be shown this access key once, so we'll need to store it somewhere sa
 
 ## Integrate SE2 with our app
 
-Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
+We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
 
 - Open the `demo-proxyz` directory
-- Open `.env.example`
-- Supply our environment variables:
+- Create a file named `.env`
+- Within our new `.env` file, we'll add our environment variables:
 
   - `SUBORBITAL_TOKEN` is our environment's access key
   - `SUBORBITAL_ENV` is the name we gave our environment
 
+- Next we'll need to export those variables by running:
+
+```bash
+set -a
+```
+
+- And then:
+
+```bash
+source .env
+```
+
 ### Build the front and backends
+
+#### Build via command line
 
 - Set up the Astro/frontend development server:
 
@@ -99,6 +112,8 @@ Within the directory we created when we cloned the repo for this demo in the [pr
   npm run build && npm run serve
   ```
 
+#### Build via Docker
+
 - Build the Docker container:
 
   ```bash
@@ -111,32 +126,42 @@ Within the directory we created when we cloned the repo for this demo in the [pr
   docker run -it --env SUBORBITAL_TOKEN --env SUBORBITAL_ENV=demo.dev -p 8080:8080 se2-demo
   ```
 
+We can now view our app on [https://localhost:8080](https://localhost:8080)!
+
+![PRO.xyz login screen successfully opened](../../website/static/img/app-served.png)
+
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally maintained users.
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users.
 
-Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
+<!-- TODO: update below for new Tenant API
+
+ Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
 
 ```bash
 curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
 --header "Authorization: Bearer ${ACCESS_KEY}"
-```
+``` -->
 
 ## A PRO.xyz user journey
 
-The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend, as mentioned, generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
+The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
 
 We provide many pre-built components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
 
-So time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital plugins on PRO.xyz' platform.
+So it's time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital plugins on PRO.xyz' platform.
 
 - We'll give our customer the name `Ada`
 - And we can type whatever we like for this pretend password
 - Click "Sign in"
 
+![Tenant creation screen displaying name and password fields](../../website/static/img/ada-creation.png)
+
 After logging in, we see the network requests as they are received by PRO.xyz' servers, and eventually forwarded to our upstream servers. When we pause the logs by clicking the "pause" button, though, we notice something peculiar...
 
-There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers run PHP indeed, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet, and they also ended up probing Ada's sites. To say this was "suspicious" would be a gross understatement.
+![Network request log with a request to `wp-login-php` highlighted](../../website/static/img/network-requests-logs.png)
+
+There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers do run PHP, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet, and they also ended up probing Ada's sites. To say this is "suspicious" would be a gross understatement.
 
 Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
 
@@ -242,11 +267,9 @@ There we go, we got our first internet troublemaker exposed, and we've seen how 
 Now that you've know how to get SE2 extensibility powers into your app, you might want to:
 
 - Learn more about using SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md)
-- Make custom [module templates](./how-to/customize-plugins/custom-plugin-templates.md) and [libraries](./how-to/customize-plugins/custom-libraries.md) to help your users get started building their own plugins for your app
+- Make custom [plugin templates](./how-to/customize-plugins/custom-plugin-templates.md) and [libraries](./how-to/customize-plugins/custom-libraries.md) to help your users get started building their own plugins for your app
 - Organize your users' plugins into [namespaces](./how-to/customize-plugins/namespaces.md) for different use cases
 
 ## Questions?
 
 If you have any questions you can't find answers to in these docs, please email us at team@suborbital.dev!
-
-<!-- TODO: add feedback section-->
