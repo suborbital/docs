@@ -151,7 +151,7 @@ export const run = (input) => {
 - Click "Run test"
 - Toward the bottom of the editor, click "TEST RESULTS". There's our greeting!
 
-![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](../../../docs/website/docs/assets/editor-screen.png)
+![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](./assets/editor-screen.png)
 
 ### Executing plugins
 
