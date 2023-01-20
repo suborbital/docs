@@ -122,7 +122,7 @@ Configure the URL like so:
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
   - `builder`: `https://your-builder.example.com`
-  - `token`: The [env token you created above](#create-a-development-environment)
+  - `token`: The [env token you created above](#create-an-environment)
   - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
   - `namespace`: the name of your namespace if different than “default”
   - `fn`: the name of your plugin
@@ -150,7 +150,7 @@ export const run = (input) => {
 - Click "Run test"
 - Toward the bottom of the editor, click "TEST RESULTS". There's our greeting!
 
-![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](../../assets/editor-screen.png)
+![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](../../../docs/website/docs/assets/editor-screen.png)
 
 ### Executing plugins
 
