@@ -63,9 +63,8 @@ We'll only be shown this access key once, so we'll need to store it somewhere sa
 
 ## Integrate SE2 with our app
 
-We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
+We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory that contains our app, we'll:
 
-- Open the `demo-proxyz` directory
 - Create a file named `.env`
 - Within our new `.env` file, we'll add our environment variables:
 
