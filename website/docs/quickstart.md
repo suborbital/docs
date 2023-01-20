@@ -98,6 +98,8 @@ source .env
 
 ### Build the front and backends
 
+It's choose your own adventure time! We can build via either the command line or via Docker.
+
 #### Build via command line
 
 - Set up the Astro/frontend development server:
@@ -177,7 +179,7 @@ Query params:
 
 `token`: The token you received in step 11
 
-`builder`: `https://builder.stg.suborbital.network`
+`builder`: `https://builder.suborbital.network`
 
 `ident`: your tenant identifier
 
@@ -185,7 +187,7 @@ Query params:
 
 `template`: the name of the language you wish to use
 
-Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.stg.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
+Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
 
 PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
 
