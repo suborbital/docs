@@ -84,173 +84,82 @@ set -a
 source .env
 ```
 
-### Build the front and backends
-
-It's choose your own adventure time! We can build via either the command line or via Docker.
-
-#### Build via command line
-
-- Set up the Astro/frontend development server:
-
-  ```bash
-  npm install && npm run dev
-  ```
-
-- Build the backend:
-
-  ```bash
-  npm run build && npm run serve
-  ```
-
-#### Build via Docker
-
-- Build the Docker container:
-
-  ```bash
-  docker build -t se2-demo .
-  ```
-
-- Supply the required environment variables:
-
-  ``` bash
-  docker run -it --env SUBORBITAL_TOKEN --env SUBORBITAL_ENV=demo.dev -p 8080:8080 se2-demo
-  ```
-
-We can now view our app on [https://localhost:8080](https://localhost:8080)!
-
-![PRO.xyz login screen successfully opened](../../website/static/img/app-served.png)
-
 ## Create a tenant (user)
 
 Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users.
 
-<!-- TODO: update below for new Tenant API
+✨ Tenant API things ✨
 
- Set `IDENTIFIER` to the name of your environment followed by a period, followed by the name of the tenant. In our case, it will be `dev.suborbital.user1`. The `ACCESS_KEY` should be set to the access key we copied in step 9.
+## Meet the editor
+
+The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
+
+### Obtain an editor token
+
+In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
 
 ```bash
-curl --location --request POST "https://controlplane.stg.suborbital.network/api/v2/tenant/${IDENTIFIER}" \
---header "Authorization: Bearer ${ACCESS_KEY}"
-``` -->
+curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
+--header "Authorization: Bearer ${ENV_TOKEN}"
+```
 
-## A PRO.xyz user journey
+### Editor URLs in production
 
-The application architecture itself is nothing out of ordinary; it's a Node.js app communicating with a simple HTML frontend using Vue.js. Our backend generates fake "ingest logs" of network requests, our WebAssembly plugins will receive this request metadata, and attempt to spot abuse.
+To edit a plugin via the editor in a production environment, you—or more likely your application—must build a valid URL to pass to the editor.
 
-We provide many pre-built components to make all of this a little easier: the frontend integrates with the Suborbital Module Editor, while the backend uses the JS SDK to interface with the SE2 REST API and our hosted Edge Dataplane.
+Configure the URL like so:
 
-So it's time to put ourselves in the shoes of Ada, a PRO.xyz customer who just received access to Suborbital plugins on PRO.xyz' platform.
+- Domain: `https://editor.suborbital.network/`
+- Query parameters:
+  - `builder`: `https://your-builder.example.com`
+  - `token`: The [env token you created above](#create-an-environment)
+  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
+  - `namespace`: the name of your namespace if different than “default”
+  - `fn`: the name of your plugin
+  - `template`: the name of the language you wish to use (Go or JavaScript)
 
-- We'll give our customer the name `Ada`
-- And we can type whatever we like for this pretend password
-- Click "Sign in"
+Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
 
-![Tenant creation screen displaying name and password fields](../../website/static/img/ada-creation.png)
+## Your first plugin
 
-After logging in, we see the network requests as they are received by PRO.xyz' servers, and eventually forwarded to our upstream servers. When we pause the logs by clicking the "pause" button, though, we notice something peculiar...
+Paste the URL you created above into your browser to load the plugin editor. Once inside the editor, you can edit, build, test, and deploy your plugins all in one place! By default, the editor will load pre-populated with the greeting plugin below. You can use it to run the editor for the first time.
 
-![Network request log with a request to `wp-login-php` highlighted](../../website/static/img/network-requests-logs.png)
-
-There have been some requests to `wp-login.php`. Well, little wonder these were always met with a 404 Not Found response! Ada's servers do run PHP, but none of them are Wordpress sites! Clearly, someone is trying to find Wordpress vulnerabilities or exploit weak passwords for Wordpress sites on the internet, and they also ended up probing Ada's sites. To say this is "suspicious" would be a gross understatement.
-
-Normally there wouldn't be much Ada could do about this, but thanks to the custom plugins we may actually turn this ship around.
-
-## Build a module
-
-Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
-
-Go to the plugin editor. Configure the URL like so:
-
-Domain: `https://editor.suborbital.network`
-
-Query params:
-
-`token`: The token you received in step 11
-
-`builder`: `https://builder.suborbital.network`
-
-`ident`: your tenant identifier
-
-`fn`: the name of your plugin `namespace`: the name of your namespace if different than “default”
-
-`template`: the name of the language you wish to use
-
-Altogether, it should look something like [`https://editor.suborbital.network/?token=eyJLZXkiOjcsIlNlY3JldCI6IlJTRUlrRWNiYzBleDhhUEEvUkltcVVPN3BmcmEreG9hYkgzdnhIRFhIK2M9In0=&builder=https://builder.suborbital.network&template=javascript&ident=dev.suborbital.user1&fn=foo`]
-
-PRO.xyz' integration only supports deploying one plugin per user. This is all up to the application, who may choose to allow their users build, deploy and use any number of plugins in any language, the sky is the limit.
-
-The editor already comes pre-loaded with a generic JavaScript template, but we have Ada's module to use instead.
-
-At the very baseline of it a plugin receives some input, processes that input, and may produce some output. Suborbital allows extra APIs (sort of superpowers) to be exposed to these modules at the operator's discretion.
-
-Here we are including the "log" API to have our application log any unexpected issues with the input data
-
-We'll replace the default code in the editor with Ada's code below:
-
-```js
+```javascript
 import { log } from "@suborbital/runnable";
 
 export const run = (input) => {
-    const tags = [];
-    try {
-        let data = JSON.parse(input);
+    let message = "Hello, " + input;
 
-        // We don't operate Wordpress sites so this is immediately sus
-        if (data?.uri?.includes("wp-login.php")) {
-            tags.push("kinda-sus");
-        }
-
-        return JSON.stringify(tags);
-    } catch (e) {
-        log.error("Failed parsin incoming log data as JSON");
-    }
+    log.info(message);
+    return message;
 };
 ```
 
-We're to click "Build" and have our JavaScript source code compiled to a deployable WebAssembly plugin!
+- The plugin provided is complete, so we can just click "Build"
+- In the "TEST" field, add some text. Here, we've added "new Suborbital user"
+- Click "Run test"
+- Toward the bottom of the editor, click "TEST RESULTS". There's our greeting!
 
-## Test
+![Editor displaying the greeting plugin above with the test output 'Hello, new Suborbital user!'](../../../docs/website/docs/assets/editor-screen.png)
 
-Great, that's done, we get to test it to see if it does what we expect!
+### Executing plugins
 
-We have a text field for specifying the "input" of this test run, I have a sample input prepared here that requests the Wordpress login page, and so it should trigger our module's spidey-senses.
+Once your first plugin has been built and deployed, it can be run with a request to the Execution API.
 
-We'll paste the text below into the "Test" field:
+```bash
+export ENV_TOKEN=<your previously generated token>
 
-```text
-{
-   "id": "l9rkryfrn7",
-   "request_start": "2022-10-27T20:21:36.538Z",
-   "request_time": 0.1659020390745758,
-   "remote_addr": "206.80.131.46",
-   "remote_asn": "AS54113 FASTLY",
-   "remote_cc": "FI",
-   "request_length": 2252,
-   "host": "noisy-cheeto.xyz",
-   "method": "DELETE",
-   "status": 200,
-   "uri": "/wp-login.php",
-   "upstream_host": "www0",
-   "user_agent": "GoobleBot 1.0 (crawler)",
-   "content_type": "text/html",
-   "tags": []
-}
+curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
+     --header "Authorization: Bearer $ENV_TOKEN" \
+     -d 'my friend'
+
+hello, my friend
 ```
 
-And click "Run test". Sure enough, the output shown in the "output" field is: `kinda sus`! Our module returns an array of string "tags", which PRO.xyz will use to annotate the requests. Perhaps in this case, PRO.xyz (TODO: should this be Ada?) could use them to fine-tune its algorithms or abuse-mitigation strategies.
+## Connect your application
 
-## Deploy
-
-Alright, let's get this deployed by clicking:
-
-- "Deploy"
-- "Done"
-
-And now we can head back to our dashboard. When I deployed our plugin, PRO.xyz was notified of this new custom integration for Ada, and will execute the WebAssembly module for all requests to make sure requests are properly tagged and its mitigation strategies tuned.
-
-_kinda-sus pops up in one of the rows in the log_ (TODO: how can we make this joke accessible?)
-
-There we go, we got our first internet troublemaker exposed, and we've seen how Suborbital Extension Engine can give application owners a way to let their users write their own plugins without compromising speed or security!
+Now that you've set up SE2 and created your first plugin, you can use SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to start integrating plugins into your application!
+Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
 ## What else can I do?
 
