@@ -87,7 +87,19 @@ source .env
 
 Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users.
 
-✨ Tenant API things ✨
+To create a tenant, we'll make an `HTTP POST` call:
+
+```bash
+POST api/v1/tenant HTTP/2
+Host: api.suborbital.network
+Content-Type: application/json
+Authorization: Bearer OUR_ACCESS_KEY
+
+{
+  "name": "org.example.tenantx",
+  "description": "hello world tenant"
+}
+```
 
 ## Meet the editor
 
@@ -154,11 +166,6 @@ curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1
 
 hello, my friend
 ```
-
-## Connect your application
-
-Now that you've set up SE2 and created your first plugin, you can use SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to start integrating plugins into your application!
-Suborbital allows users to write custom plugins in their preferred language by clicking the "Language select" button, but unfortunately PHP is not on the list of supported languages—yet!—so Ada chooses JavaScript, another language she's quite comfortable with.
 
 ## What else can I do?
 
