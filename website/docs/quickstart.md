@@ -2,6 +2,10 @@
 pagination_prev: null
 pagination_next: null
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Quickstart
 
 This quickstart will help you learn how to create an app plugin using SE2. Along the way it'll also introduce some of SE2's key features:
@@ -19,7 +23,7 @@ Let's go! 🚀
 
 ## Create an organization
 
-This is a new account, so we'll need to create our first organization: a (potentially shared) account in which one or more users manage(es) their Suborbital subscription .  For this demo, we'll give our organization:
+This is a new account, so we'll need to create our first organization: a (potentially shared) account in which one or more users manage(es) their Suborbital subscription . For this demo, we'll give our organization:
 
 - The name `DemoCompany` (note: organization names can contain only letters, numbers, and underscores)
 - The description `Always ready to demo`
@@ -61,7 +65,7 @@ Our integration will use this access key to provision resources and execute plug
 We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
 :::
 
-## Integrate SE2 with our app
+## Using the SE2 SDK
 
 We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory that contains our app, we'll:
 
@@ -89,6 +93,26 @@ Suborbital lets an application's users create their own secure, sandboxed plugin
 
 To create a tenant, we'll make an `HTTP POST` call:
 
+<Tabs groupId="tenant-creation">
+
+<TabItem value="tenant-go" label="Using Go">
+
+```go
+Go version goes here
+```
+
+</TabItem>
+
+<TabItem value = "tenant-js" label = "Using JS">
+
+```js
+JS version goes here
+```
+
+</TabItem>
+
+<TabItem value = "tenant-curl" label = "Using curl">
+
 ```bash
 POST api/v1/tenant HTTP/2
 Host: api.suborbital.network
@@ -96,27 +120,67 @@ Content-Type: application/json
 Authorization: Bearer OUR_ACCESS_KEY
 
 {
-  "name": "org.example.tenantx",
+  "name": "org.example.tenvantx",
   "description": "hello world tenant"
 }
 ```
 
+</TabItem>
+
+</Tabs>
+
 ## Meet the editor
 
-The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
+The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place. Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
 ### Obtain an editor token
 
 In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
+
+<Tabs groupId='editor-token'>
+
+<TabItem value="go" label="Using Go">
+
+```go
+Go version goes here
+```
+
+</TabItem>
+
+<TabItem value = "js" label = "Using JS">
+
+```js
+JS version goes here
+```
+
+</TabItem>
+
+<TabItem value = "curl" label = "Using curl">
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
 --header "Authorization: Bearer ${ENV_TOKEN}"
 ```
 
+</TabItem>
+
+</Tabs>
+
 ### Editor URLs in production
 
 To edit a plugin via the editor in a production environment, you—or more likely your application—must build a valid URL to pass to the editor.
+
+<Tabs groupId='editor-url'>
+
+<TabItem value="react" label="Using React">
+
+```js
+React version goes here
+```
+
+</TabItem>
+
+<TabItem value="browser" label="Using a browser tab">
 
 Configure the URL like so:
 
@@ -124,12 +188,16 @@ Configure the URL like so:
 - Query parameters:
   - `builder`: `https://your-builder.example.com`
   - `token`: The [env token you created above](#create-an-environment)
-  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
+  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In the example below, the environment is `dev.suborbital.user1`and the tenant's name is `user1`.
   - `namespace`: the name of your namespace if different than “default”
-  - `fn`: the name of your plugin
+  - `fn`: the name of your plugin. In the example below, the plugin name is `hello`.
   - `template`: the name of the language you wish to use (Go or JavaScript)
 
 Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
+
+</TabItem>
+
+</Tabs>
 
 ## Your first plugin
 
@@ -139,10 +207,10 @@ Paste the URL you created above into your browser to load the plugin editor. Onc
 import { log } from "@suborbital/runnable";
 
 export const run = (input) => {
-    let message = "Hello, " + input;
+  let message = "Hello, " + input;
 
-    log.info(message);
-    return message;
+  log.info(message);
+  return message;
 };
 ```
 
