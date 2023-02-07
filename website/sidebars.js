@@ -23,32 +23,32 @@ module.exports = {
             'how-to/customize-plugins/namespaces',
           ],
         },
-        {
-          type: 'category',
-          label: 'Self-Host SE2',
-          collapsible: true,
-          items: [
-            'how-to/self-host-se2/self-hosted-quickstart',
-            {
-              type: 'category',
-              label: 'Deploy SE2',
-              collapsible: true,
-              items: [
-                {
-                  'Cloud deployment': [
-                    'how-to/self-host-se2/deploy/cloud-deployment/configure-capabilities',
-                    'how-to/self-host-se2/deploy/cloud-deployment/configure-storage',
-                    'how-to/self-host-se2/deploy/cloud-deployment/configure-webhooks',
-                    'how-to/self-host-se2/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
-                  ],
-                  'Other deployments': [
-                    'how-to/self-host-se2/deploy/other-deployments/minikube'
-                  ]
-                }
-              ],
-            },
-          ],
-        },
+        // {  // uncomment when this users can deploy the dataplane
+        //   type: 'category',
+        //   label: 'Self-Host SE2',
+        //   collapsible: true,
+        //   items: [
+        //     'how-to/self-host-se2/self-hosted-quickstart',
+        //     {
+        //       type: 'category',
+        //       label: 'Deploy SE2',
+        //       collapsible: true,
+        //       items: [
+        //         {
+        //           'Cloud deployment': [
+        //             'how-to/self-host-se2/deploy/cloud-deployment/configure-capabilities',
+        //             'how-to/self-host-se2/deploy/cloud-deployment/configure-storage',
+        //             'how-to/self-host-se2/deploy/cloud-deployment/configure-webhooks',
+        //             'how-to/self-host-se2/deploy/cloud-deployment/install-se2-in-your-cloud-environment'
+        //           ],
+        //           'Other deployments': [
+        //             'how-to/self-host-se2/deploy/other-deployments/minikube'
+        //           ]
+        //         }
+        //       ],
+        //     },
+        //   ],
+        // },
       ],
     },
     {
