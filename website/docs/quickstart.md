@@ -111,7 +111,7 @@ JS version goes here
 
 </TabItem>
 
-<TabItem value = "tenant-curl" label = "Using curl">
+<TabItem value = "tenant-curl" label = "Using cURL">
 
 ```bash
 POST api/v1/tenant HTTP/2
@@ -155,7 +155,7 @@ JS version goes here
 
 </TabItem>
 
-<TabItem value = "curl" label = "Using curl">
+<TabItem value = "curl" label = "Using cURL">
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
