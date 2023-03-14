@@ -81,8 +81,8 @@ Go version goes here
 
 <TabItem value = "tenant-js" label = "Using JS">
 
-```js
-JS version goes here
+```bash
+npm install @suborbital/se2-node
 ```
 
 </TabItem>
@@ -104,7 +104,10 @@ Go version goes here
 <TabItem value = "tenant-js" label = "Using JS">
 
 ```js
-JS version goes here
+import { Suborbital } from "@suborbital/se2-node";
+
+// Here, we've provided the token via the SE2_ENV_TOKEN environment variable.
+const suborbital = new Suborbital(process.env.SE2_ENV_TOKEN);
 ```
 
 </TabItem>
@@ -129,9 +132,7 @@ Authorization: Bearer OUR_ACCESS_KEY
 
 ## Create a tenant (user)
 
-Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users.
-
-To create a tenant, we'll make an `HTTP POST` call:
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users. Typically, you'll want to use your system's unique ID for the user as the name of the tenant.
 
 <Tabs groupId="tenant-creation">
 
@@ -146,7 +147,8 @@ Go version goes here
 <TabItem value = "tenant-js" label = "Using JS">
 
 ```js
-JS version goes here
+const tenant = "<user ID>";
+await suborbital.admin.createTenant({ tenant });
 ```
 
 </TabItem>
@@ -173,9 +175,9 @@ Authorization: Bearer OUR_ACCESS_KEY
 
 The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place. Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
-### Obtain an editor token
+### Obtain a session token
 
-In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
+To grant a user access to modify a plugin, you'll need a session token. A session token is bound to a single plugin, and you'll create new tokens each time a user needs access to a plugin. To obtain a session token:
 
 <Tabs groupId='editor-token'>
 
@@ -190,7 +192,12 @@ Go version goes here
 <TabItem value = "js" label = "Using JS">
 
 ```js
-JS version goes here
+const params = {
+  tenant: "<user ID>", // the user this plugin belongs to
+  namespace: "<namespace>", // the plugin's namespace
+  name: "<plugin name>", // the name of the plugin
+};
+const token = await suborbital.admin.createSession(params);
 ```
 
 </TabItem>
@@ -226,14 +233,10 @@ Configure the URL like so:
 
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
-  - `builder`: `https://your-builder.example.com`
+  - `template`: the name of the template you wish to use
   - `token`: The [env token you created above](#create-an-environment)
-  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In the example below, the environment is `dev.suborbital.user1`and the tenant's name is `user1`.
-  - `namespace`: the name of your namespace if different than “default”
-  - `fn`: the name of your plugin. In the example below, the plugin name is `hello`.
-  - `template`: the name of the language you wish to use (Go or JavaScript)
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?template=javascript&token=<session token>`
 
 </TabItem>
 
@@ -265,15 +268,45 @@ export const run = (input) => {
 
 Once your first plugin has been built and deployed, it can be run with a request to the Execution API.
 
+<Tabs groupId='execute-plugin'>
+
+<TabItem value="go" label="Using Go">
+
+```go
+Go version goes here
+```
+
+</TabItem>
+
+<TabItem value = "js" label = "Using JS">
+
+```js
+const params = {
+  tenant: "<user ID>", // the user this plugin belongs to
+  namespace: "<namespace>", // the plugin's namespace
+  name: "<plugin name>", // the name of the plugin
+};
+const result = await suborbital.exec.run(params, "my friend!");
+console.log(result.result); // hello, my friend!
+```
+
+</TabItem>
+
+<TabItem value = "curl" label = "Using cURL">
+
 ```bash
 export ENV_TOKEN=<your previously generated token>
 
 curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
      --header "Authorization: Bearer $ENV_TOKEN" \
-     -d 'my friend'
+     -d 'my friend!'
 
-hello, my friend
+# hello, my friend!
 ```
+
+</TabItem>
+
+</Tabs>
 
 ## What else can I do?
 
