@@ -67,25 +67,65 @@ We'll only be shown this access key once, so we'll need to store it somewhere sa
 
 ## Using the SE2 SDK
 
-We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory that contains our app, we'll:
+SE2 provides client libraries for Go and Node.js. Start by installing the client:
 
-- Create a file named `.env`
-- Within our new `.env` file, we'll add our environment variables:
+<Tabs groupId="tenant-creation">
 
-  - `SUBORBITAL_TOKEN` is our environment's access key
-  - `SUBORBITAL_ENV` is the name we gave our environment
+<TabItem value="tenant-go" label="Using Go">
 
-- Next we'll need to export those variables by running:
-
-```bash
-set -a
+```go
+Go version goes here
 ```
 
-- And then:
+</TabItem>
+
+<TabItem value = "tenant-js" label = "Using JS">
+
+```js
+JS version goes here
+```
+
+</TabItem>
+
+</Tabs>
+
+Next, initialize the client with your environment access key:
+
+<Tabs groupId="tenant-creation">
+
+<TabItem value="tenant-go" label="Using Go">
+
+```go
+Go version goes here
+```
+
+</TabItem>
+
+<TabItem value = "tenant-js" label = "Using JS">
+
+```js
+JS version goes here
+```
+
+</TabItem>
+
+<TabItem value = "tenant-curl" label = "Using cURL">
 
 ```bash
-source .env
+POST api/v1/tenant HTTP/2
+Host: api.suborbital.network
+Content-Type: application/json
+Authorization: Bearer OUR_ACCESS_KEY
+
+{
+  "name": "org.example.tenvantx",
+  "description": "hello world tenant"
+}
 ```
+
+</TabItem>
+
+</Tabs>
 
 ## Create a tenant (user)
 
