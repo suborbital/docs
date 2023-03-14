@@ -69,17 +69,18 @@ We'll only be shown this access key once, so we'll need to store it somewhere sa
 
 SE2 provides client libraries for Go and Node.js. Start by installing the client:
 
-<Tabs groupId="tenant-creation">
+<Tabs groupId="sdk-import">
 
-<TabItem value="tenant-go" label="Using Go">
+<TabItem value="sdk-go" label="Using Go">
+In your terminal issue the following command to grab the library.
 
-```go
-Go version goes here
+```sh
+$ go get github.com/suborbital/se2-go@latest
 ```
 
 </TabItem>
 
-<TabItem value = "tenant-js" label = "Using JS">
+<TabItem value = "sdk-js" label = "Using JS">
 
 ```js
 JS version goes here
@@ -91,12 +92,27 @@ JS version goes here
 
 Next, initialize the client with your environment access key:
 
-<Tabs groupId="tenant-creation">
+<Tabs groupId="sdk-init">
 
-<TabItem value="tenant-go" label="Using Go">
+<TabItem value="sdk-init-go" label="Using Go">
 
 ```go
-Go version goes here
+package main
+
+import (
+  "log"
+
+  "github.com/suborbital/se2-go"
+)
+
+func main() {
+  client, err := se2.NewClient(se2.ModeStaging, token)
+  if err != nil {
+    log.Fatalf("encountered new client error: %s", err.Error())
+  }
+
+  // client is now ready to use
+}
 ```
 
 </TabItem>
@@ -105,22 +121,6 @@ Go version goes here
 
 ```js
 JS version goes here
-```
-
-</TabItem>
-
-<TabItem value = "tenant-curl" label = "Using cURL">
-
-```bash
-POST api/v1/tenant HTTP/2
-Host: api.suborbital.network
-Content-Type: application/json
-Authorization: Bearer OUR_ACCESS_KEY
-
-{
-  "name": "org.example.tenvantx",
-  "description": "hello world tenant"
-}
 ```
 
 </TabItem>
@@ -138,7 +138,12 @@ To create a tenant, we'll make an `HTTP POST` call:
 <TabItem value="tenant-go" label="Using Go">
 
 ```go
-Go version goes here
+func main() {
+  tenant, err := client.CreateTenant(ctx, "tenantName", "tenantDescription")
+  if err != nil {
+    log.Fatalf("create tenant failed: %s", err.Error())
+  }
+}
 ```
 
 </TabItem>
@@ -180,9 +185,21 @@ In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAME
 <Tabs groupId='editor-token'>
 
 <TabItem value="go" label="Using Go">
+Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response is going to be a struct that contains the session token. All methods will use this session response struct as input.
 
 ```go
-Go version goes here
+func main() {
+  session, err := client.CreateSession(ctx, "tenantName", "namespace", "pluginName")
+  if err != nil {
+    log.Fatalf("creating session failed with %s", err.Error())
+  }
+
+  // To use the session token in a further call
+  draft, err := client.CreatePluginDraft(ctx, "javascript", session)
+  if err != nil {
+    log.Fatalf("creating plugin draft for javascript failed: %s", err.Error())
+  }
+}
 ```
 
 </TabItem>
