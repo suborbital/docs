@@ -47,22 +47,22 @@ Here we can see a counter for plugin builds and build minutes. Both of these are
 
 ![Environment dashboard screen showing zero function builds and zero build minutes](../../website/static/img/env-dashboard-screen.png)
 
-## Create an access key
+## Create an API key
 
-Next, we'll need to create an access key. We'll click on:
+Next, we'll need to create an API key. We'll click on:
 
-- Manage access keys
-- Create new access key
+- Manage API keys
+- Create new API key
 
-Our integration will use this access key to provision resources and execute plugins in SE2. We'll give our access key:
+Our integration will use this API key to provision resources and execute plugins in SE2. We'll give our API key:
 
 - The name `DemoKey`
-- The description: `demo access key`
+- The description: `demo API key`
 
-![Access key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
+![API key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
 
 :::tip
-We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
+We'll only be shown this API key once, so we'll need to store it somewhere safe and secure!
 :::
 
 ## Using the SE2 SDK
@@ -90,7 +90,7 @@ npm install @suborbital/se2-node
 
 </Tabs>
 
-Next, initialize the client with your environment access key:
+Next, initialize the client with your API key:
 
 <Tabs groupId="sdk-init">
 
@@ -106,7 +106,7 @@ import (
 )
 
 func main() {
-  client, err := se2.NewClient(se2.ModeStaging, token)
+  client, err := se2.NewClient(se2.ModeStaging, api_key)
   if err != nil {
     log.Fatalf("encountered new client error: %s", err.Error())
   }
@@ -122,8 +122,8 @@ func main() {
 ```js
 import { Suborbital } from "@suborbital/se2-node";
 
-// Here, we've provided the token via the SE2_ENV_TOKEN environment variable.
-const suborbital = new Suborbital(process.env.SE2_ENV_TOKEN);
+// Here, we've provided the API key via the `API_KEY` environment variable.
+const suborbital = new Suborbital(process.env.API_KEY);
 ```
 
 </TabItem>
@@ -164,7 +164,7 @@ await suborbital.admin.createTenant({ tenant });
 POST api/v1/tenant HTTP/2
 Host: api.suborbital.network
 Content-Type: application/json
-Authorization: Bearer OUR_ACCESS_KEY
+Authorization: Bearer API_KEY 
 
 {
   "name": "org.example.tenvantx",
@@ -187,7 +187,7 @@ To grant a user access to modify a plugin, you'll need a session token. A sessio
 <Tabs groupId='editor-token'>
 
 <TabItem value="go" label="Using Go">
-Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response is going to be a struct that contains the session token. All methods will use this session response struct as input.
+Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response will be a struct that contains the session token. All tenant API methods will use this session response struct as input.
 
 ```go
 func main() {
@@ -223,7 +223,7 @@ const token = await suborbital.admin.createSession(params);
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
---header "Authorization: Bearer ${ENV_TOKEN}"
+--header "Authorization: Bearer ${API_KEY}"
 ```
 
 </TabItem>
@@ -251,7 +251,8 @@ Configure the URL like so:
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
   - `template`: the name of the template you wish to use
-  - `token`: The [env token you created above](#create-an-environment)
+  - `token`: The [session token you created above](#create-an-environment)
+  
 
 Altogether, it should look something like `https://editor.suborbital.network/?template=javascript&token=<session token>`
 
@@ -312,10 +313,10 @@ console.log(result.result); // hello, my friend!
 <TabItem value = "curl" label = "Using cURL">
 
 ```bash
-export ENV_TOKEN=<your previously generated token>
+export API_KEY=<your previously generated key>
 
 curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
-     --header "Authorization: Bearer $ENV_TOKEN" \
+     --header "Authorization: Bearer $API_KEY" \
      -d 'my friend!'
 
 # hello, my friend!
