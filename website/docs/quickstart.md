@@ -106,7 +106,7 @@ import (
 )
 
 func main() {
-  client, err := se2.NewClient(se2.ModeStaging, api_key)
+  client, err := se2.NewClient(se2.ModeProduction, api_key)
   if err != nil {
     log.Fatalf("encountered new client error: %s", err.Error())
   }
