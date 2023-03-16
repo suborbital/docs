@@ -106,7 +106,13 @@ import (
 )
 
 func main() {
-  client, err := se2.NewClient(se2.ModeProduction, api_key)
+  // Here, we've provided the API key via the `API_KEY` environment variable.
+  apiKey, ok := os.LookupEnv("API_KEY")
+  if !ok {
+    log.Fatal("api key is not set in the API_KEY environment variable")
+  }
+
+  client, err := se2.NewClient(se2.ModeProduction, apiKey)
   if err != nil {
     log.Fatalf("encountered new client error: %s", err.Error())
   }
