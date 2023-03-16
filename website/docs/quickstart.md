@@ -106,7 +106,13 @@ import (
 )
 
 func main() {
-  client, err := se2.NewClient(se2.ModeStaging, api_key)
+  // Here, we've provided the API key via the `API_KEY` environment variable.
+  apiKey, ok := os.LookupEnv("API_KEY")
+  if !ok {
+    log.Fatal("api key is not set in the API_KEY environment variable")
+  }
+
+  client, err := se2.NewClient(se2.ModeProduction, apiKey)
   if err != nil {
     log.Fatalf("encountered new client error: %s", err.Error())
   }
@@ -161,15 +167,13 @@ await suborbital.admin.createTenant({ tenant });
 <TabItem value = "tenant-curl" label = "Using cURL">
 
 ```bash
-POST api/v1/tenant HTTP/2
-Host: api.suborbital.network
-Content-Type: application/json
-Authorization: Bearer API_KEY 
-
-{
-  "name": "org.example.tenvantx",
-  "description": "hello world tenant"
-}
+$ curl --request POST \
+  --url https://api.suborbital.network/environment/v1/tenant/newTenantName \
+  --header 'Authorization: Bearer <api token here>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "description": "string"
+}'
 ```
 
 </TabItem>
@@ -222,8 +226,15 @@ const token = await suborbital.admin.createSession(params);
 <TabItem value = "curl" label = "Using cURL">
 
 ```bash
-curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
---header "Authorization: Bearer ${API_KEY}"
+$ curl --request POST \
+  --url https://api.suborbital.network/environment/v1/tenant/newTenantName/session \
+  --header 'Authorization: Bearer <api token here>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "namespace": "newNamespace",
+  "fn": "newPluginName"
+}'
+# {"token": "<session token here>"}
 ```
 
 </TabItem>
@@ -291,7 +302,14 @@ Once your first plugin has been built and deployed, it can be run with a request
 <TabItem value="go" label="Using Go">
 
 ```go
-Go version goes here
+func main() {
+  response, err := client.Exec(ctx, []byte(`my friend!`), tenantName, namespace, pluginName)
+  if err != nil {
+    log.Fatalf("executing plugin failed with %s", err.Error())
+  }
+
+  fmt.Printf("result of running the plugin is '%s'", string(response))
+}
 ```
 
 </TabItem>
@@ -313,12 +331,10 @@ console.log(result.result); // hello, my friend!
 <TabItem value = "curl" label = "Using cURL">
 
 ```bash
-export API_KEY=<your previously generated key>
-
-curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
-     --header "Authorization: Bearer $API_KEY" \
-     -d 'my friend!'
-
+$ curl --location 'https://edge.suborbital.network/name/<tenantName>/<namespace>/<pluginName>' \
+--header 'Authorization: Bearer <api token here>' \
+--header 'Content-Type: text/plain' \
+--data 'my friend!'
 # hello, my friend!
 ```
 
