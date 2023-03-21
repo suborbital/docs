@@ -14,9 +14,9 @@ The editor is hosted at `https://editor.suborbital.network`, and uses URL parame
 You will host the SE2 builder service in your cloud infrastructure with a configured DNS name. An HTTPS connection to the builder is required to use the editor.
 To launch the editor, you can either [embed the editor in a frame](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within your own webpage, or launch it in a new tab.
 
-## Editor token
+## Session token
 
-To authenticate the editor you'll need an [editor token](../../quickstart#obtain-an-editor-token).
+To authenticate the editor you'll need an [session token](../../quickstart#obtain-a-session-token).
 
 ## Configuration
 
@@ -32,7 +32,7 @@ Let's break it down:
 
 **Token**: `&token=K78as0aslwi30l8h5lbF4lS7`
 
-* The editor token retrieved from the control-plane service
+* The session token retrieved from the control-plane service
 
 **Ident**: `&ident=com.suborbital.customer`
 

@@ -184,7 +184,7 @@ The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [J
 
 To grant a user access to modify a plugin, you'll need a session token. A session token is bound to a single plugin, and you'll create new tokens each time a user needs access to a plugin. To obtain a session token:
 
-<Tabs groupId='editor-token'>
+<Tabs groupId='session-token'>
 
 <TabItem value="go" label="Using Go">
 Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response will be a struct that contains the session token. All tenant API methods will use this session response struct as input.
