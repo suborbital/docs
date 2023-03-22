@@ -59,7 +59,7 @@ Our integration will use this API key to provision resources and execute plugins
 - The name `DemoKey`
 - The description: `demo API key`
 
-![API key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
+![API key creation screen with fields for name and description](../../website/static/img/create-api-key-screen.png)
 
 :::tip
 We'll only be shown this API key once, so we'll need to store it somewhere safe and secure!
