@@ -55,33 +55,33 @@ Here we can see a counter for plugin builds and build minutes. Both of these are
 
 ![Environment dashboard screen showing zero function builds and zero build minutes](../../website/static/img/env-dashboard-screen.png)
 
-## Create an access key
+## Create an API key
 
-Next, we'll need to create an access key. We'll click on:
+Next, we'll need to create an API key. We'll click on:
 
-- Manage access keys
-- Create new access key
+- Manage API keys
+- Create new API key
 
-Our integration will use this access key to provision resources and execute plugins in SE2. We'll give our access key:
+Our integration will use this API key to provision resources and execute plugins in SE2. We'll give our API key:
 
 - The name `DemoKey`
-- The description: `demo access key`
+- The description: `demo API key`
 
-![Access key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
+![API key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
 
 :::tip
-We'll only be shown this access key once, so we'll need to store it somewhere safe and secure!
+We'll only be shown this API key once, so we'll need to store it somewhere safe and secure!
 :::
 
 ## Integrate SE2 with our app
 
-We'll need to supply our environment variables (our environment access key and the name of our environment) to SE2. Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
+We'll need to supply our environment variables (our environment API key and the name of our environment) to SE2. Within the directory we created when we cloned the repo for this demo in the [preliminary steps](#preliminary-steps), we'll:
 
 - Open the `demo-proxyz` directory
 - Create a file named `.env`
 - Within our new `.env` file, we'll add our environment variables:
 
-  - `SUBORBITAL_TOKEN` is our environment's access key
+  - `SUBORBITAL_TOKEN` is our environment's API key
   - `SUBORBITAL_ENV` is the name we gave our environment
 
 - Next we'll need to export those variables by running:
@@ -106,9 +106,9 @@ Suborbital lets an application's users create their own secure, sandboxed plugin
 
 The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
-### Obtain an editor token
+### Obtain a session token
 
-In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
+In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your session token.
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \

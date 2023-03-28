@@ -126,9 +126,9 @@ The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`
 
 The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
-### Obtain an editor token
+### Obtain a session token
 
-In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
+In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your session token.
 
 ```bash
 curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \

@@ -172,7 +172,7 @@ Let’s tell minikube to forward requests to port 80 to our cluster!
 minikube tunnel
 ```
 
-### 8. Create an editor token
+### 8. Create a session token
 
 In order to test our editor, we’re going to come up with a plugin name, and create a token so we can access it!
 
@@ -206,7 +206,7 @@ Let’s install `curl`:
 apt update; apt install curl
 ```
 
-With `curl` installed, we can now get our editor token for testing:
+With `curl` installed, we can now get our session token for testing:
 
 ```bash
 curl [http://local.suborbital.network:8081/api/v1/token/<IDENT>/default/](http://local.suborbital.network:8081/api/v1/token/com.acmeco.gr9fas97234b/default/httpget)<PLUGIN_NAME>

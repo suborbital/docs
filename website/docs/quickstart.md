@@ -59,7 +59,7 @@ Our integration will use this API key to provision resources and execute plugins
 - The name `DemoKey`
 - The description: `demo API key`
 
-![API key creation screen with fields for name and description](../../website/static/img/create-access-key-screen.png)
+![API key creation screen with fields for name and description](../../website/static/img/create-api-key-screen.png)
 
 :::tip
 We'll only be shown this API key once, so we'll need to store it somewhere safe and secure!
@@ -188,7 +188,7 @@ The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [J
 
 To grant a user access to modify a plugin, you'll need a session token. A session token is bound to a single plugin, and you'll create new tokens each time a user needs access to a plugin. To obtain a session token:
 
-<Tabs groupId='editor-token'>
+<Tabs groupId='session-token'>
 
 <TabItem value="go" label="Using Go">
 Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response will be a struct that contains the session token. All tenant API methods will use this session response struct as input.
