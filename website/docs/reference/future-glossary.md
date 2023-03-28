@@ -14,4 +14,4 @@ pagination_next: null
 | Tenant          | words | Identifies the relationship between an Environment and some specific user or collection of users interacting with it. The Environment administrator manages and identifies this relationship including, but not limited to, tenant authentication.                                                                                                                                             |   tnt                         |
 | Client | words | The application communicating with SE2 on the behalf of some Tenant |                            |
 | Environment Token     | words | Grants a Client access to an environment    |                            |
-| Session  Token  | words | Grants a Tenant access to the Builder Service                                                                                                                                     |                            |
+| Session Token  | words | Grants a Tenant access to the Builder Service                                                                                                                                     |                            |
