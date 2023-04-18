@@ -75,7 +75,7 @@ SE2 provides client libraries for Go and Node.js. Start by installing the client
 In your terminal issue the following command to grab the library.
 
 ```sh
-$ go get github.com/suborbital/se2-go@latest
+go get github.com/suborbital/se2-go@latest
 ```
 
 </TabItem>
@@ -167,7 +167,7 @@ await suborbital.admin.createTenant({ tenant });
 <TabItem value = "tenant-curl" label = "Using cURL">
 
 ```bash
-$ curl --request POST \
+curl --request POST \
   --url https://api.suborbital.network/environment/v1/tenant/newTenantName \
   --header 'Authorization: Bearer <api token here>' \
   --header 'Content-Type: application/json' \
@@ -226,7 +226,7 @@ const token = await suborbital.admin.createSession(params);
 <TabItem value = "curl" label = "Using cURL">
 
 ```bash
-$ curl --request POST \
+curl --request POST \
   --url https://api.suborbital.network/environment/v1/tenant/newTenantName/session \
   --header 'Authorization: Bearer <api token here>' \
   --header 'Content-Type: application/json' \
@@ -331,7 +331,7 @@ console.log(result.result); // hello, my friend!
 <TabItem value = "curl" label = "Using cURL">
 
 ```bash
-$ curl --location 'https://edge.suborbital.network/name/<tenantName>/<namespace>/<pluginName>' \
+curl --location 'https://edge.suborbital.network/name/<tenantName>/<namespace>/<pluginName>' \
 --header 'Authorization: Bearer <api token here>' \
 --header 'Content-Type: text/plain' \
 --data 'my friend!'
