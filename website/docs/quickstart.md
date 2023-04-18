@@ -3,154 +3,273 @@ pagination_prev: null
 pagination_next: null
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Quickstart
 
-<!--
-TODO: add live demo link for "What success looks like" purposes, like https://docs.netlify.com/get-started/
--->
-This quickstart will help you learn how to create an app plugin using SE2. It will also introduce some of SE2's key features to manage development environments and user access, and the plugin editor.
+This quickstart will help you learn how to create an app plugin using SE2. Along the way it'll also introduce some of SE2's key features:
 
-## Prerequisites
+- Managing development environments
+- Managing user access
+- Using the plugin editor
 
-- The Subo CLI (installation instructions below) is supported only on MacOS and Linux
+## Preliminary steps
+
+- [Create an account on our admin dashboard](https://suborbital.network)
 - Check out our language support page to see a list of languages and their respective support statuses for SE2
-- Install [Docker](https://docs.docker.com)
 
-## Create a development environment
+Let's go! 🚀
 
-The Subo CLI will create some files on disk to set up your local deployment. Get started by creating a directory somewhere on your filesystem. In the example below, we'll name our directory `suborbital`:
+## Create an organization
 
-```bash
-mkdir suborbital && cd suborbital
-```
+This is a new account, so we'll need to create our first organization: a (potentially shared) account in which one or more users manage(es) their Suborbital subscription . For this demo, we'll give our organization:
 
-### Install Subo: the SE2 CLI
+- The name `DemoCompany` (note: organization names can contain only letters, numbers, and underscores)
+- The description `Always ready to demo`
 
-If you use macOS, you can use [Homebrew](https://brew.sh) to install the `subo` command line tool:
+![Organization creation screen with fields for name and description](./../static/img/create-org-screen.png)
 
-```bash
-brew tap suborbital/subo
-brew install subo
-```
+## Create an environment
 
-Note: this may take a few minutes! Next, run `subo --version` to ensure the installation was successful.
+We can set up multiple separate environments for each of our organizations. These could be used for separating development/staging/production environments or to create different applications for distinct use cases.
 
-To install on Linux (or macOS without Homebrew), you can [download Subo directly](https://github.com/suborbital/subo/releases).
+Let's set up our first environment for development! We'll give it:
 
-You can set up multiple separate environments within an organization. These could be used for separating production/development/staging environments,or to create different applications for distinct use cases.
+- The name `demo.dev`
+- The description `development environment`
 
-### Generate your env token
+![Environment creation screen with fields for name and description](../../website/static/img/create-env-screen.png)
 
-You can get an SE2 Environment token either with our [environment token generator web app](https://suborbital.network/) or with the `subo` command line tool.
+Once we've created our environment, we'll be shown our environment's dashboard. The dashboard contains information about various usage metrics related to the Extension Engine.
 
-To create your env token, run:
+Here we can see a counter for plugin builds and build minutes. Both of these are currently 0 because we still need to set up our first integration.
 
-```bash
-subo se2 create token <your email address>
-```
+![Environment dashboard screen showing zero function builds and zero build minutes](../../website/static/img/env-dashboard-screen.png)
 
-A verification code will be sent to your email address, and the env token will be used to authenticate you and link your SE2 installation to you.
+## Create an API key
+
+Next, we'll need to create an API key. We'll click on:
+
+- Manage API keys
+- Create new API key
+
+Our integration will use this API key to provision resources and execute plugins in SE2. We'll give our API key:
+
+- The name `DemoKey`
+- The description: `demo API key`
+
+![API key creation screen with fields for name and description](../../website/static/img/create-api-key-screen.png)
 
 :::tip
-Subo will print out your environment token in your terminal, and also cache it on disk for transparent use in later steps.
+We'll only be shown this API key once, so we'll need to store it somewhere safe and secure!
 :::
 
-If you lose your environment token, just repeat this process to generate a new one.
+## Using the SE2 SDK
 
-## Start SE2 locally
+SE2 provides client libraries for Go and Node.js. Start by installing the client:
 
-:::warning Danger, Will Robinson
+<Tabs groupId="sdk-import">
 
-If you're coming from Suborbital Compute `v0.3.3` or earlier and would like to develop locally on SE2 `v0.4.0` or greater, you must first [upgrade to Subo `v0.6.0`](./subo#upgrade-subo) and update the deployment templates with `subo se2 deploy --reset`.
+<TabItem value="sdk-go" label="Using Go">
+In your terminal issue the following command to grab the library.
 
-An SE2 migration tool for production deployments of Compute will be available soon.
-
-:::
-
-Next, use Subo to start your local SE2 instance. Make sure to do this within the same directory you created above!
-
-- Make sure Docker is running
-- Run:
-
-  ```bash
-  subo se2 deploy --local
-  ```
-
-- Grab a refreshing beverage while this runs (it'll take a few minutes!)
-
-You may be asked to enter your environment token, and then Subo will use `docker-compose` to launch your SE2 instance automatically. SE2 runs in the background by default. You can use `docker-compose logs -f` to view the logs of the running containers. Run `docker-compose down` to terminate the containers.
-
-When you run SE2, it will wait for you to press enter to start a REPL where you can add or edit plugins (see [Meet the Editor](quickstart.md#meet-the-editor)). In the example below, we'll create a plugin named `hello`:
-
-```bash
-⏩ START: preparing deployment
-ℹ️  using cached environment token
-✅ DONE: ready to start installation
-⏩ START: installing...
-Network suborbital_se2  Creating
-Network suborbital_se2  Created
-Container suborbital-se2-builder-1  Creating
-Container suborbital-se2-controlplane-1  Creating
-Container suborbital-se2-controlplane-1  Created
-Container suborbital-e2core-1  Creating
-Container suborbital-se2-builder-1  Created
-Container suborbital-e2core-1  Created
-Container suborbital-se2-builder-1  Starting
-Container suborbital-se2-controlplane-1  Starting
-Container suborbital-se2-controlplane-1  Started
-Container suborbital-e2core-1  Starting
-Container suborbital-se2-builder-1  Started
-Container suborbital-e2core-1  Started
-ℹ️  use `docker ps` and `docker compose logs` to check deployment status
-
-PROXY: local tunnel to plugin editor started
-
-
-Press enter to launch the local SE2 REPL...
-1. Create or edit a plugin
-
-Choose an option: 1
-
-To create or edit a plugin, enter its name (or FQMN): hello
-
-✅ visit http://local.suborbital.network/?builder=http://local.suborbital.network:8082&token=0PYjmlH10jjjIL2NUOXzAfCA&ident=com.suborbital.acmeco&namespace=default&fn=hello to access the editor
+```sh
+go get github.com/suborbital/se2-go@latest
 ```
 
-This will allow you to create plugins and use the plugin editor locally while you work on integrating your application. Follow the instructions in the REPL to create your first plugin.
+</TabItem>
 
-The Subo REPL includes a proxy that makes it easy to connect the hosted editor to your local SE2 installation. By default, it makes the editor accessible on [`local.suborbital.network:80`](http://local.suborbital.network:80/). The editor proxy port can be configured with the `subo se2 deploy --local --proxy-port <some port>` option.
+<TabItem value = "sdk-js" label = "Using JS">
 
-The `local.suborbital.network` subdomain points to `127.0.0.1`, i.e. `localhost`. You may need to substitute a different hostname or IP address depending on your particular network setup.
+```bash
+npm install @suborbital/se2-node
+```
+
+</TabItem>
+
+</Tabs>
+
+Next, initialize the client with your API key:
+
+<Tabs groupId="sdk-init">
+
+<TabItem value="sdk-init-go" label="Using Go">
+
+```go
+package main
+
+import (
+  "log"
+
+  "github.com/suborbital/se2-go"
+)
+
+func main() {
+  // Here, we've provided the API key via the `API_KEY` environment variable.
+  apiKey, ok := os.LookupEnv("API_KEY")
+  if !ok {
+    log.Fatal("api key is not set in the API_KEY environment variable")
+  }
+
+  client, err := se2.NewClient(se2.ModeProduction, apiKey)
+  if err != nil {
+    log.Fatalf("encountered new client error: %s", err.Error())
+  }
+
+  // client is now ready to use
+}
+```
+
+</TabItem>
+
+<TabItem value = "tenant-js" label = "Using JS">
+
+```js
+import { Suborbital } from "@suborbital/se2-node";
+
+// Here, we've provided the API key via the `API_KEY` environment variable.
+const suborbital = new Suborbital(process.env.API_KEY);
+```
+
+</TabItem>
+
+</Tabs>
+
+## Create a tenant (user)
+
+Suborbital lets an application's users create their own secure, sandboxed plugins, carefully isolated from the core of the system and one another. For this reason, we will create a new tenant, which is a user account with its own plugins inside Suborbital. Our application will then connect the tenant with one of its own internally-maintained users. Typically, you'll want to use your system's unique ID for the user as the name of the tenant.
+
+<Tabs groupId="tenant-creation">
+
+<TabItem value="tenant-go" label="Using Go">
+
+```go
+func main() {
+  tenant, err := client.CreateTenant(ctx, "tenantName", "tenantDescription")
+  if err != nil {
+    log.Fatalf("create tenant failed: %s", err.Error())
+  }
+}
+```
+
+</TabItem>
+
+<TabItem value = "tenant-js" label = "Using JS">
+
+```js
+const tenant = "<user ID>";
+await suborbital.admin.createTenant({ tenant });
+```
+
+</TabItem>
+
+<TabItem value = "tenant-curl" label = "Using cURL">
+
+```bash
+curl --request POST \
+  --url https://api.suborbital.network/environment/v1/tenant/newTenantName \
+  --header 'Authorization: Bearer <api token here>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "description": "string"
+}'
+```
+
+</TabItem>
+
+</Tabs>
 
 ## Meet the editor
 
-The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place.  Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
+The SE2 plugin editor uses SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to provide a low-friction environment for your users to write, build, test, and deploy plugins to your SE2 an instance in a single place. Alternatively, the [Builder API](https://reference.suborbital.dev/) can be used programmatically, if that better suits your use case.
 
-### Obtain an editor token
+### Obtain a session token
 
-In addition to the `IDENTIFIER` and `ENV_TOKEN`, you’ll also need to set `NAMESPACE` and `fn` to the name of our namespace (e.g. `default`) and the name of our plugin (e.g. `hello`). Copy the `token` field in the response; this is your editor token.
+To grant a user access to modify a plugin, you'll need a session token. A session token is bound to a single plugin, and you'll create new tokens each time a user needs access to a plugin. To obtain a session token:
+
+<Tabs groupId='session-token'>
+
+<TabItem value="go" label="Using Go">
+Call the `CreateSession` method with your tenant's name, the namespace, and the plugin name of your intended plugin. The response will be a struct that contains the session token. All tenant API methods will use this session response struct as input.
+
+```go
+func main() {
+  session, err := client.CreateSession(ctx, "tenantName", "namespace", "pluginName")
+  if err != nil {
+    log.Fatalf("creating session failed with %s", err.Error())
+  }
+
+  // To use the session token in a further call
+  draft, err := client.CreatePluginDraft(ctx, "javascript", session)
+  if err != nil {
+    log.Fatalf("creating plugin draft for javascript failed: %s", err.Error())
+  }
+}
+```
+
+</TabItem>
+
+<TabItem value = "js" label = "Using JS">
+
+```js
+const params = {
+  tenant: "<user ID>", // the user this plugin belongs to
+  namespace: "<namespace>", // the plugin's namespace
+  name: "<plugin name>", // the name of the plugin
+};
+const token = await suborbital.admin.createSession(params);
+```
+
+</TabItem>
+
+<TabItem value = "curl" label = "Using cURL">
 
 ```bash
-curl --location --request GET "http://local.suborbital.network:8082/auth/v2/access/${IDENTIFIER}/${NAMESPACE}/${EXT}" \
---header "Authorization: Bearer ${ENV_TOKEN}"
+curl --request POST \
+  --url https://api.suborbital.network/environment/v1/tenant/newTenantName/session \
+  --header 'Authorization: Bearer <api token here>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "namespace": "newNamespace",
+  "fn": "newPluginName"
+}'
+# {"token": "<session token here>"}
 ```
+
+</TabItem>
+
+</Tabs>
 
 ### Editor URLs in production
 
 To edit a plugin via the editor in a production environment, you—or more likely your application—must build a valid URL to pass to the editor.
 
+<Tabs groupId='editor-url'>
+
+<TabItem value="react" label="Using React">
+
+```js
+React version goes here
+```
+
+</TabItem>
+
+<TabItem value="browser" label="Using a browser tab">
+
 Configure the URL like so:
 
 - Domain: `https://editor.suborbital.network/`
 - Query parameters:
-  - `builder`: `https://your-builder.example.com`
-  - `token`: The [env token you created above](#create-a-development-environment)
-  - `ident`: The name of your environment followed by a period, followed by the name of your [tenant](./reference/glossary.md). In our case, it will be `dev.suborbital.user1`
-  - `namespace`: the name of your namespace if different than “default”
-  - `fn`: the name of your plugin
-  - `template`: the name of the language you wish to use (Go or JavaScript)
+  - `template`: the name of the template you wish to use
+  - `token`: The [session token you created above](#create-an-environment)
+  
 
-Altogether, it should look something like `https://editor.suborbital.network/?builder=https://your-builder.example.com&ident=dev.suborbital.user1&fn=hello&template=javascript`
+Altogether, it should look something like `https://editor.suborbital.network/?template=javascript&token=<session token>`
+
+</TabItem>
+
+</Tabs>
 
 ## Your first plugin
 
@@ -160,10 +279,10 @@ Paste the URL you created above into your browser to load the plugin editor. Onc
 import { log } from "@suborbital/runnable";
 
 export const run = (input) => {
-    let message = "Hello, " + input;
+  let message = "Hello, " + input;
 
-    log.info(message);
-    return message;
+  log.info(message);
+  return message;
 };
 ```
 
@@ -178,16 +297,59 @@ export const run = (input) => {
 
 Once your first plugin has been built and deployed, it can be run with a request to the Execution API.
 
-```bash
-export ENV_TOKEN=<your previously generated token>
+<Tabs groupId='execute-plugin'>
 
-curl http://local.suborbital.network:8080/com.suborbital.acmeco/default/hello/v1.0.0 \
-     --header "Authorization: Bearer $ENV_TOKEN" \
-     -d 'my friend'
+<TabItem value="go" label="Using Go">
 
-hello, my friend
+```go
+func main() {
+  response, err := client.Exec(ctx, []byte(`my friend!`), tenantName, namespace, pluginName)
+  if err != nil {
+    log.Fatalf("executing plugin failed with %s", err.Error())
+  }
+
+  fmt.Printf("result of running the plugin is '%s'", string(response))
+}
 ```
 
-## Connect your application
+</TabItem>
 
-Now that you've set up SE2 and created your first plugin, you can use SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md) to start integrating plugins into your application!
+<TabItem value = "js" label = "Using JS">
+
+```js
+const params = {
+  tenant: "<user ID>", // the user this plugin belongs to
+  namespace: "<namespace>", // the plugin's namespace
+  name: "<plugin name>", // the name of the plugin
+};
+const result = await suborbital.exec.run(params, "my friend!");
+console.log(result.result); // hello, my friend!
+```
+
+</TabItem>
+
+<TabItem value = "curl" label = "Using cURL">
+
+```bash
+curl --location 'https://edge.suborbital.network/name/<tenantName>/<namespace>/<pluginName>' \
+--header 'Authorization: Bearer <api token here>' \
+--header 'Content-Type: text/plain' \
+--data 'my friend!'
+# hello, my friend!
+```
+
+</TabItem>
+
+</Tabs>
+
+## What else can I do?
+
+Now that you've know how to get SE2 extensibility powers into your app, you might want to:
+
+- Learn more about using SE2's APIs from either [Go](./how-to/se2-go.md) or [JavaScript/TypeScript](./how-to/se2-js.md)
+- Make custom [plugin templates](./how-to/customize-plugins/custom-plugin-templates.md) and [libraries](./how-to/customize-plugins/custom-libraries.md) to help your users get started building their own plugins for your app
+- Organize your users' plugins into [namespaces](./how-to/customize-plugins/namespaces.md) for different use cases
+
+## Questions?
+
+If you have any questions you can't find answers to in these docs, please email us at team@suborbital.dev!
